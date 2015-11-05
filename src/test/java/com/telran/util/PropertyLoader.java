@@ -1,4 +1,4 @@
-package telran.com.util;
+package com.telran.util;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;

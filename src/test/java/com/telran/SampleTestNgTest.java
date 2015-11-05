@@ -1,4 +1,4 @@
-package telran.com;
+package com.telran;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import telran.com.pages.HomePage;
+import com.telran.pages.HomePage;
 
 public class SampleTestNgTest extends TestNgTestBase {
 
