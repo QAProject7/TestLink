@@ -1,6 +1,7 @@
 package com.telran;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -40,9 +41,7 @@ public class RegistrationIakovTest {
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).sendKeys(email);
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).sendKeys("Asdfgh0!");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")).sendKeys("Asdfgh0!");
+        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContx_ConfirmPassword")).sendKeys("Asdfgh0!");
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")).sendKeys("532315678");
         driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_birthdayTxt_dateInput")).clear();
