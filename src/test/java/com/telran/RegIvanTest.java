@@ -1,4 +1,4 @@
-package telran.com;
+package com.telran;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
