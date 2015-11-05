@@ -43,10 +43,10 @@ public class RegistrationPageObjTest {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-            //    loginPage.openLoginPage(driver)
-            //           .waitUntilLoginPageIsLoaded()
-            //            .clickOnRegLink();
-//            registrationPage.openRegistrationPage(driver)
+            // loginPage.openLoginPage(driver)
+            //       .waitUntilLoginPageIsLoaded()
+            //        .clickOnRegLink();
+//            registrationPage.openLoginPage(driver)
             registrationPage.waitUntilRegPageIsLoaded();
         } catch (Exception e) {
             e.printStackTrace();
