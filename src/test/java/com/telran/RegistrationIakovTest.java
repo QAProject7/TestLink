@@ -1,17 +1,15 @@
 package com.telran;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-public class RegistrationIakovTest {
+public class RegistrationIakovTest extends TestNgTestBase {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -19,7 +17,7 @@ public class RegistrationIakovTest {
 
     @BeforeTest
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+        //  driver = new FirefoxDriver();
         baseUrl = "http://change-this-to-the-site-you-are-testing/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -41,7 +39,9 @@ public class RegistrationIakovTest {
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).sendKeys(email);
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContx_ConfirmPassword")).sendKeys("Asdfgh0!");
+        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).sendKeys("Asdfgh0!");
+        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")).clear();
+        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")).sendKeys("Asdfgh0!");
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")).sendKeys("532315678");
         driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_birthdayTxt_dateInput")).clear();
@@ -77,14 +77,14 @@ public class RegistrationIakovTest {
         // ERROR: Caught exception [unknown command [gotoIf]]
     }
 
-    @AfterTest
+   /* @AfterTest
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
         }
-    }
+    }*/
 
     private boolean isElementPresent(By by) {
         try {
