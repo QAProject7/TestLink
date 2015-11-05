@@ -1,15 +1,18 @@
 package com.telran;
 
-import org.openqa.selenium.*;
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.*;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import static org.testng.Assert.*;
+//import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
-public class RegistrationIakovTest extends TestNgTestBase {
+public class RegIvanTest {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -17,18 +20,17 @@ public class RegistrationIakovTest extends TestNgTestBase {
 
     @BeforeTest
     public void setUp() throws Exception {
-        //  driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
         baseUrl = "http://change-this-to-the-site-you-are-testing/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @Test
-    public void testFainbergClinicsRegister() throws Exception {
-        String index = "1";
-        String username = "eee";
+    public void testFainbergClinicsRegister() throws Exception {    String index = "1";
         // ERROR: Caught exception [unknown command [label]]
         driver.get("http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage");
         // ERROR: Caught exception [ERROR: Unsupported command [getEval |  | ]]
+        String username = "";
         String email = username + "@yopmail.com";
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_UserName")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_UserName")).sendKeys(username);
@@ -77,14 +79,14 @@ public class RegistrationIakovTest extends TestNgTestBase {
         // ERROR: Caught exception [unknown command [gotoIf]]
     }
 
-   /* @AfterTest
+    @AfterTest
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
         }
-    }*/
+    }
 
     private boolean isElementPresent(By by) {
         try {
