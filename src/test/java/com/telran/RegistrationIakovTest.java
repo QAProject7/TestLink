@@ -1,16 +1,15 @@
 package com.telran;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-public class RegistrationIakovTest {
+public class RegistrationIakovTest extends TestNgTestBase {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -18,7 +17,7 @@ public class RegistrationIakovTest {
 
     @BeforeTest
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+        //  driver = new FirefoxDriver();
         baseUrl = "http://change-this-to-the-site-you-are-testing/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -78,14 +77,14 @@ public class RegistrationIakovTest {
         // ERROR: Caught exception [unknown command [gotoIf]]
     }
 
-    @AfterTest
+   /* @AfterTest
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
         }
-    }
+    }*/
 
     private boolean isElementPresent(By by) {
         try {
