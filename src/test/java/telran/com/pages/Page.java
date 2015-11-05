@@ -1,4 +1,4 @@
-package ааа.pages;
+package telran.com.pages;
 
 import org.openqa.selenium.WebDriver;
 

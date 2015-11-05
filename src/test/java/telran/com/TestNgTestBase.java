@@ -1,4 +1,4 @@
-package ааа;
+package telran.com;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeSuite;
 import ru.stqa.selenium.factory.WebDriverFactory;
 import ru.stqa.selenium.factory.WebDriverFactoryMode;
 
-import ааа.util.PropertyLoader;
+import telran.com.util.PropertyLoader;
 
 /**
  * Base class for TestNG-based test classes
