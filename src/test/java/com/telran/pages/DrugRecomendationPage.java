@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
-
 /**
  * Created by Iakov Volf
  */
@@ -59,7 +57,7 @@ public class DrugRecomendationPage extends Page {
 //Fill the fileds
 
     public DrugRecomendationPage fillUsernameField(String username) {
-        setElementText(usernameField, username);
+        //  setElementText(usernameField, username);
         return this;
     }
 
@@ -71,7 +69,7 @@ public class DrugRecomendationPage extends Page {
     }
 
 
-    public DrugRecomendationPage waitUntilLoginPageIsLoaded() {
+   /* public DrugRecomendationPage waitUntilLoginPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
@@ -80,28 +78,28 @@ public class DrugRecomendationPage extends Page {
             e.printStackTrace();
         }
         return this;
-    }
+    }*/
 
     public void clickOnLoginButton() {
-        clickElement(loginButton);
+        //clickElement(loginButton);
 
     }
 
     public void openRegistrationPage() {
-        clickElement(goToRegLink);
+        // clickElement(goToRegLink);
 
     }
 
 
     public void openForgotPassPage() {
-        clickElement(forgotPassLink);
+        // clickElement(forgotPassLink);
 
     }
 
-    public boolean isOnLoginPage() {
+    /*public boolean isOnLoginPage() {
         return exists(loginButton);
     }
-
+*/
 
     //check alert presence
 
