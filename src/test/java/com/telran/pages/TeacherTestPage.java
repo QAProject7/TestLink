@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Iakov Volf
  */
-public class TeacherPage extends Page {
+public class TeacherTestPage extends Page {
 
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
@@ -39,34 +39,34 @@ public class TeacherPage extends Page {
 
     //public ProfilePage profilePage;
 
-    public TeacherPage(WebDriver driver) {
+    public TeacherTestPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
 
-    public TeacherPage openLoginPage(WebDriver driver) {
+    public TeacherTestPage openLoginPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
 
 //Fill the fileds
 
-    public TeacherPage fillUsernameField(String username) {
+    public TeacherTestPage fillUsernameField(String username) {
         setElementText(usernameField, username);
         return this;
     }
 
 
-    public TeacherPage fillPasswordField(String password) {
+    public TeacherTestPage fillPasswordField(String password) {
         setElementText(passwordField, password);
         // Log.info("entering password from the list: " + password + " ");
         return this;
     }
 
 
-    public TeacherPage waitUntilLoginPageIsLoaded() {
+    public TeacherTestPage waitUntilLoginPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
