@@ -1,0 +1,100 @@
+package com.telran;
+
+import com.telran.pages.ForgotPasswordPageLeonid;
+import com.telran.pages.ForgotPasswordPageSuccessLeonid;
+import com.telran.pages.LoginPage;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.*;
+
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class RegistrationLeonidTest {
+    private WebDriver driver;
+    private String baseUrl;
+    private boolean acceptNextAlert = true;
+    private StringBuffer verificationErrors = new StringBuffer();
+
+    private LoginPage loginPage;
+    private ForgotPasswordPageLeonid forgotPasswordPage;
+    private ForgotPasswordPageSuccessLeonid forgotPasswordSuccessPage;
+
+    @BeforeClass(alwaysRun = true)
+    public void setup() {
+        driver = new FirefoxDriver();
+        loginPage = PageFactory.initElements(driver,LoginPage.class);
+        forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
+        forgotPasswordSuccessPage = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
+    }
+
+    @BeforeMethod(alwaysRun = true)
+    public void beforeMethodSetUp() {
+        try {
+//             loginPage.openLoginPage(driver)
+//                      .waitUntilLoginPageIsLoaded();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testMercuryRegister() throws Exception {
+
+        loginPage
+                .openLoginPage(driver)
+                .waitUntilLoginPageIsLoaded()
+                .clickOpenForgotPassPage();
+        forgotPasswordPage
+                .waitUntilForgotPageIsLoaded()
+                .fillRestoreField("hore548@yopmail.com")
+                .clickOnSubmitButton();
+        forgotPasswordSuccessPage
+                .waitUntilForgotSuccessPageIsLoaded()
+                .assertText()
+                .clickOnBackButton();
+    }
+
+    @AfterTest
+    public void tearDown() throws Exception {
+        Thread.sleep(5000);
+        driver.quit();
+        String verificationErrorString = verificationErrors.toString();
+        if (!"".equals(verificationErrorString)) {
+            fail(verificationErrorString);
+        }
+    }
+
+    private boolean isElementPresent(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    private boolean isAlertPresent() {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+
+    private String closeAlertAndGetItsText() {
+        try {
+            Alert alert = driver.switchTo().alert();
+            String alertText = alert.getText();
+            if (acceptNextAlert) {
+                alert.accept();
+            } else {
+                alert.dismiss();
+            }
+            return alertText;
+        } finally {
+            acceptNextAlert = true;
+        }
+    }
+}
