@@ -99,7 +99,7 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage fillEmailField() {
         int rand = ThreadLocalRandom.current().nextInt(0, 10000 + 1);
-        String email = "doctor" + rand + "yopmail.com";
+        String email = "doctor" + rand + "@yopmail.com";
         setElementText(emailField, email);
         return this;
     }
