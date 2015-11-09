@@ -6,13 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
-import java.util.concurrent.ThreadLocalRandom;
-
 /**
  * Created by Iakov Volf,Oleg
  */
-public class DoctorsFizicalExam extends Page {
+public class DoctorsFizicalExamPetrunin extends Page {
 
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
@@ -67,111 +64,111 @@ public class DoctorsFizicalExam extends Page {
 
     //public ProfilePage profilePage;
 
-    public DoctorsFizicalExam(WebDriver driver) {
+    public DoctorsFizicalExamPetrunin(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/PatientPage.aspx?PersonalId=876086950";
         PageFactory.initElements(driver, this);
     }
 
 
-    public DoctorsFizicalExam openDoctorsFizicalExam(WebDriver driver) {
+    public DoctorsFizicalExamPetrunin openDoctorsFizicalExam(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
 
 //Fill the fileds
 
-    public DoctorsFizicalExam fillInputField1(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField1(String text) {
        clickElement(inputField1);
         setElementText(inputField1, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField2(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField2(String text) {
         clickElement(inputField2);
         setElementText(inputField2, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField3(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField3(String text) {
         clickElement(inputField3);
         setElementText(inputField3, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField4(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField4(String text) {
         clickElement(inputField4);
         setElementText(inputField4, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField5(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField5(String text) {
         clickElement(inputField5);
         setElementText(inputField5, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField6(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField6(String text) {
         clickElement(inputField6);
         setElementText(inputField6, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField7(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField7(String text) {
         clickElement(inputField7);
         setElementText(inputField7, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField8(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField8(String text) {
         clickElement(inputField8);
         setElementText(inputField8, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField9(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField9(String text) {
         clickElement(inputField9);
         setElementText(inputField9, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField10(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField10(String text) {
         clickElement(inputField10);
         setElementText(inputField10, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField11(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField11(String text) {
         clickElement(inputField11);
         setElementText(inputField11, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField12(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField12(String text) {
         clickElement(inputField12);
         setElementText(inputField12, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField13(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField13(String text) {
         clickElement(inputField13);
         setElementText(inputField13, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField14(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField14(String text) {
         clickElement(inputField14);
         setElementText(inputField14, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField15(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField15(String text) {
         clickElement(inputField15);
         setElementText(inputField15, text);
         return this;
     }
 
-    public DoctorsFizicalExam fillInputField16(String text) {
+    public DoctorsFizicalExamPetrunin fillInputField16(String text) {
         clickElement(inputField16);
         setElementText(inputField16, text);
         return this;
