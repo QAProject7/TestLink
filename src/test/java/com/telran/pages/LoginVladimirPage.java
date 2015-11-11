@@ -30,6 +30,12 @@ public class LoginVladimirPage extends Page {
     @FindBy(xpath = "//a[@class='forgot']")
     WebElement forgotPassLink;
 
+    @FindBy(id = "MainContent_RptNotification_NowBtn1_2")
+    WebElement nextButton;
+
+    @FindBy(id = "submit")
+    WebElement submitButton;
+
     //checkboxs
     //Select
     //Alerts
@@ -75,6 +81,16 @@ public class LoginVladimirPage extends Page {
         return this;
     }
 
+    public LoginVladimirPage waitUntilNextPageIsLoaded() {
+        try {
+            waitUntilElementIsLoaded(nextButton);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
     public void clickOnForgotPassLink() {
         clickElement(forgotPassLink);
     }
@@ -105,4 +121,18 @@ public class LoginVladimirPage extends Page {
         return exists(lastNameAlert);
     }
 
+    public void clickOnNextButton() {
+        clickElement(nextButton);
+    }
+
+    public LoginVladimirPage waitUntilTestPageIsLoaded() {
+        try {
+            waitUntilElementIsLoaded(submitButton);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
 }
