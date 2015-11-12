@@ -37,7 +37,6 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
 //Fill the fileds
 
     public ForgotPasswordPageSuccessLeonid assertText(){
-
         System.out.println(textStatus.getText());
         assertEquals("הסיסמא שלך נשלחה אליך.\nחזור", textStatus.getText());
         return this;
