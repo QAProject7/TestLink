@@ -250,6 +250,7 @@ public class ChronicQuestionnaireVladimirPage extends Page {
 
     public void fillElements() {
         driver.switchTo().frame(0);
+        //driver.switchTo().defaultContent();
         // driver.switchTo().frame(driver.findElement(By.id("ExportFrame")));
         // driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
         //List<WebElement> divs = mainForm.findElements(By.tagName("div"));
