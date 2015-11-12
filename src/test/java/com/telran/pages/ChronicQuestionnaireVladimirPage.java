@@ -1,6 +1,7 @@
 package com.telran.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -242,6 +243,9 @@ public class ChronicQuestionnaireVladimirPage extends Page {
     @FindBy(id = "RadWindowWrapper_ctl00_MainContent_rwFillReport")
     WebElement testForm;
 
+    @FindBy(xpath = "//iframe[@name='rwFillReport']")
+    WebElement iFrame;
+
     public ChronicQuestionnaireVladimirPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx";
@@ -249,11 +253,8 @@ public class ChronicQuestionnaireVladimirPage extends Page {
     }
 
     public void fillElements() {
-        driver.switchTo().frame(0);
+        driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
         //driver.switchTo().defaultContent();
-        // driver.switchTo().frame(driver.findElement(By.id("ExportFrame")));
-        // driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-        //List<WebElement> divs = mainForm.findElements(By.tagName("div"));
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
         for (WebElement element : tables) {
             System.out.println(element);
@@ -272,7 +273,9 @@ public class ChronicQuestionnaireVladimirPage extends Page {
                 }
             }
         }
-        driver.switchTo().defaultContent();
+        clickElement(submitButton);
+        driver.switchTo().activeElement().sendKeys(Keys.RETURN);
+        //driver.switchTo().defaultContent();
     }
 
     public ChronicQuestionnaireVladimirPage waitUntilTestPageIsLoaded() {
