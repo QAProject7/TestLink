@@ -7,13 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Naryck on 2015.11.09.
  */
-public class ChronicQuestionnaireVladimirPage extends Page {
+public class ChronicQuestionnaire1VladimirPage extends Page {
+    Map<String, Integer> buttons = new HashMap<String, Integer>();
+    ObjectOutputStream oos;
+
     @FindBy(id = "MainContent_contentHtml")
     WebElement mainDiv;
 
@@ -246,51 +253,54 @@ public class ChronicQuestionnaireVladimirPage extends Page {
     @FindBy(xpath = "//iframe[@name='rwFillReport']")
     WebElement iFrame;
 
-    public ChronicQuestionnaireVladimirPage(WebDriver driver) {
+    public ChronicQuestionnaire1VladimirPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx";
         PageFactory.initElements(driver, this);
     }
 
     public void fillElements() {
-//<<<<<<< Updated upstream
-        driver.switchTo().frame(0);
-        //driver.switchTo().defaultContent();
-        // driver.switchTo().frame(driver.findElement(By.id("ExportFrame")));
-        // driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-        //List<WebElement> divs = mainForm.findElements(By.tagName("div"));
-//=======
-        driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
-        //driver.switchTo().defaultContent();
-//>>>>>>> Stashed changes
-        List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
-        for (WebElement element : tables) {
-            System.out.println(element);
+        try {
+            oos = new ObjectOutputStream((new FileOutputStream("d:\\buttons1.tst")));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
+
+        List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
+        /*for (WebElement element : tables) {
+            System.out.println(element);
+        }*/
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : tables) {
             rows = currentTable.findElements(By.tagName("tr"));
             for (WebElement currentRow : rows) {
                 radioButtons = currentRow.findElements(By.tagName("input"));
-                String rndValue = String.valueOf((int) (Math.random() * 3));
+                String rndValue = String.valueOf(/*(int) (Math.random() * 3)*/ 1);
                 for (WebElement currentRadioButton : radioButtons) {
                     if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
+                        buttons.put(currentRadioButton.getAttribute("name"), Integer.parseInt(currentRadioButton.getAttribute("value")));
                         currentRadioButton.click();
                     }
                 }
             }
+            try {
+                oos.writeObject(buttons);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-//<<<<<<< Updated upstream
-        driver.switchTo().defaultContent();
-//=======
         clickElement(submitButton);
+        try {
+            wait(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.switchTo().activeElement().sendKeys(Keys.RETURN);
-        //driver.switchTo().defaultContent();
-//>>>>>>> Stashed changes
     }
 
-    public ChronicQuestionnaireVladimirPage waitUntilTestPageIsLoaded() {
+    public ChronicQuestionnaire1VladimirPage waitUntilTestPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(testForm);
         } catch (IOException e) {
