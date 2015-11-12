@@ -45,9 +45,9 @@ public class DrugRecommendationPage extends Page {
     private WebElement group2_linkAdd;
 
     //group 3
-    @FindBy(xpath = "//textarea[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_TxtPlan']")
+    @FindBy(xpath = "//td[contains(text(),'מידע נוסף')]/../td[3]//textarea")
     private WebElement group3_textarea;
-    @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_Add']")
+    @FindBy(xpath = "//td[contains(text(),'מידע נוסף')]/../td[3]//a[contains(text(),'הוסף')]")
     private WebElement group3_linkAdd;
 
     //group 4
@@ -65,6 +65,7 @@ public class DrugRecommendationPage extends Page {
     private WebElement group4_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_Add']")
     private WebElement group4_linkAdd;
+
 
     //group 5
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl05_RLB_Answers']//input[@class='rlbCheckAllItemsCheckBox']")
