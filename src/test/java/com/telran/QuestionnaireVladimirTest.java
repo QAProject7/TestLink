@@ -86,7 +86,7 @@ public class QuestionnaireVladimirTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown() {
-        // this.driver.quit();
+        this.driver.quit();
     }
 
     /*@Test(groups = {"smoke", "negative"})
