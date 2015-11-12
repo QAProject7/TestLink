@@ -14,12 +14,21 @@ public class LoginVadymPage extends Page {
     @FindBy(id = "MainContent_LoginUser_UserName")
     WebElement  userNameField;
 
+    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_UserNameLabell")
+    WebElement userNameFieldByForgotPage;
+
+    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_lbl")
+    WebElement  forgotPasswordPage;
+
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
 
     //buttons
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegistration;
+
+    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_SubmitButton")
+    WebElement recoveryPasswordButton;
 
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;
@@ -43,7 +52,6 @@ public class LoginVadymPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-
     public LoginVadymPage openLoginPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
@@ -53,6 +61,11 @@ public class LoginVadymPage extends Page {
 
     public LoginVadymPage fillUsernameField(String username) {
         setElementText(userNameField, username);
+        return this;
+    }
+
+    public LoginVadymPage fillUsernameFieldByForgotPage (String username) {
+        setElementText(userNameFieldByForgotPage, username);
         return this;
     }
 
@@ -79,6 +92,11 @@ public class LoginVadymPage extends Page {
 
     }
 
+    public void clickOnRecoveryPasswordButton() {
+        clickElement(recoveryPasswordButton);
+
+    }
+
     public void openRegistrationPage() {
         clickElement(goToRegistration);
     }
@@ -91,6 +109,10 @@ public class LoginVadymPage extends Page {
         return exists(loginButton);
     }
 
+    public boolean isOnForgotPasswordPage() {
+        return exists(forgotPasswordPage);
+    }
+
     //check alert presence
 
     public boolean alertMessageNotValidUserName() {
@@ -100,5 +122,7 @@ public class LoginVadymPage extends Page {
     public boolean alertMessageNotValidFirsrName() {
         return exists(wrongPassword);
     }
+
+
 
 }

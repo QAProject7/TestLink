@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Iakov Volf,Oleg
@@ -32,7 +31,7 @@ public class ChangePassRegistrationPatientOlga extends Page {
     @FindBy(xpath = "//a[contains(text(),'המשך >')]")
     WebElement gotoFillProfile;
 
-    @FindBy(id = "id=MainContent_firstNameTxt")
+    @FindBy(id = "MainContent_firstNameTxt")
     WebElement firstNameTxt;
     @FindBy(id = "MainContent_lastNameTxt")
     WebElement lastNameTxt;
