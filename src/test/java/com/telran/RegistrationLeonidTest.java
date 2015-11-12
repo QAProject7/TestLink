@@ -35,7 +35,7 @@ public class RegistrationLeonidTest {
     public void beforeMethodSetUp() {
         try {
 //             loginPage.openLoginPage(driver)
-//                      .waitUntilLoginPageIsLoaded();
+//                      .waitUntilMenuPageIsLoaded();
         } catch (Exception e) {
             e.printStackTrace();
         }
