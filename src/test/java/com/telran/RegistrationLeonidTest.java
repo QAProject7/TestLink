@@ -3,12 +3,15 @@ package com.telran;
 import com.telran.pages.ForgotPasswordPageLeonid;
 import com.telran.pages.ForgotPasswordPageSuccessLeonid;
 import com.telran.pages.LoginPage;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.*;
-
-import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.fail;
 
 public class RegistrationLeonidTest {
     private WebDriver driver;
@@ -44,11 +47,11 @@ public class RegistrationLeonidTest {
         loginPage
                 .openLoginPage(driver)
                 .waitUntilLoginPageIsLoaded()
-                .clickOpenForgotPassPage();
+                .openForgotPassPage();
         forgotPasswordPage
                 .waitUntilForgotPageIsLoaded()
                 .fillRestoreField("hore548@yopmail.com")
-                .clickOnSubmitButton();
+                .clickOnRestoreButton();
         forgotPasswordSuccessPage
                 .waitUntilForgotSuccessPageIsLoaded()
                 .assertText()

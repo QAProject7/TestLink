@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class ForgotPasswordPageLeonid extends Page {
 
-   @FindBy(xpath = "//div[@class='loginInfo']//a[contains(text(), 'שכחת סיסמא?')]")
+   @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_SubmitButton")
     WebElement restoreButton;
 
     @FindBy(xpath = "//*[@id='MainContent_PasswordRecovery_UserNameContainerID_LinkButton1']")
@@ -52,9 +52,9 @@ public class ForgotPasswordPageLeonid extends Page {
         return this;
     }
 
-    public void clickOnRestoreButton() {
+    public ForgotPasswordPageLeonid clickOnRestoreButton() {
         clickElement(restoreButton);
-
+        return this;
     }
 
     public boolean isOnForgotPage() {
