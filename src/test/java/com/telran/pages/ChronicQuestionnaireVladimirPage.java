@@ -253,8 +253,16 @@ public class ChronicQuestionnaireVladimirPage extends Page {
     }
 
     public void fillElements() {
+//<<<<<<< Updated upstream
+        driver.switchTo().frame(0);
+        //driver.switchTo().defaultContent();
+        // driver.switchTo().frame(driver.findElement(By.id("ExportFrame")));
+        // driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+        //List<WebElement> divs = mainForm.findElements(By.tagName("div"));
+//=======
         driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
         //driver.switchTo().defaultContent();
+//>>>>>>> Stashed changes
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
         for (WebElement element : tables) {
             System.out.println(element);
@@ -273,9 +281,13 @@ public class ChronicQuestionnaireVladimirPage extends Page {
                 }
             }
         }
+//<<<<<<< Updated upstream
+        driver.switchTo().defaultContent();
+//=======
         clickElement(submitButton);
         driver.switchTo().activeElement().sendKeys(Keys.RETURN);
         //driver.switchTo().defaultContent();
+//>>>>>>> Stashed changes
     }
 
     public ChronicQuestionnaireVladimirPage waitUntilTestPageIsLoaded() {
