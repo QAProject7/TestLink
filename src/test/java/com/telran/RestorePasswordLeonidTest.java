@@ -47,9 +47,8 @@ public class RestorePasswordLeonidTest {
                 .waitUntilLoginPageIsLoaded()
                 .openForgotPassPage();
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
-//        driver.findElement(By.id("MainContent_PasswordRecovery_UserNameContainerID_UserName")).sendKeys("hore155@yopmail.com");
-        .fillRestoreField("hore155@yopmail.com");
-        forgotPasswordPage.clickOnRestoreButton();
+                .fillRestoreField("hore155@yopmail.com")
+                .clickOnRestoreButton();
         forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
                 .assertText();
 
