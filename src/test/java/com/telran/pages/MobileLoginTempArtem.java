@@ -25,7 +25,7 @@ public class MobileLoginTempArtem extends Page {
     WebElement confirmTermOfUseAlert;
 
     @FindBy(id = "name")
-    WebElement nameField;
+    WebElement usernameField;
 
     @FindBy(id = "password")
     WebElement passwordField;
@@ -55,8 +55,8 @@ public class MobileLoginTempArtem extends Page {
 
 
 
-    public MobileLoginTempArtem fillNameField(String name) {
-        setElementText(nameField, name);
+    public MobileLoginTempArtem fillUsernameField(String name) {
+        setElementText(usernameField, name);
         // Log.info("entering password from the list: " + password + " ");
         return this;
     }
@@ -81,9 +81,9 @@ public class MobileLoginTempArtem extends Page {
         return this;
     }
 
-    public void clickOnAgreeToTermsChecker() {
+    public MobileLoginTempArtem clickOnAgreeToTermsChecker() {
         clickElement(agreeToTermsChecker);
-
+        return this;
     }
 
     public void clickOnLoginButton() {
