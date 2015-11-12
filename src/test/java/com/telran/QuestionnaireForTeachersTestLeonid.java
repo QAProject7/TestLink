@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 /**
@@ -64,12 +65,14 @@ public class QuestionnaireForTeachersTestLeonid {
                 .waitUntilQuestionsIsLoaded()
                 .fillQuestionnaire()
                 .clickOnSendResultbutton();
+        boolean flag = mobileQuestionnareForTeacher8q.isHelpButtonExist();
+        assertTrue(flag);
+
     }
 
 
     @AfterTest
     public void tearDown() throws Exception {
-        Thread.sleep(10000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
