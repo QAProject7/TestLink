@@ -10,8 +10,8 @@ import java.io.IOException;
 /**
  * Created by BARUR on 09/11/2015.
  */
-public class DoctorDrugs extends Page {
-    public DoctorDrugs(WebDriver driver) {
+public class DoctorsDrugPlan extends Page {
+    public DoctorsDrugPlan(WebDriver driver) {
         super(driver);
     }
 
