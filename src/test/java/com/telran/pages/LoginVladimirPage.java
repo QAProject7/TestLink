@@ -30,7 +30,7 @@ public class LoginVladimirPage extends Page {
     @FindBy(xpath = "//a[@class='forgot']")
     WebElement forgotPassLink;
 
-    @FindBy(id = "MainContent_RptNotification_NowBtn1_2")
+    @FindBy(id = "MainContent_RptNotification_NowBtn1_1")
     WebElement nextButton;
 
     @FindBy(id = "submit")
