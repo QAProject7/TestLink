@@ -75,6 +75,14 @@ public class LoginVadymPage extends Page {
         return this;
     }
 
+    public LoginVadymPage login (String username, String password) {
+        openLoginPage(driver);
+        waitUntilLoginPageIsLoaded();
+        fillUsernameField(username);
+        fillPasswordField(password);
+        clickOnLoginButton();
+        return  this;
+    }
 
     public LoginVadymPage waitUntilLoginPageIsLoaded() {
         try {
