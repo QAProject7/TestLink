@@ -272,6 +272,7 @@ public class ChronicQuestionnaireVladimirPage extends Page {
                 }
             }
         }
+        driver.switchTo().defaultContent();
     }
 
     public ChronicQuestionnaireVladimirPage waitUntilTestPageIsLoaded() {
