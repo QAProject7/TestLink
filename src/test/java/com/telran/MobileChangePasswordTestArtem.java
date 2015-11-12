@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 public class MobileChangePasswordTestArtem {
     public static String username = "hore582@yopmail.com";
     public static String password = "LinkCare!1";
+    public static String wrongPass = "LinkCare!2";
     public static String oldPass = "LinkCare!1";
     public static String newPass = "Fuckoff1";
 
@@ -88,26 +89,17 @@ public class MobileChangePasswordTestArtem {
     }
 
 
-/*
+
 
     @Test(groups = {"smoke", "negative"})
     public void LoginWithoutAnyInfo() {
         try {
             loginPage
-                    .fillUsernameField(username)
-                    .fillFirstNameField("")
-                    .fillPasswordField(password)
-                    .fillEmailField()
-                    .fillLastNameField(lastName)
-                    .fillConfPasswordField(password)
-                    .fillIdField()
-                    .fillStreetField(street)
-                    .fillHouseField(housenumber)
-                    .fillCityField(city)
-                    .clickOnSubmitButton();
+                    .clickOnAgreeToTermsChecker()
+                   .clickOnLoginButton();
 
             Assert.assertTrue(loginPage.isOnRegistrationPage(), "The Main Page is opened");
-            Assert.assertTrue(loginPage.alertMessageNotValidFirsrName(), "Alert message 'שם פרטי חובה' is not presented");
+            Assert.assertTrue(loginPage.alertMessageEnterAllFields(), "Alert message 'נא להזין את כל השדות' is not presented");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -122,26 +114,19 @@ public class MobileChangePasswordTestArtem {
         try {
             loginPage
                     .fillUsernameField(username)
-                    .fillFirstNameField("")
-                    .fillPasswordField(password)
-                    .fillEmailField()
-                    .fillLastNameField(lastName)
-                    .fillConfPasswordField(password)
-                    .fillIdField()
-                    .fillStreetField(street)
-                    .fillHouseField(housenumber)
-                    .fillCityField(city)
-                    .clickOnSubmitButton();
+                    .fillPasswordField(wrongPass)
+                    .clickOnAgreeToTermsChecker()
+                    .clickOnLoginButton();
 
-            Assert.assertTrue(loginPage.isOnRegistrationPage(), "The Main Page is opened");
-            Assert.assertTrue(loginPage.alertMessageNotValidFirsrName(), "Alert message 'שם פרטי חובה' is not presented");
+            //Assert.assertTrue(loginPage.isOnRegistrationPage(), "The Main Page is opened");
+            Assert.assertTrue(loginPage.alertMessageFailedLogin(), "Alert message 'ההתחברות נכשלה נא נסה שנית' is not presented");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
-
+/*
 
     @Test(groups = {"smoke", "negative"})
     public void LoginWithWrongUserName() {
