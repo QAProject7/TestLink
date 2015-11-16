@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Iakov Volf,Oleg
  */
-public class MainIrinaPage extends Page {
+public class DoctorsPage extends Page {
 
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
@@ -35,14 +35,13 @@ public class MainIrinaPage extends Page {
     private WebElement goToPatientButton;
 
 
-
-    public MainIrinaPage(WebDriver driver) {
+    public DoctorsPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Accounts.aspx";
         PageFactory.initElements(driver, this);
     }
 
-    public MainIrinaPage openMainPage(WebDriver driver) {
+    public DoctorsPage openMainPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
@@ -50,7 +49,7 @@ public class MainIrinaPage extends Page {
 //Fill the fileds
 
 
-    public MainIrinaPage waitUntilMainPageIsLoaded() {
+    public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(namesField);
         } catch (IOException e) {
