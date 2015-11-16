@@ -77,9 +77,7 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
                 e.printStackTrace();
             }
         }
-//<<<<<<< Updated upstream
         //driver.switchTo().defaultContent();
-//=======
         clickElement(submitButton);
         try {
             wait(3000);
@@ -88,7 +86,6 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
         }
         driver.switchTo().activeElement().sendKeys(Keys.RETURN);
         //driver.switchTo().defaultContent();
-//>>>>>>> Stashed changes
     }
 
     public ChronicQuestionnaire2VladimirPage waitUntilTestPageIsLoaded() {
