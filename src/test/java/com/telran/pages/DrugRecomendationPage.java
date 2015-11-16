@@ -19,20 +19,19 @@ public class DrugRecomendationPage extends Page {
     //fields
 
     //input [@id="ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton" ]
-    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
-    WebElement expandCollapseButton;
 
     @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']//*[contains(text(),('ערוך'))]")
     WebElement groupLastAddLink;
-
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan")
     WebElement groupLastTextInput;
-
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add")
     WebElement commitWebLink;
-
     @FindBy(xpath = "//*[@id = 'ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan']/../../../..")
     WebElement lastGroup;
+    /*  @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+      private WebElement expandCollapseButton;*/
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+    private WebElement expandCollapseButton;
 
 
     /*@FindBy(xpath = "//div [id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
@@ -103,8 +102,9 @@ public class DrugRecomendationPage extends Page {
 
     public DrugRecomendationPage waitUntilTestPageIsLoaded() {
         try {
+            Thread.sleep(10000);
             driver.switchTo().frame(0);
-            waitUntilElementIsLoaded(groupLastAddLink);
+            waitUntilElementIsLoaded(expandCollapseButton);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("test page IOException");

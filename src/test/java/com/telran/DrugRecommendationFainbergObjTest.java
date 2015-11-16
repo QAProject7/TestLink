@@ -46,8 +46,7 @@ public class DrugRecommendationFainbergObjTest {
             mainPage.waitUntilMainPageIsLoaded()
                     .clickOnGoToPatientButton();
 
-            patientPage
-                    .waitUntilTestPageIsLoaded();
+            patientPage.waitUntilTestPageIsLoaded();
 
 
             //loginPage.waitUntilTestPageIsLoaded();
@@ -58,7 +57,7 @@ public class DrugRecommendationFainbergObjTest {
 
     @Test(groups = {"smoke", "positive"})
     public void FillElements() {
-        patientPage.waitUntilTestPageIsLoaded();
+        //patientPage.waitUntilTestPageIsLoaded();
         try {
             //mainPage.fillElements();
             patientPage.pressExpandElement()
