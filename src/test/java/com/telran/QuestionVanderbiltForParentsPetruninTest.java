@@ -49,9 +49,11 @@ public class QuestionVanderbiltForParentsPetruninTest {
 
     @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
     public void testOpenPatientPage() {
-    doctorsPage.openPatientPage(teudat);
-
+    doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
+    drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
     }
+
+
 
 
 
