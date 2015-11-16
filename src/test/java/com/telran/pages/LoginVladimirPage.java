@@ -58,7 +58,7 @@ public class LoginVladimirPage extends Page {
         return this;
     }
 
-    //Fill the fileds
+    //Fill the fields
     public LoginVladimirPage fillUsernameField(String username) {
         setElementText(usernameField, username);
         return this;
