@@ -94,6 +94,11 @@ public class DoctorsPage extends Page {
         return exists(namesField);
     }
 
+    public boolean isPatientExists(String tz) {
+        String locator = "//td[contains(text(),'" + tz + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
+
+        return exists(driver.findElement(By.xpath(locator)));
+    }
     //check alert presence
 
     public boolean alertMessageNotValidUsername() {
