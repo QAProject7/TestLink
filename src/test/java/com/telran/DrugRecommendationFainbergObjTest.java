@@ -55,10 +55,10 @@ public class DrugRecommendationFainbergObjTest {
 
         try {
             //mainPage.fillElements();
-            mainPage.pressExpandElement()
-                    .pressAddLink()
-                    .fillTextField()
-                    .pressCommitAddLink();
+            mainPage.pressExpandElement();
+//                    .pressAddLink()
+//                    .fillTextField()
+//                    .pressCommitAddLink();
 
         } catch (Exception e) {
             e.printStackTrace();
