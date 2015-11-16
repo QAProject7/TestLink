@@ -233,6 +233,7 @@ public class DrugRecommendationPage extends Page {
         ///
         group1_linkAdd.click();
         return this;
+    }
 
 
     //check alert presence
