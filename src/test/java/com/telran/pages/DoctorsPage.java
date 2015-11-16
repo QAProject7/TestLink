@@ -80,6 +80,14 @@ public class DoctorsPage extends Page {
 
     }
 
+    public void openPatientPage(String teudat) {
+        String locator = "//td[contains(text(),'" + teudat + "')]/..//*[@class='LinkBtnPatients GreenBtn']";
+        WebElement greenbutton = driver.findElement(By.xpath(locator));
+        greenbutton.click();
+
+        //td[contains(text(),'1970524')]/..//*[@class='LinkBtnPatients GreenBtn']
+    }
+
     public boolean isOnMainPage() {
         return exists(namesField);
     }
