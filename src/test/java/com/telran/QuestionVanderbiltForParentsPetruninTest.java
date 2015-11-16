@@ -4,6 +4,7 @@ import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetrunin;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginMaksimPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -54,9 +55,8 @@ public class QuestionVanderbiltForParentsPetruninTest {
     drugRecommendationPage.clickTimeLineQst();
         try {
             Thread.sleep(10000);
-        } catch (InterruptedException e) {
-
-        }
+        } catch (InterruptedException e) {}
+        driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
     }
 
 
