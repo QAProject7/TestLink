@@ -238,11 +238,19 @@ public class DrugRecommendationPage extends Page {
         clickOnAddDrugButton();
         String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
         WebElement checkBox = driver.findElement(By.xpath(locator));
-        ///
+        checkBox.click();
         group1_linkAdd.click();
         return this;
     }
 
+    public boolean isDrugRemoved(String drug) {
+        List<WebElement> drugsList = findDrugs();
+        for (WebElement drugFromList : drugsList) {
+            if (drugFromList.getText().equals(drug))
+                return false;
+        }
+        return true;
+    }
 
     //check alert presence
 
