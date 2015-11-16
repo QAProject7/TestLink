@@ -51,6 +51,12 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public void testOpenPatientPage() {
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
+    drugRecommendationPage.clickTimeLineQst();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+
+        }
     }
 
 

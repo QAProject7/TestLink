@@ -152,6 +152,9 @@ public class DrugRecommendationPage extends Page {
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
 
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]//img[@src=\"../images/showIcon1.png\"]")
+    private WebElement timeLineQst;
+
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
 
@@ -224,6 +227,11 @@ public class DrugRecommendationPage extends Page {
     public String selectFirstDrug() {
         List<WebElement> drugsList = findDrugs();
         return drugsList.get(0).getText();
+    }
+
+       public void clickTimeLineQst() {
+        clickElement(timeLineQst);
+
     }
 
     public DrugRecommendationPage removeDrug(String drug) {
