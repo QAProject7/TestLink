@@ -1,11 +1,13 @@
 package com.telran.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by Iakov Volf,Irina
@@ -14,6 +16,10 @@ public class DrugRecommendationPage extends Page {
 
     @FindBy(xpath = "//a[contains(text(),'ערוך')]")
     public WebElement valueButton;
+
+    @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02__0']")
+    public WebElement group1;
+
     //group 1
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
     private WebElement group1_checkAll;
@@ -39,6 +45,10 @@ public class DrugRecommendationPage extends Page {
     private WebElement group1_check9;
     @FindBy(xpath = "//textarea[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_TxtPlan']")
     private WebElement group1_textarea;
+
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl02_TxtPlan_ClientState")
+    private WebElement group1_input;
+
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_Add']")
     private WebElement group1_linkAdd;
     //group 2
@@ -142,6 +152,9 @@ public class DrugRecommendationPage extends Page {
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
 
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]//img[@src=\"../images/showIcon1.png\"]")
+    private WebElement timeLineQst;
+
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
 
@@ -162,6 +175,7 @@ public class DrugRecommendationPage extends Page {
 
     public DrugRecommendationPage waitUntilDrugPageIsLoaded() {
         try {
+            Thread.sleep(10000);
             driver.switchTo().frame(0);
             waitUntilElementIsLoaded(expandCollapseButton);
         } catch (IOException e) {
@@ -177,8 +191,56 @@ public class DrugRecommendationPage extends Page {
         return this;
     }
 
+    public DrugRecommendationPage clickOnAddDrugButton() {
+        clickElement(valueButton);
+        return this;
+    }
+
+    public DrugRecommendationPage addDrug(String drug) {
+        clickOnAddDrugButton();
+        System.out.println(drug);
+        setElementText(group1_textarea, drug);
+        group1_linkAdd.click();
+        return this;
+    }
+
+    private List<WebElement> findDrugs() {
+        String locator = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02__0']//tr[@class='planAnswers']";
+        return group1.findElements(By.xpath(locator));
+        //System.out.println("size=" + drugsList.size());
+    }
+
+    public boolean isDrugAdded(String drug) {
+        List<WebElement> drugsList = findDrugs();
+        for (WebElement drugFromList : drugsList) {
+            if (drugFromList.getText().equals(drug))
+                return true;
+        }
+        return false;
+    }
+
+
     public boolean isOnDrugPage() {
         return exists(expandCollapseButton);
+    }
+
+    public String selectFirstDrug() {
+        List<WebElement> drugsList = findDrugs();
+        return drugsList.get(0).getText();
+    }
+
+       public void clickTimeLineQst() {
+        clickElement(timeLineQst);
+
+    }
+
+    public DrugRecommendationPage removeDrug(String drug) {
+        clickOnAddDrugButton();
+        String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
+        WebElement checkBox = driver.findElement(By.xpath(locator));
+        ///
+        group1_linkAdd.click();
+        return this;
     }
 
 
