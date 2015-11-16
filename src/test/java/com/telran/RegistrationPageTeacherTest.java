@@ -15,16 +15,6 @@ import org.testng.annotations.Test;
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String username = "User1";
-    public static String firstName = "Moshe";
-    public static String lastName = "Levi";
-    public static String email = "mosheLevi@yopmail.com";
-    public static String password = "!wTnrqiai$";
-    public static String teudat = "049919889";
-    public static String telephone = "0521234567";
-    public static String street = "Herzl";
-    public static String city = "Ashdod";
-    public static String housenumber = "33";
 
     public WebDriver driver;
 
@@ -43,7 +33,7 @@ public class RegistrationPageTeacherTest {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-            // loginPage.openLoginPage(driver)
+         //loginPage.openLoginPage(driver)
             //       .waitUntilLoginPageIsLoaded()
             //        .clickOnRegLink();
 //            registrationPage.openLoginPage(driver)
@@ -52,6 +42,12 @@ public class RegistrationPageTeacherTest {
             e.printStackTrace();
         }
     }
+
+    @AfterTest(alwaysRun = true)
+    public void tearDown() {
+        this.driver.quit();
+    }
+}
 
   //  @Test(groups = {"smoke", "positive"})
    /* public void LoginSuccess() {
@@ -77,7 +73,7 @@ public class RegistrationPageTeacherTest {
             e.printStackTrace();
         }*/
 
-    }
+
 
    /* @Test(groups = {"smoke", "negative"})
     public void LoginWithoutFirstName() {
@@ -105,10 +101,6 @@ public class RegistrationPageTeacherTest {
 
 
 
- /*   @AfterTest(alwaysRun = true)
-    public void tearDown() {
-        // this.driver.quit();
-    }*/
 
     /*@Test(groups = {"smoke", "negative"})
     public void LoginWithoutAtInUserNameField() {
@@ -176,6 +168,3 @@ public class RegistrationPageTeacherTest {
         }
         Reporter.log("Not logged in successful");
     }*/
-
-
-
