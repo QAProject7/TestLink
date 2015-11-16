@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by Iakov Volf,Oleg
  */
@@ -14,7 +16,7 @@ public class LoginVadymPage extends Page {
     @FindBy(id = "MainContent_LoginUser_UserName")
     WebElement  userNameField;
 
-    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_UserNameLabell")
+    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_UserName")
     WebElement userNameFieldByForgotPage;
 
     @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_lbl")
@@ -33,6 +35,10 @@ public class LoginVadymPage extends Page {
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;
 
+
+    @FindBy(xpath = "//*[@id='MainContent_PasswordRecovery_UserNameContainerID_UserNameRequired'][contains(text(),'*')]")
+    WebElement userNameRequired;
+
     //*[@class='forgot']
     @FindBy(xpath = "//*[@class='forgot']")
     WebElement forgoPassLink;
@@ -40,6 +46,10 @@ public class LoginVadymPage extends Page {
     //alert
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[1][contains(text(),'שם משתמש חובה')]")
     WebElement wrongUserName;
+
+    //text for success recovery password
+    @FindBy(xpath = "//*[@id='MainContent_PasswordRecovery']//*[contains(text(),'הסיסמא שלך נשלחה אליך.')]")
+    WebElement successRecoveryPassword;
 
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[2][contains(text(),'סיסמא חובה')]")
     WebElement wrongPassword;
@@ -120,7 +130,17 @@ public class LoginVadymPage extends Page {
     public boolean isOnForgotPasswordPage() {
         return exists(forgotPasswordPage);
     }
+    public LoginVadymPage assertText(String text){
 
+        assertEquals(text, successRecoveryPassword.getText());
+        return this;
+    }
+
+    public LoginVadymPage assertRequiredText(String text){
+
+        assertEquals(text, userNameRequired.getText());
+        return this;
+    }
     //check alert presence
 
     public boolean alertMessageNotValidUserName() {

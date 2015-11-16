@@ -14,7 +14,7 @@ public class RegVadymTest {
     public static String username = "User1";
     public static String firstName = "Moshe";
     public static String lastName = "Levi";
-    public static String email = "mosheLevi@yopmail.com";
+    public static String email = "hore665@yopmail.com";
     public static String password = "!wTnrqiai$";
     public static String teudat = "049919889";
     public static String telephone = "0521234567";
@@ -50,13 +50,28 @@ public class RegVadymTest {
             loginVadymPage.isOnLoginPage();
             loginVadymPage.openForgotPage();
             loginVadymPage.isOnForgotPasswordPage();
-            loginVadymPage.fillUsernameFieldByForgotPage(username);
-            loginVadymPage.clickOnRecoveryPasswordButton();
+            loginVadymPage.fillUsernameFieldByForgotPage(email)
+                    .clickOnRecoveryPasswordButton();
+            loginVadymPage.assertText("הסיסמא שלך נשלחה אליך.\nחזור");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         Reporter.log("Password recreated successful");
+    }
+    @Test(groups = {"smoke", "negative"})
+    public void RecoveryPasswordWithoutUsername() {
+        try {
+
+            loginVadymPage.isOnLoginPage();
+            loginVadymPage.openForgotPage();
+            loginVadymPage.isOnForgotPasswordPage();
+            loginVadymPage.clickOnRecoveryPasswordButton();
+            loginVadymPage.assertRequiredText("*");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

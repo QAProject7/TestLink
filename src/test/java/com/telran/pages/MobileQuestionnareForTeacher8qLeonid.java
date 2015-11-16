@@ -32,7 +32,7 @@ public class MobileQuestionnareForTeacher8qLeonid extends Page {
     @FindBy(id = "RightBtnHeader")
     WebElement cancelButton;
 
-    @FindBy(xpath = "//div[@class='BtnDisplayBehaver Help'")
+    @FindBy(xpath = "//div[@class='BtnDisplayBehaver Help']")
     WebElement helpButton;
 
     public MobileQuestionnareForTeacher8qLeonid(WebDriver driver) {
