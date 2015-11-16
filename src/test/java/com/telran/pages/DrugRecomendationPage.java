@@ -23,6 +23,12 @@ public class DrugRecomendationPage extends Page {
     @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']//*[contains(text(),('ערוך'))]")
     WebElement groupLastAddLink;
 
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan")
+    WebElement groupLastTextInput;
+
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add")
+    WebElement commitWebLink;
+
 
 
     /*@FindBy(xpath = "//div [id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
@@ -62,8 +68,22 @@ public class DrugRecomendationPage extends Page {
     //public ProfilePage profilePage;
     public DrugRecomendationPage pressExpandElement() {
         expandCollapseButton.click();
-
         //System.out.println("test page loaded successfully");
+        return this;
+    }
+
+    public DrugRecomendationPage pressAddLink() {
+        groupLastAddLink.click();
+        return this;
+    }
+
+    public DrugRecomendationPage fillTextField(String text) {
+        setElementText(groupLastTextInput, text);
+        return this;
+    }
+
+    public DrugRecomendationPage pressCommitAddLink() {
+        commitWebLink.click();
         return this;
     }
 

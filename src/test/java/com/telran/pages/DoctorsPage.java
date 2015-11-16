@@ -35,6 +35,9 @@ public class DoctorsPage extends Page {
     @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
     private WebElement goToPatientButton;
 
+    @FindBy(id = "MainContent_ItemLinkButton3")
+    private WebElement addPatientButton;
+//*[@id='MainContent_ItemLinkButton3']
 
     public DoctorsPage(WebDriver driver) {
         super(driver);
@@ -80,7 +83,12 @@ public class DoctorsPage extends Page {
 
     }
 
-
+    public DoctorsPage clickOnAddPatient() throws InterruptedException {
+        clickElement(addPatientButton);
+        Thread.sleep(3000);
+        driver.switchTo().frame(0);
+        return this;
+    }
 
     public boolean isOnMainPage() {
         return exists(namesField);
