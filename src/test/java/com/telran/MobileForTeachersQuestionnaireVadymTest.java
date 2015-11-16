@@ -1,6 +1,6 @@
 package com.telran;
 
-import com.telran.pages.MobileForLoginPageVadym;
+import com.telran.MobileWebPages.MobileForLoginPageVadym;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,13 +8,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class MobileForTeachersQuestionnaireVadym {
+public class MobileForTeachersQuestionnaireVadymTest {
     String username = " ";
     String password = "LinkCare!!11";
     public WebDriver driver;
     private StringBuffer verificationErrors = new StringBuffer();
     MobileForLoginPageVadym forLoginPageVadym;
-    MobileForTeachersQuestionnaireVadym teachersQuestionnaireVadym;
+    MobileForTeachersQuestionnaireVadymTest teachersQuestionnaireVadym;
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();

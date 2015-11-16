@@ -1,9 +1,9 @@
 package com.telran;
 
 
-import com.telran.pages.*;
+import com.telran.MobileWebPages.MobileChangePasswordArtem;
+import com.telran.MobileWebPages.MobileLoginTempArtem;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
