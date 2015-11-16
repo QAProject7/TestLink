@@ -51,7 +51,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
         try {
             Thread.sleep(3000); //ждем 10 сек
         } catch (InterruptedException e) {}
-        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page");
+        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
         try {
             Thread.sleep(10000); //ждем 10 сек
         } catch (InterruptedException e) {}
