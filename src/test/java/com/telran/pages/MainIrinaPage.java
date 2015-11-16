@@ -30,6 +30,12 @@ public class MainIrinaPage extends Page {
     @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
     private WebElement wrongPasswordAlert;
 
+
+    @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
+    private WebElement goToPatientButton;
+
+
+
     public MainIrinaPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Accounts.aspx";
@@ -55,8 +61,8 @@ public class MainIrinaPage extends Page {
         return this;
     }
 
-    public void clickOnLoginButton() {
-        clickElement(loginButton);
+    public void clickOnGoToPatientButton() {
+        clickElement(goToPatientButton);
 
     }
 
