@@ -56,7 +56,7 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
 
     public void fillElements() {
         try {
-            oos = new ObjectOutputStream((new FileOutputStream("d:\\buttons1.tst")));
+            oos = new ObjectOutputStream((new FileOutputStream("c:\\temp\\buttons1.tst")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -87,7 +87,6 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         clickElement(submitButton);
         driver.switchTo().alert().accept();
         driver.switchTo().defaultContent();
-        //clickElement(closeTableButton);
         clickElement(logOutButton);
     }
 
