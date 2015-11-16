@@ -1,6 +1,7 @@
 package com.telran;
 
 import com.telran.MobileWebPages.MobileForLoginPageVadym;
+import com.telran.MobileWebPages.MobileForTeachersQuestionnairePageVadym;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -9,23 +10,22 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class MobileForTeachersQuestionnaireVadymTest {
-    String username = " ";
+    String username = "more8262@yopmail.com";
     String password = "LinkCare!!11";
     public WebDriver driver;
-    private StringBuffer verificationErrors = new StringBuffer();
+   // private StringBuffer verificationErrors = new StringBuffer();
     MobileForLoginPageVadym forLoginPageVadym;
-    MobileForTeachersQuestionnaireVadymTest teachersQuestionnaireVadym;
+    MobileForTeachersQuestionnairePageVadym questionnairePageVadym;
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();
         forLoginPageVadym = PageFactory.initElements(driver, MobileForLoginPageVadym.class);
+        questionnairePageVadym = PageFactory.initElements(driver, MobileForTeachersQuestionnairePageVadym.class);
     }
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-            // loginPage.openLoginPage(driver)
-            //       .waitUntilLoginPageIsLoaded()
-            //        .clickOnRegLink();
+
             forLoginPageVadym.openLoginPage(driver);
             forLoginPageVadym.waitUntilLoginPageIsLoaded();
             forLoginPageVadym.isOnLoginPage();
@@ -33,6 +33,10 @@ public class MobileForTeachersQuestionnaireVadymTest {
                     .fillPasswordField(password)
                     .clickOnAgreeToTerms()
                     .clickOnLogin();
+            questionnairePageVadym.waitUntilMenuPageIsLoaded()
+                    .clickOnStartTestButton()
+                    .waitUntilStartTestButtonIsLoaded()
+                    .clickOnContinueButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -42,7 +46,10 @@ public class MobileForTeachersQuestionnaireVadymTest {
     public void fillQuestionnaire() {
 
         try {
-
+            questionnairePageVadym
+                    .waitUntilQuestionsIsLoaded()
+                    .fillQuestionnaire()
+                    .clickOnSendbutton();
 
 
 
