@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Iakov Volf,Oleg
  */
-public class MainIrinaPage extends Page {
+public class DoctorsPage extends Page {
 
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
@@ -30,13 +30,18 @@ public class MainIrinaPage extends Page {
     @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
     private WebElement wrongPasswordAlert;
 
-    public MainIrinaPage(WebDriver driver) {
+
+    @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
+    private WebElement goToPatientButton;
+
+
+    public DoctorsPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Accounts.aspx";
         PageFactory.initElements(driver, this);
     }
 
-    public MainIrinaPage openMainPage(WebDriver driver) {
+    public DoctorsPage openMainPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
@@ -44,7 +49,7 @@ public class MainIrinaPage extends Page {
 //Fill the fileds
 
 
-    public MainIrinaPage waitUntilMainPageIsLoaded() {
+    public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(namesField);
         } catch (IOException e) {
@@ -55,8 +60,8 @@ public class MainIrinaPage extends Page {
         return this;
     }
 
-    public void clickOnLoginButton() {
-        clickElement(loginButton);
+    public void clickOnGoToPatientButton() {
+        clickElement(goToPatientButton);
 
     }
 
