@@ -66,7 +66,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
+        <version>3.3</version>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -74,7 +74,7 @@
       </plugin>
     </plugins>
   </build>
-  <!-- profiles -->
+  <!-- profiles - way to send options to our project from outside-->
   <profiles>
     <!-- browsers -->
     <profile>

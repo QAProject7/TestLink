@@ -5,11 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
+
 /**
- * Created by Iakov Volf,Oleg
+ * Created by Iakov Volf,Irina
  */
 public class DrugRecommendationPage extends Page {
 
+    @FindBy(xpath = "//a[contains(text(),'ערוך')]")
+    public WebElement valueButton;
     //group 1
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
     private WebElement group1_checkAll;
@@ -37,19 +41,16 @@ public class DrugRecommendationPage extends Page {
     private WebElement group1_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_Add']")
     private WebElement group1_linkAdd;
-
     //group 2
     @FindBy(xpath = "//textarea[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl03_TxtPlan']")
     private WebElement group2_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl03_Add']")
     private WebElement group2_linkAdd;
-
     //group 3
-    @FindBy(xpath = "//textarea[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_TxtPlan']")
+    @FindBy(xpath = "//td[contains(text(),'מידע נוסף')]/../td[3]//textarea")
     private WebElement group3_textarea;
-    @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_Add']")
+    @FindBy(xpath = "//td[contains(text(),'מידע נוסף')]/../td[3]//a[contains(text(),'הוסף')]")
     private WebElement group3_linkAdd;
-
     //group 4
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_RLB_Answers']//input[@class='rlbCheckAllItemsCheckBox']")
     private WebElement group4_checkAll;
@@ -65,7 +66,6 @@ public class DrugRecommendationPage extends Page {
     private WebElement group4_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl04_Add']")
     private WebElement group4_linkAdd;
-
     //group 5
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl05_RLB_Answers']//input[@class='rlbCheckAllItemsCheckBox']")
     private WebElement group5_checkAll;
@@ -91,8 +91,6 @@ public class DrugRecommendationPage extends Page {
     private WebElement group5_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl05_Add']")
     private WebElement group5_linkAdd;
-
-
     //group 6
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl06_RLB_Answers']//input[@class='rlbCheckAllItemsCheckBox']")
     private WebElement group6_checkAll;
@@ -124,7 +122,6 @@ public class DrugRecommendationPage extends Page {
     private WebElement group6_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl06_Add']")
     private WebElement group6_linkAdd;
-
     //group 7
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl07_RLB_Answers']//input[@class='rlbCheckAllItemsCheckBox']")
     private WebElement group7_checkAll;
@@ -142,7 +139,8 @@ public class DrugRecommendationPage extends Page {
     private WebElement group7_textarea;
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl07_Add']")
     private WebElement group7_linkAdd;
-
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+    private WebElement expandCollapseButton;
 
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
@@ -150,27 +148,22 @@ public class DrugRecommendationPage extends Page {
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;*/
 
-    //alerts
-    @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'שם משתמש חובה')]")
-    private WebElement wrongUsernameAlert;
-
-    @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
-    private WebElement wrongPasswordAlert;
-
     public DrugRecommendationPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
-    public DrugRecommendationPage openLoginPage(WebDriver driver) {
+    /*public DrugRecommendationPage openDrugRecommendationPage(WebDriver driver) {
         driver.get(PAGE_URL);
-        return this;
-    }
 
-    /*public DrugRecommendationPage waitUntilDrugPageIsLoaded() {
+        return this;
+    }*/
+
+    public DrugRecommendationPage waitUntilDrugPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(loginButton);
+            driver.switchTo().frame(0);
+            waitUntilElementIsLoaded(expandCollapseButton);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -179,26 +172,26 @@ public class DrugRecommendationPage extends Page {
         return this;
     }
 
-    public void clickOnLoginButton() {
-        clickElement(loginButton);
-
+    public DrugRecommendationPage clickOnExpandCollapseButton() {
+        clickElement(expandCollapseButton);
+        return this;
     }
 
-    public boolean isOnLoginPage() {
+    public boolean isOnDrugPage() {
+        return exists(expandCollapseButton);
+    }
 
-        return exists(loginButton);
-    }*/
 
     //check alert presence
 
-    public boolean alertMessageNotValidUsername() {
+    /*public boolean alertMessageNotValidUsername() {
 
         return exists(wrongUsernameAlert);
-    }
+    }*/
     //div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[1]
 
-    public boolean alertMessageNotValidPassword() {
+    /*public boolean alertMessageNotValidPassword() {
         return exists(wrongPasswordAlert);
-    }
+    }*/
 
 }
