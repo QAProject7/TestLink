@@ -226,7 +226,7 @@ public class CreateNewPatientPage extends Page {
     // methods, that fills all fields except TZ and Emails
 
     public void createPatientOneParent(String TZ, String Email) throws IOException, InterruptedException {
-        driver.switchTo().frame(frameNewPatient);
+        //  driver.switchTo().frame(frameNewPatient);
         waitUntilPageIsLoaded();
         fillFirstNameField("PatientChildFirst");
         fillLastNamefield("PatientChildLast");
@@ -235,7 +235,7 @@ public class CreateNewPatientPage extends Page {
         fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
         sendFirstEmail();
-        fillMeetingDateAndTime("02/12/2015 20:00");
+        fillMeetingDateAndTime("26/11/2015 10:00");
         clickSaveAccount();
 
 
