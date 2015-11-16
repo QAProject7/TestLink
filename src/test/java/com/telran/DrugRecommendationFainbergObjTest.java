@@ -1,5 +1,6 @@
 package com.telran;
 
+import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecomendationPage;
 import com.telran.pages.LoginIrinaPage;
 import org.openqa.selenium.WebDriver;
@@ -16,11 +17,12 @@ public class DrugRecommendationFainbergObjTest {
 
     public static String username = "4337Doctor";
     public static String password = "LinkCare!!11";
-    public static String testText1 = "Test Text 1";
+    public static String testText1 = "Test Text 1234";
 
     public WebDriver driver;
 
-    public DrugRecomendationPage mainPage;
+    public DrugRecomendationPage patientPage;
+    public DoctorsPage mainPage;
     public LoginIrinaPage loginPage;
 
     @BeforeClass(alwaysRun = true)
@@ -28,7 +30,8 @@ public class DrugRecommendationFainbergObjTest {
         driver = new FirefoxDriver();
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage = PageFactory.initElements(driver, LoginIrinaPage.class);
-        mainPage = PageFactory.initElements(driver, DrugRecomendationPage.class);
+        mainPage = PageFactory.initElements(driver, DoctorsPage.class);
+        patientPage = PageFactory.initElements(driver, DrugRecomendationPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -40,7 +43,10 @@ public class DrugRecommendationFainbergObjTest {
                     .fillUsernameField(username)
                     .fillPasswordField(password)
                     .clickOnLoginButton();
-            mainPage
+            mainPage.waitUntilMainPageIsLoaded()
+                    .clickOnGoToPatientButton();
+
+            patientPage
                     .waitUntilTestPageIsLoaded();
 
 
@@ -52,11 +58,10 @@ public class DrugRecommendationFainbergObjTest {
 
     @Test(groups = {"smoke", "positive"})
     public void FillElements() {
-        mainPage.waitUntilTestPageIsLoaded();
-
+        patientPage.waitUntilTestPageIsLoaded();
         try {
             //mainPage.fillElements();
-            mainPage.pressExpandElement()
+            patientPage.pressExpandElement()
                     .pressAddLink()
                     .fillTextField(testText1)
                     .pressCommitAddLink();
@@ -64,6 +69,12 @@ public class DrugRecommendationFainbergObjTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        if (patientPage.isTextInsertedOk(testText1))
+            System.out.println("TextInsertedOk");
+
+
     }
+
 
 }
