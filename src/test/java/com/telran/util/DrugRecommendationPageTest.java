@@ -1,9 +1,9 @@
 package com.telran.util;
 
 
+import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginIrinaPage;
-import com.telran.pages.DoctorsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
