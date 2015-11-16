@@ -1,7 +1,6 @@
 package com.telran.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,8 +25,17 @@ public class ChronicQuestionnaire3VladimirPage extends Page {
 
     @FindBy(id = "submit")
     WebElement submitButton;
-    /*@FindBy(id = "ExportFrame")
-    WebElement iFrame;*/
+
+    @FindBy(id = "Top1_HeadLoginStatus")
+    WebElement logOutButton;
+
+    @FindBy(xpath = "//a[@class='rwCloseButton']")
+    WebElement closeTableButton;
+
+    @FindBy(xpath = "//div/*[contains(text(),'שאלון וונדרבילט להורה - דוח ממתין למילוי')]/../..//a[@class='LinkBtnPatients BlueBtn']")
+    WebElement questionnaireVanderbiltForParents;
+
+    // שאלון וונדרבילט להורה - דוח ממתין למילוי
 
     public ChronicQuestionnaire3VladimirPage(WebDriver driver) {
         super(driver);
@@ -40,7 +48,7 @@ public class ChronicQuestionnaire3VladimirPage extends Page {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
+        //driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
         //driver.switchTo().defaultContent();
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
         for (WebElement element : tables) {
@@ -67,16 +75,14 @@ public class ChronicQuestionnaire3VladimirPage extends Page {
             }
         }
         clickElement(submitButton);
-        try {
-            wait(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        driver.switchTo().activeElement().sendKeys(Keys.RETURN);
+        driver.switchTo().alert().accept();
+        //clickElement(logOutButton);
+
     }
 
     public ChronicQuestionnaire3VladimirPage waitUntilTestPageIsLoaded() {
         try {
+            driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
             waitUntilElementIsLoaded(submitButton);
         } catch (IOException e) {
             e.printStackTrace();
@@ -87,5 +93,13 @@ public class ChronicQuestionnaire3VladimirPage extends Page {
         }
         System.out.println("test page loaded successfully");
         return this;
+    }
+
+    public boolean isAvailable() {
+        return verifyElementIsPresent(questionnaireVanderbiltForParents);
+    }
+
+    public void pressTestButton() {
+        clickElement(questionnaireVanderbiltForParents);
     }
 }
