@@ -1,5 +1,6 @@
-package com.telran.pages;
+package com.telran.MobileWebPages;
 
+import com.telran.pages.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
