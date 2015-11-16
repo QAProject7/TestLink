@@ -6,6 +6,7 @@ import com.telran.pages.LoginIrinaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -75,5 +76,9 @@ public class DrugRecommendationFainbergObjTest {
 
     }
 
+    @AfterTest(alwaysRun = true)
+    public void tearDown() {
+        this.driver.quit();
+    }
 
 }
