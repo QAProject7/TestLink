@@ -37,7 +37,7 @@ public class ChangePassRegistrationPatientOlga extends Page {
     @FindBy(id = "MainContent_lastNameTxt")
     WebElement lastNameTxt;
 
-    @FindBy(id = "ctl00_MainContent_birthdayTxt_dateInput")
+    @FindBy(id = "ctl00_MainContent_birthdayTxt")
     WebElement dateBirthday;
 
 
@@ -59,20 +59,6 @@ public class ChangePassRegistrationPatientOlga extends Page {
     @FindBy(id = "MainContent_CreateUserButton")
     WebElement createUserButton;
 
-    //public ProfilePage profilePage;
-//
-//    public ChangePassRegistrationPatientOlga(WebDriver driver) {
-//        super(driver);
-//        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage";
-//        PageFactory.initElements(driver, this);
-//    }
-//
-//
-//    public ChangePassRegistrationPatientOlga openRegistrationPage(WebDriver driver) {
-//        driver.get(PAGE_URL);
-//        return this;
-//    }
-
 //Fill the fileds
 
 //    Page Change password
@@ -89,20 +75,14 @@ public class ChangePassRegistrationPatientOlga extends Page {
         return this;
     }
 
-    public ChangePassRegistrationPatientOlga waitUntilGoToNextPageLoaded() {
-        try {
-            waitUntilElementIsLoaded(changePasswordPushButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return this;
+    public void clickOnChangePassButton() {
+        clickElement(changePasswordPushButton);
+
     }
 
 //    Page after Change password
 
-    public ChangePassRegistrationPatientOlga waitUntilFillProfilePageIsLoaded() {
+    public ChangePassRegistrationPatientOlga waitUntilGoToNextPageLoaded() {
         try {
             waitUntilElementIsLoaded(gotoFillProfile);
         } catch (IOException e) {
@@ -112,7 +92,23 @@ public class ChangePassRegistrationPatientOlga extends Page {
         }
         return this;
     }
-//    Page Fill Profile User
+
+    public void clickOnGotoFillProfile() {
+        clickElement(gotoFillProfile);
+
+    }
+
+    //    Page Fill Profile User
+    public ChangePassRegistrationPatientOlga waitUntilFillProfilePageIsLoaded() {
+        try {
+            waitUntilElementIsLoaded(firstNameTxt);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
     public ChangePassRegistrationPatientOlga fillFirstNameTxt(String firstName) {
         setElementText(firstNameTxt, firstName);
         return this;
