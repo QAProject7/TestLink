@@ -155,6 +155,11 @@ public class DrugRecommendationPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
     private WebElement timeLineQst;
 
+
+    @FindBy(xpath = "//*[@id='form1']/div[3]/input[1]")
+    private WebElement exportPdfframeButton;
+
+
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
 
@@ -241,6 +246,12 @@ public class DrugRecommendationPage extends Page {
         checkBox.click();
         group1_linkAdd.click();
         return this;
+    }
+
+    public boolean isOnframe() {
+        driver.switchTo().frame(0);
+
+        return exists(exportPdfframeButton);
     }
 
     public boolean isDrugRemoved(String drug) {
