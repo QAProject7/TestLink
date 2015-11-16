@@ -154,7 +154,7 @@ public class DrugRecommendationPage extends Page {
     private WebElement expandCollapseButton;
     @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
     private WebElement timeLineQst;
-    @FindBy(xpath = "//*[@id='form1']/div[3]/input[1]")
+    @FindBy(xpath = "//*[@id='form1']//*[@type='button'][@value='export pdf']")
     private WebElement exportPdfframeButton;
 
 
