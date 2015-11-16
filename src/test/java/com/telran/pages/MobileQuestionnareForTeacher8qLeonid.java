@@ -14,17 +14,26 @@ import java.util.List;
  */
 public class MobileQuestionnareForTeacher8qLeonid extends Page {
 
+    //main menu elements
     @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט למורה - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
     WebElement submitButton;
 
+    //button on page after main menu
     @FindBy(xpath = ".//*[@id='listWaitingReports']/li")
     WebElement startButon;
 
+    //elements on questionnaire page
     @FindBy(id = "form1")
     WebElement questionsForm;
 
     @FindBy(id = "LeftBtnHeader")
     WebElement sendResultButton;
+
+    @FindBy(id = "RightBtnHeader")
+    WebElement cancelButton;
+
+    @FindBy(xpath = "//div[@class='BtnDisplayBehaver Help'")
+    WebElement helpButton;
 
     public MobileQuestionnareForTeacher8qLeonid(WebDriver driver) {
         super(driver);
@@ -103,6 +112,15 @@ public class MobileQuestionnareForTeacher8qLeonid extends Page {
     public MobileQuestionnareForTeacher8qLeonid clickOnSendResultbutton() {
         clickElement(sendResultButton);
         return this;
+    }
+//assert
+
+    public boolean isCancelButtonExist(){
+        return exists(cancelButton);
+    }
+
+    public boolean isHelpButtonExist(){
+        return exists(helpButton);
     }
 
     public boolean isOnLoginPage() {
