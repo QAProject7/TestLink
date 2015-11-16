@@ -1,5 +1,6 @@
 package com.telran.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,11 +48,11 @@ public class DoctorsPage extends Page {
     }
 
 //Fill the fileds
- /*   public void openPatientPage(String teudat){
+    public void openPatientPage(String teudat){
         String locator="//td[contains(text(),'"+ teudat + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
         WebElement greenButton= driver.findElement(By.xpath(locator));
         greenButton.click();
-    }*/
+    }
 
     public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
