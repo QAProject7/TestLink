@@ -16,6 +16,7 @@ public class DrugRecommendationFainbergObjTest {
 
     public static String username = "4337Doctor";
     public static String password = "LinkCare!!11";
+    public static String testText1 = "Test Text 1";
 
     public WebDriver driver;
 
@@ -55,10 +56,10 @@ public class DrugRecommendationFainbergObjTest {
 
         try {
             //mainPage.fillElements();
-            mainPage.pressExpandElement();
-//                    .pressAddLink()
-//                    .fillTextField()
-//                    .pressCommitAddLink();
+            mainPage.pressExpandElement()
+                    .pressAddLink()
+                    .fillTextField(testText1)
+                    .pressCommitAddLink();
 
         } catch (Exception e) {
             e.printStackTrace();
