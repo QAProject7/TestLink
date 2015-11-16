@@ -48,7 +48,11 @@ public class DoctorsPage extends Page {
     }
 
 //Fill the fileds
-
+    public void openPatientPage(String teudat){
+        String locator="//td[contains(text(),'"+ teudat + "')]/..//*[@class='LinkBtnPatients GreenBtn']";
+        WebElement greenButton= driver.findElement(By.xpath(locator));
+        greenButton.click();
+    }
 
     public DoctorsPage waitUntilMainPageIsLoaded() {
         try {

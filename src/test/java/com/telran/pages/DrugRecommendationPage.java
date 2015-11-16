@@ -181,6 +181,7 @@ public class DrugRecommendationPage extends Page {
         return exists(expandCollapseButton);
     }
 
+
     //check alert presence
 
     /*public boolean alertMessageNotValidUsername() {
