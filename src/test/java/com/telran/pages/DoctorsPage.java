@@ -1,5 +1,6 @@
 package com.telran.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -73,6 +74,14 @@ public class DoctorsPage extends Page {
     public void openForgotPassPage() {
         clickElement(forgotPassLink);
 
+    }
+
+    public void openPatientPage(String teudat) {
+        String locator = "//td[contains(text(),'" + teudat + "')]/..//*[@class='LinkBtnPatients GreenBtn']";
+        WebElement greenbutton = driver.findElement(By.xpath(locator));
+        greenbutton.click();
+
+        //td[contains(text(),'1970524')]/..//*[@class='LinkBtnPatients GreenBtn']
     }
 
     public boolean isOnMainPage() {

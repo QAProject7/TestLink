@@ -1,11 +1,12 @@
 package com.telran;
 
-import com.telran.pages.ChronicQuestionnaireVladimirPage;
+import com.telran.pages.ChronicQuestionnaire1VladimirPage;
+import com.telran.pages.ChronicQuestionnaire2VladimirPage;
+import com.telran.pages.ChronicQuestionnaire3VladimirPage;
 import com.telran.pages.LoginVladimirPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -14,12 +15,14 @@ import org.testng.annotations.Test;
  * Naryck
  */
 public class QuestionnaireVladimirTest {
-    public static String username = "metupelet@yopmail.com";
+    public static String username = "metupelet7@yopmail.com";
     public static String password = "LinkCare!1";
 
     public WebDriver driver;
 
-    public ChronicQuestionnaireVladimirPage questionnairePage;
+    public ChronicQuestionnaire1VladimirPage questionnairePage;
+    public ChronicQuestionnaire2VladimirPage questionnaireSecondPage;
+    public ChronicQuestionnaire3VladimirPage questionnaireThirdPage;
     public LoginVladimirPage loginPage;
 
     @BeforeClass(alwaysRun = true)
@@ -27,7 +30,9 @@ public class QuestionnaireVladimirTest {
         driver = new FirefoxDriver();
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
-        questionnairePage = PageFactory.initElements(driver, ChronicQuestionnaireVladimirPage.class);
+        questionnairePage = PageFactory.initElements(driver, ChronicQuestionnaire1VladimirPage.class);
+        questionnaireSecondPage = PageFactory.initElements(driver, ChronicQuestionnaire2VladimirPage.class);
+        questionnaireThirdPage = PageFactory.initElements(driver, ChronicQuestionnaire3VladimirPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -51,11 +56,15 @@ public class QuestionnaireVladimirTest {
     @Test(groups = {"smoke", "positive"})
     public void FillElements() {
         questionnairePage.waitUntilTestPageIsLoaded();
-        try {
-            questionnairePage.fillElements();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        questionnairePage.fillElements();
+        questionnaireSecondPage.waitUntilTestPageIsLoaded();
+        questionnaireSecondPage.fillElements();
+        questionnaireThirdPage.waitUntilTestPageIsLoaded();
+        questionnaireThirdPage.fillElements();
+
+        //questionnaireSecondPage.waitUntilTestPageIsLoaded();
+        //questionnaireSecondPage.fillElements();
+
     }
 
     /*@Test(groups = {"smoke", "negative"})
@@ -84,10 +93,10 @@ public class QuestionnaireVladimirTest {
     }*/
 
 
-    @AfterTest(alwaysRun = true)
+   /* @AfterTest(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
-    }
+    }*/
 
     /*@Test(groups = {"smoke", "negative"})
     public void LoginWithoutAtInUserNameField() {
