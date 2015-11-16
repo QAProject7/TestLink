@@ -2,6 +2,7 @@ package com.telran;
 
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetrunin;
 import com.telran.pages.DoctorsPage;
+import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginMaksimPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,6 +22,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
     private WebDriver driver;
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
+    public DrugRecommendationPage drugRecommendationPage;
 
 
     @BeforeClass(alwaysRun = true)
@@ -28,8 +30,10 @@ public class QuestionVanderbiltForParentsPetruninTest {
         driver = new FirefoxDriver(); //Запускаем Firefox
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        loginPage = PageFactory.initElements(driver, LoginMaksimPage.class); //Обращаемся к классу LoginMaksimPage
-         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);                                                                  // и берем оттуда ссылку на страницу
+        loginPage = PageFactory.initElements(driver, LoginMaksimPage.class); //Обращаемся к классу LoginMaksimPage и берем оттуда ссылку на страницу
+        doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
+        drugRecommendationPage = PageFactory.initElements(driver, DrugRecommendationPage.class);
+
     }
 
     @BeforeMethod(alwaysRun = true)
