@@ -1,12 +1,14 @@
 package com.telran.pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by
@@ -17,18 +19,19 @@ public class DrugRecomendationPage extends Page {
     //fields
 
     //input [@id="ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton" ]
-    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
-    WebElement expandCollapseButton;
 
     @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']//*[contains(text(),('ערוך'))]")
     WebElement groupLastAddLink;
-
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan")
     WebElement groupLastTextInput;
-
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add")
     WebElement commitWebLink;
-
+    @FindBy(xpath = "//*[@id = 'ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan']/../../../..")
+    WebElement lastGroup;
+    /*  @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+      private WebElement expandCollapseButton;*/
+    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+    private WebElement expandCollapseButton;
 
 
     /*@FindBy(xpath = "//div [id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
@@ -87,9 +90,21 @@ public class DrugRecomendationPage extends Page {
         return this;
     }
 
+    public boolean isTextInsertedOk(String testText) {
+        List<WebElement> webElements = lastGroup.findElements(By.xpath("//tr[@class='planAnswers'][not(contains(@onclick,'javascript:'))]"));
+        for (WebElement webElement : webElements) {
+            if (testText.equals(webElement.getText()))
+                return true;
+        }
+        return false;
+    }
+
+
     public DrugRecomendationPage waitUntilTestPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(groupLastAddLink);
+            Thread.sleep(10000);
+            driver.switchTo().frame(0);
+            waitUntilElementIsLoaded(expandCollapseButton);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("test page IOException");

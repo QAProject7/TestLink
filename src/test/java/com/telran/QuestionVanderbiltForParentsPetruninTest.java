@@ -48,6 +48,9 @@ public class QuestionVanderbiltForParentsPetruninTest {
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
     drugRecommendationPage.clickTimeLineQst();
+        try {
+            Thread.sleep(3000); //ждем 10 сек
+        } catch (InterruptedException e) {}
         Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page");
         try {
             Thread.sleep(10000); //ждем 10 сек

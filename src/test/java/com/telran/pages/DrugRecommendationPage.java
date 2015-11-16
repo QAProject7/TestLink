@@ -249,7 +249,7 @@ public class DrugRecommendationPage extends Page {
     }
 
     public boolean isOnframe() {
-        driver.switchTo().frame(0);
+        driver.switchTo().frame(1);
 
         return exists(exportPdfframeButton);
     }
