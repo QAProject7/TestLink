@@ -152,7 +152,7 @@ public class DrugRecommendationPage extends Page {
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
 
-    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]//img[@src=\"../images/showIcon1.png\"]")
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
     private WebElement timeLineQst;
 
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
