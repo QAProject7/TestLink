@@ -41,6 +41,14 @@ public class LoginIrinaPage extends Page {
         return this;
     }
 
+    public LoginIrinaPage login(String username, String password) {
+        openLoginPage(driver);
+        waitUntilLoginPageIsLoaded();
+        fillUsernameField(username);
+        fillPasswordField(password);
+        clickOnLoginButton();
+        return this;
+    }
 //Fill the fileds
 
     public LoginIrinaPage fillUsernameField(String username) {
