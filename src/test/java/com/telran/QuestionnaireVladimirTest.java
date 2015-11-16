@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * Naryck
  */
 public class QuestionnaireVladimirTest {
-    public static String username = "metupelet10@yopmail.com";
+    public static String username = "metupelet14@yopmail.com";
     public static String password = "LinkCare!1";
 
     public WebDriver driver;

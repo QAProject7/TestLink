@@ -42,7 +42,7 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
 
     public void fillElements() {
         try {
-            oos = new ObjectOutputStream((new FileOutputStream("d:\\buttons2.tst")));
+            oos = new ObjectOutputStream((new FileOutputStream("c:\\temp\\buttons2.tst")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,14 +70,10 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
                 e.printStackTrace();
             }
         }
-        //driver.switchTo().defaultContent();
         clickElement(submitButton);
-
         driver.switchTo().alert().accept();
-        //driver.switchTo().defaultContent();
-        clickElement(closeTableButton);
+        driver.switchTo().defaultContent();
         clickElement(logOutButton);
-
     }
 
     public ChronicQuestionnaire2VladimirPage waitUntilTestPageIsLoaded() {
