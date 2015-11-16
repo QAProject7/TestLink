@@ -1,8 +1,8 @@
 package com.telran;
 
 
+import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginIrinaPage;
-import com.telran.pages.MainIrinaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -22,7 +22,7 @@ public class LoginIrinaPageObjTest {
     public WebDriver driver;
 
     public LoginIrinaPage loginPage;
-    public MainIrinaPage mainPage;
+    public DoctorsPage mainPage;
     //public DoctorMainPage mainPage;
     // public LoginPage loginPage;
 
@@ -30,7 +30,7 @@ public class LoginIrinaPageObjTest {
     public void setup() {
         driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver, LoginIrinaPage.class);
-        mainPage = PageFactory.initElements(driver, MainIrinaPage.class);
+        mainPage = PageFactory.initElements(driver, DoctorsPage.class);
         //  loginPage = PageFactory.initElements(driver,LoginPage.class);
     }
 
