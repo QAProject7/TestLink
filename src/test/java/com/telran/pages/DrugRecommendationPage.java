@@ -152,7 +152,7 @@ public class DrugRecommendationPage extends Page {
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
 
-    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]//img[@src=\"../images/showIcon1.png\"]")
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
     private WebElement timeLineQst;
 
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
@@ -238,11 +238,19 @@ public class DrugRecommendationPage extends Page {
         clickOnAddDrugButton();
         String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
         WebElement checkBox = driver.findElement(By.xpath(locator));
-        ///
+        checkBox.click();
         group1_linkAdd.click();
         return this;
     }
 
+    public boolean isDrugRemoved(String drug) {
+        List<WebElement> drugsList = findDrugs();
+        for (WebElement drugFromList : drugsList) {
+            if (drugFromList.getText().equals(drug))
+                return false;
+        }
+        return true;
+    }
 
     //check alert presence
 
