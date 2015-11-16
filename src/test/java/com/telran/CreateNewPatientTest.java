@@ -1,6 +1,7 @@
 package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
+import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginMaksimPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,16 +20,18 @@ public class CreateNewPatientTest {
     public static String zeut;
     public static String email;
     public LoginMaksimPage loginPage;
+    public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientpage;
     private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
-    public void setup() {
+    public void setup() throws InterruptedException {
         driver = new FirefoxDriver();
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, LoginMaksimPage.class);
         createNewPatientpage = PageFactory.initElements(driver, CreateNewPatientPage.class);
+        doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         zeut = createNewPatientpage.generateZeut();
         email = createNewPatientpage.generateParentEmail();
         loginPage.
@@ -36,6 +39,8 @@ public class CreateNewPatientTest {
                 .fillUsernameField(username)
                 .fillPasswordField(password)
                 .clickOnLoginButton();
+        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.clickOnAddPatient();
 
     }
 
