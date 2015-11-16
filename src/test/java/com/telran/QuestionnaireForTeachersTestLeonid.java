@@ -1,8 +1,8 @@
 package com.telran;
 
-import com.telran.pages.MobileLoginPageLeonid;
-import com.telran.pages.MobileQuestionnareForTeacher8qLeonid;
-import com.telran.pages.MobileUserMainMenuAccountLeonid;
+import com.telran.MobileWebPages.MobileLoginPageLeonid;
+import com.telran.MobileWebPages.MobileQuestionnareForTeacher8qLeonid;
+import com.telran.MobileWebPages.MobileUserMainMenuAccountLeonid;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -10,12 +10,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 /**
- * Naryck
+ * Created by Leonid Gengrinovich
  */
 public class QuestionnaireForTeachersTestLeonid {
 
