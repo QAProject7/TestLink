@@ -35,6 +35,9 @@ public class DoctorsPage extends Page {
     @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
     private WebElement goToPatientButton;
 
+    @FindBy(id = "MainContent_ItemLinkButton3")
+    private WebElement addPatientButton;
+//*[@id='MainContent_ItemLinkButton3']
 
     public DoctorsPage(WebDriver driver) {
         super(driver);
