@@ -74,8 +74,8 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
         clickElement(submitButton);
 
         driver.switchTo().alert().accept();
-        //driver.switchTo().defaultContent();
-        clickElement(closeTableButton);
+        //clickElement(closeTableButton);
+        driver.switchTo().defaultContent();
         clickElement(logOutButton);
 
     }

@@ -86,7 +86,8 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         }
         clickElement(submitButton);
         driver.switchTo().alert().accept();
-        clickElement(closeTableButton);
+        driver.switchTo().defaultContent();
+        //clickElement(closeTableButton);
         clickElement(logOutButton);
     }
 
