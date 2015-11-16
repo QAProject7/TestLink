@@ -89,12 +89,12 @@ public class DrugRecomendationPage extends Page {
 
     //check alert presence
 
-    public boolean alertMessageNotValidUserName() {
-        return exists(wrongUserNameAlert);
-    }
-
-    public boolean alertMessageNotValidFirsrName() {
-        return exists(wrongPasswordAlert);
-    }
+//    public boolean alertMessageNotValidUserName() {
+//        return exists(wrongUserNameAlert);
+//    }
+//
+//    public boolean alertMessageNotValidFirsrName() {
+//        return exists(wrongPasswordAlert);
+//    }
 
 }
