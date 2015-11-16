@@ -1,6 +1,5 @@
 package com.telran;
 
-
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,46 +9,50 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 /**
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-
-    public WebDriver driver;
-
-    public TeacherTestPage teacherTestPage;
-    //public DoctorMainPage mainPage;
-    // public LoginPage loginPage;
+    public static String registered_username = "more1167@yopmail.com";
+    public static String registered_password = "LinkCare!!11";
+    private WebDriver driver;
+    public TeacherTestPage loginPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();
-        teacherTestPage = PageFactory.initElements(driver, TeacherTestPage.class);
+        //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        //  loginPage = PageFactory.initElements(driver,LoginPage.class);
+        loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        try {
-         //loginPage.openLoginPage(driver)
-            //       .waitUntilLoginPageIsLoaded()
-            //        .clickOnRegLink();
-//            registrationPage.openLoginPage(driver)
-            teacherTestPage.waitUntilPageIsLoaded();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        loginPage.openLoginPage(driver);
     }
 
     @AfterTest(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
     }
+
+    @Test(groups = {"positive", "smoke"})
+    public void testLoginByRegisteredUser() {
+        loginPage
+                .fillUsernameField(registered_username)
+                .fillPasswordField(registered_password)
+                .clickOnLoginButton();
+        Assert.assertFalse(loginPage.isPageOpened());
+    }
+
+
+
+
+
 }
 
-  //  @Test(groups = {"smoke", "positive"})
+
+        //  @Test(groups = {"smoke", "positive"})
    /* public void LoginSuccess() {
         try {
             teacherTestPage
