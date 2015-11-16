@@ -57,7 +57,26 @@ public class DrugRecommendationFainbergObjTest {
     }
 
     @Test(groups = {"smoke", "positive"})
-    public void FillElements() {
+    public void AddElement() {
+        //patientPage.waitUntilTestPageIsLoaded();
+        try {
+            //mainPage.fillElements();
+            patientPage.pressExpandElement()
+                    .pressAddLink()
+                    .fillTextField(testText1)
+                    .pressCommitAddLink();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (patientPage.isTextInsertedOk(testText1))
+            System.out.println("TextInsertedOk");
+    }
+
+
+    @Test(groups = {"smoke", "positive"})
+    public void DeleteElement() {
         //patientPage.waitUntilTestPageIsLoaded();
         try {
             //mainPage.fillElements();
@@ -75,6 +94,7 @@ public class DrugRecommendationFainbergObjTest {
 
 
     }
+
 
     @AfterTest(alwaysRun = true)
     public void tearDown() {
