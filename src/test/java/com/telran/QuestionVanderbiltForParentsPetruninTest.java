@@ -1,6 +1,5 @@
 package com.telran;
 
-import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetrunin;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginMaksimPage;
@@ -13,17 +12,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Date;
-
 public class QuestionVanderbiltForParentsPetruninTest {
     public static String registered_username = "493Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "140088204";//Данные входа доктора
-    private WebDriver driver;
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
     public DrugRecommendationPage drugRecommendationPage;
-
+    private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -51,6 +47,13 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public void testOpenPatientPage() {
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
+    drugRecommendationPage.clickTimeLineQst();
+        try {
+            Thread.sleep(4000); //ждем 3 сек
+        } catch (InterruptedException e) {}
+        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
+
+        //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }
 
 

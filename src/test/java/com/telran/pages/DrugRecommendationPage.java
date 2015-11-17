@@ -19,7 +19,10 @@ public class DrugRecommendationPage extends Page {
 
     @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02__0']")
     public WebElement group1;
-
+    @FindBy(id = "ctl00_MainContent_AddEditAccount1_RDTmeetingdate_dateInput")
+    public WebElement dateMeetingInput;
+    @FindBy(xpath = "//input[@class='BtnCreateSummaryReport']")
+    public WebElement redMainButton;
     //group 1
     @FindBy(xpath = "//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
     private WebElement group1_checkAll;
@@ -45,10 +48,8 @@ public class DrugRecommendationPage extends Page {
     private WebElement group1_check9;
     @FindBy(xpath = "//textarea[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_TxtPlan']")
     private WebElement group1_textarea;
-
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl02_TxtPlan_ClientState")
     private WebElement group1_input;
-
     @FindBy(xpath = "//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_Add']")
     private WebElement group1_linkAdd;
     //group 2
@@ -151,6 +152,11 @@ public class DrugRecommendationPage extends Page {
     private WebElement group7_linkAdd;
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
+    private WebElement timeLineQst;
+    @FindBy(xpath = "//*[@id='form1']//*[@type='button'][@value='export pdf']")
+    private WebElement exportPdfframeButton;
+
 
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
@@ -198,6 +204,8 @@ public class DrugRecommendationPage extends Page {
         System.out.println(drug);
         setElementText(group1_textarea, drug);
         group1_linkAdd.click();
+        setElementText(dateMeetingInput, "12.12.2015");
+        redMainButton.click();
         return this;
     }
 
@@ -209,7 +217,9 @@ public class DrugRecommendationPage extends Page {
 
     public boolean isDrugAdded(String drug) {
         List<WebElement> drugsList = findDrugs();
+        System.out.println("found: " + drugsList.size());
         for (WebElement drugFromList : drugsList) {
+            System.out.println(drugFromList.getText());
             if (drugFromList.getText().equals(drug))
                 return true;
         }
@@ -226,15 +236,34 @@ public class DrugRecommendationPage extends Page {
         return drugsList.get(0).getText();
     }
 
+       public void clickTimeLineQst() {
+        clickElement(timeLineQst);
+
+    }
+
     public DrugRecommendationPage removeDrug(String drug) {
         clickOnAddDrugButton();
         String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
         WebElement checkBox = driver.findElement(By.xpath(locator));
-        ///
+        checkBox.click();
         group1_linkAdd.click();
         return this;
     }
 
+    public boolean isOnframe() {
+        driver.switchTo().frame(1);
+
+        return exists(exportPdfframeButton);
+    }
+
+    public boolean isDrugRemoved(String drug) {
+        List<WebElement> drugsList = findDrugs();
+        for (WebElement drugFromList : drugsList) {
+            if (drugFromList.getText().equals(drug))
+                return false;
+        }
+        return true;
+    }
 
     //check alert presence
 

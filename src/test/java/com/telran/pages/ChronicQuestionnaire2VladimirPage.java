@@ -1,7 +1,6 @@
 package com.telran.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,21 +23,17 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
     @FindBy(id = "MainContent_contentHtml")
     WebElement mainDiv;
 
-    /*@FindBy(id = "form1")
-    WebElement mainForm;
+    @FindBy(xpath = "//div/*[contains(text(),'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//a[@class='LinkBtnPatients BlueBtn']")
+    WebElement questionnaireVanderbiltFollowUp;
 
-    //comments
-    @FindBy(xpath = "//textarea[@name='q35']")
-    WebElement commentsTextArea;*/
+    @FindBy(id = "Top1_HeadLoginStatus")
+    WebElement logOutButton;
+
+    @FindBy(xpath = "//a[@class='rwCloseButton']")
+    WebElement closeTableButton;
 
     @FindBy(id = "submit")
     WebElement submitButton;
-
-    @FindBy(id = "RadWindowWrapper_ctl00_MainContent_rwFillReport")
-    WebElement testForm;
-
-   /* @FindBy(xpath = "//iframe[@name='rwFillReport']")
-    WebElement iFrame;*/
 
     public ChronicQuestionnaire2VladimirPage(WebDriver driver) {
         super(driver);
@@ -47,16 +42,14 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
 
     public void fillElements() {
         try {
-            oos = new ObjectOutputStream((new FileOutputStream("d:\\buttons2.tst")));
+            oos = new ObjectOutputStream((new FileOutputStream("c:\\temp\\buttons2.tst")));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+        //driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
         //driver.switchTo().defaultContent();
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
-        /*for (WebElement element : tables) {
-            System.out.println(element);
-        }*/
+
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : tables) {
@@ -77,20 +70,16 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
                 e.printStackTrace();
             }
         }
-        //driver.switchTo().defaultContent();
         clickElement(submitButton);
-        try {
-            wait(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        driver.switchTo().activeElement().sendKeys(Keys.RETURN);
-        //driver.switchTo().defaultContent();
+        driver.switchTo().alert().accept();
+        driver.switchTo().defaultContent();
+        clickElement(logOutButton);
     }
 
     public ChronicQuestionnaire2VladimirPage waitUntilTestPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(testForm);
+            driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+            waitUntilElementIsLoaded(submitButton);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("test page IOException");
@@ -101,4 +90,15 @@ public class ChronicQuestionnaire2VladimirPage extends Page {
         System.out.println("test page loaded successfully");
         return this;
     }
+
+    public boolean isFollowUpAvailable() {
+        return verifyElementIsPresent(questionnaireVanderbiltFollowUp);
+    }
+
+    public void pressTestButton() {
+        clickElement(questionnaireVanderbiltFollowUp);
+    }
+
+
+
 }

@@ -61,29 +61,33 @@ public class DrugRecommendationPageTest {
 
     @Test(groups = {"smoke", "positive"})
     public void AddDrugSuccess() {
+        System.out.println("AddDrugSuccess");
         try {
             drugPage.clickOnExpandCollapseButton()
                     .waitUntilElementIsLoaded(drugPage.valueButton);
             String drugValue = "group111";
-            drugPage.addDrug(drugValue)
-                    .waitUntilElementIsLoaded(drugPage.valueButton);
+            drugPage.addDrug(drugValue);
+            //.waitUntilElementIsLoaded(drugPage.valueButton);
+            driver.switchTo().alert().accept();
+            beforeMethodSetUp();
+
             Assert.assertTrue(drugPage.isDrugAdded(drugValue), "The drug wasn't added");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Test(groups = {"smoke", "positive"})
     public void RemoveDrugSuccess() {
+        System.out.println("RemoveDrugSuccess");
         try {
             drugPage.clickOnExpandCollapseButton()
                     .waitUntilElementIsLoaded(drugPage.valueButton);
             String drugToRemove = drugPage.selectFirstDrug();
             drugPage.removeDrug(drugToRemove)
                     .waitUntilElementIsLoaded(drugPage.valueButton);
-            //Assert.assertTrue(drugPage.isDrugAdded(drugValue), "The drug wasn't added");
+            Assert.assertTrue(drugPage.isDrugRemoved(drugToRemove), "The drug wasn't removed");
 
         } catch (Exception e) {
             e.printStackTrace();

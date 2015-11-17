@@ -15,12 +15,12 @@ import org.testng.annotations.Test;
  * Naryck
  */
 public class QuestionnaireVladimirTest {
-    public static String username = "metupelet7@yopmail.com";
+    public static String username = "metupelet14@yopmail.com";
     public static String password = "LinkCare!1";
 
     public WebDriver driver;
 
-    public ChronicQuestionnaire1VladimirPage questionnairePage;
+    public ChronicQuestionnaire1VladimirPage questionnaireFirstPage;
     public ChronicQuestionnaire2VladimirPage questionnaireSecondPage;
     public ChronicQuestionnaire3VladimirPage questionnaireThirdPage;
     public LoginVladimirPage loginPage;
@@ -30,7 +30,7 @@ public class QuestionnaireVladimirTest {
         driver = new FirefoxDriver();
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
-        questionnairePage = PageFactory.initElements(driver, ChronicQuestionnaire1VladimirPage.class);
+        questionnaireFirstPage = PageFactory.initElements(driver, ChronicQuestionnaire1VladimirPage.class);
         questionnaireSecondPage = PageFactory.initElements(driver, ChronicQuestionnaire2VladimirPage.class);
         questionnaireThirdPage = PageFactory.initElements(driver, ChronicQuestionnaire3VladimirPage.class);
     }
@@ -44,10 +44,8 @@ public class QuestionnaireVladimirTest {
                     .fillUsernameField(username)
                     .fillPasswordField(password)
                     .clickOnLoginButton();
-            loginPage
-                    .waitUntilNextPageIsLoaded()
-                    .clickOnNextButton();
-            //loginPage.waitUntilTestPageIsLoaded();
+            //loginPage.waitUntilNextPageIsLoaded();
+            //.clickOnNextButton();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -55,12 +53,37 @@ public class QuestionnaireVladimirTest {
 
     @Test(groups = {"smoke", "positive"})
     public void FillElements() {
-        questionnairePage.waitUntilTestPageIsLoaded();
-        questionnairePage.fillElements();
-        questionnaireSecondPage.waitUntilTestPageIsLoaded();
-        questionnaireSecondPage.fillElements();
-        questionnaireThirdPage.waitUntilTestPageIsLoaded();
-        questionnaireThirdPage.fillElements();
+        if (questionnaireFirstPage.isChronicIllnessAvailable()) {
+            questionnaireFirstPage.pressTestButton();
+            questionnaireFirstPage.waitUntilTestPageIsLoaded();
+            questionnaireFirstPage.fillElements();
+            loginPage.openLoginPage(driver);
+            if (loginPage.isOnLoginPage()) {
+                loginPage.fillUsernameField(username).fillPasswordField(password).clickOnLoginButton();
+            }
+            questionnaireSecondPage.waitUntilTestPageIsLoaded();
+            questionnaireSecondPage.fillElements();
+            loginPage.openLoginPage(driver);
+            if (loginPage.isOnLoginPage()) {
+                loginPage.fillUsernameField(username).fillPasswordField(password).clickOnLoginButton();
+            }
+            questionnaireThirdPage.waitUntilTestPageIsLoaded();
+            questionnaireThirdPage.fillElements();
+        } else if (questionnaireSecondPage.isFollowUpAvailable()) {
+            questionnaireSecondPage.pressTestButton();
+            questionnaireSecondPage.waitUntilTestPageIsLoaded();
+            questionnaireSecondPage.fillElements();
+            loginPage.openLoginPage(driver);
+            if (loginPage.isOnLoginPage()) {
+                loginPage.fillUsernameField(username).fillPasswordField(password).clickOnLoginButton();
+            }
+            questionnaireThirdPage.waitUntilTestPageIsLoaded();
+            questionnaireThirdPage.fillElements();
+        } else if (questionnaireThirdPage.isAvailable()) {
+            questionnaireThirdPage.pressTestButton();
+            questionnaireThirdPage.waitUntilTestPageIsLoaded();
+            questionnaireThirdPage.fillElements();
+        }
 
         //questionnaireSecondPage.waitUntilTestPageIsLoaded();
         //questionnaireSecondPage.fillElements();

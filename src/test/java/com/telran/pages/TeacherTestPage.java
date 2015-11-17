@@ -86,14 +86,8 @@ public class TeacherTestPage extends Page {
     @FindBy(id = "submit")
     WebElement send;
 
-    @FindBy(id = "MainContent_LoginUser_UserName")
-    WebElement usernameField;
-
-    @FindBy(id = "MainContent_LoginUser_Password")
-    WebElement passwordField;
-
-    @FindBy(id = "MainContent_LoginUser_LoginButton")
-    WebElement loginBtn;
+    @FindBy(xpath = "//*[@id='MainContent_RptNotification_NowBtn1_0']")
+    WebElement buttonStartTest;
 
     /*@FindBy(id = "MainContent_LoginUser_UserName")
     WebElement usernameField;
@@ -116,37 +110,12 @@ public class TeacherTestPage extends Page {
 
 
 */
+
     public TeacherTestPage(WebDriver driver) {
-        super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
-        this.PAGE_TITLE = "Log In";
-        PageFactory.initElements(driver, this);
-    }
-
-    public TeacherTestPage openLoginPage(WebDriver driver) {
-        driver.get(PAGE_URL);
-        return this;
-    }
-
-    public TeacherTestPage fillUsernameField(String username) {
-        setElementText(usernameField, username);
-        // Log.info("entering username: " + username + " ");
-        return this;
-    }
-
-    public TeacherTestPage fillPasswordField(String password) {
-        setElementText(passwordField, password);
-        // Log.info("entering password: " + password + " ");
-        return this;
-    }
-
-
-
-    /*public TeacherTestPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Notifications.aspx";
         PageFactory.initElements(driver, this);
-    }*/
+    }
 
 
     //public ProfilePage profilePage;
@@ -187,15 +156,12 @@ public class TeacherTestPage extends Page {
 
     public void clickOnSendButton() {
         clickElement(send);
-
     }
 
-    public void clickOnLoginButton() {
-        clickElement(loginBtn);
+    public void clickOnButtonStartTest() {
+        clickElement(buttonStartTest);
     }
-    public boolean isPageOpened() {
-        return exists(loginBtn);
-    }
+
 
 }
 //Fill the fileds
