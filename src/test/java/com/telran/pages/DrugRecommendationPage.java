@@ -154,6 +154,8 @@ public class DrugRecommendationPage extends Page {
     private WebElement expandCollapseButton;
     @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
     private WebElement timeLineQst;
+    @FindBy(xpath = "//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]/../..[contains(text(), 'שאלון וונדרבילט להורה')]")
+    private WebElement tebleSelect;
     @FindBy(xpath = "//*[@id='form1']//*[@type='button'][@value='export pdf']")
     private WebElement exportPdfframeButton;
 
@@ -241,6 +243,15 @@ public class DrugRecommendationPage extends Page {
 
     }
 
+    public void clickToExportOnFrame() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement iframeQ = driver.findElement(By.xpath("//iframe[@name='rwQuestion']"));
+        driver.switchTo().frame(iframeQ);
+        Thread.sleep(2000);
+        clickElement(exportPdfframeButton);
+
+    }
+
     public DrugRecommendationPage removeDrug(String drug) {
         clickOnAddDrugButton();
         String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
@@ -251,9 +262,14 @@ public class DrugRecommendationPage extends Page {
     }
 
     public boolean isOnframe() {
-        driver.switchTo().frame(1);
+        driver.switchTo().activeElement();
 
         return exists(exportPdfframeButton);
+    }
+
+    public boolean isTableSelected() {
+
+        return exists(tebleSelect);
     }
 
     public boolean isDrugRemoved(String drug) {

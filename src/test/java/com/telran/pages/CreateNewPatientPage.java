@@ -235,7 +235,7 @@ public class CreateNewPatientPage extends Page {
         fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
         sendFirstEmail();
-        fillMeetingDateAndTime("26/11/2015 10:00");
+        fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
 
 
