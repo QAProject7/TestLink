@@ -33,6 +33,10 @@ public class DrugRecomendationPage extends Page {
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
 
+//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//span[@class='rlbText']
+    @FindBy(xpath = "//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//span[@class='rlbText']")
+    private WebElement elementToDelete;
+
 
     /*@FindBy(xpath = "//div [id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
     WebElement group1_checkAll;

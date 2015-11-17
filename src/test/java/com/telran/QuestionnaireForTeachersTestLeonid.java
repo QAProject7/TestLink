@@ -3,13 +3,18 @@ package com.telran;
 import com.telran.MobileWebPages.MobileLoginPageLeonid;
 import com.telran.MobileWebPages.MobileQuestionnareForTeacher8qLeonid;
 import com.telran.MobileWebPages.MobileUserMainMenuAccountLeonid;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.List;
+
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
@@ -18,7 +23,7 @@ import static org.testng.Assert.fail;
  */
 public class QuestionnaireForTeachersTestLeonid {
 
-    String username = "more8262@yopmail.com";
+    String username = "more3373@yopmail.com";
     String password = "LinkCare!!11";
 
     public WebDriver driver;
@@ -59,19 +64,18 @@ public class QuestionnaireForTeachersTestLeonid {
     }
 
     @Test(groups = {"smoke", "positive"})
-    public void FillElements() {
+    public void FillElements() throws InterruptedException {
         mobileQuestionnareForTeacher8q
-                .waitUntilQuestionsIsLoaded()
-                .fillQuestionnaire()
-                .clickOnSendResultbutton();
+                .waitUntilQuestionsIsLoaded();
+        fillQuestionnaire();
+        mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
         boolean flag = mobileQuestionnareForTeacher8q.isHelpButtonExist();
         assertTrue(flag);
-
     }
-
 
     @AfterTest
     public void tearDown() throws Exception {
+        Thread.sleep(5000);
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
@@ -79,4 +83,28 @@ public class QuestionnaireForTeachersTestLeonid {
         }
     }
 
+    public void fillQuestionnaire() throws InterruptedException {
+        List<WebElement> divs = mobileQuestionnareForTeacher8q.getAllQuestions();
+
+        List<WebElement> spanWithInput, radioButtons;
+        int divAnswered = 0;
+        int divNotAnswered = divs.size();
+
+        for (WebElement div: divs) {
+            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
+            int divCounter = 1;
+            for(WebElement question: divs) {
+                if(divCounter > divAnswered) {
+                    assertTrue(question.getAttribute("class").equals("sectionq  Required"));
+                }
+                divCounter++;
+            }
+            spanWithInput = div.findElements(By.className("answerInput"));
+            int rndValue = (int) (Math.random() * 3);
+            WebElement currentSpan = spanWithInput.get(rndValue);
+            WebElement radioButton = currentSpan.findElement(By.tagName("input"));
+            radioButton.click();
+            divAnswered++;
+        }
+    }
 }
