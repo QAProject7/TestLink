@@ -47,7 +47,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public void testOpenPatientPage() {
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
-        Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire");
+        Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
     drugRecommendationPage.clickTimeLineQst();
         try {
             Thread.sleep(4000); //ждем 4 сек
