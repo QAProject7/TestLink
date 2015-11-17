@@ -246,13 +246,14 @@ public class CreateNewPatientPage extends Page {
         fillWeightfield("2");
         filltEmailField(Email);
         sendFirstEmail();
+        fillBirthDayfield("01/01/2015");
         Random rn = new Random();
         int day = rn.nextInt(27) + 1;
         int month = rn.nextInt(11) + 1;
-        int year = rn.nextInt(3) + 2015;
-        String birthDate = day + "/" + month + "/" + year;
-        fillBirthDayfield(birthDate);
-        fillMeetingDateAndTime("30/11/2015 15:00");
+        int year = rn.nextInt(3) + 2016;
+        String meetingDate = day + "/" + month + "/" + year;
+        System.out.println(meetingDate);
+        fillMeetingDateAndTime(meetingDate + " 13:00");
         clickSaveAccount();
 
 

@@ -72,7 +72,7 @@ public class QuestionnaireVladimirTest {
         registrationPage
                 .fillUsernameField(firstName)
                 .fillFirstNameField(firstName)
-                        //.fillPasswordField(password)
+                //.fillPasswordField(password)
                 .fillEmailField(email)
                 .fillLastNameField(lastName)
                 .fillConfPasswordField(password)
