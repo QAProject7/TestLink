@@ -144,17 +144,18 @@ public class CreateNewPatientPage extends Page {
 
     public String generateParentEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(1000) + 1;
+        int num = rn.nextInt(100000) + 1;
         String ParentEmail = "hore" + num + "@yopmail.com";
         return ParentEmail;
     }
 
     public String generateTeacherEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(1000) + 1;
+        int num = rn.nextInt(100000) + 1;
         String Email = "more" + num + "@yopmail.com";
         return Email;
     }
+
 
     public String generateZeut() {
         String number = createId();
