@@ -31,10 +31,13 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     @FindBy(xpath = "//a[contains(text(),'המשך >')]")
     WebElement gotoFillProfile;
 
-    @FindBy(id = "id=MainContent_firstNameTxt")
+    @FindBy(id = "MainContent_firstNameTxt")
     WebElement firstNameTxt;
     @FindBy(id = "MainContent_lastNameTxt")
     WebElement lastNameTxt;
+
+    @FindBy(id = "MainContent_Email")
+    WebElement emailTxt;
 
     @FindBy(id = "ctl00_MainContent_birthdayTxt")
     WebElement dateBirthday;
@@ -70,6 +73,37 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
 
     @FindBy (xpath= "//*[@id='MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary']/ul/li[contains(text(),'אשור הסיסמה החדשה חייב להתאים לערך הסיסמה החדש')]")
     WebElement errorPassNotSame;
+
+    @FindBy(id = "MainContent_FirsNameRequired")
+    WebElement firstNameRequired;
+
+    @FindBy(id = "MainContent_LastNameRequired")
+    WebElement lastNameRequired;
+
+    @FindBy(id = "MainContent_EmailRequired")
+    WebElement emailRequired;
+
+    @FindBy(id = "MainContent_regexEmailValid")
+    WebElement emailInvalidRequired;
+
+    @FindBy(id = "MainContent_RequiredFieldValidator1")
+    WebElement requiredTZ;
+
+    @FindBy(id = "MainContent_CVPersonalId")
+    WebElement requiredTZInvalid;
+
+    @FindBy(id = "MainContent_RequiredFieldValidator2")
+    WebElement requiredTelephone;
+
+    @FindBy(id = "MainContent_RequiredFieldValidator5")
+    WebElement requiredHomeNumber;
+
+    @FindBy(id = "MainContent_RequiredFieldValidator3")
+    WebElement requiredStreet;
+
+    @FindBy(id = "MainContent_RequiredFieldValidator4")
+    WebElement requiredTown;
+
 
 //Fill the fileds MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary
 
@@ -147,6 +181,10 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         setElementText(lastNameTxt, lastName);
         return this;
     }
+    public ChangePassRegistrationPatientOlgaPage fillEmail(String email) {
+        setElementText(emailTxt, email);
+        return this;
+    }
     public ChangePassRegistrationPatientOlgaPage fillDateBirthday(String date) {
         setElementText(dateBirthday, date);
         return this;
@@ -172,10 +210,52 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         return this;
     }
 
+
     public void clickOnSubmitButton() {
         clickElement(createUserButton);
 
     }
 
+    public String generateId (){
+        return createId();
+    }
 
+    public boolean isErEmptyFirstName() {
+        return exists(firstNameRequired);
+    }
+
+    public boolean isErEmptyLastName() {
+        return exists(lastNameRequired);
+    }
+
+    public boolean isErEmptyEmail() {
+        return exists(emailRequired);
+    }
+
+    public boolean isErEmailInvalid() {
+        return exists(emailInvalidRequired);
+    }
+
+    public boolean isErEmptyTZ() {
+        return exists(requiredTZ);
+    }
+    public boolean isErTZInvalid() {
+        return exists(requiredTZInvalid);
+    }
+
+    public boolean isErEmptyTelephone() {
+        return exists(requiredTelephone);
+    }
+
+    public boolean isErEmptyHomeNumber() {
+        return exists(requiredHomeNumber);
+    }
+
+    public boolean isErEmptyStreet() {
+        return exists(requiredStreet);
+    }
+
+    public boolean isErEmptyTown() {
+        return exists(requiredTown);
+    }
 }
