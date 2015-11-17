@@ -57,8 +57,8 @@ public class QuestionnaireVladimirTest {
                 .clickOnLoginButton();
         doctorsPage.waitUntilMainPageIsLoaded();
         doctorsPage.clickOnAddPatient();
-        createNewPatientPage.createPatientOneParent(zeut, email);
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
+        createNewPatientPage.createPatientOneParent(zeut, email);
         loginPage.clickLogOut();
 
         loginPage

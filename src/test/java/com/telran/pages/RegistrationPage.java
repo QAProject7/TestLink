@@ -133,14 +133,14 @@ public class RegistrationPage extends Page {
         return this;
     }
 
-    public RegistrationPage fillIdField() {
-        String id = createId();
+    public RegistrationPage fillIdField(String id) {
         setElementText(teudatField, id);
         //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
-    public RegistrationPage fillIdField(String id) {
+    public RegistrationPage fillIdField() {
+        String id = createId();
         setElementText(teudatField, id);
         //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
