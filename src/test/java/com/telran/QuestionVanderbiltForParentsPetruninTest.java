@@ -47,11 +47,12 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public void testOpenPatientPage() {
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
+        Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
     drugRecommendationPage.clickTimeLineQst();
         try {
-            Thread.sleep(4000); //ждем 3 сек
+            Thread.sleep(4000); //ждем 4 сек
         } catch (InterruptedException e) {}
-        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
+       // Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
 
         //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }
