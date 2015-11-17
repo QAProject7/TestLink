@@ -10,6 +10,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
+
 /**
  * Oleg
  */
@@ -19,6 +22,8 @@ public class RegistrationPageTeacherTest {
     public TeacherTestPage loginPage;
     public CreateNewPatientPage createPatientPage;
     private WebDriver driver;
+    public static String parentEmail;
+    public static String zeut;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -30,6 +35,18 @@ public class RegistrationPageTeacherTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
+        registered_username = createPatientPage.generateTeacherEmail();
+        parentEmail = createPatientPage.generateParentEmail();
+        zeut = createPatientPage.generateZeut();
+        try {
+            createPatientPage.createPatientParentAndTeacher(zeut, parentEmail, registered_username );
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
         loginPage.openLoginPage(driver);
     }
 
