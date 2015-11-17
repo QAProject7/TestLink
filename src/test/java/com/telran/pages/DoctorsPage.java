@@ -85,7 +85,7 @@ public class DoctorsPage extends Page {
 
     public DoctorsPage clickOnAddPatient() throws InterruptedException {
         clickElement(addPatientButton);
-        Thread.sleep(15000);
+        Thread.sleep(5000);
         driver.switchTo().frame(0);
         return this;
     }

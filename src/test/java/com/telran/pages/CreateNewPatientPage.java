@@ -83,9 +83,6 @@ public class CreateNewPatientPage extends Page {
     @FindBy(id = "MainContent_AddEditAccount1_SaveAccount")
     WebElement buttonSaveAccount;
 
-    @FindBy(id = "Top1_HeadLoginStatus")
-    WebElement logOutButton;
-
     //public ProfilePage profilePage;
 
     public CreateNewPatientPage(WebDriver driver) {
@@ -247,15 +244,16 @@ public class CreateNewPatientPage extends Page {
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
         fillWeightfield("2");
+        filltEmailField(Email);
+        sendFirstEmail();
+        fillBirthDayfield("01/01/2015");
         Random rn = new Random();
         int day = rn.nextInt(27) + 1;
         int month = rn.nextInt(11) + 1;
-        int year = rn.nextInt(3) + 2015;
-        String birthDate = day + "/" + month + "/" + year;
-        fillBirthDayfield(birthDate);
-        filltEmailField(Email);
-        sendFirstEmail();
-        fillMeetingDateAndTime("30/11/2015 15:00");
+        int year = rn.nextInt(3) + 2016;
+        String meetingDate = day + "/" + month + "/" + year;
+        System.out.println(meetingDate);
+        fillMeetingDateAndTime(meetingDate + " 13:00");
         clickSaveAccount();
 
 
@@ -277,9 +275,7 @@ public class CreateNewPatientPage extends Page {
         sendFirstEmail();
         fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
-    }
 
-    public void clickLogOutButton() {
-        clickElement(logOutButton);
+
     }
 }

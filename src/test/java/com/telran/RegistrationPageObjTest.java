@@ -1,6 +1,7 @@
 package com.telran;
 
 
+import com.telran.pages.LoginPage;
 import com.telran.pages.RegistrationPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -30,22 +31,22 @@ public class RegistrationPageObjTest {
 
     public RegistrationPage registrationPage;
     //public DoctorMainPage mainPage;
-    // public LoginPage loginPage;
+     public LoginPage loginPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();
         registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        //  loginPage = PageFactory.initElements(driver,LoginPage.class);
+          loginPage = PageFactory.initElements(driver,LoginPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-            // loginPage.openLoginPage(driver)
-            //       .waitUntilLoginPageIsLoaded()
-            //        .clickOnRegLink();
+             loginPage.openLoginPage(driver)
+                   .waitUntilLoginPageIsLoaded()
+                    .openRegistrationPage();
 //            registrationPage.openLoginPage(driver)
             registrationPage.waitUntilRegPageIsLoaded();
         } catch (Exception e) {
