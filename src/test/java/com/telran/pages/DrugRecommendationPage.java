@@ -243,6 +243,15 @@ public class DrugRecommendationPage extends Page {
 
     }
 
+    public void clickToExportOnFrame() throws InterruptedException {
+        Thread.sleep(3000);
+        WebElement iframeQ = driver.findElement(By.xpath("//iframe[@name='rwQuestion']"));
+        driver.switchTo().frame(iframeQ);
+        Thread.sleep(2000);
+        clickElement(exportPdfframeButton);
+
+    }
+
     public DrugRecommendationPage removeDrug(String drug) {
         clickOnAddDrugButton();
         String locator = "//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers_i0']/label/input";
@@ -253,7 +262,7 @@ public class DrugRecommendationPage extends Page {
     }
 
     public boolean isOnframe() {
-        driver.switchTo().frame(1);
+        driver.switchTo().activeElement();
 
         return exists(exportPdfframeButton);
     }
