@@ -108,7 +108,7 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         return this;
     }
 
-    public void pressTestButton() {
+    public void clickTestButton() {
         clickElement(questionnaireChronicIllness);
     }
 

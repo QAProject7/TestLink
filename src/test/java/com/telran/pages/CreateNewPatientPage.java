@@ -1,5 +1,6 @@
 package com.telran.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -81,6 +82,9 @@ public class CreateNewPatientPage extends Page {
 
     @FindBy(id = "MainContent_AddEditAccount1_SaveAccount")
     WebElement buttonSaveAccount;
+
+    @FindBy(id = "Top1_HeadLoginStatus")
+    WebElement logOutButton;
 
     //public ProfilePage profilePage;
 
@@ -202,6 +206,7 @@ public class CreateNewPatientPage extends Page {
     public CreateNewPatientPage sendFirstEmail() throws IOException, InterruptedException {
         waitUntilElementIsLoaded(sendFirstEmailButton);
         clickElement(sendFirstEmailButton);
+        waitUntilIsLoaded(driver.findElement(By.id("ctl00_MainContent_AddEditAccount1_RadGrid2_ctl00")));
         return this;
     }
 
@@ -242,7 +247,12 @@ public class CreateNewPatientPage extends Page {
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
         fillWeightfield("2");
-        fillBirthDayfield("09/04/2014");
+        Random rn = new Random();
+        int day = rn.nextInt(27) + 1;
+        int month = rn.nextInt(11) + 1;
+        int year = rn.nextInt(3) + 2015;
+        String birthDate = day + "/" + month + "/" + year;
+        fillBirthDayfield(birthDate);
         filltEmailField(Email);
         sendFirstEmail();
         fillMeetingDateAndTime("30/11/2015 15:00");
@@ -267,7 +277,9 @@ public class CreateNewPatientPage extends Page {
         sendFirstEmail();
         fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
+    }
 
-
+    public void clickLogOutButton() {
+        clickElement(logOutButton);
     }
 }
