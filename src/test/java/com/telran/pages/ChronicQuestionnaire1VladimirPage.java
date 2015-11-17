@@ -1,7 +1,6 @@
 package com.telran.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,8 +23,17 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
     @FindBy(id = "MainContent_contentHtml")
     WebElement mainDiv;
 
+    @FindBy(id = "Top1_HeadLoginStatus")
+    WebElement logOutButton;
+
+    @FindBy(xpath = "//a[@class='rwCloseButton']")
+    WebElement closeTableButton;
+
     @FindBy(id = "form1")
     WebElement mainForm;
+
+    @FindBy(xpath = "//div/*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../..//a[@class='LinkBtnPatients BlueBtn']")
+    WebElement questionnaireChronicIllness;
 
     //comments
     @FindBy(xpath = "//textarea[@name='q35']")
@@ -48,16 +56,14 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
 
     public void fillElements() {
         try {
-            oos = new ObjectOutputStream((new FileOutputStream("d:\\buttons1.tst")));
+            oos = new ObjectOutputStream((new FileOutputStream("c:\\temp\\buttons1.tst")));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        driver.switchTo().frame(driver.findElement(By.tagName("iFrame")));
+        driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
-        /*for (WebElement element : tables) {
-            System.out.println(element);
-        }*/
+
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : tables) {
@@ -79,17 +85,18 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
             }
         }
         clickElement(submitButton);
-        try {
-            wait(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        driver.switchTo().activeElement().sendKeys(Keys.RETURN);
+        driver.switchTo().alert().accept();
+        driver.switchTo().defaultContent();
+        clickElement(logOutButton);
+    }
+
+    public boolean isChronicIllnessAvailable() {
+        return verifyElementIsPresent(questionnaireChronicIllness);
     }
 
     public ChronicQuestionnaire1VladimirPage waitUntilTestPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(testForm);
+            waitUntilElementIsLoaded(questionnaireChronicIllness);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("test page IOException");
@@ -100,4 +107,9 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         System.out.println("test page loaded successfully");
         return this;
     }
+
+    public void pressTestButton() {
+        clickElement(questionnaireChronicIllness);
+    }
+
 }

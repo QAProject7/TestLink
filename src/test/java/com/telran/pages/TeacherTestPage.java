@@ -86,6 +86,9 @@ public class TeacherTestPage extends Page {
     @FindBy(id = "submit")
     WebElement send;
 
+    @FindBy(xpath = "//*[@id='MainContent_RptNotification_NowBtn1_0']")
+    WebElement buttonStartTest;
+
     /*@FindBy(id = "MainContent_LoginUser_UserName")
     WebElement usernameField;
 
@@ -153,7 +156,10 @@ public class TeacherTestPage extends Page {
 
     public void clickOnSendButton() {
         clickElement(send);
+    }
 
+    public void clickOnButtonStartTest() {
+        clickElement(buttonStartTest);
     }
 
 
