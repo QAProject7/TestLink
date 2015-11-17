@@ -17,13 +17,13 @@ import java.io.IOException;
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String registered_username;
+    public static String registered_username = null;
     public static String registered_password = "LinkCare!!11";
+    public static String parentEmail = null;
+    public static String zeut = null;
     public TeacherTestPage loginPage;
     public CreateNewPatientPage createPatientPage;
     private WebDriver driver;
-    public static String parentEmail;
-    public static String zeut;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -31,6 +31,8 @@ public class RegistrationPageTeacherTest {
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
+        createPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
+
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -46,7 +48,6 @@ public class RegistrationPageTeacherTest {
             e.printStackTrace();
         }
 
-
         loginPage.openLoginPage(driver);
     }
 
@@ -57,7 +58,7 @@ public class RegistrationPageTeacherTest {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
-        registered_username = createPatientPage.generateTeacherEmail();
+
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
