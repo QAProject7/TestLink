@@ -43,6 +43,12 @@ public class RegistrationPageTeacherTest {
                 .fillPasswordField(registered_password)
                 .clickOnLoginButton();
         Assert.assertFalse(loginPage.isPageOpened());
+
+
+
+
+
+
     }
 
 

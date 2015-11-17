@@ -83,6 +83,17 @@ public class TeacherTestPage extends Page {
     @FindBy(xpath = "//*[[@id='MainContent_contentHtml']/table/tbody/tr]")
     WebElement tablelist;
 
+    @FindBy(id = "MainContent_LoginUser_UserName")
+    WebElement usernameField;
+
+    @FindBy(id = "MainContent_LoginUser_Password")
+    WebElement passwordField;
+
+    @FindBy(id = "MainContent_LoginUser_LoginButton")
+    WebElement loginBtn;
+
+
+
     @FindBy(id = "submit")
     WebElement send;
 
@@ -115,6 +126,24 @@ public class TeacherTestPage extends Page {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Notifications.aspx";
         PageFactory.initElements(driver, this);
+    }
+
+    public TeacherTestPage openLoginPage(WebDriver driver) {
+        driver.get(PAGE_URL);
+        return this;
+    }
+
+    //Fill the fileds
+    public TeacherTestPage fillUsernameField(String username) {
+        setElementText(usernameField, username);
+        // Log.info("entering username: " + username + " ");
+        return this;
+    }
+
+    public TeacherTestPage fillPasswordField(String password) {
+        setElementText(passwordField, password);
+        // Log.info("entering password: " + password + " ");
+        return this;
     }
 
 
@@ -160,6 +189,13 @@ public class TeacherTestPage extends Page {
 
     public void clickOnButtonStartTest() {
         clickElement(buttonStartTest);
+    }
+    public void clickOnLoginButton() {
+        clickElement(loginBtn);
+    }
+
+    public boolean isPageOpened() {
+        return exists(loginBtn);
     }
 
 
