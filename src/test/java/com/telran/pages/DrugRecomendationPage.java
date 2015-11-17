@@ -34,8 +34,7 @@ public class DrugRecomendationPage extends Page {
     private WebElement expandCollapseButton;
 
 //*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//span[@class='rlbText']
-    @FindBy(xpath = "//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//span[@class='rlbText']")
-    private WebElement elementToDelete;
+
 
 
     /*@FindBy(xpath = "//div [id='ctl00_MainContent_ctl10_RadTreeList1_ctl02_RLB_Answers']//input")
@@ -75,7 +74,6 @@ public class DrugRecomendationPage extends Page {
     //public ProfilePage profilePage;
     public DrugRecomendationPage pressExpandElement() {
         expandCollapseButton.click();
-        //System.out.println("test page loaded successfully");
         return this;
     }
 
@@ -96,11 +94,25 @@ public class DrugRecomendationPage extends Page {
 
     public boolean isTextInsertedOk(String testText) {
         List<WebElement> webElements = lastGroup.findElements(By.xpath("//tr[@class='planAnswers'][not(contains(@onclick,'javascript:'))]"));
+        System.out.println("Found elements : " + webElements.size());
         for (WebElement webElement : webElements) {
+            String temp = webElement.getText();
+            System.out.println(temp);
             if (testText.equals(webElement.getText()))
                 return true;
         }
         return false;
+    }
+
+    public boolean isDrugRemoved(String testText) {
+        List<WebElement> webElements = lastGroup.findElements(By.xpath("//tr[@class='planAnswers'][not(contains(@onclick,'javascript:'))] "));
+        for (WebElement webElement : webElements) {
+            String temp = webElement.getText();
+            System.out.println(temp);
+            if (temp.equals(testText))
+                return false;
+        }
+        return true;
     }
 
 
@@ -125,7 +137,47 @@ public class DrugRecomendationPage extends Page {
         return this;
     }
 
+    public String unCheckCheckBoxDeletedDrug() {
+/*        List<WebElement> webElementList=driver.findElements(By.xpath("//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//ul[@class='rlbList']/*//*[@checked='checked']"));///../span"));
+        for (WebElement webElement:webElementList ){
+            webElement.click();
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            WebElement elementSpan=webElement.findElement(By.xpath("/../span"));
+            String temp=elementSpan.getText();
+            System.out.println("elementSpan.getText()="+temp);
+            return temp;
+        }
+        return null;*/
+        WebElement webElement = driver.findElement(By.xpath("//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//*[@class='rlbList']  /*//*[@checked='checked']"));///../span"));
+        WebElement webElementSpan = driver.findElement(By.xpath("//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//*[@class='rlbList']  /*//*[@checked='checked']/../span"));
+        if (webElement.isDisplayed())
+            System.out.println("webElement Founded !!!");
+        else
+            System.out.println("webElement NOT  Founded !!!");
+        if (webElementSpan.isDisplayed())
+            System.out.println("webElementSpan Founded !!!");
+        else
+            System.out.println("webElementSpan NOT  Founded !!!");
+        String temp = webElementSpan.getText();
+        webElement.click();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //WebElement elementSpan=webElement.findElement(By.xpath("/*/../../span"));
 
+        System.out.println("webElementSpan.getText()=" + temp);
+        return temp;
+
+        //return null
+
+
+    }
     //check alert presence
 
 //    public boolean alertMessageNotValidUserName() {
