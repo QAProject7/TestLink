@@ -90,7 +90,7 @@ public class RegistrationPage extends Page {
         return this;
     }
 
-//Fill the fileds
+    //Fill the fileds
 
     public RegistrationPage fillUsernameField(String username) {
         setElementText(usernameField, username);
@@ -100,6 +100,11 @@ public class RegistrationPage extends Page {
     public RegistrationPage fillEmailField() {
         int rand = ThreadLocalRandom.current().nextInt(0, 10000 + 1);
         String email = "doctor" + rand + "@yopmail.com";
+        setElementText(emailField, email);
+        return this;
+    }
+
+    public RegistrationPage fillEmailField(String email) {
         setElementText(emailField, email);
         return this;
     }
@@ -130,6 +135,12 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage fillIdField() {
         String id = createId();
+        setElementText(teudatField, id);
+        //   Log.info("entering last name from the list: " + lastName + " ");
+        return this;
+    }
+
+    public RegistrationPage fillIdField(String id) {
         setElementText(teudatField, id);
         //   Log.info("entering last name from the list: " + lastName + " ");
         return this;

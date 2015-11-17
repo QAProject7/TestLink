@@ -6,7 +6,6 @@ import com.telran.pages.LoginMaksimPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -15,10 +14,11 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class CreateNewPatientTest {
-    public static String username = "527Doctor";
+    public static String username = "8781Doctor";
     public static String password = "LinkCare!!11";
     public static String zeut;
     public static String email;
+    public static String emailTeacher;
     public LoginMaksimPage loginPage;
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientpage;
@@ -34,6 +34,7 @@ public class CreateNewPatientTest {
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         zeut = createNewPatientpage.generateZeut();
         email = createNewPatientpage.generateParentEmail();
+        emailTeacher = createNewPatientpage.generateTeacherEmail();
         loginPage.
                 openLoginPage(driver)
                 .fillUsernameField(username)
@@ -53,6 +54,7 @@ public class CreateNewPatientTest {
     public void createNewPatient() {
         try {
             createNewPatientpage.createPatientOneParent(zeut, email);
+            doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -60,25 +62,18 @@ public class CreateNewPatientTest {
         }
     }
 
-    @Test(groups = {"negative"})
-    public void testLoginWithoutName() {
-        loginPage
-                .fillUsernameField("")
-                .fillPasswordField("anypassword")
-                .clickOnLoginButton();
-        Assert.assertTrue(loginPage.alertMessageNotValidUserName() && !loginPage.alertMessageNotValidPassword());
+    @Test(groups = {"positive"})
+    public void createNewPatientWithParentAndTeacher() {
+        try {
+            createNewPatientpage.createPatientParentAndTeacher(zeut, email, emailTeacher);
+            doctorsPage.waitUntilMainPageIsLoaded();
+            doctorsPage.isPatientExists(zeut);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
-    @Test(groups = {"negative"})
-    public void testLoginWithoutPassword() {
-        loginPage
-                .fillUsernameField("anyusername")
-                .fillPasswordField("")
-                .clickOnLoginButton();
-        Assert.assertTrue(!loginPage.alertMessageNotValidUserName() && loginPage.alertMessageNotValidPassword());
-    }
-
-    // test of clicking on Registration link are written in another class
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {

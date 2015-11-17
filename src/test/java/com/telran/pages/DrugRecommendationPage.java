@@ -156,9 +156,13 @@ public class DrugRecommendationPage extends Page {
     private WebElement timeLineQst;
     @FindBy(xpath = "//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]/../..[contains(text(), 'שאלון וונדרבילט להורה')]")
     private WebElement tebleSelect;
-    @FindBy(xpath = "//*[@id='form1']//*[@type='button'][@value='export pdf']")
-    private WebElement exportPdfframeButton;
 
+   /* @FindBy(xpath = "/*//*[@id='form1']/*//*[@type='button'][@value='export pdf']")
+    private WebElement exportPdfframeButton;
+*/
+
+    @FindBy(xpath = "//*[@id='form1']")
+    private WebElement exportPdfframeButton;
 
     /*   @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
@@ -262,7 +266,7 @@ public class DrugRecommendationPage extends Page {
     }
 
     public boolean isOnframe() {
-        driver.switchTo().activeElement();
+        //driver.switchTo().frame(1);
 
         return exists(exportPdfframeButton);
     }

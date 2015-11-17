@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 public class QuestionVanderbiltForParentsPetruninTest {
     public static String registered_username = "493Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    public static String teudat = "140088204";//Данные входа доктора
+    public static String teudat = "225543537";//Данные входа доктора
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
     public DrugRecommendationPage drugRecommendationPage;
@@ -52,7 +52,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
         try {
             Thread.sleep(4000); //ждем 4 сек
         } catch (InterruptedException e) {}
-       // Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
+       Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
 
         //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }

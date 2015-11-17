@@ -17,6 +17,9 @@ public class LoginVladimirPage extends Page {
     @FindBy(id = "MainContent_LoginUser_UserName")
     WebElement usernameField;
 
+    @FindBy(id = "MainContent_ChangeUserPassword_ChangePasswordContainerID_CancelPushButton")
+    WebElement cancelChangePasswordButton;
+
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
 
@@ -35,6 +38,9 @@ public class LoginVladimirPage extends Page {
 
     @FindBy(id = "submit")
     WebElement submitButton;
+
+    @FindBy(id = "Top1_HeadLoginStatus")
+    WebElement logOutButton;
 
     //checkboxs
     //Select
@@ -99,6 +105,10 @@ public class LoginVladimirPage extends Page {
         clickElement(loginButton);
     }
 
+    public void clickOnCancelChangePassword() {
+        clickElement(cancelChangePasswordButton);
+    }
+
     public void openRegistrationPage() {
         clickElement(goToRegLink);
     }
@@ -134,5 +144,9 @@ public class LoginVladimirPage extends Page {
             e.printStackTrace();
         }
         return this;
+    }
+
+    public void clickLogOut() {
+        logOutButton.click();
     }
 }
