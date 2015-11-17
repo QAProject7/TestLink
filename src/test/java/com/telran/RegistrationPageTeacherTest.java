@@ -1,5 +1,6 @@
 package com.telran;
 
+import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,10 +14,11 @@ import org.testng.annotations.Test;
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String registered_username = "more1167@yopmail.com";
+    public static String registered_username;
     public static String registered_password = "LinkCare!!11";
-    private WebDriver driver;
     public TeacherTestPage loginPage;
+    public CreateNewPatientPage createPatientPage;
+    private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -38,6 +40,7 @@ public class RegistrationPageTeacherTest {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
+        registered_username = createPatientPage.generateTeacherEmail();
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
@@ -51,10 +54,11 @@ public class RegistrationPageTeacherTest {
         Assert.assertTrue(loginPage.isButtonStartTest(),"Button start test not present");
         loginPage
                 .clickOnButtonStartTest();
-
-
-
-
+        loginPage
+                .clickOnAnyStar();
+        loginPage
+                .clickOnSendButton();
+        Assert.assertFalse(loginPage.isButtonStartTest(), "Test not passed");
 
     }
 
