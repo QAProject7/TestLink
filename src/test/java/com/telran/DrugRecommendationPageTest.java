@@ -1,6 +1,9 @@
 package com.telran;
 
-import com.telran.pages.TeacherTestPage;
+
+import com.telran.pages.DoctorsPage;
+import com.telran.pages.DrugRecommendationPage;
+import com.telran.pages.LoginIrinaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -9,114 +12,112 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 /**
- * Oleg
+ * Irina
  */
-public class RegistrationPageTeacherTest {
-    public static String registered_username = "more1167@yopmail.com";
-    public static String registered_password = "LinkCare!!11";
-    private WebDriver driver;
-    public TeacherTestPage loginPage;
+public class DrugRecommendationPageTest {
+    public static String username = "4337Doctor";
+    public static String password = "LinkCare!!11";
+
+    public WebDriver driver;
+
+    public LoginIrinaPage loginPage;
+    public DoctorsPage mainPage;
+    public DrugRecommendationPage drugPage;
+    //public DoctorMainPage mainPage;
+    // public LoginPage loginPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();
-        //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
-        //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
+        loginPage = PageFactory.initElements(driver, LoginIrinaPage.class);
+        mainPage = PageFactory.initElements(driver, DoctorsPage.class);
+        drugPage = PageFactory.initElements(driver, DrugRecommendationPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        loginPage.openLoginPage(driver);
+        try {
+            loginPage.openLoginPage(driver)
+                    .waitUntilLoginPageIsLoaded()
+                    .fillUsernameField(username)
+                    .fillPasswordField(password)
+                    .clickOnLoginButton();
+
+            mainPage.waitUntilMainPageIsLoaded()
+                    .clickOnGoToPatientButton();
+
+            drugPage.waitUntilDrugPageIsLoaded();
+
+
+            //            .clickOnRegLink();
+//            registrationPage.openRegistrationPage(driver)
+            //loginPage.waitUntilLoginPageIsLoaded();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+    @Test(groups = {"smoke", "positive"})
+    public void AddDrugSuccess() {
+        System.out.println("AddDrugSuccess");
+        try {
+            drugPage.clickOnExpandCollapseButton()
+                    .waitUntilElementIsLoaded(drugPage.valueButton);
+            String drugValue = "group111";
+            drugPage.addDrug(drugValue);
+            //.waitUntilElementIsLoaded(drugPage.valueButton);
+            driver.switchTo().alert().accept();
+            beforeMethodSetUp();
+
+            Assert.assertTrue(drugPage.isDrugAdded(drugValue), "The drug wasn't added");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(groups = {"smoke", "positive"})
+    public void RemoveDrugSuccess() {
+        System.out.println("RemoveDrugSuccess");
+        try {
+            drugPage.clickOnExpandCollapseButton()
+                    .waitUntilElementIsLoaded(drugPage.valueButton);
+            String drugToRemove = drugPage.selectFirstDrug();
+            drugPage.removeDrug(drugToRemove)
+                    .waitUntilElementIsLoaded(drugPage.valueButton);
+            Assert.assertTrue(drugPage.isDrugRemoved(drugToRemove), "The drug wasn't removed");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+   /* @Test(groups = {"smoke", "negative"})
+    public void LoginWithoutUsername() {
+        try {
+            loginPage
+                    .fillUsernameField("")
+                    .fillPasswordField(password)
+                    .clickOnLoginButton();
+
+            Assert.assertTrue(loginPage.isOnLoginPage(), "The Login Page is opened");
+            Assert.assertTrue(loginPage.alertMessageNotValidUsername(), "Alert message 'שם משתמש חובה' is presented");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }*/
+
 
     @AfterTest(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
     }
-
-    @Test(groups = {"positive", "smoke"})
-    public void testLoginByRegisteredUser() {
-        loginPage
-                .fillUsernameField(registered_username)
-                .fillPasswordField(registered_password)
-                .clickOnLoginButton();
-        Assert.assertFalse(loginPage.isPageOpened());
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Assert.assertTrue(loginPage.isButtonStartTest(),"Button start test not present");
-        loginPage
-                .clickOnButtonStartTest();
-
-
-
-
-
-    }
-
-
-
-
-
-}
-
-
-        //  @Test(groups = {"smoke", "positive"})
-   /* public void LoginSuccess() {
-        try {
-            teacherTestPage
-                    //.fillUsernameField(username)
-                    //.fillFirstNameField(firstName)
-                    .fillPasswordField(password)
-                    .fillEmailField()
-                    .fillLastNameField(lastName)
-                    .fillConfPasswordField(password)
-                    .fillIdField()
-                    .fillMobile(telephone)
-                    .fillStreetField(street)
-                    .fillHouseField(housenumber)
-                    .fillCityField(city)
-                    .clickOnSubmitButton();
-
-            //    mainPage.waitUntilMainPageIsLoaded();
-            //    Assert.assertTrue(mainPage.isOnMainPage(), "The Main Page doesn't open");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
-
-
-
-   /* @Test(groups = {"smoke", "negative"})
-    public void LoginWithoutFirstName() {
-        try {
-            registrationPage
-                    .fillUsernameField(username)
-                    .fillFirstNameField("")
-                    .fillPasswordField(password)
-                    .fillEmailField()
-                    .fillLastNameField(lastName)
-                    .fillConfPasswordField(password)
-                    .fillIdField()
-                    .fillStreetField(street)
-                    .fillHouseField(housenumber)
-                    .fillCityField(city)
-                    .clickOnSubmitButton();
-
-            Assert.assertTrue(registrationPage.isOnRegistrationPage(), "The Main Page is opened");
-            Assert.assertTrue(registrationPage.alertMessageNotValidFirsrName(), "Alert message 'שם פרטי חובה' is not presented");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
-
-
-
-
 
     /*@Test(groups = {"smoke", "negative"})
     public void LoginWithoutAtInUserNameField() {
@@ -184,3 +185,6 @@ public class RegistrationPageTeacherTest {
         }
         Reporter.log("Not logged in successful");
     }*/
+
+
+}

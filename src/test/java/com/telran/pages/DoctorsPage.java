@@ -35,6 +35,9 @@ public class DoctorsPage extends Page {
     @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
     private WebElement goToPatientButton;
 
+    @FindBy(id = "MainContent_ItemLinkButton3")
+    private WebElement addPatientButton;
+//*[@id='MainContent_ItemLinkButton3']
 
     public DoctorsPage(WebDriver driver) {
         super(driver);
@@ -48,11 +51,11 @@ public class DoctorsPage extends Page {
     }
 
 //Fill the fileds
- /*   public void openPatientPage(String teudat){
+    public void openPatientPage(String teudat){
         String locator="//td[contains(text(),'"+ teudat + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
         WebElement greenButton= driver.findElement(By.xpath(locator));
         greenButton.click();
-    }*/
+    }
 
     public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
@@ -80,18 +83,22 @@ public class DoctorsPage extends Page {
 
     }
 
-    public void openPatientPage(String teudat) {
-        String locator = "//td[contains(text(),'" + teudat + "')]/..//*[@class='LinkBtnPatients GreenBtn']";
-        WebElement greenbutton = driver.findElement(By.xpath(locator));
-        greenbutton.click();
-
-        //td[contains(text(),'1970524')]/..//*[@class='LinkBtnPatients GreenBtn']
+    public DoctorsPage clickOnAddPatient() throws InterruptedException {
+        clickElement(addPatientButton);
+        Thread.sleep(3000);
+        driver.switchTo().frame(0);
+        return this;
     }
 
     public boolean isOnMainPage() {
         return exists(namesField);
     }
 
+    public boolean isPatientExists(String tz) {
+        String locator = "//td[contains(text(),'" + tz + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
+
+        return exists(driver.findElement(By.xpath(locator)));
+    }
     //check alert presence
 
     public boolean alertMessageNotValidUsername() {
