@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by Iakov Volf
+ * Created by Leonid Gengrinovich
  */
 public class MobileQuestionnareForTeacher8qLeonid extends Page {
 
@@ -47,20 +47,36 @@ public class MobileQuestionnareForTeacher8qLeonid extends Page {
         driver.get(PAGE_URL);
         return this;
     }
-//fill
-    public MobileQuestionnareForTeacher8qLeonid fillQuestionnaire(){
-        List<WebElement> tables = questionsForm.findElements(By.className("sectionq "));
-        for (WebElement element : tables) {
-            System.out.println(element);
-        }
-        List<WebElement> spanWithInput, radioButtons;
+//find element
+    public List<WebElement> getAllQuestions(){
+        return questionsForm.findElements(By.className("sectionq "));
+    }
 
-        for (WebElement currentTable : tables) {
-            spanWithInput = currentTable.findElements(By.className("answerInput"));
+//fill
+    public MobileQuestionnareForTeacher8qLeonid fillQuestionnaire() throws InterruptedException {
+        List<WebElement> divs = questionsForm.findElements(By.className("sectionq "));
+
+        List<WebElement> spanWithInput, radioButtons;
+        int divAnswered = 0;
+        int divNotAnswered = divs.size();
+
+        for (WebElement div: divs) {
+            clickOnSendResultbutton();
+            int divCounter = 1;
+            for(WebElement question: divs) {
+                if(divCounter > divAnswered) {
+                    question.getAttribute("class").equals("sectionq  Required");
+                    System.out.println("divAnswered = " + divAnswered + ". divCounter = " + divCounter);
+                    //todo assert na razmer ostavwihsya qs
+                }
+                divCounter++;
+            }
+            spanWithInput = div.findElements(By.className("answerInput"));
             int rndValue = (int) (Math.random() * 3);
             WebElement currentSpan = spanWithInput.get(rndValue);
             WebElement radioButton = currentSpan.findElement(By.tagName("input"));
             radioButton.click();
+            divAnswered++;
         }
         return this;
     }
