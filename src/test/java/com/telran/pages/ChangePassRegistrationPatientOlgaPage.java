@@ -6,14 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Created by Iakov Volf,Oleg
+ * Created by Olga K.
  */
-public class ChangePassRegistrationPatientOlga extends Page {
+public class ChangePassRegistrationPatientOlgaPage extends Page {
 
-    public ChangePassRegistrationPatientOlga(WebDriver driver) {
+    public ChangePassRegistrationPatientOlgaPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
@@ -59,18 +58,31 @@ public class ChangePassRegistrationPatientOlga extends Page {
     @FindBy(id = "MainContent_CreateUserButton")
     WebElement createUserButton;
 
-//Fill the fileds
+    //Errors
+    @FindBy (xpath= "//*[@id='MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary']/ul/li[contains(text(),'סיסמא קודמת חובה')]")
+    WebElement errorEmptyPass;
+
+    @FindBy (xpath= "//*[@id='MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary']/ul/li[contains(text(),'סיסמא חדשה חובה')]")
+    WebElement errorEmptyPassNew;
+
+    @FindBy (xpath= "//*[@id='MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary']/ul/li[contains(text(),'אימות סיסמא חובה')]")
+    WebElement errorEmptyPassRepeat;
+
+    @FindBy (xpath= "//*[@id='MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary']/ul/li[contains(text(),'אשור הסיסמה החדשה חייב להתאים לערך הסיסמה החדש')]")
+    WebElement errorPassNotSame;
+
+//Fill the fileds MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary
 
 //    Page Change password
-    public ChangePassRegistrationPatientOlga fillCurrentPassword(String pass) {
+    public ChangePassRegistrationPatientOlgaPage fillCurrentPassword(String pass) {
         setElementText(changePasswordCurrentPassword, pass);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillNewPassword(String pass) {
+    public ChangePassRegistrationPatientOlgaPage fillNewPassword(String pass) {
         setElementText(changePasswordNewPassword, pass);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillConfirmNewPassword(String pass) {
+    public ChangePassRegistrationPatientOlgaPage fillConfirmNewPassword(String pass) {
         setElementText(changePasswordConfirmNewPassword, pass);
         return this;
     }
@@ -80,9 +92,27 @@ public class ChangePassRegistrationPatientOlga extends Page {
 
     }
 
+    public boolean isErrorEmptyPass() {
+        return exists(errorEmptyPass);
+    }
+    public boolean isErrorEmptyPassNew() {
+        return exists(errorEmptyPassNew);
+    }
+    public boolean isErrorEmptyPassRepeat() {
+        return exists(errorEmptyPassRepeat);
+    }
+
+    public boolean isErrorPassNotSame() {
+        return exists(errorPassNotSame);
+    }
+    public boolean isNoIntermediatePage() {
+        return exists(gotoFillProfile);
+    }
+
+
 //    Page after Change password
 
-    public ChangePassRegistrationPatientOlga waitUntilGoToNextPageLoaded() {
+    public ChangePassRegistrationPatientOlgaPage waitUntilGoToNextPageLoaded() {
         try {
             waitUntilElementIsLoaded(gotoFillProfile);
         } catch (IOException e) {
@@ -99,7 +129,7 @@ public class ChangePassRegistrationPatientOlga extends Page {
     }
 
     //    Page Fill Profile User
-    public ChangePassRegistrationPatientOlga waitUntilFillProfilePageIsLoaded() {
+    public ChangePassRegistrationPatientOlgaPage waitUntilFillProfilePageIsLoaded() {
         try {
             waitUntilElementIsLoaded(firstNameTxt);
         } catch (IOException e) {
@@ -109,35 +139,35 @@ public class ChangePassRegistrationPatientOlga extends Page {
         }
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillFirstNameTxt(String firstName) {
+    public ChangePassRegistrationPatientOlgaPage fillFirstNameTxt(String firstName) {
         setElementText(firstNameTxt, firstName);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillLastNameTxt(String lastName) {
+    public ChangePassRegistrationPatientOlgaPage fillLastNameTxt(String lastName) {
         setElementText(lastNameTxt, lastName);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillDateBirthday(String date) {
+    public ChangePassRegistrationPatientOlgaPage fillDateBirthday(String date) {
         setElementText(dateBirthday, date);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillPersonalId(String personalId) {
+    public ChangePassRegistrationPatientOlgaPage fillPersonalId(String personalId) {
         setElementText(personalIdTxt, personalId);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillcontactPhone(String personalId) {
+    public ChangePassRegistrationPatientOlgaPage fillcontactPhone(String personalId) {
         setElementText(contactPhoneTxt, personalId);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillAdress(String address) {
+    public ChangePassRegistrationPatientOlgaPage fillAdress(String address) {
         setElementText(addressTxt, address);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillHouseNumber(String houseNumber) {
+    public ChangePassRegistrationPatientOlgaPage fillHouseNumber(String houseNumber) {
         setElementText(houseNumberTxt, houseNumber);
         return this;
     }
-    public ChangePassRegistrationPatientOlga fillCity(String city) {
+    public ChangePassRegistrationPatientOlgaPage fillCity(String city) {
         setElementText(cityTxt, city);
         return this;
     }
