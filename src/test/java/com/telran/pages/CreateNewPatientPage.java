@@ -118,24 +118,24 @@ public class CreateNewPatientPage extends Page {
     }
 
 
-    public String generateFirstName() {
+    /*public String generateFirstName() {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
-        String name = "First" + num;
+        String name = "First" + Integer.toString(num);
         return name;
-    }
+    }*/
 
     public CreateNewPatientPage fillFirstNameField(String name) {
         setElementText(inputName, name);
         return this;
     }
 
-    public String generateLastName() {
+    /*public String generateLastName() {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
         String name = "Last" + num;
         return name;
-    }
+    }*/
 
     public CreateNewPatientPage fillLastNamefield(String name) {
         setElementText(inputLastName, name);
@@ -152,7 +152,7 @@ public class CreateNewPatientPage extends Page {
     public String generateTeacherEmail() {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
-        String Email = "hore" + num + "@yopmail.com";
+        String Email = "more" + num + "@yopmail.com";
         return Email;
     }
 
@@ -198,17 +198,26 @@ public class CreateNewPatientPage extends Page {
         return this;
     }
 
-    public CreateNewPatientPage sendFirstEmail() {
+    public CreateNewPatientPage sendFirstEmail() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(sendFirstEmailButton);
         clickElement(sendFirstEmailButton);
         return this;
     }
 
-    public CreateNewPatientPage addTeacher() {
+    public CreateNewPatientPage selectTypeTeacher() {
+        clickElement(chooseAdultTypeButton);
+        clickElement(teacherAdultFromList);
+        return this;
+    }
+
+    public CreateNewPatientPage addTeacher() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(addNewAdultButton);
         clickElement(addNewAdultButton);
         return this;
     }
 
-    public CreateNewPatientPage fillMeetingDateAndTime(String dateMiting) {
+    public CreateNewPatientPage fillMeetingDateAndTime(String dateMiting) throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(inputMeetingDate);
         setElementText(inputMeetingDate, dateMiting);
         return this;
     }
@@ -234,6 +243,26 @@ public class CreateNewPatientPage extends Page {
         fillWeightfield("2");
         fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
+        sendFirstEmail();
+        fillMeetingDateAndTime("30/11/2015 15:00");
+        clickSaveAccount();
+
+
+    }
+
+    public void createPatientParentAndTeacher(String TZ, String Email, String EmailTeacher) throws IOException, InterruptedException {
+        //  driver.switchTo().frame(frameNewPatient);
+        waitUntilPageIsLoaded();
+        fillFirstNameField("PatientChildFirst");
+        fillLastNamefield("PatientChildLast");
+        fillZeutfield(TZ);
+        fillWeightfield("2");
+        fillBirthDayfield("09/04/2014");
+        filltEmailField(Email);
+        sendFirstEmail();
+        addTeacher();
+
+        filltEmailField(EmailTeacher);
         sendFirstEmail();
         fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
