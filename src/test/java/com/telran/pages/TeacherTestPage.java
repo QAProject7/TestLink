@@ -190,12 +190,17 @@ public class TeacherTestPage extends Page {
     public void clickOnButtonStartTest() {
         clickElement(buttonStartTest);
     }
+
     public void clickOnLoginButton() {
         clickElement(loginBtn);
     }
 
     public boolean isPageOpened() {
         return exists(loginBtn);
+    }
+
+    public boolean isButtonStartTest(){
+        return exists(buttonStartTest);
     }
 
 

@@ -43,7 +43,14 @@ public class RegistrationPageTeacherTest {
                 .fillPasswordField(registered_password)
                 .clickOnLoginButton();
         Assert.assertFalse(loginPage.isPageOpened());
-
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(loginPage.isButtonStartTest(),"Button start test not present");
+        loginPage
+                .clickOnButtonStartTest();
 
 
 
