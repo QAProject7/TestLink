@@ -59,7 +59,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     }
 
     public void fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq"));
+        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq "));
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : sectionqs) {
@@ -80,33 +80,9 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
         clickElement(leftBtnHeader);
 
     }
+
 }
 
 
-
-   /* public void loginOnMobilePage(String username, String pass) {
-        openLoginPage(driver);
-        waitUntilLoginPageIsLoaded();
-        fillUsernameField(username);
-        fillPasswordField(pass);
-        checkAgreeChebox();
-        clickOnLoginButton();
-    }
-
-    public boolean isOnLoginPage() {
-        return exists(loginButton);
-    }
-
-
-    //check alert presence
-
-    public boolean alertMessageNotValidUserName() {
-        return exists(wrongUserNameAlert);
-    }
-
-    public boolean alertMessageNotValidFirsrName() {
-        return exists(wrongPasswordAlert);
-    }
-*/
 
 
