@@ -9,11 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by Iakov Volf
  */
 public class QuestionVanderbiltForParentsPetrunin extends Page {
 
+    QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin;
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
@@ -57,31 +60,34 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
         clickElement(nextImgButton);
 
     }
-    //find element
-    public List<WebElement> getAllQuestions(){
-        return form1.findElements(By.className("sectionq "));
-    }
-    public void fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq "));
-        List<WebElement> rows, radioButtons;
 
-        for (WebElement currentTable : sectionqs) {
-            rows = currentTable.findElements(By.tagName("tr"));
-            for (WebElement currentRow : rows) {
-                radioButtons = currentRow.findElements(By.tagName("input"));
-                String rndValue = String.valueOf((int) (Math.random() * 3));
-                for (WebElement currentRadioButton : radioButtons) {
-                    if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
-                        currentRadioButton.click();
-                    }
+    public void fillElements() {
+        List<WebElement> sectionqs = form1.findElements(By.className("sectionq "));
+        List<WebElement> spanWithInput, radioButtons;
+        int divAnswered = 0;
+        int divNotAnswered = sectionqs.size();
+
+        for (WebElement sec: sectionqs) {
+            questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+            int divCounter = 1;
+            for(WebElement question: sectionqs) {
+                if(divCounter > divAnswered) {
+                    assertTrue(question.getAttribute("class").equals("sectionq  Required"));
                 }
+                divCounter++;
             }
+            spanWithInput = sec.findElements(By.className("answerInput"));
+            int rndValue = (int) (Math.random() * 3);
+            WebElement currentSpan = spanWithInput.get(rndValue);
+            WebElement radioButton = currentSpan.findElement(By.tagName("input"));
+            radioButton.click();
+            divAnswered++;
         }
     }
 
-    public void checkLeftBtnHeader() {
+    public QuestionVanderbiltForParentsPetrunin checkLeftBtnHeader() {
         clickElement(leftBtnHeader);
-
+        return this;
     }
 
 }

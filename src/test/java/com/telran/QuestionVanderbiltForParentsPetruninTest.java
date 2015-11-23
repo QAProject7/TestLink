@@ -72,7 +72,6 @@ public class QuestionVanderbiltForParentsPetruninTest {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
         }
         questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
     }
