@@ -31,10 +31,6 @@ public class TestNgTestBase {
     }
     capabilities = PropertyLoader.loadCapabilities();
     WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
-  }
-
-  @BeforeMethod(alwaysRun = true)
-  public void initWebDriver() {
     driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
   }
 

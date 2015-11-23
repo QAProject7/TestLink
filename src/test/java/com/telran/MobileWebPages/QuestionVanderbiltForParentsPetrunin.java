@@ -9,15 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by Iakov Volf
  */
 public class QuestionVanderbiltForParentsPetrunin extends Page {
 
+    QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin;
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
-    @FindBy(xpath = "//*[@class='TitleManageNot'][contains(text(),'שאלון וונדרבילט להורה - דוח ממתין למילוי')]/../../../*[@class='liOnList ManageNot'][@index='0']//div[@class='nowBtn BaseBtn GreenBtn'][@ntype='1']")
-    WebElement mainPage;
+    @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
+    WebElement submitButton;
 
     @FindBy(xpath = "//*[@id='listWaitingReports']//div[@class='NextImgButton']")
     WebElement nextImgButton;
@@ -48,9 +51,9 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     }
 
 
-    public void clickMainPage() {
-        clickElement(mainPage);
-
+    public QuestionVanderbiltForParentsPetrunin clickSubmitButton() {
+        clickElement(submitButton);
+        return this;
     }
 
     public void checkNextImgButton() {
@@ -59,54 +62,36 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     }
 
     public void fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq"));
-        List<WebElement> rows, radioButtons;
+        List<WebElement> sectionqs = form1.findElements(By.className("sectionq "));
+        List<WebElement> spanWithInput, radioButtons;
+        int divAnswered = 0;
+        int divNotAnswered = sectionqs.size();
 
-        for (WebElement currentTable : sectionqs) {
-            rows = currentTable.findElements(By.tagName("tr"));
-            for (WebElement currentRow : rows) {
-                radioButtons = currentRow.findElements(By.tagName("input"));
-                String rndValue = String.valueOf((int) (Math.random() * 3));
-                for (WebElement currentRadioButton : radioButtons) {
-                    if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
-                        currentRadioButton.click();
-                    }
+        for (WebElement sec: sectionqs) {
+            questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+            int divCounter = 1;
+            for(WebElement question: sectionqs) {
+                if(divCounter > divAnswered) {
+                    assertTrue(question.getAttribute("class").equals("sectionq  Required"));
                 }
+                divCounter++;
             }
+            spanWithInput = sec.findElements(By.className("answerInput"));
+            int rndValue = (int) (Math.random() * 3);
+            WebElement currentSpan = spanWithInput.get(rndValue);
+            WebElement radioButton = currentSpan.findElement(By.tagName("input"));
+            radioButton.click();
+            divAnswered++;
         }
     }
 
-    public void checkLeftBtnHeader() {
+    public QuestionVanderbiltForParentsPetrunin checkLeftBtnHeader() {
         clickElement(leftBtnHeader);
-
+        return this;
     }
+
 }
 
 
-
-   /* public void loginOnMobilePage(String username, String pass) {
-        openLoginPage(driver);
-        waitUntilLoginPageIsLoaded();
-        fillUsernameField(username);
-        fillPasswordField(pass);
-        checkAgreeChebox();
-        clickOnLoginButton();
-    }
-
-    public boolean isOnLoginPage() {
-        return exists(loginButton);
-    }
-
-
-    //check alert presence
-
-    public boolean alertMessageNotValidUserName() {
-        return exists(wrongUserNameAlert);
-    }
-
-    public boolean alertMessageNotValidFirsrName() {
-        return exists(wrongPasswordAlert);
-    }
-*/
 
 
