@@ -56,8 +56,11 @@ public class QuestionVanderbiltForParentsPetruninTest {
 
     @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
     public void testOpenPatientPage() {
-
-
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        }
+        questionVanderbiltForParentsPetrunin.checkNextImgButton();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
