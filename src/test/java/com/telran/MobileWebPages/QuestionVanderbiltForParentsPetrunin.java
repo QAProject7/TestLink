@@ -17,7 +17,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
-    WebElement mainPage;
+    WebElement submitButton;
 
     @FindBy(xpath = "//*[@id='listWaitingReports']//div[@class='NextImgButton']")
     WebElement nextImgButton;
@@ -48,18 +48,21 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     }
 
 
-    public void clickMainPage() {
-        clickElement(mainPage);
-
+    public QuestionVanderbiltForParentsPetrunin clickSubmitButton() {
+        clickElement(submitButton);
+        return this;
     }
 
     public void checkNextImgButton() {
         clickElement(nextImgButton);
 
     }
-
+    //find element
+    public List<WebElement> getAllQuestions(){
+        return form1.findElements(By.className("sectionq "));
+    }
     public void fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq"));
+        List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq "));
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : sectionqs) {
@@ -80,33 +83,9 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
         clickElement(leftBtnHeader);
 
     }
+
 }
 
 
-
-   /* public void loginOnMobilePage(String username, String pass) {
-        openLoginPage(driver);
-        waitUntilLoginPageIsLoaded();
-        fillUsernameField(username);
-        fillPasswordField(pass);
-        checkAgreeChebox();
-        clickOnLoginButton();
-    }
-
-    public boolean isOnLoginPage() {
-        return exists(loginButton);
-    }
-
-
-    //check alert presence
-
-    public boolean alertMessageNotValidUserName() {
-        return exists(wrongUserNameAlert);
-    }
-
-    public boolean alertMessageNotValidFirsrName() {
-        return exists(wrongPasswordAlert);
-    }
-*/
 
 
