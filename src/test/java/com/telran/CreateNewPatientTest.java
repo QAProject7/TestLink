@@ -3,9 +3,11 @@ package com.telran;
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginMaksimPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +21,7 @@ public class CreateNewPatientTest {
     public static String zeut;
     public static String email;
     public static String emailTeacher;
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public LoginMaksimPage loginPage;
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientpage;
@@ -53,8 +56,10 @@ public class CreateNewPatientTest {
     @Test(groups = {"positive"})
     public void createNewPatient() {
         try {
+            Log.info("Create new patient started");
             createNewPatientpage.createPatientOneParent(zeut, email);
             doctorsPage.isPatientExists(zeut);
+            Reporter.log("new Patient added");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
