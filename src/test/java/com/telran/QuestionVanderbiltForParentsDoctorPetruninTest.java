@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class QuestionVanderbiltForParentsPetruninTest {
+public class QuestionVanderbiltForParentsDoctorPetruninTest {
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public static String registered_username = "6012Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
