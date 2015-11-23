@@ -24,12 +24,8 @@ public class QuestionVanderbiltForParentsPetruninTest {
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver(); //Запускаем Firefox
-        //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
-        //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetrunin.class);
-       // doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
-       // drugRecommendationPage = PageFactory.initElements(driver, DrugRecommendationPage.class);
 
     }
 
@@ -51,10 +47,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
 
     }
 
-
-
-
-    @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
+    @Test(groups = {"positive", "smoke"})
     public void testOpenPatientPage() {
         try {
             Thread.sleep(3000);
@@ -66,21 +59,9 @@ public class QuestionVanderbiltForParentsPetruninTest {
         } catch (InterruptedException e) {
         }
         questionVanderbiltForParentsPetrunin.fillElements();
-       /* Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
-    drugRecommendationPage.clickTimeLineQst();
-        try {
-            Thread.sleep(4000); //ждем 4 сек
-        } catch (InterruptedException e) {}
-       Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
-*/
-        //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
+
     }
 
-
-
-
-
-    // test of clicking on Registration link are written in another class
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
