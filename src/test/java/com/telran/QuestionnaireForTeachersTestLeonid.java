@@ -19,7 +19,7 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 /**
- * Created by Leonid Gengrinovich
+ *  Created by Leonid Gengrinovich
  */
 public class QuestionnaireForTeachersTestLeonid {
 
