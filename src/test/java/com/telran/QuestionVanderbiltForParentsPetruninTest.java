@@ -39,20 +39,26 @@ public class QuestionVanderbiltForParentsPetruninTest {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
         loginMobilePage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
-
+        loginMobilePage.waitUntilLoginPageIsLoaded();
         loginMobilePage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
                 .checkAgreeChebox();
+
         loginMobilePage.clickOnLoginButton();
-       loginMobilePage.waitUntilLoginPageIsLoaded();
+
+
     }
 
 
     @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
     public void testOpenPatientPage() {
-
-    questionVanderbiltForParentsPetrunin.checkNextImgButton(); // Открыли клиента по теудату
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        questionVanderbiltForParentsPetrunin.checkNextImgButton(); // Открыли клиента по теудату
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
