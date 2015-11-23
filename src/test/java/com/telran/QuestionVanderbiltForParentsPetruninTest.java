@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class QuestionVanderbiltForParentsPetruninTest {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
-    public static String registered_username = "493Doctor"; //Данные входа доктора
+    public static String registered_username = "6012Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "225543537";//Данные входа доктора
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
