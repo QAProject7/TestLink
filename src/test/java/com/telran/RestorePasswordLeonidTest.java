@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.fail;
+import static com.thoughtworks.selenium.SeleneseTestBase.fail;
 
 public class RestorePasswordLeonidTest {
     private WebDriver driver;
