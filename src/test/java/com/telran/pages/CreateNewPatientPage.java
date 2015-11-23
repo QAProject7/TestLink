@@ -1,5 +1,6 @@
 package com.telran.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -90,6 +91,17 @@ public class CreateNewPatientPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
+
+    public String createMeetingDate() {
+        Random rn = new Random();
+        int day = rn.nextInt(27) + 1;
+        int month = rn.nextInt(11) + 1;
+        int year = rn.nextInt(3) + 2016;
+        String meetingDate = day + "/" + month + "/" + year;
+        System.out.println(meetingDate);
+        return meetingDate;
+    }
+
     public CreateNewPatientPage openCreatePAtinetPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
@@ -118,24 +130,24 @@ public class CreateNewPatientPage extends Page {
     }
 
 
-    public String generateFirstName() {
+    /*public String generateFirstName() {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
-        String name = "First" + num;
+        String name = "First" + Integer.toString(num);
         return name;
-    }
+    }*/
 
     public CreateNewPatientPage fillFirstNameField(String name) {
         setElementText(inputName, name);
         return this;
     }
 
-    public String generateLastName() {
+    /*public String generateLastName() {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
         String name = "Last" + num;
         return name;
-    }
+    }*/
 
     public CreateNewPatientPage fillLastNamefield(String name) {
         setElementText(inputLastName, name);
@@ -144,17 +156,18 @@ public class CreateNewPatientPage extends Page {
 
     public String generateParentEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(1000) + 1;
+        int num = rn.nextInt(100000) + 1;
         String ParentEmail = "hore" + num + "@yopmail.com";
         return ParentEmail;
     }
 
     public String generateTeacherEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(1000) + 1;
-        String Email = "hore" + num + "@yopmail.com";
+        int num = rn.nextInt(100000) + 1;
+        String Email = "more" + num + "@yopmail.com";
         return Email;
     }
+
 
     public String generateZeut() {
         String number = createId();
@@ -198,17 +211,27 @@ public class CreateNewPatientPage extends Page {
         return this;
     }
 
-    public CreateNewPatientPage sendFirstEmail() {
+    public CreateNewPatientPage sendFirstEmail() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(sendFirstEmailButton);
         clickElement(sendFirstEmailButton);
+        waitUntilIsLoaded(driver.findElement(By.id("ctl00_MainContent_AddEditAccount1_RadGrid2_ctl00")));
         return this;
     }
 
-    public CreateNewPatientPage addTeacher() {
+    public CreateNewPatientPage selectTypeTeacher() {
+        clickElement(chooseAdultTypeButton);
+        clickElement(teacherAdultFromList);
+        return this;
+    }
+
+    public CreateNewPatientPage addTeacher() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(addNewAdultButton);
         clickElement(addNewAdultButton);
         return this;
     }
 
-    public CreateNewPatientPage fillMeetingDateAndTime(String dateMiting) {
+    public CreateNewPatientPage fillMeetingDateAndTime(String dateMiting) throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(inputMeetingDate);
         setElementText(inputMeetingDate, dateMiting);
         return this;
     }
@@ -232,10 +255,32 @@ public class CreateNewPatientPage extends Page {
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
         fillWeightfield("2");
+        filltEmailField(Email);
+        sendFirstEmail();
+        fillBirthDayfield("01/01/2015");
+        String meetingDate = createMeetingDate();
+        fillMeetingDateAndTime(meetingDate + " 13:00");
+        clickSaveAccount();
+
+
+    }
+
+
+    public void createPatientParentAndTeacher(String TZ, String Email, String EmailTeacher) throws IOException, InterruptedException {
+        //  driver.switchTo().frame(frameNewPatient);
+        waitUntilPageIsLoaded();
+        fillFirstNameField("PatientChildFirst");
+        fillLastNamefield("PatientChildLast");
+        fillZeutfield(TZ);
+        fillWeightfield("2");
         fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
         sendFirstEmail();
-        fillMeetingDateAndTime("26/11/2015 10:00");
+        addTeacher();
+
+        filltEmailField(EmailTeacher);
+        sendFirstEmail();
+        fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
 
 

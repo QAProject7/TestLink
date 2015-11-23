@@ -6,6 +6,7 @@ import com.telran.pages.LoginIrinaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,7 +19,7 @@ public class DrugRecommendationFainbergObjTest {
 
     public static String username = "4337Doctor";
     public static String password = "LinkCare!!11";
-    public static String testText1 = "Test Text 1234";
+    public static String testText1 = "Test Text 123456";
 
     public WebDriver driver;
 
@@ -58,41 +59,41 @@ public class DrugRecommendationFainbergObjTest {
 
     @Test(groups = {"smoke", "positive"})
     public void AddElement() {
-        //patientPage.waitUntilTestPageIsLoaded();
+        System.out.println("Add drug to last group test");
         try {
             //mainPage.fillElements();
-            patientPage.pressExpandElement()
-                    .pressAddLink()
+            patientPage.pressExpandElement();
+            Thread.sleep(5000);
+            patientPage.pressAddLink()
                     .fillTextField(testText1)
                     .pressCommitAddLink();
-
+            Thread.sleep(5000);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        if (patientPage.isTextInsertedOk(testText1))
-            System.out.println("TextInsertedOk");
+        System.out.println("Asserting starting");
+        Assert.assertTrue(patientPage.isTextInsertedOk(testText1), "DrugAddedTest Failed!");
     }
 
 
     @Test(groups = {"smoke", "positive"})
     public void DeleteElement() {
-        //patientPage.waitUntilTestPageIsLoaded();
+        System.out.println("Delete drug from last group test");
+        String deletedDrug = null;
         try {
-            //mainPage.fillElements();
-            patientPage.pressExpandElement()
-                    .pressAddLink()
-                    .fillTextField(testText1)
-                    .pressCommitAddLink();
-
+            deletedDrug = null;
+            patientPage.pressExpandElement();
+            Thread.sleep(5000);
+            patientPage.pressAddLink();
+            Thread.sleep(5000);
+            deletedDrug = patientPage.unCheckCheckBoxDeletedDrug();
+            Thread.sleep(5000);
+            patientPage.pressCommitAddLink();
+            Thread.sleep(5000);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        if (patientPage.isTextInsertedOk(testText1))
-            System.out.println("TextInsertedOk");
-
-
+        Assert.assertTrue(patientPage.isDrugRemoved(deletedDrug), "DrugRemove Test Failed!");
     }
 
 
