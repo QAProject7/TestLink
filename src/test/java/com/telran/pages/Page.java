@@ -2,8 +2,11 @@ package com.telran.pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.Color;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -174,7 +177,14 @@ public abstract class Page {
     new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(element));
   }
 
+  public void moveMouseOverElement(WebElement element) {
+    String javaScript = "var evObj = document.createEvent('MouseEvents');" +
+            "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
+            "arguments[0].dispatchEvent(evObj);";
 
+
+    ((JavascriptExecutor) driver).executeScript(javaScript, element);
+  }
   public void waitForElement(WebDriverWait wait, String element) {
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(element)));
   }
