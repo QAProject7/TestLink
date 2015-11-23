@@ -57,7 +57,10 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
         clickElement(nextImgButton);
 
     }
-
+    //find element
+    public List<WebElement> getAllQuestions(){
+        return form1.findElements(By.className("sectionq "));
+    }
     public void fillElements() {
         List<WebElement> sectionqs = form1.findElements(By.tagName("sectionq "));
         List<WebElement> rows, radioButtons;

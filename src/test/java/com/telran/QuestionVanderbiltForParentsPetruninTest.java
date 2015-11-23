@@ -28,14 +28,14 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginMobilePage loginMobilePage;
     private WebDriver driver;
-    public MobileQuestionnareForTeacher8qLeonid mobileQuestionnareForTeacher8q;
+
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver(); //Запускаем Firefox
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetrunin.class);
-        mobileQuestionnareForTeacher8q = PageFactory.initElements(driver, MobileQuestionnareForTeacher8qLeonid.class);
+
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -67,33 +67,15 @@ public class QuestionVanderbiltForParentsPetruninTest {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
         }
-    }
-    public void fillQuestionnaire() throws InterruptedException {
-        List<WebElement> divs = mobileQuestionnareForTeacher8q.getAllQuestions();
 
-        List<WebElement> spanWithInput, radioButtons;
-        int divAnswered = 0;
-        int divNotAnswered = divs.size();
-
-        for (WebElement div : divs) {
-            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
-            int divCounter = 1;
-            for (WebElement question : divs) {
-                if (divCounter > divAnswered) {
-                    assertTrue(question.getAttribute("class").equals("sectionq  Required"));
-                }
-                divCounter++;
-            }
-            spanWithInput = div.findElements(By.className("answerInput"));
-            int rndValue = (int) (Math.random() * 3);
-            WebElement currentSpan = spanWithInput.get(rndValue);
-            WebElement radioButton = currentSpan.findElement(By.tagName("input"));
-            radioButton.click();
-            divAnswered++;
+            questionVanderbiltForParentsPetrunin.fillElements();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
     }
-
-
 
 
     @AfterClass(alwaysRun = true)
