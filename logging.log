@@ -1,0 +1,5 @@
+2015-11-23 12:12:43 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-23 12:12:43 INFO  LogLog4j:57 - Open patient page by teudat <233466119>
+2015-11-23 12:12:43 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-23 12:12:43 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-23 12:12:53 INFO  LogLog4j:249 - Click time line element

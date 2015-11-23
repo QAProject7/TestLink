@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class CreateNewPatientTest {
-    public static String username = "8781Doctor";
+    public static String username = "1298Doctor";
     public static String password = "LinkCare!!11";
     public static String zeut;
     public static String email;

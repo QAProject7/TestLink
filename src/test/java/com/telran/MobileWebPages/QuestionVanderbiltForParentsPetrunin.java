@@ -16,7 +16,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
 
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
-    @FindBy(xpath = "//*[@class='TitleManageNot'][contains(text(),'שאלון וונדרבילט להורה - דוח ממתין למילוי')]/../../../*[@class='liOnList ManageNot'][@index='0']//div[@class='nowBtn BaseBtn GreenBtn'][@ntype='1']")
+    @FindBy(xpath = "//*[contains(text(),'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//*[contains(text(),'כעת')]")
     WebElement mainPage;
 
     @FindBy(xpath = "//*[@id='listWaitingReports']//div[@class='NextImgButton']")

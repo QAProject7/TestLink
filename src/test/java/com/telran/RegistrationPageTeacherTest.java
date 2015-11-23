@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String registered_username = "more4168@yopmail.com";
+    public static String registered_username = "more8769@yopmail.com";
     public static String registered_password = "LinkCare!!11";
     public static String parentEmail = null;
     public static String zeut = null;
@@ -67,14 +67,22 @@ public class RegistrationPageTeacherTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Assert.assertTrue(loginPage.isButtonStartTest(),"Button start test not present");
+        Assert.assertTrue(loginPage.getButtonStartTest1(), "Button start test not present");
         loginPage
-                .clickOnButtonStartTest();
+                .clickOnButtonStartTest1();
         loginPage
                 .clickOnAnyStar();
         loginPage
                 .clickOnSendButton();
-        Assert.assertFalse(loginPage.isButtonStartTest(), "Test not passed");
+        Assert.assertFalse(loginPage.getButtonStartTest1(), "Test not passed");
+        loginPage.clickOnButtonAccept();
+        loginPage.clickOnButtonStartTest2();
+        driver.switchTo().frame(0);
+        loginPage.clickOnAnyStar();
+        loginPage.clickOnSendButton();
+        driver.switchTo().alert().accept();
+
+
 
     }
 
