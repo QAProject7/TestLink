@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class GhengePassRegPatientOlgaTest {
+public class СhangePassRegPatientOlgaTest {
     public static String firstName = "Moshe";
     public static String lastName = "Levi";
     public static String email = "";
