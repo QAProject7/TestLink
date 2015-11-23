@@ -11,13 +11,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 /**
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String registered_username = null;
+    public static String registered_username = "more4168@yopmail.com";
     public static String registered_password = "LinkCare!!11";
     public static String parentEmail = null;
     public static String zeut = null;
@@ -37,7 +35,7 @@ public class RegistrationPageTeacherTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        registered_username = createPatientPage.generateTeacherEmail();
+       /* registered_username = createPatientPage.generateTeacherEmail();
         parentEmail = createPatientPage.generateParentEmail();
         zeut = createPatientPage.generateZeut();
         try {
@@ -46,7 +44,7 @@ public class RegistrationPageTeacherTest {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         loginPage.openLoginPage(driver);
     }
