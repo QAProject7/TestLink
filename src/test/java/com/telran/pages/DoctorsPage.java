@@ -1,10 +1,14 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+
 
 import java.io.IOException;
 
@@ -12,7 +16,7 @@ import java.io.IOException;
  * Created by Iakov Volf,Oleg
  */
 public class DoctorsPage extends Page {
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
@@ -52,6 +56,7 @@ public class DoctorsPage extends Page {
 
 //Fill the fileds
     public void openPatientPage(String teudat){
+        Log.info("Open patient page by teudat <"+teudat+">");
         String locator="//td[contains(text(),'"+ teudat + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
         WebElement greenButton= driver.findElement(By.xpath(locator));
         greenButton.click();
