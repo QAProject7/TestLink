@@ -15,14 +15,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class QuestionVanderbiltForParentsPetruninTest {
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
-    public static String registered_username = "hore3216@yopmail.com"; //Данные входа доктора
+    public static String registered_username = "hore3216@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    //public static String teudat = "233466119";//Данные входа доктора
     public QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginMobilePage loginMobilePage;
-   // public DoctorsPage doctorsPage;
-   // public DrugRecommendationPage drugRecommendationPage;
     private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
@@ -31,6 +27,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
+        questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetrunin.class);
        // doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
        // drugRecommendationPage = PageFactory.initElements(driver, DrugRecommendationPage.class);
 
@@ -46,18 +43,21 @@ public class QuestionVanderbiltForParentsPetruninTest {
                 .checkAgreeChebox();
 
         loginMobilePage.clickOnLoginButton();
-
-
-    }
-
-
-    @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
-    public void testOpenPatientPage() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
         }
         questionVanderbiltForParentsPetrunin.clickSubmitButton();
+
+    }
+
+
+
+
+    @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
+    public void testOpenPatientPage() {
+
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
