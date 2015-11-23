@@ -2,7 +2,6 @@ package com.telran;
 
 
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
-import com.telran.pages.CreateNewPatient;
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class GhengePassRegPatientOlgaTest {
+public class СhangePassRegPatientOlgaTest {
     public static String firstName = "Moshe";
     public static String lastName = "Levi";
     public static String email = "";

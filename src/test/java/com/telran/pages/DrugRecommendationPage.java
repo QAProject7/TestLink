@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +15,7 @@ import java.util.List;
  * Created by Iakov Volf,Irina
  */
 public class DrugRecommendationPage extends Page {
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     @FindBy(xpath = "//a[contains(text(),'ערוך')]")
     public WebElement valueButton;
 
@@ -183,6 +185,7 @@ public class DrugRecommendationPage extends Page {
     }*/
 
     public DrugRecommendationPage waitUntilDrugPageIsLoaded() {
+        Log.info("Wait until drug page is loaded");
         try {
             Thread.sleep(10000);
             driver.switchTo().frame(0);
@@ -243,6 +246,7 @@ public class DrugRecommendationPage extends Page {
     }
 
        public void clickTimeLineQst() {
+           Log.info("Click time line element");
         clickElement(timeLineQst);
 
     }

@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,7 @@ import java.io.IOException;
  * Created by Iakov Volf,Oleg
  */
 public class DoctorsPage extends Page {
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
@@ -52,13 +54,16 @@ public class DoctorsPage extends Page {
 
 //Fill the fileds
     public void openPatientPage(String teudat){
+        Log.info("Open patient page by teudat <"+teudat+">");
         String locator="//td[contains(text(),'"+ teudat + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
         WebElement greenButton= driver.findElement(By.xpath(locator));
+        Log.info("Clicking 'Green' button");
         greenButton.click();
     }
 
     public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
+            Log.info("Waiting for Main page is loaded");
             waitUntilElementIsLoaded(namesField);
         } catch (IOException e) {
             e.printStackTrace();
@@ -69,11 +74,12 @@ public class DoctorsPage extends Page {
     }
 
     public void clickOnGoToPatientButton() {
+        Log.info("Clicking 'Go to patient' button");
         clickElement(goToPatientButton);
-
     }
 
     public void openRegistrationPage() {
+        Log.info("Opening Registration page");
         clickElement(goToRegLink);
 
     }
@@ -84,19 +90,23 @@ public class DoctorsPage extends Page {
     }
 
     public DoctorsPage clickOnAddPatient() throws InterruptedException {
+        Log.info("Clicking 'Add patient' button");
         clickElement(addPatientButton);
+        Log.info("Trying thread sleep 5000");
         Thread.sleep(5000);
+        Log.info("Trying to switch to frame 0");
         driver.switchTo().frame(0);
         return this;
     }
 
     public boolean isOnMainPage() {
+        Log.info("Checking if we are on the Main page");
         return exists(namesField);
     }
 
     public boolean isPatientExists(String tz) {
+        Log.info("Checking if patient with ID " + tz + " exists");
         String locator = "//td[contains(text(),'" + tz + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
-
         return exists(driver.findElement(By.xpath(locator)));
     }
     //check alert presence
