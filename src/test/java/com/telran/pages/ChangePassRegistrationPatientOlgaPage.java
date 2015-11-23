@@ -232,7 +232,7 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         return exists(emailRequired);
     }
 
-    public boolean isErEmailInvalid() {
+    public boolean isErInvalidEmail() {
         return exists(emailInvalidRequired);
     }
 
