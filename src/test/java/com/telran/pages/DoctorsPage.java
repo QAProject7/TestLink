@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
-
 import java.io.IOException;
 
 /**
@@ -59,11 +57,13 @@ public class DoctorsPage extends Page {
         Log.info("Open patient page by teudat <"+teudat+">");
         String locator="//td[contains(text(),'"+ teudat + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
         WebElement greenButton= driver.findElement(By.xpath(locator));
+        Log.info("Clicking 'Green' button");
         greenButton.click();
     }
 
     public DoctorsPage waitUntilMainPageIsLoaded() {
         try {
+            Log.info("Waiting for Main page is loaded");
             waitUntilElementIsLoaded(namesField);
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,11 +74,12 @@ public class DoctorsPage extends Page {
     }
 
     public void clickOnGoToPatientButton() {
+        Log.info("Clicking 'Go to patient' button");
         clickElement(goToPatientButton);
-
     }
 
     public void openRegistrationPage() {
+        Log.info("Opening Registration page");
         clickElement(goToRegLink);
 
     }
@@ -89,19 +90,23 @@ public class DoctorsPage extends Page {
     }
 
     public DoctorsPage clickOnAddPatient() throws InterruptedException {
+        Log.info("Clicking 'Add patient' button");
         clickElement(addPatientButton);
+        Log.info("Trying thread sleep 5000");
         Thread.sleep(5000);
+        Log.info("Trying to switch to frame 0");
         driver.switchTo().frame(0);
         return this;
     }
 
     public boolean isOnMainPage() {
+        Log.info("Checking if we are on the Main page");
         return exists(namesField);
     }
 
     public boolean isPatientExists(String tz) {
+        Log.info("Checking if patient with ID " + tz + " exists");
         String locator = "//td[contains(text(),'" + tz + "')]/../*//*[@class='LinkBtnPatients GreenBtn']";
-
         return exists(driver.findElement(By.xpath(locator)));
     }
     //check alert presence

@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +19,8 @@ import java.util.Map;
  * Created by Naryck on 2015.11.09.
  */
 public class ChronicQuestionnaire1VladimirPage extends Page {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+
     Map<String, Integer> buttons = new HashMap<String, Integer>();
     ObjectOutputStream oos;
 
@@ -67,13 +71,16 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         List<WebElement> rows, radioButtons;
 
         for (WebElement currentTable : tables) {
+            Log.info("Filling the tables' radiobuttons");
             rows = currentTable.findElements(By.tagName("tr"));
             for (WebElement currentRow : rows) {
                 radioButtons = currentRow.findElements(By.tagName("input"));
                 String rndValue = String.valueOf(/*(int) (Math.random() * 3)*/ 1);
                 for (WebElement currentRadioButton : radioButtons) {
                     if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
-                        buttons.put(currentRadioButton.getAttribute("name"), Integer.parseInt(currentRadioButton.getAttribute("value")));
+                        String name = currentRadioButton.getAttribute("name");
+                        Log.info("Filling radioButtons with index " + rndValue + " with name " + name);
+                        buttons.put(name, Integer.parseInt(currentRadioButton.getAttribute("value")));
                         currentRadioButton.click();
                     }
                 }
@@ -84,18 +91,24 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
                 e.printStackTrace();
             }
         }
+        Log.info("Click on 'Submit' button");
         clickElement(submitButton);
+        Log.info("Accepting alert window");
         driver.switchTo().alert().accept();
+        Log.info("Switching to default content");
         driver.switchTo().defaultContent();
+        Log.info("Clicking the 'Log Out' button");
         clickElement(logOutButton);
     }
 
     public boolean isChronicIllnessAvailable() {
+        Log.info("Check if button 'Chronic Illness' available");
         return verifyElementIsPresent(questionnaireChronicIllness);
     }
 
     public ChronicQuestionnaire1VladimirPage waitUntilTestPageIsLoaded() {
         try {
+            Log.info("Waiting for the test page to load");
             waitUntilElementIsLoaded(questionnaireChronicIllness);
         } catch (IOException e) {
             e.printStackTrace();
@@ -109,6 +122,7 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
     }
 
     public void clickTestButton() {
+        Log.info("Clocking the 'Test' button");
         clickElement(questionnaireChronicIllness);
     }
 
