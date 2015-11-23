@@ -56,9 +56,8 @@ public class QuestionVanderbiltForParentsPetruninTest {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
         }
-        questionVanderbiltForParentsPetrunin.checkNextImgButton(); // Открыли клиента по теудату
+        questionVanderbiltForParentsPetrunin.clickMainPage();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
