@@ -21,7 +21,7 @@ import static org.testng.Assert.fail;
 /**
  *  Created by Leonid Gengrinovich
  */
-public class QuestionnaireForTeachersTestLeonid {
+public class QuestionnaireForTeachersTest {
 
     String username = "more3373@yopmail.com";
     String password = "LinkCare!!11";
