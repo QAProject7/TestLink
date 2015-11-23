@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,7 @@ import java.util.List;
  */
 public class TeacherTestPage extends Page {
 
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(xpath = "//*[@id='MainContent_contentHtml']/table/tbody//input[@name='q1'][@value='3']]")
     WebElement question1Button1;
@@ -129,18 +131,21 @@ public class TeacherTestPage extends Page {
     }
 
     public TeacherTestPage openLoginPage(WebDriver driver) {
+        Log.info("Openning Login Page");
         driver.get(PAGE_URL);
         return this;
     }
 
     //Fill the fileds
     public TeacherTestPage fillUsernameField(String username) {
+        Log.info("Filling User name");
         setElementText(usernameField, username);
         // Log.info("entering username: " + username + " ");
         return this;
     }
 
     public TeacherTestPage fillPasswordField(String password) {
+        Log.info("Filling password");
         setElementText(passwordField, password);
         // Log.info("entering password: " + password + " ");
         return this;
@@ -150,7 +155,7 @@ public class TeacherTestPage extends Page {
     //public ProfilePage profilePage;
 
     public void clickOnAnyStar() {
-
+        Log.info("Click any radio button ");
         List<WebElement> guestList = tablelist.findElements(By.tagName("tr"));
         Iterator<WebElement> iterator = guestList.iterator();
         while (iterator.hasNext()) {
@@ -168,11 +173,13 @@ public class TeacherTestPage extends Page {
     }
 
     public TeacherTestPage openTeacherTestPage(WebDriver driver) {
+        Log.info("Openning Teacher Test Page");
         driver.get(PAGE_URL);
         return this;
     }
 
     public TeacherTestPage waitUntilPageIsLoaded() {
+        Log.info("Waiting page is loaded");
         try {
             waitUntilElementIsLoaded(send);
         } catch (IOException e) {
@@ -184,22 +191,27 @@ public class TeacherTestPage extends Page {
     }
 
     public void clickOnSendButton() {
+        Log.info("Click Send button");
         clickElement(send);
     }
 
     public void clickOnButtonStartTest() {
+        Log.info("Click button Start Test");
         clickElement(buttonStartTest);
     }
 
     public void clickOnLoginButton() {
+        Log.info("Click Login button");
         clickElement(loginBtn);
     }
 
     public boolean isPageOpened() {
+        Log.info("Check the opening page");
         return exists(loginBtn);
     }
 
-    public boolean isButtonStartTest(){
+    public boolean isButtonStartTest() {
+        Log.info("Check availability button start test");
         return exists(buttonStartTest);
     }
 

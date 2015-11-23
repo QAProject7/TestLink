@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginMaksimPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -13,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class QuestionVanderbiltForParentsPetruninTest {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public static String registered_username = "493Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "225543537";//Данные входа доктора
@@ -34,7 +36,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginPage.openLoginPage(driver);
+        loginPage.openLoginPage(driver); //Логи к данному методу добавлены на странице Максима LoginPage
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
@@ -45,6 +47,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
 
     @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
     public void testOpenPatientPage() {
+    //Логи к методам добавлены на странице Иры DoctorsPage и DrugRecommendationPage
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
         Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника

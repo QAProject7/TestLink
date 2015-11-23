@@ -254,12 +254,16 @@ public class CreateNewPatientPage extends Page {
         fillFirstNameField("PatientChildFirst");
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
-        fillWeightfield("2");
+        fillWeightfield("25");
         filltEmailField(Email);
         sendFirstEmail();
-        fillBirthDayfield("01/01/2015");
-        String meetingDate = createMeetingDate();
-        fillMeetingDateAndTime(meetingDate + " 13:00");
+        Random rn = new Random();
+        int day = rn.nextInt(27) + 1;
+        int month = rn.nextInt(11) + 1;
+        int year = rn.nextInt(3) + 2015;
+        String birthDate = day + "/" + month + "/" + year;
+        fillBirthDayfield(birthDate);
+        fillMeetingDateAndTime("30/11/2015 15:00");
         clickSaveAccount();
 
 
