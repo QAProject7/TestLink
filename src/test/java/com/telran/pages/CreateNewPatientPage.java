@@ -121,14 +121,14 @@ public class CreateNewPatientPage extends Page {
 
     public String generateParentEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(100000) + 1;
+        int num = rn.nextInt(1000) + 1;
         String ParentEmail = "hore" + num + "@yopmail.com";
         return ParentEmail;
     }
 
     public String generateTeacherEmail() {
         Random rn = new Random();
-        int num = rn.nextInt(100000) + 1;
+        int num = rn.nextInt(1000) + 1;
         String Email = "more" + num + "@yopmail.com";
         Log.info("TeacherEmail generated is <" + Email + ">");
         return Email;
@@ -146,7 +146,7 @@ public class CreateNewPatientPage extends Page {
         int day = rn.nextInt(27) + 1;
         int month = rn.nextInt(11) + 1;
         int year = rn.nextInt(3) + 2016;
-        String meetingDate = day + "/" + month + "/" + year;
+        String meetingDate = day + "/" + month + "/" + year + " 08:00";
         System.out.println(meetingDate);
         Log.info("MeetingDate generated is <" + meetingDate + ">");
         return meetingDate;
