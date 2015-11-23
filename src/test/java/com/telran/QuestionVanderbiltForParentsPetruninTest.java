@@ -57,7 +57,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
         }
-        questionVanderbiltForParentsPetrunin.clickMainPage();
+        questionVanderbiltForParentsPetrunin.clickSubmitButton();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
