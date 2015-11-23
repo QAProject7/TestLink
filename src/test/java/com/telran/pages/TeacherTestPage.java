@@ -82,6 +82,16 @@ public class TeacherTestPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_contentHtml']/table/tbody//input[@name='q7'][@value='0']]")
     WebElement question7Button4;
 
+    //new button
+    @FindBy(xpath = "//*[@id='MainContent_RptNotification_NowBtn1_0']")
+    WebElement buttonStartTest1;
+    //*[@id='MainContent_RptNotification_NowBtn1_0']
+
+    @FindBy(xpath = "//*[@id='ctl00_MainContent_RadGrid1_ctl00_ctl04_Accept']")
+    WebElement buttonAccept;
+    //*[@id='ctl00_MainContent_RadGrid1_ctl00_ctl04_Accept']
+
+    //old button
     @FindBy(xpath = "//*[[@id='MainContent_contentHtml']/table/tbody/tr]")
     WebElement tablelist;
 
@@ -100,7 +110,7 @@ public class TeacherTestPage extends Page {
     WebElement send;
 
     @FindBy(xpath = "//*[@id='MainContent_RptNotification_NowBtn1_0']")
-    WebElement buttonStartTest;
+    WebElement buttonStartTest2;
 
     /*@FindBy(id = "MainContent_LoginUser_UserName")
     WebElement usernameField;
@@ -195,9 +205,19 @@ public class TeacherTestPage extends Page {
         clickElement(send);
     }
 
-    public void clickOnButtonStartTest() {
-        Log.info("Click button Start Test");
-        clickElement(buttonStartTest);
+    public void clickOnButtonStartTest2() {
+        Log.info("Click button Start Test2");
+        clickElement(buttonStartTest2);
+    }
+
+    public void clickOnButtonStartTest1() {
+        Log.info("Click button Start Test1");
+        clickElement(buttonStartTest1);
+    }
+
+    public void clickOnButtonAccept() {
+        Log.info("Click button accept");
+        clickElement(buttonAccept);
     }
 
     public void clickOnLoginButton() {
@@ -210,9 +230,14 @@ public class TeacherTestPage extends Page {
         return exists(loginBtn);
     }
 
-    public boolean isButtonStartTest() {
+    public boolean getButtonStartTest2() {
         Log.info("Check availability button start test");
-        return exists(buttonStartTest);
+        return exists(buttonStartTest2);
+    }
+
+    public boolean getButtonStartTest1() {
+        Log.info("Check availability button start test");
+        return exists(buttonStartTest1);
     }
 
 
