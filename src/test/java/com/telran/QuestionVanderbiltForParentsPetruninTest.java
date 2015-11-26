@@ -44,7 +44,6 @@ public class QuestionVanderbiltForParentsPetruninTest {
         } catch (InterruptedException e) {
         }
         questionVanderbiltForParentsPetrunin.clickSubmitButton();
-
     }
 
     @Test(groups = {"positive", "smoke"})
@@ -56,7 +55,8 @@ public class QuestionVanderbiltForParentsPetruninTest {
         Thread.sleep(3000);
         Log.info("All input elements is clicked");
             Thread.sleep(3000);
-       // questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+       questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+        Log.info("Access buttom was pushed. Test is finished!");
     }
 
 
