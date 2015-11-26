@@ -65,7 +65,7 @@ public class QuestionVanderbiltForParentsPetruninPage extends Page {
     }
 
     public QuestionVanderbiltForParentsPetruninPage fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.className("sectionq "));
+        List<WebElement> sectionqs = form1.findElements(By.className("sectionq"));
 
         Log.info("Find all table elements");
         List<WebElement> spanWithInput, radioButtons;
