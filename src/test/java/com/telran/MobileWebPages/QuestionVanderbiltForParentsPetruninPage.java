@@ -20,7 +20,7 @@ public class QuestionVanderbiltForParentsPetruninPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
         //fields
 
-    @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
+    @FindBy(xpath = "//*[@class='TitleManageNot'][contains(text(), 'שאלון וונדרבילט להורה - דוח ממתין למילוי')]/../..//*[@class='nowBtn BaseBtn GreenBtn']")
     WebElement submitButton;
 
     @FindBy(xpath = "//*[@id='listWaitingReports']//div[@class='NextImgButton']")
