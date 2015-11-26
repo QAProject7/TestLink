@@ -63,7 +63,7 @@ public class CreateNewPatientPage extends Page {
     @FindBy(id = "ctl00_MainContent_AddEditAccount1_TxtSearchRoles_Arrow")
     WebElement chooseAdultTypeButton;
 
-    @FindBy(xpath = "//*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[3]")
+    @FindBy(xpath = "//*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[2]")
     WebElement teacherAdultFromList;
 
     @FindBy(xpath = "//*[@id='popup']/div[6]/iframe")
@@ -311,6 +311,7 @@ public class CreateNewPatientPage extends Page {
         fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
         sendFirstEmail();
+        selectTypeTeacher();
         addTeacher();
 
         filltEmailField(EmailTeacher);
