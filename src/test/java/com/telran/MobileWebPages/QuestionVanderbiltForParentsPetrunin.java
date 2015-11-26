@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
@@ -15,10 +19,11 @@ import static org.testng.Assert.assertTrue;
  * Created by Iakov Volf
  */
 public class QuestionVanderbiltForParentsPetrunin extends Page {
-
+    public static final String FILE_PATH = "c:\\temp\\buttons1.tst";
     QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin;
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
+    ObjectOutputStream oos;
     @FindBy(xpath = "//div[@id='MainPage']//label[contains(text(), 'שאלון וונדרבילט להורה- אבחון מעקב - דוח ממתין למילוי')]/../..//div[contains(text(), 'כעת')]")
     WebElement submitButton;
 
@@ -76,7 +81,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
                 }
                 divCounter++;
             }
-            spanWithInput = sec.findElements(By.xpath("//*[@type='radio']"));
+            spanWithInput = sec.findElements(By.xpath("/*//*[@type='radio']"));
             int rndValue = (int) (Math.random() * 3);
             WebElement currentSpan = spanWithInput.get(rndValue);
             WebElement radioButton = currentSpan.findElement(By.tagName("input"));
