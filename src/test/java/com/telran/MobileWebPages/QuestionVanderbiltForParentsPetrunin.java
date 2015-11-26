@@ -62,7 +62,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
     }
 
     public void fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.className("sectionq "));
+        List<WebElement> sectionqs = form1.findElements(By.className("sectionq"));
         List<WebElement> spanWithInput, radioButtons;
         int divAnswered = 0;
         int divNotAnswered = sectionqs.size();
@@ -76,7 +76,7 @@ public class QuestionVanderbiltForParentsPetrunin extends Page {
                 }
                 divCounter++;
             }
-            spanWithInput = sec.findElements(By.className("answerInput"));
+            spanWithInput = sec.findElements(By.xpath("//*[@type='radio']"));
             int rndValue = (int) (Math.random() * 3);
             WebElement currentSpan = spanWithInput.get(rndValue);
             WebElement radioButton = currentSpan.findElement(By.tagName("input"));

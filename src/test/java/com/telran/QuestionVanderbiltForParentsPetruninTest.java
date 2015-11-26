@@ -1,26 +1,15 @@
 package com.telran;
 
 import com.telran.MobileWebPages.LoginMobilePage;
-import com.telran.MobileWebPages.MobileQuestionnareForTeacher8qLeonid;
-import com.telran.MobileWebPages.MobileUserMainMenuAccountLeonid;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetrunin;
-import com.telran.pages.DoctorsPage;
-import com.telran.pages.DrugRecommendationPage;
-import com.telran.pages.LoginMaksimPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
-import static org.testng.Assert.assertTrue;
 
 public class QuestionVanderbiltForParentsPetruninTest {
     public static String registered_username = "hore3216@yopmail.com"; //Данные входа клеента
@@ -82,3 +71,5 @@ public class QuestionVanderbiltForParentsPetruninTest {
         this.driver.quit();
     }
 }
+
+
