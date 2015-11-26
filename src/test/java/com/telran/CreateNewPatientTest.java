@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -93,6 +94,9 @@ public class CreateNewPatientTest {
         Log.info("Create new patient started");
         createNewPatientpage.createPatientOneParent(zeut, email);
         Reporter.log("new Patient added");
+        createNewPatientpage.profileFilling(email, zeut);
+        createNewPatientpage.WaitUntilPatientPageIsLoaded();
+        Assert.assertTrue(createNewPatientpage.isOnPatientPage(), "User is not on profile page");
     }
 
 

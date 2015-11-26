@@ -291,7 +291,7 @@ public class CreateNewPatientPage extends Page {
         return exists(fillingAlert);
     }
 
-    public CreateNewPatientPage Fillprofile(String email, String id) {
+    public CreateNewPatientPage profileFilling(String email, String id) {
         driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
         driver.findElement(By.id("MainContent_LoginUser_Password")).clear();
         driver.findElement(By.id("MainContent_LoginUser_Password")).sendKeys("LinkCare!!11");
