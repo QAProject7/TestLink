@@ -4,6 +4,7 @@ import com.telran.util.PropertyLoader;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import ru.stqa.selenium.factory.WebDriverFactory;
 import ru.stqa.selenium.factory.WebDriverFactoryMode;
@@ -30,6 +31,11 @@ public class TestNgTestBase {
     }
     capabilities = PropertyLoader.loadCapabilities();
     WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
+    driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+  }
+
+  @BeforeMethod(alwaysRun = true)
+  public void initWebDriver() {
 
   }
 
