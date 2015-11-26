@@ -23,15 +23,13 @@ import static org.testng.Assert.fail;
  */
 public class QuestionnaireForTeachersTest {
 
-    String username = "more3373@yopmail.com";
-    String password = "LinkCare!!11";
-
     public WebDriver driver;
-    private StringBuffer verificationErrors = new StringBuffer();
+    String username = "more2429@yopmail.com";
+    String password = "LinkCare!!11";
     MobileLoginPageLeonid mobileLoginPage;
     MobileUserMainMenuAccountLeonid mobileUserMainMenuAccount;
     MobileQuestionnareForTeacher8qLeonid mobileQuestionnareForTeacher8q;
-
+    private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
     public void setUp() {

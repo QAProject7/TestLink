@@ -1,8 +1,6 @@
-package com.telran;
+package com.telran.MobileWebPages;
 
 
-import com.telran.MobileWebPages.MobileChangePasswordArtem;
-import com.telran.MobileWebPages.MobileLoginTempArtem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
