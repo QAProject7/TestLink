@@ -89,7 +89,7 @@ public class QuestionnaireForTeachersTest {
         int divNotAnswered = divs.size();
 
         for (WebElement div: divs) {
-            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
+//            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
             int divCounter = 1;
             for(WebElement question: divs) {
                 if(divCounter > divAnswered) {
