@@ -156,7 +156,7 @@ public class CreateNewPatientPage extends Page {
         Random rn = new Random();
         int day = rn.nextInt(27) + 1;
         int month = rn.nextInt(11) + 1;
-        int year = rn.nextInt(3) + 2015;
+        int year = rn.nextInt(3) + 2010;
         return day + "/" + month + "/" + year;
     }
 
@@ -188,7 +188,8 @@ public class CreateNewPatientPage extends Page {
     }
 
 
-    public CreateNewPatientPage fillBirthDayfield(String date) {
+    public CreateNewPatientPage fillBirthDayfield(String date) throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(inputBirthDay);
         Log.info("Filling BirthDate <" + date + ">");
         setElementText(inputBirthDay, date);
         return this;
@@ -286,7 +287,10 @@ public class CreateNewPatientPage extends Page {
         return exists(fillingAlert);
     }
 
+    public void Fillprofile() {
 
+
+    }
     // methods, that fills all fields except TZ and Emails
 
     public void createPatientOneParent(String TZ, String Email) throws IOException, InterruptedException {
