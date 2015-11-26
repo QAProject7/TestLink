@@ -69,10 +69,10 @@ public class CreateNewPatientTest {
                     .fillZeutfield(zeut)
                     .fillWeightfield("2")
                     .filltEmailField(email)
-                    .sendFirstEmail()
+                    .sendAdultEmail()
                     .addTeacher()
                     .filltEmailField(emailTeacher)
-                    .sendFirstEmail();
+                    .sendAdultEmail();
             Thread.sleep(4000);
             createNewPatientpage.fillMeetingDateAndTime(meetingDate)
                     .fillBirthDayfield(birthDate)
@@ -87,6 +87,14 @@ public class CreateNewPatientTest {
             e.printStackTrace();
         }
     }
+
+    @Test(groups = {"positive"})
+    public void createNewPatientWithOneMethod() throws IOException, InterruptedException {
+        Log.info("Create new patient started");
+        createNewPatientpage.createPatientOneParent(zeut, email);
+        Reporter.log("new Patient added");
+    }
+
 
     @Test(groups = {"positive"})
     public void createNewPatientWithParentAndTeacher() {

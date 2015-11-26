@@ -152,6 +152,14 @@ public class CreateNewPatientPage extends Page {
         return meetingDate;
     }
 
+    public String generateBirthDate() {
+        Random rn = new Random();
+        int day = rn.nextInt(27) + 1;
+        int month = rn.nextInt(11) + 1;
+        int year = rn.nextInt(3) + 2010;
+        return day + "/" + month + "/" + year;
+    }
+
     //methods that fill test data
     public CreateNewPatientPage fillFirstNameField(String name) {
         Log.info("Filling First Name <" + name + ">");
@@ -180,7 +188,8 @@ public class CreateNewPatientPage extends Page {
     }
 
 
-    public CreateNewPatientPage fillBirthDayfield(String date) {
+    public CreateNewPatientPage fillBirthDayfield(String date) throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(inputBirthDay);
         Log.info("Filling BirthDate <" + date + ">");
         setElementText(inputBirthDay, date);
         return this;
@@ -210,7 +219,7 @@ public class CreateNewPatientPage extends Page {
         return this;
     }
 
-    public CreateNewPatientPage sendFirstEmail() throws IOException, InterruptedException {
+    public CreateNewPatientPage sendAdultEmail() throws IOException, InterruptedException {
         Log.info("Waiting for button Send Email");
         waitUntilElementIsLoaded(sendFirstEmailButton);
         Log.info("Clicking button Send Email <" + sendFirstEmailButton + ">");
@@ -219,8 +228,10 @@ public class CreateNewPatientPage extends Page {
         return this;
     }
 
-    public CreateNewPatientPage selectTypeTeacher() {
+    public CreateNewPatientPage selectTypeTeacher() throws IOException, InterruptedException {
         Log.info("Selecting teacher type");
+        Log.info("Waiting for Select adult type dropdown");
+        waitUntilElementIsLoaded(chooseAdultTypeButton);
         Log.info("Clicking on <" + chooseAdultTypeButton + ">");
         clickElement(chooseAdultTypeButton);
         Log.info("Clicking on <" + teacherAdultFromList + ">");
@@ -276,7 +287,10 @@ public class CreateNewPatientPage extends Page {
         return exists(fillingAlert);
     }
 
+    public void Fillprofile() {
 
+
+    }
     // methods, that fills all fields except TZ and Emails
 
     public void createPatientOneParent(String TZ, String Email) throws IOException, InterruptedException {
@@ -285,15 +299,10 @@ public class CreateNewPatientPage extends Page {
         fillFirstNameField("PatientChildFirst");
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
-        fillWeightfield("25");
+        fillWeightfield("5");
         filltEmailField(Email);
-        sendFirstEmail();
-        Random rn = new Random();
-        int day = rn.nextInt(27) + 1;
-        int month = rn.nextInt(11) + 1;
-        int year = rn.nextInt(3) + 2015;
-        String birthDate = day + "/" + month + "/" + year;
-        fillBirthDayfield(birthDate);
+        sendAdultEmail();
+        fillBirthDayfield(generateBirthDate());
         fillMeetingDateAndTime(createMeetingDate());
         clickSaveAccount();
 
@@ -308,15 +317,14 @@ public class CreateNewPatientPage extends Page {
         fillLastNamefield("PatientChildLast");
         fillZeutfield(TZ);
         fillWeightfield("2");
-        fillBirthDayfield("09/04/2014");
         filltEmailField(Email);
-        sendFirstEmail();
-        selectTypeTeacher();
+        sendAdultEmail();
         addTeacher();
-
+        selectTypeTeacher();
         filltEmailField(EmailTeacher);
-        sendFirstEmail();
-        fillMeetingDateAndTime("30/11/2015 15:00");
+        sendAdultEmail();
+        fillMeetingDateAndTime(createMeetingDate());
+        fillBirthDayfield(generateBirthDate());
         clickSaveAccount();
 
 
