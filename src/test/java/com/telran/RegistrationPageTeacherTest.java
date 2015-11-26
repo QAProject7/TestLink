@@ -58,16 +58,17 @@ public class RegistrationPageTeacherTest {
         doctorsPage.clickOnAddPatient();
         try {
             createPatientPage.createPatientParentAndTeacher(zeut, parentEmail, registered_username );
-            doctorsPage.waitUntilMainPageIsLoaded();
-            doctorsPage.isPatientExists(zeut);
+          // doctorsPage.waitUntilMainPageIsLoaded();
+           // doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //this.driver.quit();
+       //driver.quit();
 
-        loginPage.openLoginPage(driver);
+       //driver = new FirefoxDriver();
+
     }
 
     @AfterTest(alwaysRun = true)
@@ -77,7 +78,12 @@ public class RegistrationPageTeacherTest {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
-
+        loginPage.openLoginPage(driver);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)

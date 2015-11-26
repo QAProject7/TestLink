@@ -178,8 +178,6 @@ public class TeacherTestPage extends Page {
             }
 
         }
-
-
     }
 
     public TeacherTestPage openTeacherTestPage(WebDriver driver) {
