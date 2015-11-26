@@ -1,7 +1,8 @@
 package com.telran;
 
 import com.telran.MobileWebPages.LoginMobilePage;
-import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetrunin;
+import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -12,9 +13,10 @@ import org.testng.annotations.Test;
 
 
 public class QuestionVanderbiltForParentsPetruninTest {
-    public static String registered_username = "hore3216@yopmail.com"; //Данные входа клеента
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    public static String registered_username = "hore2966@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    public QuestionVanderbiltForParentsPetrunin questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
+    public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginMobilePage loginMobilePage;
     private WebDriver driver;
 
@@ -23,7 +25,7 @@ public class QuestionVanderbiltForParentsPetruninTest {
     public void setup() {
         driver = new FirefoxDriver(); //Запускаем Firefox
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
-        questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetrunin.class);
+        questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
 
     }
 
@@ -46,23 +48,15 @@ public class QuestionVanderbiltForParentsPetruninTest {
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void testOpenPatientPage() {
-        try {
+    public void testOpenPatientPage() throws InterruptedException {
             Thread.sleep(3000);
-        } catch (InterruptedException e) {
-        }
         questionVanderbiltForParentsPetrunin.checkNextImgButton();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-        }
-
-            questionVanderbiltForParentsPetrunin.fillElements();
-        try {
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
-        }
-        questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+        questionVanderbiltForParentsPetrunin.fillElements();
+        Thread.sleep(3000);
+        Log.info("All input elements is clicked");
+            Thread.sleep(3000);
+       // questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
     }
 
 
