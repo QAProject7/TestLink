@@ -2,6 +2,7 @@ package com.telran.pages;
 
 import com.telran.LogLog4j;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -68,6 +69,9 @@ public class CreateNewPatientPage extends Page {
 
     @FindBy(xpath = "//*[@id='popup']/div[6]/iframe")
     WebElement frameNewPatient;
+    @FindBy(xpath = "//*[@id='ctl00_DisplayImportantLinks1_myMenu']/ul/li[1]/a")
+    WebElement questMenu;
+
 
 //*[@id='popup']/div[6]/iframe
 
@@ -287,10 +291,48 @@ public class CreateNewPatientPage extends Page {
         return exists(fillingAlert);
     }
 
-    public void Fillprofile() {
-
-
+    public CreateNewPatientPage Fillprofile(String email, String id) {
+        driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
+        driver.findElement(By.id("MainContent_LoginUser_Password")).clear();
+        driver.findElement(By.id("MainContent_LoginUser_Password")).sendKeys("LinkCare!!11");
+        driver.findElement(By.id("MainContent_LoginUser_UserName")).clear();
+        driver.findElement(By.id("MainContent_LoginUser_UserName")).sendKeys(email);
+        driver.findElement(By.id("MainContent_LoginUser_Password")).clear();
+        driver.findElement(By.id("MainContent_LoginUser_Password")).sendKeys("LinkCare!1");
+        driver.findElement(By.id("MainContent_LoginUser_LoginButton")).click();
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_CurrentPassword")).clear();
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_CurrentPassword")).sendKeys("LinkCare!1");
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_NewPassword")).clear();
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_NewPassword")).sendKeys("LinkCare!!11");
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ConfirmNewPassword")).clear();
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ConfirmNewPassword")).sendKeys("LinkCare!!11");
+        driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangePasswordPushButton")).click();
+        driver.findElement(By.name("fakeusernameremembered")).clear();
+        driver.findElement(By.name("fakeusernameremembered")).sendKeys("527Doctor");
+        driver.findElement(By.name("fakepasswordremembered")).clear();
+        driver.findElement(By.name("fakepasswordremembered")).sendKeys("LinkCare!!11");
+        driver.findElement(By.xpath("//form[@id='Form1']/div[2]/div[2]/div/div/a")).click();
+        driver.findElement(By.id("MainContent_firstNameTxt")).clear();
+        driver.findElement(By.id("MainContent_firstNameTxt")).sendKeys("Parent");
+        driver.findElement(By.id("MainContent_lastNameTxt")).clear();
+        driver.findElement(By.id("MainContent_lastNameTxt")).sendKeys("This");
+        driver.findElement(By.id("MainContent_PersonalIdTxt")).clear();
+        driver.findElement(By.id("MainContent_PersonalIdTxt")).sendKeys(id);
+        driver.findElement(By.id("ctl00_MainContent_ContactPhoneTxt")).clear();
+        driver.findElement(By.id("ctl00_MainContent_ContactPhoneTxt")).sendKeys("(123)-4567890");
+        driver.findElement(By.id("ctl00_MainContent_ContactPhoneTxt")).clear();
+        driver.findElement(By.id("ctl00_MainContent_ContactPhoneTxt")).sendKeys("(123)-4567890");
+        driver.findElement(By.id("MainContent_AddressTxt")).clear();
+        driver.findElement(By.id("MainContent_AddressTxt")).sendKeys("Henkin");
+        driver.findElement(By.id("MainContent_HouseNumberTxt")).clear();
+        driver.findElement(By.id("MainContent_HouseNumberTxt")).sendKeys("3");
+        driver.findElement(By.id("MainContent_CityTxt")).clear();
+        driver.findElement(By.id("MainContent_CityTxt")).sendKeys("TelAviv");
+        driver.findElement(By.id("MainContent_CreateUserButton")).click();
+        return this;
     }
+
+
     // methods, that fills all fields except TZ and Emails
 
     public void createPatientOneParent(String TZ, String Email) throws IOException, InterruptedException {
@@ -328,5 +370,15 @@ public class CreateNewPatientPage extends Page {
         clickSaveAccount();
 
 
+    }
+
+    //Check
+    public CreateNewPatientPage WaitUntilPatientPageIsLoaded() {
+        waitUntilIsLoaded(questMenu);
+        return this;
+    }
+
+    public boolean isOnPatientPage() {
+        return exists(questMenu);
     }
 }
