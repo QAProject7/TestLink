@@ -60,10 +60,9 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         doctorsPage.clickOnAddPatient();
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         createNewPatientPage.createPatientOneParent(zeut, email);
-        assertTrue(!questionnaireFirstPage.isPopUpPresent());
-        if (!questionnaireFirstPage.isPopUpPresent())
-            loginPage.clickLogOut();
-        else return;
+        questionnaireFirstPage.waitUntilElementIsDisappeared("popup");
+
+        loginPage.clickLogOut();
         createNewPatientPage.profileFilling(email, email);
 
         /*loginPage
