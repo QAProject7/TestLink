@@ -1,0 +1,109 @@
+2015-11-26 12:40:26 INFO  LogLog4j:139 - Zeut generated is <233301514>
+2015-11-26 12:40:26 INFO  LogLog4j:133 - TeacherEmail generated is <more367@yopmail.com>
+2015-11-26 12:40:26 INFO  LogLog4j:151 - MeetingDate generated is <2/8/2018 08:00>
+2015-11-26 12:40:26 INFO  LogLog4j:66 - Opening Login page
+2015-11-26 12:40:26 INFO  LogLog4j:73 - Filling username field
+2015-11-26 12:40:27 INFO  LogLog4j:79 - Filling password field
+2015-11-26 12:40:27 INFO  LogLog4j:112 - Clicking on Login button
+2015-11-26 12:40:29 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:40:29 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-11-26 12:40:29 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-11-26 12:40:34 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-11-26 12:40:34 INFO  LogLog4j:93 - Create new patient started
+2015-11-26 12:40:34 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
+2015-11-26 12:40:34 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
+2015-11-26 12:40:34 INFO  LogLog4j:185 - Filling Teudat zeut <233301514>
+2015-11-26 12:40:35 INFO  LogLog4j:198 - Filling weight <5>
+2015-11-26 12:40:35 INFO  LogLog4j:204 - Filling Email <hore618@yopmail.com>
+2015-11-26 12:40:35 INFO  LogLog4j:222 - Waiting for button Send Email
+2015-11-26 12:40:35 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (ef426106-2b92-438e-b1b2-df8648e5004e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:40:35 INFO  LogLog4j:192 - Filling BirthDate <20/8/2017>
+2015-11-26 12:40:35 INFO  LogLog4j:151 - MeetingDate generated is <4/2/2016 08:00>
+2015-11-26 12:40:35 INFO  LogLog4j:251 - Filling meeting date with <4/2/2016 08:00>
+2015-11-26 12:40:37 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (ef426106-2b92-438e-b1b2-df8648e5004e)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-11-26 12:42:47 INFO  LogLog4j:139 - Zeut generated is <842230419>
+2015-11-26 12:42:47 INFO  LogLog4j:133 - TeacherEmail generated is <more521@yopmail.com>
+2015-11-26 12:42:47 INFO  LogLog4j:151 - MeetingDate generated is <20/4/2018 08:00>
+2015-11-26 12:42:47 INFO  LogLog4j:66 - Opening Login page
+2015-11-26 12:42:47 INFO  LogLog4j:73 - Filling username field
+2015-11-26 12:42:49 INFO  LogLog4j:79 - Filling password field
+2015-11-26 12:42:49 INFO  LogLog4j:112 - Clicking on Login button
+2015-11-26 12:42:50 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:42:50 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-11-26 12:42:50 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-11-26 12:42:55 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-11-26 12:42:56 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
+2015-11-26 12:42:56 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
+2015-11-26 12:42:56 INFO  LogLog4j:185 - Filling Teudat zeut <842230419>
+2015-11-26 12:42:56 INFO  LogLog4j:198 - Filling weight <2>
+2015-11-26 12:42:56 INFO  LogLog4j:204 - Filling Email <hore669@yopmail.com>
+2015-11-26 12:42:56 INFO  LogLog4j:222 - Waiting for button Send Email
+2015-11-26 12:42:56 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:42:56 INFO  LogLog4j:242 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@75c56eb9>
+2015-11-26 12:42:59 INFO  LogLog4j:244 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: btnAddLink]>
+2015-11-26 12:42:59 INFO  LogLog4j:231 - Selecting teacher type
+2015-11-26 12:42:59 INFO  LogLog4j:232 - Waiting for Select adult type dropdown
+2015-11-26 12:42:59 INFO  LogLog4j:234 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_TxtSearchRoles_Arrow]>
+2015-11-26 12:42:59 INFO  LogLog4j:236 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> xpath: //*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[2]]>
+2015-11-26 12:42:59 INFO  LogLog4j:204 - Filling Email <more521@yopmail.com>
+2015-11-26 12:42:59 INFO  LogLog4j:222 - Waiting for button Send Email
+2015-11-26 12:42:59 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:42:59 INFO  LogLog4j:151 - MeetingDate generated is <23/3/2016 08:00>
+2015-11-26 12:42:59 INFO  LogLog4j:251 - Filling meeting date with <23/3/2016 08:00>
+2015-11-26 12:42:59 INFO  LogLog4j:192 - Filling BirthDate <20/7/2015>
+2015-11-26 12:43:01 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-11-26 12:43:01 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:44:59 INFO  LogLog4j:139 - Zeut generated is <722119450>
+2015-11-26 12:44:59 INFO  LogLog4j:133 - TeacherEmail generated is <more531@yopmail.com>
+2015-11-26 12:44:59 INFO  LogLog4j:151 - MeetingDate generated is <16/8/2018 08:00>
+2015-11-26 12:44:59 INFO  LogLog4j:66 - Opening Login page
+2015-11-26 12:44:59 INFO  LogLog4j:73 - Filling username field
+2015-11-26 12:45:00 INFO  LogLog4j:79 - Filling password field
+2015-11-26 12:45:00 INFO  LogLog4j:112 - Clicking on Login button
+2015-11-26 12:45:02 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:45:02 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-11-26 12:45:02 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-11-26 12:45:07 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-11-26 12:45:07 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
+2015-11-26 12:45:08 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
+2015-11-26 12:45:08 INFO  LogLog4j:185 - Filling Teudat zeut <722119450>
+2015-11-26 12:45:08 INFO  LogLog4j:198 - Filling weight <2>
+2015-11-26 12:45:08 INFO  LogLog4j:204 - Filling Email <hore772@yopmail.com>
+2015-11-26 12:45:08 INFO  LogLog4j:222 - Waiting for button Send Email
+2015-11-26 12:45:08 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:45:08 INFO  LogLog4j:242 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@75c56eb9>
+2015-11-26 12:45:10 INFO  LogLog4j:244 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: btnAddLink]>
+2015-11-26 12:45:10 INFO  LogLog4j:231 - Selecting teacher type
+2015-11-26 12:45:10 INFO  LogLog4j:232 - Waiting for Select adult type dropdown
+2015-11-26 12:45:10 INFO  LogLog4j:234 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_TxtSearchRoles_Arrow]>
+2015-11-26 12:45:11 INFO  LogLog4j:236 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> xpath: //*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[2]]>
+2015-11-26 12:45:11 INFO  LogLog4j:204 - Filling Email <more531@yopmail.com>
+2015-11-26 12:45:11 INFO  LogLog4j:222 - Waiting for button Send Email
+2015-11-26 12:45:11 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:45:11 INFO  LogLog4j:151 - MeetingDate generated is <19/11/2017 08:00>
+2015-11-26 12:45:11 INFO  LogLog4j:251 - Filling meeting date with <19/11/2017 08:00>
+2015-11-26 12:45:11 INFO  LogLog4j:192 - Filling BirthDate <20/6/2012>
+2015-11-26 12:45:13 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-11-26 12:45:13 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:48:56 INFO  LogLog4j:139 - Zeut generated is <775156961>
+2015-11-26 12:48:56 INFO  LogLog4j:133 - TeacherEmail generated is <more307@yopmail.com>
+2015-11-26 12:48:56 INFO  LogLog4j:151 - MeetingDate generated is <7/10/2018 08:00>
+2015-11-26 12:48:56 INFO  LogLog4j:66 - Opening Login page
+2015-11-26 12:48:56 INFO  LogLog4j:73 - Filling username field
+2015-11-26 12:48:57 INFO  LogLog4j:79 - Filling password field
+2015-11-26 12:48:57 INFO  LogLog4j:112 - Clicking on Login button
+2015-11-26 12:48:59 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 12:48:59 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-11-26 12:48:59 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-11-26 12:49:04 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-11-26 12:49:04 INFO  LogLog4j:93 - Create new patient started
+2015-11-26 12:49:04 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
+2015-11-26 12:49:04 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
+2015-11-26 12:49:04 INFO  LogLog4j:185 - Filling Teudat zeut <775156961>
+2015-11-26 12:49:04 INFO  LogLog4j:199 - Filling weight <5>
+2015-11-26 12:49:04 INFO  LogLog4j:205 - Filling Email <hore339@yopmail.com>
+2015-11-26 12:49:05 INFO  LogLog4j:223 - Waiting for button Send Email
+2015-11-26 12:49:05 INFO  LogLog4j:225 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (cf5e42dd-e5e5-403d-a587-8f1468e0501e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-11-26 12:49:05 INFO  LogLog4j:193 - Filling BirthDate <5/8/2010>
+2015-11-26 12:49:05 INFO  LogLog4j:151 - MeetingDate generated is <24/7/2018 08:00>
+2015-11-26 12:49:05 INFO  LogLog4j:252 - Filling meeting date with <24/7/2018 08:00>

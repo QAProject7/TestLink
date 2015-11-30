@@ -1,70 +1,69 @@
 package com.telran;
 
-import com.telran.pages.DoctorsPage;
-import com.telran.pages.DrugRecommendationPage;
-import com.telran.pages.LoginMaksimPage;
+import com.telran.MobileWebPages.LoginMobilePage;
+import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
 public class QuestionVanderbiltForParentsPetruninTest {
-    public static String registered_username = "493Doctor"; //Данные входа доктора
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    public static String registered_username = "hore2966@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    public static String teudat = "225543537";//Данные входа доктора
-    public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
-    public DoctorsPage doctorsPage;
-    public DrugRecommendationPage drugRecommendationPage;
+    public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
+    public LoginMobilePage loginMobilePage;
     private WebDriver driver;
+
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver(); //Запускаем Firefox
-        //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
-        //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        loginPage = PageFactory.initElements(driver, LoginMaksimPage.class); //Обращаемся к классу LoginMaksimPage и берем оттуда ссылку на страницу
-        doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
-        drugRecommendationPage = PageFactory.initElements(driver, DrugRecommendationPage.class);
+        loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
+        questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
 
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginPage.openLoginPage(driver);
-        loginPage
+        loginMobilePage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+        loginMobilePage.waitUntilLoginPageIsLoaded();
+        loginMobilePage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
-                .clickOnLoginButton();
-       doctorsPage.waitUntilMainPageIsLoaded();
-    }
+                .checkAgreeChebox();
 
-
-    @Test(groups = {"positive", "smoke"}) //Зашли через DoctorsPage в конкретного юзера по теудату и проверили зашел или нет
-    public void testOpenPatientPage() {
-    doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
-    drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
-        Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
-    drugRecommendationPage.clickTimeLineQst();
+        loginMobilePage.clickOnLoginButton();
         try {
-            Thread.sleep(4000); //ждем 4 сек
-        } catch (InterruptedException e) {}
-       Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
-
-        //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        }
+        questionVanderbiltForParentsPetrunin.clickSubmitButton();
     }
 
+    @Test(groups = {"positive", "smoke"})
+    public void testOpenPatientPage() throws InterruptedException {
+            Thread.sleep(3000);
+        questionVanderbiltForParentsPetrunin.checkNextImgButton();
+            Thread.sleep(5000);
+        questionVanderbiltForParentsPetrunin.fillElements();
+        Thread.sleep(3000);
+        Log.info("All input elements is clicked");
+            Thread.sleep(3000);
+       questionVanderbiltForParentsPetrunin.checkLeftBtnHeader();
+        Log.info("Access buttom was pushed. Test is finished!");
+    }
 
-
-
-
-    // test of clicking on Registration link are written in another class
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
     }
 }
+
+

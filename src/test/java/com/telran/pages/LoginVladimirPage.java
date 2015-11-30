@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +13,7 @@ import java.io.IOException;
  * Created by Vladimir, Iakov Volf
  */
 public class LoginVladimirPage extends Page {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
@@ -60,17 +63,20 @@ public class LoginVladimirPage extends Page {
     }
 
     public LoginVladimirPage openLoginPage(WebDriver driver) {
+        Log.info("Opening Login page");
         driver.get(PAGE_URL);
         return this;
     }
 
     //Fill the fields
     public LoginVladimirPage fillUsernameField(String username) {
+        Log.info("Filling username field");
         setElementText(usernameField, username);
         return this;
     }
 
     public LoginVladimirPage fillPasswordField(String password) {
+        Log.info("Filling password field");
         setElementText(passwordField, password);
         // Log.info("entering password from the list: " + password + " ");
         return this;
@@ -78,6 +84,7 @@ public class LoginVladimirPage extends Page {
 
     public LoginVladimirPage waitUntilRegPageIsLoaded() {
         try {
+            Log.info("Waiting for the Reg page is loaded");
             waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
             e.printStackTrace();
@@ -102,18 +109,22 @@ public class LoginVladimirPage extends Page {
     }
 
     public void clickOnLoginButton() {
+        Log.info("Clicking on Login button");
         clickElement(loginButton);
     }
 
     public void clickOnCancelChangePassword() {
+        Log.info("Clicking on 'Cancel change password' button");
         clickElement(cancelChangePasswordButton);
     }
 
     public void openRegistrationPage() {
+        Log.info("CLicking the 'Register' button");
         clickElement(goToRegLink);
     }
 
     public boolean isOnLoginPage() {
+        Log.info("Checking if we are on Login page");
         return exists(loginButton);
     }
 
@@ -147,6 +158,7 @@ public class LoginVladimirPage extends Page {
     }
 
     public void clickLogOut() {
+        Log.info("Clicking on 'Log Out' button");
         logOutButton.click();
     }
 }

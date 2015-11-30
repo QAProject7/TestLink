@@ -34,6 +34,12 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -133,9 +139,7 @@
             <properties>
                 <site.url>http://localhost/</site.url>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
         </profile>
         <profile>
             <id>devhost</id>
@@ -146,8 +150,11 @@
         <profile>
             <id>testhost</id>
             <properties>
-                <site.url>http://testhost/</site.url>
+                <site.url>http://dhclinicappv2stg.item-soft.co.il/</site.url>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
         <profile>
             <id>prodhost</id>

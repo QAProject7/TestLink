@@ -31,11 +31,12 @@ public class TestNgTestBase {
     }
     capabilities = PropertyLoader.loadCapabilities();
     WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
+    driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
   }
 
   @BeforeMethod(alwaysRun = true)
   public void initWebDriver() {
-    driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
+
   }
 
   @AfterSuite(alwaysRun = true)

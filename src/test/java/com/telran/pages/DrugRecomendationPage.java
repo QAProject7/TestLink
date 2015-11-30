@@ -1,6 +1,8 @@
 package com.telran.pages;
 
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,26 +13,28 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by
+ * Created by Alex
  */
 public class DrugRecomendationPage extends Page {
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
 
     //input [@id="ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton" ]
-
-    @FindBy(xpath = "//tr[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']//*[contains(text(),('ערוך'))]")
-    WebElement groupLastAddLink;
-    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan")
+//a[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add']
+    @FindBy(xpath = "//tr [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']//a[contains(text(),'ערוך')]")
+    public WebElement groupLastAddLink;
+    @FindBy(xpath = "//textarea [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan']")
     WebElement groupLastTextInput;
-    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add")
+    @FindBy(xpath = "//a [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_Add']")
     WebElement commitWebLink;
-    @FindBy(xpath = "//*[@id = 'ctl00_MainContent_ctl10_RadTreeList1_ctl08_TxtPlan']/../../../..")
+
+    //@FindBy(xpath = "//div [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']")
+    @FindBy(xpath = "//tr [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08__6']")
     WebElement lastGroup;
     /*  @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
       private WebElement expandCollapseButton;*/
-    @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
+    @FindBy(xpath = "//input [@id='ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton']")
     private WebElement expandCollapseButton;
 
 //*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//span[@class='rlbText']
@@ -93,22 +97,35 @@ public class DrugRecomendationPage extends Page {
     }
 
     public boolean isTextInsertedOk(String testText) {
-        List<WebElement> webElements = lastGroup.findElements(By.xpath("//tr[@class='planAnswers'][not(contains(@onclick,'javascript:'))]"));
-        System.out.println("Found elements : " + webElements.size());
+        Log.info("isTextInsertedOk Start");
+        List<WebElement> webElements = lastGroup.findElements(By.xpath(".//span[@style='display:inline-block;width:100%;']"));
+        Log.info("Found elements : " + webElements.size());
+        //System.out.println("Found elements : " + webElements.size());
+        int i = 0;
         for (WebElement webElement : webElements) {
-            String temp = webElement.getText();
-            System.out.println(temp);
-            if (testText.equals(webElement.getText()))
-                return true;
+            i = i + 1;
+            if (webElement.isDisplayed()) {
+
+                String temp = webElement.getText();
+                Log.info("i=" + i + ":" + temp);
+                //System.out.println(temp);
+                if (testText.equals(webElement.getText()))
+                    return true;
+            }
         }
+        //Log.info("isTextInsertedOk finished");
         return false;
     }
 
     public boolean isDrugRemoved(String testText) {
-        List<WebElement> webElements = lastGroup.findElements(By.xpath("//tr[@class='planAnswers'][not(contains(@onclick,'javascript:'))] "));
+        Log.info("isDrugRemoved Start");
+        List<WebElement> webElements = lastGroup.findElements(By.xpath(".//span[@style='display:inline-block;width:100%;']"));
+        if (webElements.size() < 1)
+            return false;
         for (WebElement webElement : webElements) {
             String temp = webElement.getText();
-            System.out.println(temp);
+            Log.info("text:" + temp);
+            //System.out.println(temp);
             if (temp.equals(testText))
                 return false;
         }
@@ -138,40 +155,28 @@ public class DrugRecomendationPage extends Page {
     }
 
     public String unCheckCheckBoxDeletedDrug() {
-/*        List<WebElement> webElementList=driver.findElements(By.xpath("//div[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//ul[@class='rlbList']/*//*[@checked='checked']"));///../span"));
-        for (WebElement webElement:webElementList ){
-            webElement.click();
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            WebElement elementSpan=webElement.findElement(By.xpath("/../span"));
-            String temp=elementSpan.getText();
-            System.out.println("elementSpan.getText()="+temp);
-            return temp;
-        }
-        return null;*/
-        WebElement webElement = driver.findElement(By.xpath("//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//*[@class='rlbList']  /*//*[@checked='checked']"));///../span"));
-        WebElement webElementSpan = driver.findElement(By.xpath("//*[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers']//*[@class='rlbList']  /*//*[@checked='checked']/../span"));
+
+        WebElement webElement = driver.findElement(By.xpath("//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//input[@checked='checked']"));
+        WebElement webElementSpan = driver.findElement(By.xpath("//li[@id='ctl00_MainContent_ctl10_RadTreeList1_ctl08_RLB_Answers_i0']//input[@checked='checked']/../span"));
         if (webElement.isDisplayed())
-            System.out.println("webElement Founded !!!");
+            Log.info("checked webElement  Founded !!!");
         else
-            System.out.println("webElement NOT  Founded !!!");
-        if (webElementSpan.isDisplayed())
+            Log.info("checked webElement NOT  Founded !!!");
+        /*if (webElementSpan.isDisplayed())
             System.out.println("webElementSpan Founded !!!");
         else
-            System.out.println("webElementSpan NOT  Founded !!!");
+            System.out.println("webElementSpan NOT  Founded !!!");*/
         String temp = webElementSpan.getText();
+        Log.info("webElementSpan.getText()=" + temp);
+        Log.info("webElement.click()");
         webElement.click();
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         //WebElement elementSpan=webElement.findElement(By.xpath("/*/../../span"));
 
-        System.out.println("webElementSpan.getText()=" + temp);
         return temp;
 
         //return null

@@ -1,4 +1,4 @@
-package com.telran;
+package com.telran.Training;
 
 
 import com.telran.pages.LoginPage;

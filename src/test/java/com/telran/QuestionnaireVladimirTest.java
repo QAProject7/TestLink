@@ -10,18 +10,25 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 /**
  * Created by Naryck, Maksim
  */
-public class QuestionnaireVladimirTest {
+public class QuestionnaireVladimirTest extends TestNgTestBase {
+    public static String email;// = "metupelet06@yopmail.com";
+    public static String zeut;
+    public static String password = "LinkCare!!11";
+    public static String doctorEmail = "";
+    public static String doctorPassword = "";
+    public static String docName = "3339Doctor";
+    public static String docPass = "LinkCare!!11";
     public static String username;
-    public static String password = "LinkCare!1";
+
+
     public static String firstName = "Scarlettt";
     public static String lastName = "Johanssson";
-    public static String docName = "493Doctor";
-    public static String docPass = "LinkCare!!11";
+
 
     public WebDriver driver;
 
@@ -31,12 +38,12 @@ public class QuestionnaireVladimirTest {
     public DoctorsPage doctorsPage;
     public RegistrationPage registrationPage;
 
-    private String zeut;
-    private String email;
-    private String street = "Rehov";
+
+
+    /*private String street = "Rehov";
     private String housenumber = "123";
     private String telephone = "0531234567";
-    private String city = "Jerusalem";
+    private String city = "Jerusalem";*/
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws InterruptedException, IOException {
@@ -48,6 +55,7 @@ public class QuestionnaireVladimirTest {
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         zeut = createNewPatientPage.generateZeut();
         email = createNewPatientPage.generateParentEmail();
+        //createNewPatientPage.createPatientOneParent(zeut, email);
         username = email;
 
         loginPage
@@ -55,13 +63,14 @@ public class QuestionnaireVladimirTest {
                 .fillUsernameField(docName)
                 .fillPasswordField(docPass)
                 .clickOnLoginButton();
+
         doctorsPage.waitUntilMainPageIsLoaded();
         doctorsPage.clickOnAddPatient();
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         createNewPatientPage.createPatientOneParent(zeut, email);
         loginPage.clickLogOut();
 
-        loginPage
+        /*loginPage
                 .openLoginPage(driver)
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(username)
@@ -82,7 +91,7 @@ public class QuestionnaireVladimirTest {
                 .fillHouseField(housenumber)
                 .fillCityField(city)
                 .clickOnSubmitButton();
-        loginPage.clickLogOut();
+        loginPage.clickLogOut();*/
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -90,7 +99,7 @@ public class QuestionnaireVladimirTest {
         loginPage
                 .openLoginPage(driver)
                 .waitUntilRegPageIsLoaded()
-                .fillUsernameField(username)
+                .fillUsernameField(email)
                 .fillPasswordField(password)
                 .clickOnLoginButton();
     }
@@ -101,6 +110,20 @@ public class QuestionnaireVladimirTest {
         questionnaireFirstPage.clickTestButton();
         questionnaireFirstPage.waitUntilTestPageIsLoaded();
         questionnaireFirstPage.fillElements();
+
+        loginPage.waitUntilRegPageIsLoaded()
+                .fillUsernameField(email)
+                .fillPasswordField(password)
+                .clickOnLoginButton();
+        assertFalse(questionnaireFirstPage.isChronicIllnessAvailable());
+
+        loginPage.clickLogOut();
+        loginPage.waitUntilRegPageIsLoaded()
+                .fillUsernameField(doctorEmail)
+                .fillPasswordField(doctorPassword)
+                .clickOnLoginButton();
+
+
     }
 
 }

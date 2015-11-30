@@ -19,19 +19,17 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 /**
- * Created by Leonid Gengrinovich
+ *  Created by Leonid Gengrinovich
  */
-public class QuestionnaireForTeachersTestLeonid {
-
-    String username = "more3373@yopmail.com";
-    String password = "LinkCare!!11";
+public class QuestionnaireForTeachersTest {
 
     public WebDriver driver;
-    private StringBuffer verificationErrors = new StringBuffer();
+    String username = "more2429@yopmail.com";
+    String password = "LinkCare!!11";
     MobileLoginPageLeonid mobileLoginPage;
     MobileUserMainMenuAccountLeonid mobileUserMainMenuAccount;
     MobileQuestionnareForTeacher8qLeonid mobileQuestionnareForTeacher8q;
-
+    private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
     public void setUp() {
@@ -91,7 +89,7 @@ public class QuestionnaireForTeachersTestLeonid {
         int divNotAnswered = divs.size();
 
         for (WebElement div: divs) {
-            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
+//            mobileQuestionnareForTeacher8q.clickOnSendResultbutton();
             int divCounter = 1;
             for(WebElement question: divs) {
                 if(divCounter > divAnswered) {

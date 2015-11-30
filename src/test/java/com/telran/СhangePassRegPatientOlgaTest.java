@@ -216,7 +216,7 @@ public class СhangePassRegPatientOlgaTest {
                     .fillEmail("sdsdsdfsdf")
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErInvalidEmail(),"Not found alert: Empty Invalid Email");
+            Assert.assertTrue(loginPatient.isErEmailInvalid(),"Not found alert: Empty Invalid Email");
         } catch (Exception e) {
             e.printStackTrace();
         }

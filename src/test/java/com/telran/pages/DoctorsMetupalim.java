@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- * Created by Iakov Volf,Oleg
+ * 
  */
 public class DoctorsMetupalim extends Page {
 
