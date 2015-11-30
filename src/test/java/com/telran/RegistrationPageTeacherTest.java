@@ -65,7 +65,7 @@ public class RegistrationPageTeacherTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       //driver.quit();
+        this.driver.quit();
 
        //driver = new FirefoxDriver();
 
@@ -78,6 +78,7 @@ public class RegistrationPageTeacherTest {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
+        setup();
         loginPage.openLoginPage(driver);
         try {
             Thread.sleep(3000);
