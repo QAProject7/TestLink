@@ -1,6 +1,7 @@
 package com.telran;
 
 import com.telran.pages.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -59,8 +60,9 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         createNewPatientPage.createPatientOneParent(zeut, email);
         loginPage.clickLogOut();
+        createNewPatientPage.profileFilling(email, email);
 
-        loginPage
+        /*loginPage
                 .openLoginPage(driver)
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(username)
@@ -81,7 +83,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .fillHouseField("123")
                 .fillCityField("city" + generateRandomString(3))
                 .clickOnSubmitButton();
-        loginPage.clickLogOut();
+        loginPage.clickLogOut();*/
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -99,7 +101,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         assertTrue(questionnaireFirstPage.isChronicIllnessAvailable());
         questionnaireFirstPage.clickTestButton();
         questionnaireFirstPage.waitUntilTestPageIsLoaded();
-        questionnaireFirstPage.fillElements();
+        questionnaireFirstPage.fillElements(zeut);
 
         loginPage.waitUntilRegPageIsLoaded()
                 .fillUsernameField(email)
@@ -112,6 +114,10 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .fillUsernameField(doctorEmail)
                 .fillPasswordField(doctorPassword)
                 .clickOnLoginButton();
+        loginPage.clickElement(driver.findElement(By.xpath("//tr[contains(text(),'GridItem')]//*[contains(text(),'" + zeut + "')]/..//a[@class='LinkBtnPatients GreenBtn']")));
+
+        //questionnaireFirstPage.checkAnswers();
+
     }
 
     public String generateRandomString(int length) {

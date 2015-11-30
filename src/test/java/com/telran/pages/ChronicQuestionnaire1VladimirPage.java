@@ -15,7 +15,8 @@ import java.util.*;
  * Created by Naryck on 2015.11.09.
  */
 public class ChronicQuestionnaire1VladimirPage extends Page {
-    public static final String FILE_PATH = "c:\\temp\\buttons1.tst";
+    public static String FILE_PATH;
+    public static String teudat;
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     Map<String, Integer> buttons = new HashMap<String, Integer>();
@@ -27,9 +28,6 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
 
     @FindBy(id = "Top1_HeadLoginStatus")
     WebElement logOutButton;
-
-    @FindBy(xpath = "//a[@class='rwCloseButton']")
-    WebElement closeTableButton;
 
     @FindBy(id = "form1")
     WebElement mainForm;
@@ -56,7 +54,9 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-    public void fillElements() {
+    public void fillElements(String zeut) {
+        FILE_PATH = "D:\\" + zeut + ".tst";
+        teudat = zeut;
         try {
             oos = new ObjectOutputStream((new FileOutputStream(FILE_PATH)));
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
             rows = currentTable.findElements(By.tagName("tr"));
             for (WebElement currentRow : rows) {
                 radioButtons = currentRow.findElements(By.tagName("input"));
-                String rndValue = String.valueOf(/*(int) (Math.random() * 3)*/ 0);
+                String rndValue = String.valueOf((int) (Math.random() * 3) /*0*/);
                 for (WebElement currentRadioButton : radioButtons) {
                     if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
                         String name = currentRadioButton.getAttribute("name");
@@ -109,7 +109,7 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         clickElement(logOutButton);
     }
 
-    private void checkAnswers() {
+    public void checkAnswers() {
         // TODO: logic should be moved into proper place
         Log.info("Check Answers");
         try {
