@@ -69,6 +69,7 @@ public class CreateNewPatientPage extends Page {
 
     @FindBy(xpath = "//*[@id='popup']/div[6]/iframe")
     WebElement frameNewPatient;
+
     @FindBy(xpath = "//*[@id='ctl00_DisplayImportantLinks1_myMenu']/ul/li[1]/a")
     WebElement questMenu;
 
@@ -354,9 +355,8 @@ public class CreateNewPatientPage extends Page {
         clickElement(inputBirthDay);
         clickElement(inputMeetingDate);
         clickElement(addNewAdultButton);
+        Log.info("Clicking 'Save' button");
         clickSaveAccount();
-
-
     }
 
 
