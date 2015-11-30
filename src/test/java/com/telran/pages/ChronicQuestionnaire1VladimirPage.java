@@ -35,6 +35,9 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
     @FindBy(xpath = "//div/*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../..//a[@class='LinkBtnPatients BlueBtn']")
     WebElement questionnaireChronicIllness;
 
+    @FindBy(xpath = "//*[@id='popup']")
+    WebElement questionnairePopUp;
+
     //comments
     @FindBy(xpath = "//textarea[@name='q35']")
     WebElement commentsTextArea;
@@ -134,6 +137,11 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
     public boolean isChronicIllnessAvailable() {
         Log.info("Check if button 'Chronic Illness' available");
         return verifyElementIsPresent(questionnaireChronicIllness);
+    }
+
+    public boolean isPopUpPresent() {
+        Log.info("Check if popup window disappeared");
+        return verifyElementIsPresent(questionnairePopUp);
     }
 
     public ChronicQuestionnaire1VladimirPage waitUntilTestPageIsLoaded() {

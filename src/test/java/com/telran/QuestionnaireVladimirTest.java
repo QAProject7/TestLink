@@ -1,6 +1,7 @@
 package com.telran;
 
 import com.telran.pages.*;
+import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -59,7 +60,10 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         doctorsPage.clickOnAddPatient();
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         createNewPatientPage.createPatientOneParent(zeut, email);
-        loginPage.clickLogOut();
+        assertTrue(!questionnaireFirstPage.isPopUpPresent());
+        if (!questionnaireFirstPage.isPopUpPresent())
+            loginPage.clickLogOut();
+        else return;
         createNewPatientPage.profileFilling(email, email);
 
         /*loginPage
