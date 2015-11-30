@@ -59,7 +59,7 @@ public class CreateNewPatientTest {
 
     }
 
-    @Test(groups = {"positive"})
+
     public void createNewPatient() {
         try {
             Log.info("Create new patient started");
@@ -79,8 +79,8 @@ public class CreateNewPatientTest {
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
             Thread.sleep(4000);
-            doctorsPage.waitUntilMainPageIsLoaded();
-            doctorsPage.isPatientExists(zeut);
+            // doctorsPage.waitUntilMainPageIsLoaded();
+            //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
         } catch (IOException e) {
             e.printStackTrace();
@@ -94,7 +94,11 @@ public class CreateNewPatientTest {
         Log.info("Create new patient started");
         createNewPatientpage.createPatientOneParent(zeut, email);
         Reporter.log("new Patient added");
-        createNewPatientpage.profileFilling(email, zeut);
+        Thread.sleep(4000);
+        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isPatientExists(zeut);
+        Reporter.log("new Patient added");
+        // createNewPatientpage.profileFilling(email, zeut);
         createNewPatientpage.WaitUntilPatientPageIsLoaded();
         Assert.assertTrue(createNewPatientpage.isOnPatientPage(), "User is not on profile page");
     }
