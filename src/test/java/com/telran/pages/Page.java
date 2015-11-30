@@ -177,8 +177,8 @@ public abstract class Page {
     new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(element));
   }
 
-  public void waitUntilElementIsNotPresent(WebElement element) throws IOException, InterruptedException {
-    new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(By.id(element.getTagName())));
+  public void waitUntilElementIsDisappeared (String id) throws IOException, InterruptedException {
+    new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(By.id(id)));
   }
 
   public void moveMouseOverElement(WebElement element) {
