@@ -58,7 +58,7 @@ public class LoginVladimirPage extends Page {
 
     public LoginVladimirPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage";
+        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/";
         PageFactory.initElements(driver, this);
     }
 
