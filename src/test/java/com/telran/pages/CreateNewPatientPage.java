@@ -88,6 +88,9 @@ public class CreateNewPatientPage extends Page {
     @FindBy(id = "MainContent_AddEditAccount1_SaveAccount")
     WebElement buttonSaveAccount;
 
+    @FindBy(id = "MainContent_AddEditAccount1_Label1")
+    WebElement labelUserName;
+
     //public ProfilePage profilePage;
 
     public CreateNewPatientPage(WebDriver driver) {
@@ -196,6 +199,7 @@ public class CreateNewPatientPage extends Page {
         waitUntilElementIsLoaded(inputBirthDay);
         Log.info("Filling BirthDate <" + date + ">");
         setElementText(inputBirthDay, date);
+        labelUserName.click();
         return this;
     }
 
@@ -255,6 +259,7 @@ public class CreateNewPatientPage extends Page {
         waitUntilElementIsLoaded(inputMeetingDate);
         Log.info("Filling meeting date with <" + dateMiting + ">");
         setElementText(inputMeetingDate, dateMiting);
+        labelUserName.click();
         return this;
     }
 

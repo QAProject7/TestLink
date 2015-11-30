@@ -79,8 +79,8 @@ public class CreateNewPatientTest {
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
             Thread.sleep(4000);
-            // doctorsPage.waitUntilMainPageIsLoaded();
-            //doctorsPage.isPatientExists(zeut);
+            doctorsPage.waitUntilMainPageIsLoaded();
+            doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
         } catch (IOException e) {
             e.printStackTrace();
