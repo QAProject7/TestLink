@@ -372,6 +372,9 @@ public class CreateNewPatientPage extends Page {
         sendAdultEmail();
         fillMeetingDateAndTime(createMeetingDate());
         fillBirthDayfield(generateBirthDate());
+        clickElement(inputBirthDay);
+        clickElement(inputMeetingDate);
+        clickElement(addNewAdultButton);
         clickSaveAccount();
 
 
