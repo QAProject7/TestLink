@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.Random;
 
 import static org.testng.Assert.*;
 
@@ -19,18 +20,14 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     public static String email;// = "metupelet06@yopmail.com";
     public static String zeut;
     public static String password = "LinkCare!!11";
+    public static String defaultPassword = "LinkCare!!11";
     public static String doctorEmail = "";
     public static String doctorPassword = "";
     public static String docName = "3339Doctor";
     public static String docPass = "LinkCare!!11";
     public static String username;
-
-
-    public static String firstName = "Scarlettt";
-    public static String lastName = "Johanssson";
-
-
-    public WebDriver driver;
+    static Random rnd = new Random();
+    //public WebDriver driver;
 
     public ChronicQuestionnaire1VladimirPage questionnaireFirstPage;
     public LoginVladimirPage loginPage;
@@ -38,16 +35,9 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     public DoctorsPage doctorsPage;
     public RegistrationPage registrationPage;
 
-
-
-    /*private String street = "Rehov";
-    private String housenumber = "123";
-    private String telephone = "0531234567";
-    private String city = "Jerusalem";*/
-
     @BeforeClass(alwaysRun = true)
     public void setUp() throws InterruptedException, IOException {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         driver.manage().window().maximize();
         loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
         questionnaireFirstPage = PageFactory.initElements(driver, ChronicQuestionnaire1VladimirPage.class);
@@ -70,28 +60,28 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         createNewPatientPage.createPatientOneParent(zeut, email);
         loginPage.clickLogOut();
 
-        /*loginPage
+        loginPage
                 .openLoginPage(driver)
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(username)
-                .fillPasswordField(password)
+                .fillPasswordField(defaultPassword)
                 .clickOnLoginButton();
         loginPage.clickOnCancelChangePassword();
 
         registrationPage
-                .fillUsernameField(firstName)
-                .fillFirstNameField(firstName)
+                .fillUsernameField(email)
+                .fillFirstNameField("name" + generateRandomString(3))
                 //.fillPasswordField(password)
                 .fillEmailField(email)
-                .fillLastNameField(lastName)
+                .fillLastNameField("last" + generateRandomString(4))
                 .fillConfPasswordField(password)
                 .fillIdField(zeut)
-                .fillMobile(telephone)
-                .fillStreetField(street)
-                .fillHouseField(housenumber)
-                .fillCityField(city)
+                .fillMobile("0531234567")
+                .fillStreetField("street" + generateRandomString(3))
+                .fillHouseField("123")
+                .fillCityField("city" + generateRandomString(3))
                 .clickOnSubmitButton();
-        loginPage.clickLogOut();*/
+        loginPage.clickLogOut();
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -122,8 +112,15 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .fillUsernameField(doctorEmail)
                 .fillPasswordField(doctorPassword)
                 .clickOnLoginButton();
+    }
 
-
+    public String generateRandomString(int length) {
+        String chars = "abcdefghijklmnopqrstuvwxyz";
+        StringBuilder buf = new StringBuilder();
+        for (int i=0; i<length; i++) {
+            buf.append(chars.charAt(rnd.nextInt(chars.length())));
+        }
+        return buf.toString();
     }
 
 }
