@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.MobileWebPages.LoginMobilePage;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
 import com.telran.pages.LoginIrinaPage;
+import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -18,28 +19,32 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
     public static String username = "hore2966@yopmail.com"; //Данные входа клеента
     public static String password = "LinkCare!!11";//Данные входа доктора
     public LoginIrinaPage loginIrinaPage;
+    public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;
     private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver(); //Запускаем Firefox
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
-
+        questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
         loginIrinaPage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+
         loginIrinaPage.waitUntilLoginPageIsLoaded();
         loginIrinaPage
                 .fillUsernameField(username)
-                .fillPasswordField(password)
-                .clickOnLoginButton();
+                .fillPasswordField(password);
+        questionnaireChronicDiseasesPatientPetruninPage.clickAddAcceptField();
+        loginIrinaPage.clickOnLoginButton();
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void testOpenPatientPage() {
-
+    public void testOpenPatientPage() throws InterruptedException {
+        Thread.sleep(5000);
+        questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
     }
 
 }

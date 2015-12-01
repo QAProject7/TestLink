@@ -9,11 +9,25 @@ import org.openqa.selenium.support.FindBy;
  */
 public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page{
 
-    @FindBy(id = "MainContent_LoginUser_Password")
-    WebElement passwordField;
+    @FindBy(xpath = "//*[@id='MainContent_LoginUser_CBAgreeToTerms']")
+    WebElement addAcceptField;
+
+    @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../../*[@class='notificationBtns']/a[@id='MainContent_RptNotification_NowBtn1_0']")
+    WebElement clickTableButtom;
 
 
     public QuestionnaireChronicDiseasesPatientPetruninPage(WebDriver driver) {
         super(driver);
+        //Данный сласс не используется, т.к. используем аналогичный loginIrinaPage
+    }
+
+    public QuestionnaireChronicDiseasesPatientPetruninPage clickAddAcceptField() {
+        clickElement(addAcceptField);
+        return this;
+    }
+
+    public QuestionnaireChronicDiseasesPatientPetruninPage clickTableButtom() {
+        clickElement(clickTableButtom);
+        return this;
     }
 }
