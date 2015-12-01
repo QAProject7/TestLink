@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -50,6 +51,13 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
         Thread.sleep(4000);
         driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
         Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.isOnframe(), "We are not on frame page");
+        questionnaireChronicDiseasesPatientPetruninPage.fillElements();
+        Thread.sleep(3000);
     }
 
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
+        this.driver.quit();
+    }
 }
+
