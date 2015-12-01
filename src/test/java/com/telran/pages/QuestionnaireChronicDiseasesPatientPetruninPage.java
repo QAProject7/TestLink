@@ -58,13 +58,10 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
 
         Log.info("Find all table elements " + sections.size());
         List<WebElement> spanWithInput, radioButtons;
-
         for (WebElement sec : sections) {
             spanWithInput = sec.findElements(By.tagName("td"));
             int rndValue = (int) (Math.random() * 3);
-            Log.info("INFO rndValue: " + rndValue + " spanWithInput.size: " + spanWithInput.size());
             if (spanWithInput.size() == 5) {
-                Log.info("INFO " + sec.getAttribute("text") + " " + sec.getAttribute("value") + " " + sec.getText());
                 WebElement currentSpan = spanWithInput.get(rndValue);
                 radioButtons = currentSpan.findElements(By.tagName("input"));
                 for (WebElement but : radioButtons) {
