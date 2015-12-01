@@ -68,7 +68,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
                     }
                 }
             } else {
-                //
+                //Дописать метод поиска пустых строк, внесения их в HashMap и заполнения их
             }
         }
         fillField("test");
