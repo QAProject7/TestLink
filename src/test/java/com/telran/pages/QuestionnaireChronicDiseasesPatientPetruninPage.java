@@ -15,6 +15,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page{
     @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../../*[@class='notificationBtns']/a[@id='MainContent_RptNotification_NowBtn1_0']")
     WebElement clickTableButtom;
 
+    @FindBy(xpath = "//*[@id='MainContent_contentHtml']")
+    WebElement onFrame;
+
 
     public QuestionnaireChronicDiseasesPatientPetruninPage(WebDriver driver) {
         super(driver);
@@ -29,5 +32,11 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page{
     public QuestionnaireChronicDiseasesPatientPetruninPage clickTableButtom() {
         clickElement(clickTableButtom);
         return this;
+    }
+
+    public boolean isOnframe() {
+
+
+        return exists(onFrame);
     }
 }

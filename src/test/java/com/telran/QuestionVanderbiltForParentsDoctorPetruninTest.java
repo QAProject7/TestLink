@@ -57,7 +57,7 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest {
         } catch (InterruptedException e) {}
        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
 
-        //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
+       //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }
 
 

@@ -4,9 +4,11 @@ import com.telran.MobileWebPages.LoginMobilePage;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
 import com.telran.pages.LoginIrinaPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -45,6 +47,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
     public void testOpenPatientPage() throws InterruptedException {
         Thread.sleep(5000);
         questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
+        Thread.sleep(4000);
+        driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+        Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.isOnframe(), "We are not on frame page");
     }
 
 }
