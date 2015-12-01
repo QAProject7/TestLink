@@ -29,8 +29,6 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     @FindBy(xpath = "//*[@name='q34']")
     WebElement textIntroduce;
 
-    @FindBy(xpath = "//*[@type='radio']")
-    WebElement pointField;
 
     public QuestionnaireChronicDiseasesPatientPetruninPage(WebDriver driver) {
         super(driver);
@@ -74,6 +72,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
             }
         }
         fillField("test");
+        Log.info("Text was write into the last field");
         return this;
     }
 
