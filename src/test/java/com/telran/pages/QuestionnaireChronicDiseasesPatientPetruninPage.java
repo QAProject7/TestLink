@@ -39,11 +39,13 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
 
     public QuestionnaireChronicDiseasesPatientPetruninPage clickAddAcceptField() {
         clickElement(addAcceptField);
+        Log.info("Accept Field was added");
         return this;
     }
 
     public QuestionnaireChronicDiseasesPatientPetruninPage clickTableButtom() {
         clickElement(clickTableButtom);
+        Log.info("TableButtom was pushed");
         return this;
     }
 
