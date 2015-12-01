@@ -48,7 +48,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
     public void testOpenPatientPage() throws InterruptedException {
         Thread.sleep(5000);
         questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
         Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.isOnframe(), "We are not on frame page");
         questionnaireChronicDiseasesPatientPetruninPage.fillElements();
@@ -57,7 +57,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        this.driver.quit();
+        //this.driver.quit();
     }
 }
 

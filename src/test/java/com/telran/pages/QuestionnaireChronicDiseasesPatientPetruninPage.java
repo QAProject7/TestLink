@@ -29,7 +29,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     @FindBy(xpath = "//*[@name='q34']")
     WebElement textIntroduce;
 
-    @FindBy(xpath ="//*[@type='radio']")
+    @FindBy(xpath = "//*[@type='radio']")
     WebElement pointField;
 
     public QuestionnaireChronicDiseasesPatientPetruninPage(WebDriver driver) {
@@ -54,24 +54,32 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     }
 
     public QuestionnaireChronicDiseasesPatientPetruninPage fillElements() {
-        List<WebElement> sectionqs = form1.findElements(By.tagName("tr"));
+        List<WebElement> sections = form1.findElements(By.tagName("tr"));
 
-        Log.info("Find all table elements");
+        Log.info("Find all table elements " + sections.size());
         List<WebElement> spanWithInput, radioButtons;
 
-        for (WebElement sec : sectionqs) {
+        for (WebElement sec : sections) {
             spanWithInput = sec.findElements(By.tagName("td"));
-            if (spanWithInput.size() != 0) {
-                int rndValue = (int) (Math.random() * (spanWithInput.size() - 1));
+            int rndValue = (int) (Math.random() * 3);
+            Log.info("INFO rndValue: " + rndValue + " spanWithInput.size: " + spanWithInput.size());
+            if (spanWithInput.size() == 5) {
+                Log.info("INFO " + sec.getAttribute("text") + " " + sec.getAttribute("value") + " " + sec.getText());
                 WebElement currentSpan = spanWithInput.get(rndValue);
-                WebElement radioButton = currentSpan.findElement(By.xpath("//*[@type='radio']"));
-                radioButton.click();
+                radioButtons = currentSpan.findElements(By.tagName("input"));
+                for (WebElement but : radioButtons) {
+                    if(Integer.parseInt(but.getAttribute("value"))==rndValue){
+                        but.click();
+                    }
+                }
             } else {
-                fillField("test");
+                //
             }
         }
+        fillField("test");
         return this;
     }
+
     public QuestionnaireChronicDiseasesPatientPetruninPage fillField(String text) {
         setElementText(textIntroduce, text);
         return this;
