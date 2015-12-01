@@ -35,8 +35,8 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page{
     }
 
     public boolean isOnframe() {
-
-
         return exists(onFrame);
     }
+
+
 }
