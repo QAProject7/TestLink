@@ -4,11 +4,13 @@ import com.telran.MobileWebPages.LoginMobilePage;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
 import com.telran.pages.LoginIrinaPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
+import org.apache.log4j.Priority;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -53,11 +55,14 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
         Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.isOnframe(), "We are not on frame page");
         questionnaireChronicDiseasesPatientPetruninPage.fillElements();
         Thread.sleep(3000);
+        questionnaireChronicDiseasesPatientPetruninPage.clickSubmitButtom();
+        Reporter.log("Registration is validate!");
+
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        //this.driver.quit();
+        this.driver.quit();
     }
 }
 

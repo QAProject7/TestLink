@@ -29,6 +29,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     @FindBy(xpath = "//*[@name='q34']")
     WebElement textIntroduce;
 
+    @FindBy(xpath = "//*[@id='submit']")
+    WebElement submitButtom;
+
 
     public QuestionnaireChronicDiseasesPatientPetruninPage(WebDriver driver) {
         super(driver);
@@ -72,12 +75,18 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
             }
         }
         fillField("test");
-        Log.info("Text was write into the last field");
+        Log.info("Text was write into the last TextField");
         return this;
     }
 
     public QuestionnaireChronicDiseasesPatientPetruninPage fillField(String text) {
         setElementText(textIntroduce, text);
+        return this;
+    }
+
+    public QuestionnaireChronicDiseasesPatientPetruninPage clickSubmitButtom() {
+        clickElement(submitButtom);
+        Log.info("SubmitButtom was pushed");
         return this;
     }
 }
