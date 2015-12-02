@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
  */
 public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
-    public static String username = "hore2966@yopmail.com"; //Данные входа клеента
+    public static String username = "hore4743@yopmail.com"; //Данные входа клеента (hore2966@yopmail.com был заполнен)
     public static String password = "LinkCare!!11";//Данные входа доктора
     public LoginIrinaPage loginIrinaPage;
     public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;

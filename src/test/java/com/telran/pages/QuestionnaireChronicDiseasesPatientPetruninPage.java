@@ -17,7 +17,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_CBAgreeToTerms']")
     WebElement addAcceptField;
 
-    @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../../*[@class='notificationBtns']/a[@id='MainContent_RptNotification_NowBtn1_0']")
+    @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../..//*[contains(text(), 'כעת')]")
     WebElement clickTableButtom;
 
     @FindBy(xpath = "//*[@id='MainContent_contentHtml']")
