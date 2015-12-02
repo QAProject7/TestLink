@@ -17,6 +17,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
     WebElement choosePatient;
 
 
+
     public DoctorQuestionnaireChronicDiseasesPetruninPage(WebDriver driver) {
         super(driver);
         //Данный сласс не используется, т.к. используем аналогичный loginIrinaPage
