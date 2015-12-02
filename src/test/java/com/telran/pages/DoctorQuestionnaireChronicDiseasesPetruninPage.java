@@ -19,7 +19,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
     @FindBy(xpath = ("//*[contains(text(), '"+PATIENT_TZ+"')]/..//*[@class='LinkBtnPatients GreenBtn']"))
     WebElement choosePatient;
 
-    @FindBy(xpath = "//div[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]/div/img")
+    @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]")
     WebElement tableFrame;
 
 
