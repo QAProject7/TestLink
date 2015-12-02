@@ -54,14 +54,8 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest {
         //Assert.assertTrue(doctorQuestionnaireChronicDiseasesPetruninPage.inTableFrame(), "Table has not been completed");
         doctorQuestionnaireChronicDiseasesPetruninPage.clickTableFrame();
         Thread.sleep(5000);
-         /*questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
-        Thread.sleep(5000);
-        driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
 
-        questionnaireChronicDiseasesPatientPetruninPage.fillElements();
-        Thread.sleep(3000);
-        questionnaireChronicDiseasesPatientPetruninPage.clickSubmitButtom();
-        Reporter.log("Registration is validate!");*/
+        Reporter.log("Registration is validate!");
 
     }
 
