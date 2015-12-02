@@ -19,6 +19,9 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
     @FindBy(xpath = ("//*[contains(text(), '"+PATIENT_TZ+"')]/..//*[@class='LinkBtnPatients GreenBtn']"))
     WebElement choosePatient;
 
+    @FindBy(xpath = "//div[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]/div/img")
+    WebElement tableFrame;
+
 
 
     public DoctorQuestionnaireChronicDiseasesPetruninPage(WebDriver driver) {
@@ -32,6 +35,16 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
         return this;
     }
 
+    public boolean inTableFrame() {
+        return exists(tableFrame);
+    }
+
+    public DoctorQuestionnaireChronicDiseasesPetruninPage clickTableFrame() {
+        clickElement(tableFrame);
+        Log.info("TableFrame was opend");
+        return this;
+    }
+
 
 }
    /* public QuestionnaireChronicDiseasesPatientPetruninPage clickTableButtom() {
@@ -40,9 +53,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
         return this;
     }
 
-    public boolean isOnframe() {
-        return exists(onFrame);
-    }
+
 
     public QuestionnaireChronicDiseasesPatientPetruninPage fillElements() {
         List<WebElement> sections = form1.findElements(By.tagName("tr"));

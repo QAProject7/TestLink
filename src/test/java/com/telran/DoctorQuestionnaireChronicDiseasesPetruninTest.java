@@ -50,11 +50,14 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest {
     public void testOpenPatientPage() throws InterruptedException {
         Thread.sleep(5000);
         doctorQuestionnaireChronicDiseasesPetruninPage.clickChoosePatient();
+        Thread.sleep(10000);
+        //Assert.assertTrue(doctorQuestionnaireChronicDiseasesPetruninPage.inTableFrame(), "Table has not been completed");
+        doctorQuestionnaireChronicDiseasesPetruninPage.clickTableFrame();
         Thread.sleep(5000);
          /*questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
         Thread.sleep(5000);
         driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-        Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.isOnframe(), "We are not on frame page");
+
         questionnaireChronicDiseasesPatientPetruninPage.fillElements();
         Thread.sleep(3000);
         questionnaireChronicDiseasesPatientPetruninPage.clickSubmitButtom();
