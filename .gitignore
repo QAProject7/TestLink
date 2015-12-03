@@ -2,6 +2,6 @@
 /.gitignore
 /rere.iml
 /logging.log
-/target
 /.idea
+/pom.xml
 # Created by .ignore support plugin (hsz.mobi)

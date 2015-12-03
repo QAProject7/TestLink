@@ -69,6 +69,7 @@ public class CreateNewPatientPage extends Page {
 
     @FindBy(xpath = "//*[@id='popup']/div[6]/iframe")
     WebElement frameNewPatient;
+
     @FindBy(xpath = "//*[@id='ctl00_DisplayImportantLinks1_myMenu']/ul/li[1]/a")
     WebElement questMenu;
 
@@ -87,6 +88,9 @@ public class CreateNewPatientPage extends Page {
 
     @FindBy(id = "MainContent_AddEditAccount1_SaveAccount")
     WebElement buttonSaveAccount;
+
+    @FindBy(id = "MainContent_AddEditAccount1_Label1")
+    WebElement labelUserName;
 
     //public ProfilePage profilePage;
 
@@ -196,6 +200,7 @@ public class CreateNewPatientPage extends Page {
         waitUntilElementIsLoaded(inputBirthDay);
         Log.info("Filling BirthDate <" + date + ">");
         setElementText(inputBirthDay, date);
+        labelUserName.click();
         return this;
     }
 
@@ -255,6 +260,7 @@ public class CreateNewPatientPage extends Page {
         waitUntilElementIsLoaded(inputMeetingDate);
         Log.info("Filling meeting date with <" + dateMiting + ">");
         setElementText(inputMeetingDate, dateMiting);
+        labelUserName.click();
         return this;
     }
 
@@ -308,7 +314,7 @@ public class CreateNewPatientPage extends Page {
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ConfirmNewPassword")).sendKeys("LinkCare!!11");
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangePasswordPushButton")).click();
         driver.findElement(By.name("fakeusernameremembered")).clear();
-        driver.findElement(By.name("fakeusernameremembered")).sendKeys("527Doctor");
+        driver.findElement(By.name("fakeusernameremembered")).sendKeys("3339Doctor");
         driver.findElement(By.name("fakepasswordremembered")).clear();
         driver.findElement(By.name("fakepasswordremembered")).sendKeys("LinkCare!!11");
         driver.findElement(By.xpath("//form[@id='Form1']/div[2]/div[2]/div/div/a")).click();
@@ -346,9 +352,11 @@ public class CreateNewPatientPage extends Page {
         sendAdultEmail();
         fillBirthDayfield(generateBirthDate());
         fillMeetingDateAndTime(createMeetingDate());
+        clickElement(inputBirthDay);
+        clickElement(inputMeetingDate);
+        clickElement(addNewAdultButton);
+        Log.info("Clicking 'Save' button");
         clickSaveAccount();
-
-
     }
 
 
@@ -367,6 +375,9 @@ public class CreateNewPatientPage extends Page {
         sendAdultEmail();
         fillMeetingDateAndTime(createMeetingDate());
         fillBirthDayfield(generateBirthDate());
+        clickElement(inputBirthDay);
+        clickElement(inputMeetingDate);
+        clickElement(addNewAdultButton);
         clickSaveAccount();
 
 

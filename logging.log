@@ -1,109 +1,597 @@
-2015-11-26 12:40:26 INFO  LogLog4j:139 - Zeut generated is <233301514>
-2015-11-26 12:40:26 INFO  LogLog4j:133 - TeacherEmail generated is <more367@yopmail.com>
-2015-11-26 12:40:26 INFO  LogLog4j:151 - MeetingDate generated is <2/8/2018 08:00>
-2015-11-26 12:40:26 INFO  LogLog4j:66 - Opening Login page
-2015-11-26 12:40:26 INFO  LogLog4j:73 - Filling username field
-2015-11-26 12:40:27 INFO  LogLog4j:79 - Filling password field
-2015-11-26 12:40:27 INFO  LogLog4j:112 - Clicking on Login button
-2015-11-26 12:40:29 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:40:29 INFO  LogLog4j:93 - Clicking 'Add patient' button
-2015-11-26 12:40:29 INFO  LogLog4j:95 - Trying thread sleep 5000
-2015-11-26 12:40:34 INFO  LogLog4j:97 - Trying to switch to frame 0
-2015-11-26 12:40:34 INFO  LogLog4j:93 - Create new patient started
-2015-11-26 12:40:34 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
-2015-11-26 12:40:34 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
-2015-11-26 12:40:34 INFO  LogLog4j:185 - Filling Teudat zeut <233301514>
-2015-11-26 12:40:35 INFO  LogLog4j:198 - Filling weight <5>
-2015-11-26 12:40:35 INFO  LogLog4j:204 - Filling Email <hore618@yopmail.com>
-2015-11-26 12:40:35 INFO  LogLog4j:222 - Waiting for button Send Email
-2015-11-26 12:40:35 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (ef426106-2b92-438e-b1b2-df8648e5004e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:40:35 INFO  LogLog4j:192 - Filling BirthDate <20/8/2017>
-2015-11-26 12:40:35 INFO  LogLog4j:151 - MeetingDate generated is <4/2/2016 08:00>
-2015-11-26 12:40:35 INFO  LogLog4j:251 - Filling meeting date with <4/2/2016 08:00>
-2015-11-26 12:40:37 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (ef426106-2b92-438e-b1b2-df8648e5004e)] -> id: MainContent_AddEditAccount1_SaveAccount]>
-2015-11-26 12:42:47 INFO  LogLog4j:139 - Zeut generated is <842230419>
-2015-11-26 12:42:47 INFO  LogLog4j:133 - TeacherEmail generated is <more521@yopmail.com>
-2015-11-26 12:42:47 INFO  LogLog4j:151 - MeetingDate generated is <20/4/2018 08:00>
-2015-11-26 12:42:47 INFO  LogLog4j:66 - Opening Login page
-2015-11-26 12:42:47 INFO  LogLog4j:73 - Filling username field
-2015-11-26 12:42:49 INFO  LogLog4j:79 - Filling password field
-2015-11-26 12:42:49 INFO  LogLog4j:112 - Clicking on Login button
-2015-11-26 12:42:50 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:42:50 INFO  LogLog4j:93 - Clicking 'Add patient' button
-2015-11-26 12:42:50 INFO  LogLog4j:95 - Trying thread sleep 5000
-2015-11-26 12:42:55 INFO  LogLog4j:97 - Trying to switch to frame 0
-2015-11-26 12:42:56 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
-2015-11-26 12:42:56 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
-2015-11-26 12:42:56 INFO  LogLog4j:185 - Filling Teudat zeut <842230419>
-2015-11-26 12:42:56 INFO  LogLog4j:198 - Filling weight <2>
-2015-11-26 12:42:56 INFO  LogLog4j:204 - Filling Email <hore669@yopmail.com>
-2015-11-26 12:42:56 INFO  LogLog4j:222 - Waiting for button Send Email
-2015-11-26 12:42:56 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:42:56 INFO  LogLog4j:242 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@75c56eb9>
-2015-11-26 12:42:59 INFO  LogLog4j:244 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: btnAddLink]>
-2015-11-26 12:42:59 INFO  LogLog4j:231 - Selecting teacher type
-2015-11-26 12:42:59 INFO  LogLog4j:232 - Waiting for Select adult type dropdown
-2015-11-26 12:42:59 INFO  LogLog4j:234 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_TxtSearchRoles_Arrow]>
-2015-11-26 12:42:59 INFO  LogLog4j:236 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> xpath: //*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[2]]>
-2015-11-26 12:42:59 INFO  LogLog4j:204 - Filling Email <more521@yopmail.com>
-2015-11-26 12:42:59 INFO  LogLog4j:222 - Waiting for button Send Email
-2015-11-26 12:42:59 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:42:59 INFO  LogLog4j:151 - MeetingDate generated is <23/3/2016 08:00>
-2015-11-26 12:42:59 INFO  LogLog4j:251 - Filling meeting date with <23/3/2016 08:00>
-2015-11-26 12:42:59 INFO  LogLog4j:192 - Filling BirthDate <20/7/2015>
-2015-11-26 12:43:01 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (12aa73ce-fb4f-4359-8a5d-e6a3a021e9e1)] -> id: MainContent_AddEditAccount1_SaveAccount]>
-2015-11-26 12:43:01 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:44:59 INFO  LogLog4j:139 - Zeut generated is <722119450>
-2015-11-26 12:44:59 INFO  LogLog4j:133 - TeacherEmail generated is <more531@yopmail.com>
-2015-11-26 12:44:59 INFO  LogLog4j:151 - MeetingDate generated is <16/8/2018 08:00>
-2015-11-26 12:44:59 INFO  LogLog4j:66 - Opening Login page
-2015-11-26 12:44:59 INFO  LogLog4j:73 - Filling username field
-2015-11-26 12:45:00 INFO  LogLog4j:79 - Filling password field
-2015-11-26 12:45:00 INFO  LogLog4j:112 - Clicking on Login button
-2015-11-26 12:45:02 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:45:02 INFO  LogLog4j:93 - Clicking 'Add patient' button
-2015-11-26 12:45:02 INFO  LogLog4j:95 - Trying thread sleep 5000
-2015-11-26 12:45:07 INFO  LogLog4j:97 - Trying to switch to frame 0
-2015-11-26 12:45:07 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
-2015-11-26 12:45:08 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
-2015-11-26 12:45:08 INFO  LogLog4j:185 - Filling Teudat zeut <722119450>
-2015-11-26 12:45:08 INFO  LogLog4j:198 - Filling weight <2>
-2015-11-26 12:45:08 INFO  LogLog4j:204 - Filling Email <hore772@yopmail.com>
-2015-11-26 12:45:08 INFO  LogLog4j:222 - Waiting for button Send Email
-2015-11-26 12:45:08 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:45:08 INFO  LogLog4j:242 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@75c56eb9>
-2015-11-26 12:45:10 INFO  LogLog4j:244 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: btnAddLink]>
-2015-11-26 12:45:10 INFO  LogLog4j:231 - Selecting teacher type
-2015-11-26 12:45:10 INFO  LogLog4j:232 - Waiting for Select adult type dropdown
-2015-11-26 12:45:10 INFO  LogLog4j:234 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_TxtSearchRoles_Arrow]>
-2015-11-26 12:45:11 INFO  LogLog4j:236 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> xpath: //*[@id='ctl00_MainContent_AddEditAccount1_TxtSearchRoles_DropDown']/div/ul/li[2]]>
-2015-11-26 12:45:11 INFO  LogLog4j:204 - Filling Email <more531@yopmail.com>
-2015-11-26 12:45:11 INFO  LogLog4j:222 - Waiting for button Send Email
-2015-11-26 12:45:11 INFO  LogLog4j:224 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:45:11 INFO  LogLog4j:151 - MeetingDate generated is <19/11/2017 08:00>
-2015-11-26 12:45:11 INFO  LogLog4j:251 - Filling meeting date with <19/11/2017 08:00>
-2015-11-26 12:45:11 INFO  LogLog4j:192 - Filling BirthDate <20/6/2012>
-2015-11-26 12:45:13 INFO  LogLog4j:279 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (62700260-a96b-411c-be76-c2ebf540d896)] -> id: MainContent_AddEditAccount1_SaveAccount]>
-2015-11-26 12:45:13 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:48:56 INFO  LogLog4j:139 - Zeut generated is <775156961>
-2015-11-26 12:48:56 INFO  LogLog4j:133 - TeacherEmail generated is <more307@yopmail.com>
-2015-11-26 12:48:56 INFO  LogLog4j:151 - MeetingDate generated is <7/10/2018 08:00>
-2015-11-26 12:48:56 INFO  LogLog4j:66 - Opening Login page
-2015-11-26 12:48:56 INFO  LogLog4j:73 - Filling username field
-2015-11-26 12:48:57 INFO  LogLog4j:79 - Filling password field
-2015-11-26 12:48:57 INFO  LogLog4j:112 - Clicking on Login button
-2015-11-26 12:48:59 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-11-26 12:48:59 INFO  LogLog4j:93 - Clicking 'Add patient' button
-2015-11-26 12:48:59 INFO  LogLog4j:95 - Trying thread sleep 5000
-2015-11-26 12:49:04 INFO  LogLog4j:97 - Trying to switch to frame 0
-2015-11-26 12:49:04 INFO  LogLog4j:93 - Create new patient started
-2015-11-26 12:49:04 INFO  LogLog4j:165 - Filling First Name <PatientChildFirst>
-2015-11-26 12:49:04 INFO  LogLog4j:172 - Filling Last Name <PatientChildLast>
-2015-11-26 12:49:04 INFO  LogLog4j:185 - Filling Teudat zeut <775156961>
-2015-11-26 12:49:04 INFO  LogLog4j:199 - Filling weight <5>
-2015-11-26 12:49:04 INFO  LogLog4j:205 - Filling Email <hore339@yopmail.com>
-2015-11-26 12:49:05 INFO  LogLog4j:223 - Waiting for button Send Email
-2015-11-26 12:49:05 INFO  LogLog4j:225 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (cf5e42dd-e5e5-403d-a587-8f1468e0501e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
-2015-11-26 12:49:05 INFO  LogLog4j:193 - Filling BirthDate <5/8/2010>
-2015-11-26 12:49:05 INFO  LogLog4j:151 - MeetingDate generated is <24/7/2018 08:00>
-2015-11-26 12:49:05 INFO  LogLog4j:252 - Filling meeting date with <24/7/2018 08:00>
+2015-11-26 13:02:05 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 13:02:22 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 13:04:19 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 13:04:35 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 13:06:49 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 13:07:06 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 13:08:30 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 13:08:47 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:06:11 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:06:28 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:07:34 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:07:51 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:11:43 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:11:59 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:13:24 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:13:40 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:16:06 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:25:33 INFO  LogLog4j:72 - Find all table elements
+2015-11-26 14:25:46 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:29:32 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:29:45 INFO  LogLog4j:57 - All input elements is clicked
+2015-11-26 14:29:48 INFO  LogLog4j:60 - Access buttom was pushed. Test is finished!
+2015-11-26 14:55:53 INFO  LogLog4j:70 - Find all table elements
+2015-11-26 14:56:02 INFO  LogLog4j:56 - All input elements is clicked
+2015-11-26 14:56:05 INFO  LogLog4j:59 - Access buttom was pushed. Test is finished!
+2015-11-26 15:00:34 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-26 15:00:34 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-26 15:00:34 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-26 15:00:34 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-26 15:00:44 INFO  LogLog4j:249 - Click time line element
+2015-11-29 16:26:02 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-29 16:26:02 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-29 16:26:02 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-29 16:26:02 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-29 16:26:23 INFO  LogLog4j:249 - Click time line element
+2015-11-29 16:37:14 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-29 16:37:14 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-29 16:37:14 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-29 16:37:14 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-29 16:37:24 INFO  LogLog4j:249 - Click time line element
+2015-11-29 16:41:03 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-29 16:41:03 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-29 16:41:03 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-29 16:41:03 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-29 16:42:13 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-29 16:42:13 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-29 16:42:13 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-29 16:42:14 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-29 16:46:12 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-11-29 16:46:12 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-11-29 16:46:12 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-11-29 16:46:12 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-11-29 16:46:23 INFO  LogLog4j:249 - Click time line element
+2015-12-01 10:59:51 INFO  LogLog4j:54 - Find all table elements
+2015-12-01 11:08:48 INFO  LogLog4j:54 - Find all table elements
+2015-12-01 11:15:05 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:19:45 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:21:24 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:31:11 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:45:09 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:48:15 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:49:14 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:52:15 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:58:03 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 11:59:56 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:01:12 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:03:20 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:05:48 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:07:00 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:10:04 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:11:54 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:21:55 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:21:55 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:21:56 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:21:58 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:22:07 INFO  LogLog4j:57 - Find all table elements
+2015-12-01 12:26:09 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:26:10 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:26:10 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:26:10 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:26:12 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:26:17 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:26:21 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 12:35:11 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:35:11 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:35:12 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:35:12 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:35:13 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:35:19 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:35:23 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 12:36:27 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:36:27 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:36:28 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:36:28 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:36:30 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:36:35 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:36:39 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 12:39:26 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:39:26 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:39:26 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:39:26 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:39:28 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:39:33 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:39:37 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 12:43:45 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:43:45 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:43:46 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:43:46 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:43:48 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:43:53 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:43:57 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 12:49:36 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 12:49:36 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 12:49:37 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 12:49:37 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 12:49:39 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 12:49:44 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 12:49:48 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 14:41:15 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 14:41:16 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 14:41:16 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 14:41:16 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 14:41:18 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 14:41:23 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 14:41:28 INFO  LogLog4j:59 - Find all table elements
+2015-12-01 14:46:49 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 14:46:50 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 14:46:50 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 14:46:51 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 14:46:54 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 14:46:59 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 14:47:04 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 14:47:04 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:04 INFO  LogLog4j:65 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 14:47:04 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:05 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:05 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:05 INFO  LogLog4j:65 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 14:47:05 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:06 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:06 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:06 INFO  LogLog4j:65 - INFO null null פרכוסים
+2015-12-01 14:47:06 INFO  LogLog4j:65 - INFO null null ארועים חוזרים של ניתוק ובהיה
+2015-12-01 14:47:07 INFO  LogLog4j:65 - INFO null null טיקים או תנועות לא רצוניות
+2015-12-01 14:47:07 INFO  LogLog4j:65 - INFO null null קושי בראיה
+2015-12-01 14:47:07 INFO  LogLog4j:65 - INFO null null קושי בשמיעה
+2015-12-01 14:47:07 INFO  LogLog4j:65 - INFO null null קושי בדיבור
+2015-12-01 14:47:08 INFO  LogLog4j:65 - INFO null null קושי בבליעה
+2015-12-01 14:47:08 INFO  LogLog4j:65 - INFO null null קושי בהנעת הידים או הרגלים
+2015-12-01 14:47:08 INFO  LogLog4j:65 - INFO null null חוסר יציבות נטיה לנפילות חוזרות
+2015-12-01 14:47:09 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:09 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:09 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:09 INFO  LogLog4j:65 - INFO null null האם ישנן בעיות ידועות בלב
+2015-12-01 14:47:10 INFO  LogLog4j:65 - INFO null null איבוד הכרה
+2015-12-01 14:47:10 INFO  LogLog4j:65 - INFO null null אסטמה
+2015-12-01 14:47:10 INFO  LogLog4j:65 - INFO null null נטיה לשיעול בלילה
+2015-12-01 14:47:10 INFO  LogLog4j:65 - INFO null null דלקות ריאה חוזרות
+2015-12-01 14:47:11 INFO  LogLog4j:65 - INFO null null טיפול במרחיבי באינהלציות
+2015-12-01 14:47:11 INFO  LogLog4j:65 - INFO null null נחירות בלילה
+2015-12-01 14:47:11 INFO  LogLog4j:65 - INFO null null נזלת כרונית
+2015-12-01 14:47:11 INFO  LogLog4j:65 - INFO null null דלקות גרון חוזרות
+2015-12-01 14:47:12 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:12 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:12 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:13 INFO  LogLog4j:65 - INFO null null נטיה לעצירות
+2015-12-01 14:47:13 INFO  LogLog4j:65 - INFO null null נטיה לשילשולים
+2015-12-01 14:47:13 INFO  LogLog4j:65 - INFO null null בעיות בדרכי השתן
+2015-12-01 14:47:13 INFO  LogLog4j:65 - INFO null null דלקות חוזרות בדרכי השתן
+2015-12-01 14:47:14 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:14 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:14 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:47:15 INFO  LogLog4j:65 - INFO null null פריחה חוזרת על פני העור
+2015-12-01 14:47:15 INFO  LogLog4j:65 - INFO null null כאבים משמעותיים חוזרים במפרקים
+2015-12-01 14:47:15 INFO  LogLog4j:65 - INFO null null כאבי שרירים משמעותיים חוזרים
+2015-12-01 14:47:16 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:16 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:47:16 INFO  LogLog4j:65 - INFO null null הערות
+2015-12-01 14:47:16 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:51:27 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 14:51:28 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 14:51:28 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 14:51:28 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 14:51:31 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 14:51:36 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 14:51:40 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 14:51:40 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:51:41 INFO  LogLog4j:65 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 14:51:41 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:51:41 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:51:42 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 14:51:42 INFO  LogLog4j:65 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 14:51:42 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:51:42 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 14:53:03 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 14:53:04 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 14:53:04 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 14:53:04 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 14:53:06 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 14:53:11 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 14:53:16 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 14:54:49 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:09:40 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:09:41 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:09:41 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:09:41 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:09:44 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:09:49 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:09:54 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:09:54 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:09:54 INFO  LogLog4j:65 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 15:09:54 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:09:54 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:11:44 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:11:44 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:11:45 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:11:45 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:11:49 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:11:55 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:11:59 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:11:59 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:12:54 INFO  LogLog4j:65 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 15:15:29 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:15:43 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:15:54 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:16:04 INFO  LogLog4j:65 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 15:16:20 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:16:22 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:16:23 INFO  LogLog4j:65 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:16:25 INFO  LogLog4j:65 - INFO null null פרכוסים
+2015-12-01 15:16:27 INFO  LogLog4j:65 - INFO null null ארועים חוזרים של ניתוק ובהיה
+2015-12-01 15:16:29 INFO  LogLog4j:65 - INFO null null טיקים או תנועות לא רצוניות
+2015-12-01 15:16:32 INFO  LogLog4j:65 - INFO null null קושי בראיה
+2015-12-01 15:16:32 INFO  LogLog4j:65 - INFO null null קושי בשמיעה
+2015-12-01 15:16:34 INFO  LogLog4j:65 - INFO null null קושי בדיבור
+2015-12-01 15:16:34 INFO  LogLog4j:65 - INFO null null קושי בבליעה
+2015-12-01 15:16:36 INFO  LogLog4j:65 - INFO null null קושי בהנעת הידים או הרגלים
+2015-12-01 15:16:41 INFO  LogLog4j:65 - INFO null null חוסר יציבות נטיה לנפילות חוזרות
+2015-12-01 15:16:42 INFO  LogLog4j:65 - INFO null null נא לפרט
+2015-12-01 15:16:43 INFO  LogLog4j:65 - INFO null null 
+2015-12-01 15:19:25 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:19:25 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:19:26 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:19:26 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:19:46 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:19:52 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:20:45 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:20:45 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:20:45 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:20:45 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:20:47 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:20:53 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:20:58 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:22:31 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:22:31 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:22:31 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:22:31 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:22:54 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:22:59 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:23:05 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:29:40 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:29:40 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:29:41 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:29:41 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:29:43 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:29:48 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:29:53 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:33:29 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:33:30 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:33:31 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:33:31 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:33:34 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:33:39 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:33:44 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:33:44 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:45 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:33:45 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:33:45 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:33:46 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:46 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:33:47 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:33:47 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:33:47 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:48 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:48 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:48 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:49 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:49 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:49 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:50 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:50 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:51 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:51 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:33:51 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:33:52 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:52 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:52 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:53 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:53 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:53 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:33:54 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:54 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:55 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:55 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:55 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:33:56 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:33:56 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:33:57 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:57 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:33:57 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:33:58 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:33:58 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:33:59 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:33:59 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:34:00 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:34:00 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:34:00 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:34:01 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:34:01 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:34:01 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:34:02 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:34:44 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:34:45 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:34:45 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:34:45 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:34:47 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:34:52 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:34:58 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:34:58 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:34:58 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:34:58 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:34:58 INFO  LogLog4j:67 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 15:34:58 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:34:59 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:34:59 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:34:59 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:34:59 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:34:59 INFO  LogLog4j:67 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 15:35:00 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:00 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:35:00 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:00 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:35:00 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:01 INFO  LogLog4j:67 - INFO null null פרכוסים
+2015-12-01 15:35:01 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:01 INFO  LogLog4j:67 - INFO null null ארועים חוזרים של ניתוק ובהיה
+2015-12-01 15:35:01 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:01 INFO  LogLog4j:67 - INFO null null טיקים או תנועות לא רצוניות
+2015-12-01 15:35:02 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:02 INFO  LogLog4j:67 - INFO null null קושי בראיה
+2015-12-01 15:35:02 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:02 INFO  LogLog4j:67 - INFO null null קושי בשמיעה
+2015-12-01 15:35:02 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:02 INFO  LogLog4j:67 - INFO null null קושי בדיבור
+2015-12-01 15:35:03 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:03 INFO  LogLog4j:67 - INFO null null קושי בבליעה
+2015-12-01 15:35:03 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:03 INFO  LogLog4j:67 - INFO null null קושי בהנעת הידים או הרגלים
+2015-12-01 15:35:03 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:03 INFO  LogLog4j:67 - INFO null null חוסר יציבות נטיה לנפילות חוזרות
+2015-12-01 15:35:04 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:04 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:35:04 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:05 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:35:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:05 INFO  LogLog4j:67 - INFO null null האם ישנן בעיות ידועות בלב
+2015-12-01 15:35:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:05 INFO  LogLog4j:67 - INFO null null איבוד הכרה
+2015-12-01 15:35:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:05 INFO  LogLog4j:67 - INFO null null אסטמה
+2015-12-01 15:35:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:06 INFO  LogLog4j:67 - INFO null null נטיה לשיעול בלילה
+2015-12-01 15:35:06 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:06 INFO  LogLog4j:67 - INFO null null דלקות ריאה חוזרות
+2015-12-01 15:35:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:07 INFO  LogLog4j:67 - INFO null null טיפול במרחיבי באינהלציות
+2015-12-01 15:35:07 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:07 INFO  LogLog4j:67 - INFO null null נחירות בלילה
+2015-12-01 15:35:07 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:07 INFO  LogLog4j:67 - INFO null null נזלת כרונית
+2015-12-01 15:35:07 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:08 INFO  LogLog4j:67 - INFO null null דלקות גרון חוזרות
+2015-12-01 15:35:08 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:08 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:35:09 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:09 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:35:09 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:09 INFO  LogLog4j:67 - INFO null null נטיה לעצירות
+2015-12-01 15:35:09 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:09 INFO  LogLog4j:67 - INFO null null נטיה לשילשולים
+2015-12-01 15:35:10 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:10 INFO  LogLog4j:67 - INFO null null בעיות בדרכי השתן
+2015-12-01 15:35:10 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:10 INFO  LogLog4j:67 - INFO null null דלקות חוזרות בדרכי השתן
+2015-12-01 15:35:10 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:11 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:35:11 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:11 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:35:11 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:35:11 INFO  LogLog4j:67 - INFO null null פריחה חוזרת על פני העור
+2015-12-01 15:35:12 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:35:12 INFO  LogLog4j:67 - INFO null null כאבים משמעותיים חוזרים במפרקים
+2015-12-01 15:35:12 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:35:12 INFO  LogLog4j:67 - INFO null null כאבי שרירים משמעותיים חוזרים
+2015-12-01 15:35:12 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:13 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:35:13 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:35:14 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:35:51 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:35:52 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:35:52 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:35:52 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:35:54 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:35:59 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:36:05 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:36:05 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:05 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:05 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:05 INFO  LogLog4j:67 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 15:36:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:36:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:36:06 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:06 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:06 INFO  LogLog4j:67 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 15:36:07 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:36:07 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:36:07 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:08 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:08 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:08 INFO  LogLog4j:67 - INFO null null פרכוסים
+2015-12-01 15:36:08 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:08 INFO  LogLog4j:67 - INFO null null ארועים חוזרים של ניתוק ובהיה
+2015-12-01 15:36:08 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:08 INFO  LogLog4j:67 - INFO null null טיקים או תנועות לא רצוניות
+2015-12-01 15:36:09 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:09 INFO  LogLog4j:67 - INFO null null קושי בראיה
+2015-12-01 15:36:09 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:09 INFO  LogLog4j:67 - INFO null null קושי בשמיעה
+2015-12-01 15:36:09 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:09 INFO  LogLog4j:67 - INFO null null קושי בדיבור
+2015-12-01 15:36:10 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:10 INFO  LogLog4j:67 - INFO null null קושי בבליעה
+2015-12-01 15:36:10 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:10 INFO  LogLog4j:67 - INFO null null קושי בהנעת הידים או הרגלים
+2015-12-01 15:36:10 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:10 INFO  LogLog4j:67 - INFO null null חוסר יציבות נטיה לנפילות חוזרות
+2015-12-01 15:36:11 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:36:11 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:36:11 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:11 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:11 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:12 INFO  LogLog4j:67 - INFO null null האם ישנן בעיות ידועות בלב
+2015-12-01 15:36:12 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:12 INFO  LogLog4j:67 - INFO null null איבוד הכרה
+2015-12-01 15:36:12 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:12 INFO  LogLog4j:67 - INFO null null אסטמה
+2015-12-01 15:36:13 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:13 INFO  LogLog4j:67 - INFO null null נטיה לשיעול בלילה
+2015-12-01 15:36:13 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:13 INFO  LogLog4j:67 - INFO null null דלקות ריאה חוזרות
+2015-12-01 15:36:13 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:13 INFO  LogLog4j:67 - INFO null null טיפול במרחיבי באינהלציות
+2015-12-01 15:36:14 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:14 INFO  LogLog4j:67 - INFO null null נחירות בלילה
+2015-12-01 15:36:14 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:14 INFO  LogLog4j:67 - INFO null null נזלת כרונית
+2015-12-01 15:36:14 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:15 INFO  LogLog4j:67 - INFO null null דלקות גרון חוזרות
+2015-12-01 15:36:15 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:36:15 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:36:16 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:16 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:16 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:16 INFO  LogLog4j:67 - INFO null null נטיה לעצירות
+2015-12-01 15:36:16 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:36:16 INFO  LogLog4j:67 - INFO null null נטיה לשילשולים
+2015-12-01 15:36:16 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:17 INFO  LogLog4j:67 - INFO null null בעיות בדרכי השתן
+2015-12-01 15:36:17 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:17 INFO  LogLog4j:67 - INFO null null דלקות חוזרות בדרכי השתן
+2015-12-01 15:36:17 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:36:18 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:36:18 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:18 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:36:18 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:36:18 INFO  LogLog4j:67 - INFO null null פריחה חוזרת על פני העור
+2015-12-01 15:36:18 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:19 INFO  LogLog4j:67 - INFO null null כאבים משמעותיים חוזרים במפרקים
+2015-12-01 15:36:19 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:36:19 INFO  LogLog4j:67 - INFO null null כאבי שרירים משמעותיים חוזרים
+2015-12-01 15:36:19 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:36:20 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:36:20 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:36:21 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:38:48 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 15:38:49 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 15:38:49 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 15:38:49 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 15:38:51 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 15:38:56 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 15:39:01 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 15:39:01 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:02 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:02 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:02 INFO  LogLog4j:67 - INFO null null האם הילד סובל ממחלות כרוניות כלשהם
+2015-12-01 15:39:02 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:39:02 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:39:02 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:02 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:02 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:03 INFO  LogLog4j:67 - INFO null null האם הילד עבר ניתוח כלשהוא
+2015-12-01 15:39:03 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:39:03 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:39:03 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:03 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:03 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:03 INFO  LogLog4j:67 - INFO null null פרכוסים
+2015-12-01 15:39:03 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:04 INFO  LogLog4j:67 - INFO null null ארועים חוזרים של ניתוק ובהיה
+2015-12-01 15:39:04 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:04 INFO  LogLog4j:67 - INFO null null טיקים או תנועות לא רצוניות
+2015-12-01 15:39:04 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:04 INFO  LogLog4j:67 - INFO null null קושי בראיה
+2015-12-01 15:39:04 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:05 INFO  LogLog4j:67 - INFO null null קושי בשמיעה
+2015-12-01 15:39:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:05 INFO  LogLog4j:67 - INFO null null קושי בדיבור
+2015-12-01 15:39:05 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:05 INFO  LogLog4j:67 - INFO null null קושי בבליעה
+2015-12-01 15:39:05 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:05 INFO  LogLog4j:67 - INFO null null קושי בהנעת הידים או הרגלים
+2015-12-01 15:39:06 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:06 INFO  LogLog4j:67 - INFO null null חוסר יציבות נטיה לנפילות חוזרות
+2015-12-01 15:39:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:39:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 15:39:06 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:06 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:06 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:06 INFO  LogLog4j:67 - INFO null null האם ישנן בעיות ידועות בלב
+2015-12-01 15:39:07 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:07 INFO  LogLog4j:67 - INFO null null איבוד הכרה
+2015-12-01 15:39:07 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:07 INFO  LogLog4j:67 - INFO null null אסטמה
+2015-12-01 15:39:07 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:07 INFO  LogLog4j:67 - INFO null null נטיה לשיעול בלילה
+2015-12-01 15:39:08 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:08 INFO  LogLog4j:67 - INFO null null דלקות ריאה חוזרות
+2015-12-01 15:39:08 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:08 INFO  LogLog4j:67 - INFO null null טיפול במרחיבי באינהלציות
+2015-12-01 15:39:08 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:08 INFO  LogLog4j:67 - INFO null null נחירות בלילה
+2015-12-01 15:39:09 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:09 INFO  LogLog4j:67 - INFO null null נזלת כרונית
+2015-12-01 15:39:09 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:09 INFO  LogLog4j:67 - INFO null null דלקות גרון חוזרות
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 2
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:10 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:10 INFO  LogLog4j:67 - INFO null null נטיה לעצירות
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:10 INFO  LogLog4j:67 - INFO null null נטיה לשילשולים
+2015-12-01 15:39:10 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:10 INFO  LogLog4j:67 - INFO null null בעיות בדרכי השתן
+2015-12-01 15:39:11 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:11 INFO  LogLog4j:67 - INFO null null דלקות חוזרות בדרכי השתן
+2015-12-01 15:39:11 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 2
+2015-12-01 15:39:11 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 1
+2015-12-01 15:39:11 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:11 INFO  LogLog4j:67 - INFO null null כן לא לא רלוונטי
+2015-12-01 15:39:11 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 5
+2015-12-01 15:39:11 INFO  LogLog4j:67 - INFO null null פריחה חוזרת על פני העור
+2015-12-01 15:39:12 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 5
+2015-12-01 15:39:12 INFO  LogLog4j:67 - INFO null null כאבים משמעותיים חוזרים במפרקים
+2015-12-01 15:39:12 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 5
+2015-12-01 15:39:12 INFO  LogLog4j:67 - INFO null null כאבי שרירים משמעותיים חוזרים
+2015-12-01 15:39:13 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:39:13 INFO  LogLog4j:65 - INFO rndValue: 2 spanWithInput.size: 1
+2015-12-01 15:39:13 INFO  LogLog4j:65 - INFO rndValue: 1 spanWithInput.size: 2
+2015-12-01 15:39:13 INFO  LogLog4j:65 - INFO rndValue: 0 spanWithInput.size: 1
+2015-12-01 16:07:54 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 16:07:54 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 16:07:55 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 16:07:55 INFO  LogLog4j:42 - Accept Field was added
+2015-12-01 16:07:56 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 16:08:01 INFO  LogLog4j:48 - TableButtom was pushed
+2015-12-01 16:08:07 INFO  LogLog4j:59 - Find all table elements 47
+2015-12-01 16:10:45 INFO  LogLog4j:77 - LoginPage was Loaded
+2015-12-01 16:10:45 INFO  LogLog4j:58 - UserName was incerted
+2015-12-01 16:10:46 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
+2015-12-01 16:10:46 INFO  LogLog4j:40 - Accept Field was added
+2015-12-01 16:10:48 INFO  LogLog4j:83 - Login button was pushed
+2015-12-01 16:10:53 INFO  LogLog4j:46 - TableButtom was pushed
+2015-12-01 16:10:58 INFO  LogLog4j:57 - Find all table elements 47
+2015-12-01 16:11:06 INFO  LogLog4j:75 - Text was write into last field
