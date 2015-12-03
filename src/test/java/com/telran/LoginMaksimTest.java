@@ -2,7 +2,6 @@ package com.telran;
 
 import com.telran.pages.LoginMaksimPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Date;
 
-public class LoginMaksimTest {
+public class LoginMaksimTest extends TestNgTestBase {
     public static String registered_username = "loginName";
     public static String registered_password = "Passw0rd!";
     public LoginMaksimPage loginPage;
@@ -20,7 +19,7 @@ public class LoginMaksimTest {
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, LoginMaksimPage.class);
