@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +13,7 @@ import java.io.IOException;
  * Created by Iakov Volf,Oleg
  */
 public class LoginIrinaPage extends Page {
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
@@ -53,12 +55,13 @@ public class LoginIrinaPage extends Page {
 
     public LoginIrinaPage fillUsernameField(String username) {
         setElementText(usernameField, username);
+        Log.info("UserName was incerted");
         return this;
     }
 
     public LoginIrinaPage fillPasswordField(String password) {
         setElementText(passwordField, password);
-        // Log.info("entering password from the list: " + password + " ");
+        Log.info("entering password from the list: " + password + " ");
         return this;
     }
 
@@ -71,17 +74,18 @@ public class LoginIrinaPage extends Page {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        Log.info("LoginPage was Loaded");
         return this;
     }
 
     public void clickOnLoginButton() {
         clickElement(loginButton);
-
+        Log.info("Login button was pushed");
     }
 
     public void openRegistrationPage() {
         clickElement(goToRegLink);
-
+        Log.info("RegistrationPage was opened");
     }
 
     public void openForgotPassPage() {

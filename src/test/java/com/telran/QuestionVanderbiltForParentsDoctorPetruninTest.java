@@ -14,10 +14,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class QuestionVanderbiltForParentsDoctorPetruninTest {
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
-    public static String registered_username = "6012Doctor"; //Данные входа доктора
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
+    public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    public static String teudat = "233466119";//Данные входа доктора
+    public static String teudat = "779294107";//Данные входа доктора
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
     public DrugRecommendationPage drugRecommendationPage;
@@ -50,14 +50,14 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest {
     //Логи к методам добавлены на странице Иры DoctorsPage и DrugRecommendationPage
     doctorsPage.openPatientPage(teudat); // Открыли клиента по теудату
     drugRecommendationPage.waitUntilDrugPageIsLoaded(); //Дождались чтоб открылась клиентская страница через класс DrugRecommendationPage
-        Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
-    drugRecommendationPage.clickTimeLineQst();
+      Assert.assertTrue(drugRecommendationPage.isTableSelected(), "User not filled the questionnaire"); //Добавили проверку появилась ли заполненная таблица вопросника
+              drugRecommendationPage.clickTimeLineQst();
         try {
             Thread.sleep(4000); //ждем 4 сек
         } catch (InterruptedException e) {}
        Assert.assertTrue(drugRecommendationPage.isOnframe(), "We are not on frame page"); //Проверяем находимся ли во фрейме(ссылка на DragRecommendationPage)
 
-        //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
+       //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }
 
 

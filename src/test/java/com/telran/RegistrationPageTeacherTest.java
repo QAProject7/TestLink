@@ -1,6 +1,8 @@
 package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
+import com.telran.pages.DoctorsPage;
+import com.telran.pages.LoginMaksimPage;
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,14 +13,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Oleg
  */
 public class RegistrationPageTeacherTest {
-    public static String registered_username = "more8769@yopmail.com";
+    public static String username = "1298Doctor";
+    public static String password = "LinkCare!!11";
+    public static String registered_username = null;
     public static String registered_password = "LinkCare!!11";
     public static String parentEmail = null;
     public static String zeut = null;
+    public LoginMaksimPage loginCreateTeachersPage;
+    public DoctorsPage doctorsPage;
     public TeacherTestPage loginPage;
     public CreateNewPatientPage createPatientPage;
     private WebDriver driver;
@@ -30,23 +38,37 @@ public class RegistrationPageTeacherTest {
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
         createPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
+        loginCreateTeachersPage = PageFactory.initElements(driver, LoginMaksimPage.class);
+        doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
 
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() {
-       /* registered_username = createPatientPage.generateTeacherEmail();
+    public void beforeMethodSetUp() throws InterruptedException {
+        registered_username = createPatientPage.generateTeacherEmail();
         parentEmail = createPatientPage.generateParentEmail();
         zeut = createPatientPage.generateZeut();
+        loginCreateTeachersPage.
+                openLoginPage(driver)
+                .fillUsernameField(username)
+                .fillPasswordField(password)
+                .clickOnLoginButton();
+        doctorsPage.waitUntilMainPageIsLoaded();
+        driver.manage().window().maximize();
+        doctorsPage.clickOnAddPatient();
         try {
             createPatientPage.createPatientParentAndTeacher(zeut, parentEmail, registered_username );
+          // doctorsPage.waitUntilMainPageIsLoaded();
+           // doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
+        this.driver.quit();
 
-        loginPage.openLoginPage(driver);
+       //driver = new FirefoxDriver();
+
     }
 
     @AfterTest(alwaysRun = true)
@@ -56,7 +78,13 @@ public class RegistrationPageTeacherTest {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
-
+        setup();
+        loginPage.openLoginPage(driver);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
@@ -67,16 +95,23 @@ public class RegistrationPageTeacherTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Assert.assertTrue(loginPage.getButtonStartTest1(), "Button start test not present");
-        loginPage
-                .clickOnButtonStartTest1();
-        loginPage
-                .clickOnAnyStar();
-        loginPage
-                .clickOnSendButton();
-        Assert.assertFalse(loginPage.getButtonStartTest1(), "Test not passed");
+        Assert.assertTrue(loginPage.getButtonTestVanderbild(), "Button start test not present");
+        loginPage.clickOnButtonTestVanderbild();
+        /*loginPage.clickOnAnyStar();
+        loginPage.clickOnSendButton();*/
+        Assert.assertFalse(loginPage.getButtonTestVanderbild(), "Test not passed");
         loginPage.clickOnButtonAccept();
-        loginPage.clickOnButtonStartTest2();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        loginPage.clickOnButtonStartTest();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.switchTo().frame(0);
         loginPage.clickOnAnyStar();
         loginPage.clickOnSendButton();

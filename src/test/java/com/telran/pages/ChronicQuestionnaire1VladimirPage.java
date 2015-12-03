@@ -8,21 +8,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 /**
  * Created by Naryck on 2015.11.09.
  */
 public class ChronicQuestionnaire1VladimirPage extends Page {
+    public static String FILE_PATH;
+    public static String teudat;
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     Map<String, Integer> buttons = new HashMap<String, Integer>();
     ObjectOutputStream oos;
+    ObjectInputStream ois;
 
     @FindBy(id = "MainContent_contentHtml")
     WebElement mainDiv;
@@ -30,14 +29,14 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
     @FindBy(id = "Top1_HeadLoginStatus")
     WebElement logOutButton;
 
-    @FindBy(xpath = "//a[@class='rwCloseButton']")
-    WebElement closeTableButton;
-
     @FindBy(id = "form1")
     WebElement mainForm;
 
     @FindBy(xpath = "//div/*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות - דוח ממתין למילוי')]/../..//a[@class='LinkBtnPatients BlueBtn']")
     WebElement questionnaireChronicIllness;
+
+    @FindBy(xpath = "//*[@id='popup']")
+    WebElement questionnairePopUp;
 
     //comments
     @FindBy(xpath = "//textarea[@name='q35']")
@@ -58,9 +57,11 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-    public void fillElements() {
+    public void fillElements(String zeut) {
+        FILE_PATH = "D:\\" + zeut + ".tst";
+        teudat = zeut;
         try {
-            oos = new ObjectOutputStream((new FileOutputStream("c:\\temp\\buttons1.tst")));
+            oos = new ObjectOutputStream((new FileOutputStream(FILE_PATH)));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -68,29 +69,39 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
 
         List<WebElement> tables = mainDiv.findElements(By.tagName("table"));
 
-        List<WebElement> rows, radioButtons;
+        List<WebElement> rows, radioButtons, tds;
 
         for (WebElement currentTable : tables) {
             Log.info("Filling the tables' radiobuttons");
             rows = currentTable.findElements(By.tagName("tr"));
             for (WebElement currentRow : rows) {
                 radioButtons = currentRow.findElements(By.tagName("input"));
-                String rndValue = String.valueOf(/*(int) (Math.random() * 3)*/ 1);
+                String rndValue = String.valueOf((int) (Math.random() * 3) /*0*/);
                 for (WebElement currentRadioButton : radioButtons) {
                     if (currentRadioButton.getAttribute("value").equalsIgnoreCase(rndValue)) {
                         String name = currentRadioButton.getAttribute("name");
-                        Log.info("Filling radioButtons with index " + rndValue + " with name " + name);
-                        buttons.put(name, Integer.parseInt(currentRadioButton.getAttribute("value")));
+                        String question = "";
+                        tds = currentRow.findElements(By.tagName("td"));
+                        for (WebElement td: tds) {
+                            if ("quest".equals(td.getAttribute("class"))) {
+                                question = td.getText();
+                            }
+                        }
+                        Log.info("Filling radioButtons with index " + rndValue + " with name " + name +
+                                " and question = " + question);
+                        buttons.put(question, Integer.parseInt(currentRadioButton.getAttribute("value")));
                         currentRadioButton.click();
                     }
                 }
             }
-            try {
-                oos.writeObject(buttons);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
+        try {
+            oos.writeObject(buttons);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //checkAnswers();
         Log.info("Click on 'Submit' button");
         clickElement(submitButton);
         Log.info("Accepting alert window");
@@ -101,9 +112,36 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         clickElement(logOutButton);
     }
 
+    public void checkAnswers() {
+        // TODO: logic should be moved into proper place
+        Log.info("Check Answers");
+        try {
+            ois = new ObjectInputStream(new FileInputStream(FILE_PATH));
+            List<WebElement> radioBtns = mainDiv.findElements(By.xpath("//input[@type='radio']"));
+            Map<String, Integer> selectedRadioBtns = new HashMap<String, Integer>();
+            for (WebElement rbtn: radioBtns) {
+                Log.info("name: " + rbtn.getAttribute("name") + " value " + rbtn.getAttribute("value")
+                    + " selected " + rbtn.getAttribute("selected"));
+                if ("true".equals(rbtn.getAttribute("selected"))) {
+                    selectedRadioBtns.put(rbtn.getAttribute("name"),
+                            Integer.valueOf(rbtn.getAttribute("value")));
+                }
+            }
+            Map<String, Integer> buttonsFromFile = (Map<String, Integer>) ois.readObject();
+            Log.info("Maps are equal: " + buttonsFromFile.equals(selectedRadioBtns));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public boolean isChronicIllnessAvailable() {
         Log.info("Check if button 'Chronic Illness' available");
         return verifyElementIsPresent(questionnaireChronicIllness);
+    }
+
+    public boolean isPopUpPresent() {
+        Log.info("Check if popup window disappeared");
+        return verifyElementIsPresent(questionnairePopUp);
     }
 
     public ChronicQuestionnaire1VladimirPage waitUntilTestPageIsLoaded() {

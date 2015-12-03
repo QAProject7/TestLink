@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecomendationPage;
 import com.telran.pages.LoginIrinaPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,11 +17,11 @@ import org.testng.annotations.Test;
  * Created by Alex on 12.11.2015.
  */
 public class DrugRecommendationFainbergObjTest {
-
-    public static String username = "4337Doctor";
+    public static String username = "6012Doctor";
     public static String password = "LinkCare!!11";
     public static String testText1 = "Test Text 123456";
-
+    public static String testText2 = "Test Text 123";
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public WebDriver driver;
 
     public DrugRecomendationPage patientPage;
@@ -55,39 +56,54 @@ public class DrugRecommendationFainbergObjTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        driver.manage().window().maximize();
     }
 
     @Test(groups = {"smoke", "positive"})
     public void AddElement() {
-        System.out.println("Add drug to last group test");
+
+        Log.info("Add drug to last group test start");
         try {
             //mainPage.fillElements();
+            Log.info("pressExpandElement");
             patientPage.pressExpandElement();
+            patientPage.waitUntilElementIsLoaded(patientPage.groupLastAddLink);
             Thread.sleep(5000);
-            patientPage.pressAddLink()
-                    .fillTextField(testText1)
-                    .pressCommitAddLink();
+            Log.info("pressAddLink");
+            patientPage.pressAddLink();
+            Log.info("fillTextField");
+            patientPage.fillTextField(testText1);
+            Log.info("pressCommitAddLink");
+            patientPage.pressCommitAddLink();
             Thread.sleep(5000);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("Asserting starting");
+        Log.info("Asserting starting");
         Assert.assertTrue(patientPage.isTextInsertedOk(testText1), "DrugAddedTest Failed!");
     }
 
 
     @Test(groups = {"smoke", "positive"})
     public void DeleteElement() {
-        System.out.println("Delete drug from last group test");
+        Log.info("Adding element before deleting");
+        AddElement();
+        Log.info("Delete drug from last group test");
         String deletedDrug = null;
         try {
             deletedDrug = null;
+            Log.info("pressExpandElement");
             patientPage.pressExpandElement();
+            Log.info("waitUntilElementIsLoaded(patientPage.groupLastAddLink)");
+            patientPage.waitUntilElementIsLoaded(patientPage.groupLastAddLink);
             Thread.sleep(5000);
+            Log.info("pressAddLink");
             patientPage.pressAddLink();
             Thread.sleep(5000);
+            Log.info("unCheckCheckBoxDeletedDrug");
             deletedDrug = patientPage.unCheckCheckBoxDeletedDrug();
             Thread.sleep(5000);
+            Log.info("pressCommitAddLink");
             patientPage.pressCommitAddLink();
             Thread.sleep(5000);
         } catch (Exception e) {

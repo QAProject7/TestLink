@@ -1,5 +1,6 @@
-package com.telran;
+package com.telran.Training;
 
+import com.telran.TestNgTestBase;
 import org.openqa.selenium.*;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;

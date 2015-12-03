@@ -177,6 +177,10 @@ public abstract class Page {
     new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOf(element));
   }
 
+  public void waitUntilElementIsDisappeared (String id) throws IOException, InterruptedException {
+    new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(By.id(id)));
+  }
+
   public void moveMouseOverElement(WebElement element) {
     String javaScript = "var evObj = document.createEvent('MouseEvents');" +
             "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
