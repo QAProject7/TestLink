@@ -1,6 +1,7 @@
 package com.telran.pages;
 
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,7 @@ import java.io.IOException;
  */
 public class ChangePassRegistrationPatientOlgaPage extends Page {
 
+    public static Logger Log = Logger.getLogger(ChangePassRegistrationPatientOlgaPage.class.getName());
     public ChangePassRegistrationPatientOlgaPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
