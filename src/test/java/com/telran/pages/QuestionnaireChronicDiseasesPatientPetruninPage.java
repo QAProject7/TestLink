@@ -53,6 +53,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninPage extends Page {
     public boolean isOnframe() {
         return exists(onFrame);
     }
+    public boolean tableWasFilled() {
+        return exists(clickTableButtom);
+    }
 
     public QuestionnaireChronicDiseasesPatientPetruninPage fillElements() {
         List<WebElement> sections = form1.findElements(By.tagName("tr"));
