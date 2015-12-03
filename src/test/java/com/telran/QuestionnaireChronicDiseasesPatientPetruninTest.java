@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.MobileWebPages.LoginMobilePage;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
 import com.telran.pages.LoginIrinaPage;
+import com.telran.pages.LoginVladimirPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
 import org.apache.log4j.Priority;
 import org.openqa.selenium.By;
@@ -21,29 +22,29 @@ import org.testng.annotations.Test;
  */
 public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
-    public static String username = "hore4743@yopmail.com"; //Данные входа клеента (hore2966@yopmail.com был заполнен)
+    public static String username = "hore4832@yopmail.com"; //Данные входа клеента (hore2966@yopmail.com был заполнен)
     public static String password = "LinkCare!!11";//Данные входа доктора
-    public LoginIrinaPage loginIrinaPage;
+    public LoginVladimirPage loginVladimirPage;
     public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;
     private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-       // driver = new FirefoxDriver(); //Запускаем Firefox
-        loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
+      driver = new FirefoxDriver(); //Запускаем Firefox
+        loginVladimirPage = PageFactory.initElements(driver, LoginVladimirPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginIrinaPage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+        loginVladimirPage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
 
-        loginIrinaPage.waitUntilLoginPageIsLoaded();
-        loginIrinaPage
+        loginVladimirPage.waitUntilLoginPageIsLoaded();
+        loginVladimirPage
                 .fillUsernameField(username)
                 .fillPasswordField(password);
         questionnaireChronicDiseasesPatientPetruninPage.clickAddAcceptField();
-        loginIrinaPage.clickOnLoginButton();
+        loginVladimirPage.clickOnLoginButton();
     }
 
     @Test(groups = {"positive", "smoke"})
@@ -63,9 +64,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
     }
 
-    /*@AfterClass(alwaysRun = true)
-    public void tearDown() {
+    @AfterClass(alwaysRun = true)
+   public void tearDown() {
         this.driver.quit();
-    }*/
+    }
 }
 
