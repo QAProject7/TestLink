@@ -379,11 +379,19 @@ public class CreateNewPatientPage extends Page {
         clickElement(inputMeetingDate);
         clickElement(addNewAdultButton);
         clickSaveAccount();
-
-
     }
 
+
     //Check
+    public void waitUntilPopupClosed() throws IOException, InterruptedException {
+        waitUntilElementIsDisappeared("popup");
+    }
+
+    public boolean isPopUpClosed() {
+        return !exists(driver.findElement(By.id("popup")));
+    }
+
+
     public CreateNewPatientPage WaitUntilPatientPageIsLoaded() {
         waitUntilIsLoaded(questMenu);
         return this;

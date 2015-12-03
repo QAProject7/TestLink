@@ -89,7 +89,7 @@ public class CreateNewPatientTest {
         }
     }
 
-    @Test(groups = {"positive"})
+    @Test(groups = {"positive", "smoke"})
     public void createNewPatientWithOneMethod() throws IOException, InterruptedException {
         Log.info("Create new patient started");
         createNewPatientpage.createPatientOneParent(zeut, email);
@@ -104,7 +104,7 @@ public class CreateNewPatientTest {
     }
 
 
-    @Test(groups = {"positive"})
+    @Test(groups = {"positive", "smoke"})
     public void createNewPatientWithParentAndTeacher() {
         try {
             createNewPatientpage.createPatientParentAndTeacher(zeut, email, emailTeacher);
