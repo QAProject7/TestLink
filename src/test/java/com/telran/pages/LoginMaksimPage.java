@@ -1,6 +1,5 @@
 package com.telran.pages;
 
-import com.telran.TestNgTestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +38,7 @@ public class LoginMaksimPage extends Page {
 
     public LoginMaksimPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = TestNgTestBase.baseUrl + "/Login.aspx";
+        this.PAGE_URL = baseUrl + "/Login.aspx";
         this.PAGE_TITLE = "Log In";
         PageFactory.initElements(driver, this);
     }

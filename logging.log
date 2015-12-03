@@ -325,3 +325,11 @@
 2015-11-30 15:19:06 INFO  LogLog4j:215 - Filling Email <hore805@yopmail.com>
 2015-11-30 15:19:06 INFO  LogLog4j:233 - Waiting for button Send Email
 2015-11-30 15:19:06 INFO  LogLog4j:235 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (b2f474b0-d7d0-4377-8a34-74d2efb12269)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-03 12:52:55 INFO  LogLog4j:147 - Zeut generated is <015542897>
+2015-12-03 12:52:55 INFO  LogLog4j:141 - TeacherEmail generated is <more245@yopmail.com>
+2015-12-03 12:52:55 INFO  LogLog4j:159 - MeetingDate generated is <23/11/2016 08:00>
+2015-12-03 12:52:55 INFO  LogLog4j:66 - Opening Login page
+2015-12-03 12:52:56 INFO  LogLog4j:73 - Filling username field
+2015-12-03 12:52:58 INFO  LogLog4j:79 - Filling password field
+2015-12-03 12:52:58 INFO  LogLog4j:112 - Clicking on Login button
+2015-12-03 12:52:58 INFO  LogLog4j:66 - Waiting for Main page is loaded
