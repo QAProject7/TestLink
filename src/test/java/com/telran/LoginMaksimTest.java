@@ -1,10 +1,8 @@
 package com.telran;
 
 import com.telran.pages.LoginMaksimPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,7 +13,7 @@ public class LoginMaksimTest extends TestNgTestBase {
     public static String registered_username = "loginName";
     public static String registered_password = "Passw0rd!";
     public LoginMaksimPage loginPage;
-    private WebDriver driver;
+    //private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -84,8 +82,8 @@ public class LoginMaksimTest extends TestNgTestBase {
 
     // test of clicking on Registration link are written in another class
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown() {
-        this.driver.quit();
-    }
+    //@AfterClass(alwaysRun = true)
+    //  public void tearDown() {
+    //      this.driver.quit();
+    // }
 }
