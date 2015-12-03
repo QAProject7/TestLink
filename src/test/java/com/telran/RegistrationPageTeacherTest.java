@@ -5,10 +5,8 @@ import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginMaksimPage;
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +16,7 @@ import java.io.IOException;
 /**
  * Oleg
  */
-public class RegistrationPageTeacherTest {
+public class RegistrationPageTeacherTest extends TestNgTestBase {
     public static String username = "1298Doctor";
     public static String password = "LinkCare!!11";
     public static String registered_username = null;
@@ -33,7 +31,7 @@ public class RegistrationPageTeacherTest {
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
@@ -71,10 +69,10 @@ public class RegistrationPageTeacherTest {
 
     }
 
-    @AfterTest(alwaysRun = true)
+   /* @AfterTest(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
-    }
+    }*/
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
