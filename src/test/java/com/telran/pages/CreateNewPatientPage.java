@@ -96,7 +96,7 @@ public class CreateNewPatientPage extends Page {
 
     public CreateNewPatientPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage";
+        this.PAGE_URL = baseUrl + "/SitePages/createUser.aspx?ReturnUrl=HomePage";
         PageFactory.initElements(driver, this);
     }
 

@@ -4,8 +4,8 @@ import com.telran.util.PropertyLoader;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import ru.stqa.selenium.factory.WebDriverFactory;
 import ru.stqa.selenium.factory.WebDriverFactoryMode;
 
@@ -17,12 +17,11 @@ import java.io.IOException;
 public class TestNgTestBase {
 
   public static String baseUrl;
+  public static WebDriver driver;
   protected static String gridHubUrl;
   protected static Capabilities capabilities;
 
-  protected WebDriver driver;
-
-  @BeforeSuite(alwaysRun = true)
+  @BeforeClass(alwaysRun = true)
   public void initTestSuite() throws IOException {
     baseUrl = PropertyLoader.loadProperty("site.url");//загружает capabilities
     gridHubUrl = PropertyLoader.loadProperty("grid.url");

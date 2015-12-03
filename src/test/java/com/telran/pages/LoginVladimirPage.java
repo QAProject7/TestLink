@@ -126,6 +126,7 @@ public class LoginVladimirPage extends Page {
     }
 
     public void openRegistrationPage() {
+        waitUntilLoginPageIsLoaded();
         Log.info("CLicking the 'Register' button");
         clickElement(goToRegLink);
     }
