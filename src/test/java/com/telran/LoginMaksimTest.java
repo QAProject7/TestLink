@@ -1,7 +1,6 @@
 package com.telran;
 
 import com.telran.pages.LoginMaksimPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +13,7 @@ public class LoginMaksimTest extends TestNgTestBase {
     public static String registered_username = "loginName";
     public static String registered_password = "Passw0rd!";
     public LoginMaksimPage loginPage;
-    private WebDriver driver;
+    //private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
