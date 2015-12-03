@@ -1,7 +1,10 @@
 package com.telran.pages;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import java.io.IOException;
 
 /**
@@ -35,7 +38,7 @@ public class LoginMaksimPage extends Page {
 
     public LoginMaksimPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
+        this.PAGE_URL = baseUrl + "/Login.aspx";
         this.PAGE_TITLE = "Log In";
         PageFactory.initElements(driver, this);
     }

@@ -1,18 +1,22 @@
 package com.telran;
 
-import com.telran.pages.*;
-import org.openqa.selenium.*;
+import com.telran.pages.LoginMaksimPage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 import java.util.Date;
 
 public class LoginMaksimTest {
     public static String registered_username = "loginName";
     public static String registered_password = "Passw0rd!";
-    private WebDriver driver;
     public LoginMaksimPage loginPage;
+    private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {

@@ -139,7 +139,6 @@
             <properties>
                 <site.url>http://localhost/</site.url>
             </properties>
-
         </profile>
         <profile>
             <id>devhost</id>
@@ -147,8 +146,9 @@
                 <site.url>http://devhost/</site.url>
             </properties>
         </profile>
+
         <profile>
-            <id>testhost</id>
+            <id>stage</id>
             <properties>
                 <site.url>http://dhclinicappv2stg.item-soft.co.il/</site.url>
             </properties>
@@ -157,7 +157,7 @@
             </activation>
         </profile>
         <profile>
-            <id>prodhost</id>
+            <id>production</id>
             <properties>
                 <site.url>http://prodhost.com/</site.url>
             </properties>
@@ -177,6 +177,58 @@
             <properties>
                 <grid.url>http://localhost:4444/wd/hub/</grid.url>
             </properties>
+        </profile>
+        <profile>
+            <id>debug</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testngSmokeReady.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <!-- TestNg Configurations -->
+        <profile>
+            <id>all</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>smoke</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testngSmokeReady.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>
