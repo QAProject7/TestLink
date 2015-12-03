@@ -15,7 +15,7 @@ import java.io.IOException;
 public class LoginVladimirPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+
     //fields
     @FindBy(id = "MainContent_LoginUser_UserName")
     WebElement usernameField;
@@ -45,6 +45,9 @@ public class LoginVladimirPage extends Page {
     @FindBy(id = "Top1_HeadLoginStatus")
     WebElement logOutButton;
 
+    @FindBy(id = "MainContent_LoginUser_CBAgreeToTerms")
+    WebElement termsCheckBox;
+
     //checkboxs
     //Select
     //Alerts
@@ -58,7 +61,7 @@ public class LoginVladimirPage extends Page {
 
     public LoginVladimirPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/";
+        this.PAGE_URL = baseUrl;
         PageFactory.initElements(driver, this);
     }
 
@@ -82,6 +85,10 @@ public class LoginVladimirPage extends Page {
         return this;
     }
 
+    public LoginVladimirPage clickOnTermsCheckbox() {
+        clickElement(termsCheckBox);
+        return this;
+    }
     public LoginVladimirPage waitUntilRegPageIsLoaded() {
         try {
             Log.info("Waiting for the Reg page is loaded");
@@ -132,6 +139,14 @@ public class LoginVladimirPage extends Page {
         clickElement(forgotPassLink);
     }
 
+    public void login(String username, String password) {
+        waitUntilLoginPageIsLoaded();
+        fillUsernameField(username);
+        fillPasswordField(password);
+        clickOnTermsCheckbox();
+        clickOnLoginButton();
+    }
+
     //check alert presence
 
     public boolean alertMessageNotValidUserName() {
@@ -146,7 +161,7 @@ public class LoginVladimirPage extends Page {
         clickElement(nextButton);
     }
 
-    public LoginVladimirPage waitUntilTestPageIsLoaded() {
+    public LoginVladimirPage waitUntilLoginPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(submitButton);
         } catch (IOException e) {

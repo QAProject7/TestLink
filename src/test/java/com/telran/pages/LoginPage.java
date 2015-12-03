@@ -29,6 +29,9 @@ public class LoginPage extends Page {
     @FindBy(xpath = "//a[@class='forgot']")
     WebElement forgotPassLink;
 
+    @FindBy(id = "MainContent_LoginUser_CBAgreeToTerms")
+    WebElement termsCheckBox;
+
     //Alerts
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),('שם משתמש חובה'))]")
     WebElement wrongUserNameAlert;
@@ -41,7 +44,7 @@ public class LoginPage extends Page {
 
     public LoginPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
+        this.PAGE_URL = baseUrl + "/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
@@ -65,6 +68,11 @@ public class LoginPage extends Page {
         return this;
     }
 
+
+    public LoginPage clickOnTermsCheckbox(String username) {
+        clickElement(termsCheckBox);
+        return this;
+    }
 
     public LoginPage waitUntilLoginPageIsLoaded() {
         try {
