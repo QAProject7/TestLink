@@ -41,7 +41,7 @@ public class LoginPage extends Page {
 
     public LoginPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
+        this.PAGE_URL = baseUrl+"/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 

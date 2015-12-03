@@ -9,12 +9,10 @@ import org.testng.Assert;
 
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
-
 /**
  * Abstract class representation of a Page in the UI. Page object pattern
  */
 public abstract class Page {
-  public static String baseUrl;
   public String PAGE_URL;
   public String PAGE_TITLE;
   protected WebDriver driver;
