@@ -158,7 +158,7 @@
         <profile>
             <id>production</id>
             <properties>
-                <site.url>http://prodhost.com/</site.url>
+                <site.url>https://app.linkcaring.com/</site.url>
             </properties>
         </profile>
         <!-- TestNg Configurations -->
