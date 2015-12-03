@@ -263,8 +263,7 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     }
 
     public void fillProfile(int tz, String email){
-//        loginPatient
-//                .fillCurrentPassword(password)
+//        fillCurrentPassword(password)
 //                .fillNewPassword(passwordResult)
 //                .fillConfirmNewPassword(passwordResult)
 //                .clickOnChangePassButton();
