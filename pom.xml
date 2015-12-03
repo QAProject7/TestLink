@@ -146,7 +146,6 @@
                 <site.url>http://devhost/</site.url>
             </properties>
         </profile>
-
         <profile>
             <id>stage</id>
             <properties>
@@ -178,8 +177,9 @@
                 <grid.url>http://localhost:4444/wd/hub/</grid.url>
             </properties>
         </profile>
+        <!-- TestNg Configurations -->
         <profile>
-            <id>debug</id>
+            <id>smoke</id>
             <build>
                 <plugins>
                     <plugin>
@@ -197,7 +197,6 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-        <!-- TestNg Configurations -->
         <profile>
             <id>all</id>
             <build>
@@ -208,22 +207,6 @@
                         <configuration>
                             <suiteXmlFiles>
                                 <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                            </suiteXmlFiles>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>smoke</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/testngSmokeReady.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>

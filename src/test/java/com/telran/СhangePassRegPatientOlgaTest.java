@@ -57,7 +57,7 @@ public class СhangePassRegPatientOlgaTest {
         }
     }
 
-    @Test
+    @Test (groups = {"positive","smoke"})
     public void loginFirstPatient() {
         try {
             loginPatient
@@ -85,7 +85,7 @@ public class СhangePassRegPatientOlgaTest {
         }
 
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativeEmptyPass(){
         try {
             loginPatient.clickOnChangePassButton();
@@ -113,7 +113,7 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativePassNotSame(){
         try {
             loginPatient
@@ -126,7 +126,7 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativeNoIntermediatePage(){
         try {
             loginPatient
@@ -180,7 +180,7 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativeEmptyEmail(){
         try {
             loginPatient
@@ -200,7 +200,7 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativeEmailInvalid(){
         try {
             loginPatient
@@ -221,7 +221,7 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test
+    @Test (groups = {"negative","smoke"})
     public void negativeEmptyTZ(){
         try {
             loginPatient

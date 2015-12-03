@@ -16,8 +16,8 @@ import java.io.IOException;
  */
 public class TestNgTestBase {
 
+  public static String baseUrl;
   protected static String gridHubUrl;
-  protected static String baseUrl;
   protected static Capabilities capabilities;
 
   protected WebDriver driver;

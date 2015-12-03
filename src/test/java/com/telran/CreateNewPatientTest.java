@@ -4,19 +4,17 @@ import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginVladimirPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class CreateNewPatientTest {
+public class CreateNewPatientTest extends TestNgTestBase {
     public static String username = "1003Doctor";
     public static String password = "LinkCare!!11";
     public static String zeut;
@@ -28,7 +26,7 @@ public class CreateNewPatientTest {
     public LoginVladimirPage loginPage;
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientpage;
-    private WebDriver driver;
+    // private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws InterruptedException {
@@ -117,8 +115,8 @@ public class CreateNewPatientTest {
         }
     }
 
-    @AfterClass(alwaysRun = true)
+   /* @AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
-    }
+    }*/
 }
