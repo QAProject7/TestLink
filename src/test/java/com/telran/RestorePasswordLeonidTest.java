@@ -11,8 +11,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.thoughtworks.selenium.SeleneseTestBase.fail;
-
+import static org.testng.Assert.fail;
+/**
+ * Created by Leonid Gengrinovich
+ */
 public class RestorePasswordLeonidTest {
     private WebDriver driver;
     private String baseUrl;
@@ -51,7 +53,6 @@ public class RestorePasswordLeonidTest {
                 .clickOnRestoreButton();
         forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
                 .assertText();
-
     }
 
     @AfterTest

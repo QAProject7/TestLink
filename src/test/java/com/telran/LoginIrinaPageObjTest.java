@@ -41,7 +41,7 @@ public class LoginIrinaPageObjTest {
                     .waitUntilLoginPageIsLoaded();
             //            .clickOnRegLink();
 //            registrationPage.openRegistrationPage(driver)
-            //loginPage.waitUntilLoginPageIsLoaded();
+            //loginPage.waitUntilMenuPageIsLoaded();
         } catch (Exception e) {
             e.printStackTrace();
         }

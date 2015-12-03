@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 
 /**
- * Created by Iakov Volf
+ * Created by Leonid Gengrinovich
  */
 public class MobileUserMainMenuAccountLeonid extends Page {
 
