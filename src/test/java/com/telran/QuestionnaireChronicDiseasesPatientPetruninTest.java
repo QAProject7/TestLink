@@ -49,6 +49,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
     @Test(groups = {"positive", "smoke"})
     public void testOpenPatientPage() throws InterruptedException {
         Thread.sleep(5000);
+        Assert.assertTrue(questionnaireChronicDiseasesPatientPetruninPage.tableWasFilled(), "Table was Filled");
         questionnaireChronicDiseasesPatientPetruninPage.clickTableButtom();
         Thread.sleep(5000);
         driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
@@ -56,6 +57,8 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
         questionnaireChronicDiseasesPatientPetruninPage.fillElements();
         Thread.sleep(3000);
         questionnaireChronicDiseasesPatientPetruninPage.clickSubmitButtom();
+        Thread.sleep(3000);
+        driver.switchTo().alert().accept();
         Reporter.log("Registration is validate!");
 
     }
