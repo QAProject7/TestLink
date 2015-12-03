@@ -4,7 +4,6 @@ import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginVladimirPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -30,7 +29,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws InterruptedException {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
 
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);

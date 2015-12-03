@@ -4,8 +4,6 @@ package com.telran;
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -13,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class СhangePassRegPatientOlgaTest {
+public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     public static String firstName = "Moshe";
     public static String lastName = "Levi";
     public static String email = "";
@@ -25,7 +23,7 @@ public class СhangePassRegPatientOlgaTest {
     public static String houseNumber = "33";
     public static String date = "1990-11-05";
 
-    public WebDriver driver;
+//    public WebDriver driver;
 
     public CreateNewPatientPage patient;
     public ChangePassRegistrationPatientOlgaPage loginPatient;
@@ -34,7 +32,7 @@ public class СhangePassRegPatientOlgaTest {
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver();
+//        driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver,LoginPage.class);
         loginPatient = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
         patient = PageFactory.initElements(driver, CreateNewPatientPage.class);
@@ -73,6 +71,7 @@ public class СhangePassRegPatientOlgaTest {
                     .fillFirstNameTxt(firstName)
                     .fillLastNameTxt(lastName)
                     .fillDateBirthday(date)
+                    .fillEmail(email)
                     .fillPersonalId(personalId)
                     .fillcontactPhone(personalId)
                     .fillAdress(address)
