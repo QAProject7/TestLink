@@ -40,11 +40,9 @@ public class CreateNewPatientTest extends TestNgTestBase {
         email = createNewPatientpage.generateParentEmail();
         emailTeacher = createNewPatientpage.generateTeacherEmail();
         meetingDate = createNewPatientpage.createMeetingDate();
-        loginPage.
-                openLoginPage(driver)
-                .fillUsernameField(username)
-                .fillPasswordField(password)
-                .clickOnLoginButton();
+        loginPage.openLoginPage(driver);
+        loginPage.login(username, password);
+
         doctorsPage.waitUntilMainPageIsLoaded();
         driver.manage().window().maximize();
         doctorsPage.clickOnAddPatient();
@@ -88,7 +86,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
 
     @Test(groups = {"positive", "smoke"})
     public void createNewPatientWithOneMethod() throws IOException, InterruptedException {
-        Log.info("Create new patient started");
+        Log.info("Creating of a new patient started");
         createNewPatientpage.createPatientOneParent(zeut, email);
         Reporter.log("new Patient added");
         Thread.sleep(4000);
