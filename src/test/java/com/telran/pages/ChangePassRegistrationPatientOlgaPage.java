@@ -262,24 +262,55 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         return exists(requiredTown);
     }
 
-    public void fillProfile(int tz, String email){
-//        fillCurrentPassword(password)
-//                .fillNewPassword(passwordResult)
-//                .fillConfirmNewPassword(passwordResult)
-//                .clickOnChangePassButton();
-//        loginPatient
-//                .waitUntilGoToNextPageLoaded()
-//                .clickOnGotoFillProfile();
-//        loginPatient
-//                .waitUntilFillProfilePageIsLoaded()
-//                .fillFirstNameTxt(firstName)
-//                .fillLastNameTxt(lastName)
-//                .fillDateBirthday(date)
-//                .fillPersonalId(personalId)
-//                .fillcontactPhone(personalId)
-//                .fillAdress(address)
-//                .fillHouseNumber(houseNumber)
-//                .fillCity(city)
-//                .clickOnSubmitButton();
+
+    public static String firstName = "Moshe";
+    public static String lastName = "Levi";
+    public static String password = "LinkCare!1";
+    public static String passwordResult = "LinkCare!!11";
+    public static String address = "Herzl";
+    public static String city = "Ashdod";
+    public static String houseNumber = "33";
+    public static String date = "1990-11-05";
+
+    public void fillAllChangePassAndProfile(String tz, String email){
+        fillCurrentPassword(password);
+        fillNewPassword(passwordResult);
+        fillConfirmNewPassword(passwordResult);
+        clickOnChangePassButton();
+        waitUntilGoToNextPageLoaded();
+        clickOnGotoFillProfile();
+        waitUntilFillProfilePageIsLoaded();
+        fillFirstNameTxt(firstName);
+        fillLastNameTxt(lastName);
+        fillDateBirthday(date);
+        fillEmail(email);
+        fillPersonalId(tz);
+        fillcontactPhone(tz);
+        fillAdress(address);
+        fillHouseNumber(houseNumber);
+        fillCity(city);
+        clickOnSubmitButton();
+    }
+    public void fillOnlyProfile(String tz, String email){
+        waitUntilFillProfilePageIsLoaded();
+        fillFirstNameTxt(firstName);
+        fillLastNameTxt(lastName);
+        fillDateBirthday(date);
+        fillEmail(email);
+        fillPersonalId(tz);
+        fillcontactPhone(tz);
+        fillAdress(address);
+        fillHouseNumber(houseNumber);
+        fillCity(city);
+        clickOnSubmitButton();
+    }
+    public void fillChangePass(){
+        fillCurrentPassword(password);
+        fillNewPassword(passwordResult);
+        fillConfirmNewPassword(passwordResult);
+        clickOnChangePassButton();
+        waitUntilGoToNextPageLoaded();
+        clickOnGotoFillProfile();
+        waitUntilFillProfilePageIsLoaded();
     }
 }

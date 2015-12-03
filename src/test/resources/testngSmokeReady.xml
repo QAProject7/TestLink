@@ -9,6 +9,8 @@
         </groups>
         <classes>
             <class name="com.telran.CreateNewPatientTest"/>
+            <class name="com.telran.СhangePassRegPatientOlgaTest"/>
+
         </classes>
 
 
