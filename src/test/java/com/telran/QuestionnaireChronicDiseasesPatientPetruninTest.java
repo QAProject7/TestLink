@@ -29,7 +29,7 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver(); //Запускаем Firefox
+       // driver = new FirefoxDriver(); //Запускаем Firefox
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
     }
@@ -63,9 +63,9 @@ public class QuestionnaireChronicDiseasesPatientPetruninTest {
 
     }
 
-    @AfterClass(alwaysRun = true)
+    /*@AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
-    }
+    }*/
 }
 
