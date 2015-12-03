@@ -1,5 +1,6 @@
 package com.telran.pages;
 
+import com.telran.TestNgTestBase;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +18,7 @@ public abstract class Page {
   public String PAGE_URL;
   public String PAGE_TITLE;
   protected WebDriver driver;
+  protected String baseUrl = TestNgTestBase.baseUrl;
 
   /*
    * Constructor injecting the WebDriver interface

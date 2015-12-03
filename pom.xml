@@ -161,22 +161,6 @@
                 <site.url>http://prodhost.com/</site.url>
             </properties>
         </profile>
-        <!-- grid -->
-        <profile>
-            <id>nogrid</id>
-            <properties>
-                <grid.url></grid.url>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>grid</id>
-            <properties>
-                <grid.url>http://localhost:4444/wd/hub/</grid.url>
-            </properties>
-        </profile>
         <!-- TestNg Configurations -->
         <profile>
             <id>smoke</id>
@@ -206,7 +190,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/testngAll.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
