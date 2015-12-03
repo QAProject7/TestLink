@@ -261,4 +261,26 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     public boolean isErEmptyTown() {
         return exists(requiredTown);
     }
+
+    public void fillProfile(int tz, String email){
+//        loginPatient
+//                .fillCurrentPassword(password)
+//                .fillNewPassword(passwordResult)
+//                .fillConfirmNewPassword(passwordResult)
+//                .clickOnChangePassButton();
+//        loginPatient
+//                .waitUntilGoToNextPageLoaded()
+//                .clickOnGotoFillProfile();
+//        loginPatient
+//                .waitUntilFillProfilePageIsLoaded()
+//                .fillFirstNameTxt(firstName)
+//                .fillLastNameTxt(lastName)
+//                .fillDateBirthday(date)
+//                .fillPersonalId(personalId)
+//                .fillcontactPhone(personalId)
+//                .fillAdress(address)
+//                .fillHouseNumber(houseNumber)
+//                .fillCity(city)
+//                .clickOnSubmitButton();
+    }
 }
