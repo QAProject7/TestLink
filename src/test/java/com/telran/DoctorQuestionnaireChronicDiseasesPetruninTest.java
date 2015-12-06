@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 /**
  * Created by leoni on 02.12.2015.
  */
-public class DoctorQuestionnaireChronicDiseasesPetruninTest {
+public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBase {
     public static String username = "1003Doctor"; //Данные входа клеента
     public static String password = "LinkCare!!11";//Данные входа доктора
     public LoginIrinaPage loginIrinaPage;
@@ -59,7 +59,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest {
 
     }
 
-    @AfterClass(alwaysRun = true)
+   @AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
     }
