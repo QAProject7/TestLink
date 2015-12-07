@@ -30,7 +30,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     //public WebDriver driver;
 
     public ChronicQuestionnaire1VladimirPage questionnaireFirstPage;
-    public LoginVladimirPage loginPage;
+    public LoginPage loginPage;
     public CreateNewPatientPage createNewPatientPage;
     public DoctorsPage doctorsPage;
     public RegistrationPage registrationPage;
@@ -40,7 +40,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     public void setUp() throws InterruptedException, IOException {
         //driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
         questionnaireFirstPage = PageFactory.initElements(driver, ChronicQuestionnaire1VladimirPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
