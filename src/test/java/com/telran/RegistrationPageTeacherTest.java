@@ -4,7 +4,6 @@ import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
 import com.telran.pages.TeacherTestPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +16,7 @@ import java.io.IOException;
  * Oleg
  */
 public class RegistrationPageTeacherTest extends TestNgTestBase {
-    public static String username = "1298Doctor";
+    public static String username = "3339Doctor";
     public static String password = "LinkCare!!11";
     public static String registered_username = null;
     public static String registered_password = "LinkCare!!11";
@@ -27,7 +26,6 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
     public DoctorsPage doctorsPage;
     public TeacherTestPage loginPage;
     public CreateNewPatientPage createPatientPage;
-    private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
@@ -50,6 +48,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
                 openLoginPage(driver)
                 .fillUsernameField(username)
                 .fillPasswordField(password)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         doctorsPage.waitUntilMainPageIsLoaded();
         driver.manage().window().maximize();
@@ -63,7 +62,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        this.driver.quit();
+        //this.driver.quit();
 
        //driver = new FirefoxDriver();
 
@@ -76,9 +75,20 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
-        setup();
-        loginPage.openLoginPage(driver);
+        //setup();
+        loginCreateTeachersPage.
+                openLoginPage(driver);
         try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        loginCreateTeachersPage.fillUsernameField(registered_username)
+                .fillPasswordField(registered_password)
+                .clickOnTermsCheckbox()
+                .clickOnLoginButton();
+        //loginPage.openLoginPage(driver);
+        /*try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -86,7 +96,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
-                .clickOnLoginButton();
+                .clickOnLoginButton();*/
         Assert.assertFalse(loginPage.isPageOpened());
         try {
             Thread.sleep(3000);
