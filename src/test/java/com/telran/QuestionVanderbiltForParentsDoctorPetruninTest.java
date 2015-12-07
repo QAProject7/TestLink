@@ -13,6 +13,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * Created by PetruninLeonid
+ */
+
 public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBase {  //ТЕСТ ГОТОВ!
     public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
