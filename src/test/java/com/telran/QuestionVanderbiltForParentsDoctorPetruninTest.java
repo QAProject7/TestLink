@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBase {
+public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBase {  //ТЕСТ ГОТОВ!
     public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "779294107";//Данные входа доктора
@@ -40,6 +40,7 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
        doctorsPage.waitUntilMainPageIsLoaded();
     }
