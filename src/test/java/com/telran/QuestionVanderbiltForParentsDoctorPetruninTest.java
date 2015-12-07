@@ -65,10 +65,6 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
         //driver.switchTo().frame(driver.findElement(By.tagName("iframe"))); //Переходим на внутренний фрейм
     }
 
-
-
-
-
     // test of clicking on Registration link are written in another class
 
     @AfterClass(alwaysRun = true)
