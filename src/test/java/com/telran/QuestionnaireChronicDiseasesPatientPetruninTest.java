@@ -1,5 +1,6 @@
 package com.telran;
 
+import com.telran.pages.LoginPage;
 import com.telran.pages.PageTraining.LoginVladimirPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
 import org.openqa.selenium.By;
@@ -16,31 +17,31 @@ import org.testng.annotations.Test;
 /**
  * Created by Petrunin on 01.12.2015.
  */
-public class QuestionnaireChronicDiseasesPatientPetruninTest {
+public class QuestionnaireChronicDiseasesPatientPetruninTest extends TestNgTestBase{ //ТЕСТ ГОТОВ!
 
     public static String username = "hore4832@yopmail.com"; //Данные входа клеента (hore2966@yopmail.com был заполнен)
     public static String password = "LinkCare!!11";//Данные входа доктора
-    public LoginVladimirPage loginVladimirPage;
+    public LoginPage loginPage;
     public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;
-    private WebDriver driver;
+   // private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-      driver = new FirefoxDriver(); //Запускаем Firefox
-        loginVladimirPage = PageFactory.initElements(driver, LoginVladimirPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
+    //  driver = new FirefoxDriver(); //Запускаем Firefox
+        loginPage = PageFactory.initElements(driver, LoginPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginVladimirPage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+        loginPage.openLoginPage(); //Логи к данному методу добавлены на странице LoginMobilePage
 
-        loginVladimirPage.waitUntilLoginPageIsLoaded();
-        loginVladimirPage
+        loginPage.waitUntilLoginPageIsLoaded();
+        loginPage
                 .fillUsernameField(username)
                 .fillPasswordField(password);
         questionnaireChronicDiseasesPatientPetruninPage.clickAddAcceptField();
-        loginVladimirPage.clickOnLoginButton();
+        loginPage.clickOnLoginButton();
     }
 
     @Test(groups = {"positive", "smoke"})
