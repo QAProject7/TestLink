@@ -40,8 +40,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
         email = createNewPatientpage.generateParentEmail();
         emailTeacher = createNewPatientpage.generateTeacherEmail();
         meetingDate = createNewPatientpage.createMeetingDate();
-        loginPage.openLoginPage();
-        loginPage.login(username, password);
+
 
         doctorsPage.waitUntilMainPageIsLoaded();
         driver.manage().window().maximize();
@@ -51,7 +50,8 @@ public class CreateNewPatientTest extends TestNgTestBase {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-
+        loginPage.openLoginPage();
+        loginPage.login(username, password);
     }
 
 

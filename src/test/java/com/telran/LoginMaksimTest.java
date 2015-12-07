@@ -28,6 +28,7 @@ public class LoginMaksimTest extends TestNgTestBase {
         loginPage.openLoginPage();
     }
 
+
     @Test(groups = {"negative"})
     public void testLoginWithoutNameAndPassword() {
         loginPage
