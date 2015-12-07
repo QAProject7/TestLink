@@ -44,7 +44,7 @@ public class RegistrationPageObjTest {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-             loginPage.openLoginPage(driver)
+            loginPage.openLoginPage()
                    .waitUntilLoginPageIsLoaded()
                     .openRegistrationPage();
 //            registrationPage.openLoginPage(driver)

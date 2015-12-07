@@ -45,7 +45,7 @@ public class RegistrationLeonidTest {
     public void testMercuryRegister() throws Exception {
 
         loginPage
-                .openLoginPage(driver)
+                .openLoginPage()
                 .waitUntilLoginPageIsLoaded()
                 .openForgotPasswordPage();
         forgotPasswordPage

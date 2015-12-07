@@ -3,7 +3,6 @@ package com.telran;
 import com.telran.pages.ForgotPasswordPageLeonid;
 import com.telran.pages.ForgotPasswordPageSuccessLeonid;
 import com.telran.pages.LoginPage;
-import com.telran.pages.Page;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -20,13 +19,13 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    private Page page;
     private LoginPage loginPage;
     private ForgotPasswordPageLeonid forgotPasswordPage;
     private ForgotPasswordPageSuccessLeonid forgotPasswordPageSuccess;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
+        // driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
         forgotPasswordPageSuccess = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
@@ -44,9 +43,9 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest() throws Exception {
-        loginPage.openLoginPage(driver);
-        forgotPasswordPage.waitUntilLoginPageIsLoaded();
-        loginPage.openForgotPasswordPage();
+        loginPage.openLoginPage()
+                .waitUntilLoginPageIsLoaded()
+                .openForgotPasswordPage();
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("Doctor123")
                 .clickOnRestoreButton();

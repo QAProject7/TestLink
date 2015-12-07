@@ -6,6 +6,7 @@
       <class name="com.telran.RestorePasswordLeonidTest"/>
       <class name="com.telran.CreateNewPatientTest"/>
       <class name="com.telran.СhangePassRegPatientOlgaTest"/>
+      <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
 
     </classes>
   </test>  

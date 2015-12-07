@@ -5,6 +5,7 @@
         <classes>
             <class name="com.telran.CreateNewPatientTest"/>
             <class name="com.telran.СhangePassRegPatientOlgaTest"/>
+            <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
         </classes>
     </test>
 </suite>
