@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 /**
  * Created by PetruninLeonid
  */
-public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ТЕСТ ГОТОВ! Вписан клеент с незаполненой таблицей!
+public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ДОБАВИТЬ СОЗДАНИЕ НОВОГО ПАЦИЕНТА
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String registered_username = "hore4832@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
