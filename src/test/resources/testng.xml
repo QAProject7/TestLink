@@ -7,7 +7,6 @@
       <class name="com.telran.CreateNewPatientTest"/>
       <class name="com.telran.СhangePassRegPatientOlgaTest"/>
       <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
-      <class name="com.telran.QuestionnaireChronicDiseasesPatientPetruninTest"/>
 
     </classes>
   </test>  

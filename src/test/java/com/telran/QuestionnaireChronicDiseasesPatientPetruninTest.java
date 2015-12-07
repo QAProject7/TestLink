@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 /**
  * Created by Petrunin on 01.12.2015.
  */
-public class QuestionnaireChronicDiseasesPatientPetruninTest extends TestNgTestBase{ //ТЕСТ ГОТОВ!
+public class QuestionnaireChronicDiseasesPatientPetruninTest extends TestNgTestBase{ //ДОБАВИТЬ СОЗДАНИЕ НОВОГО ПАЦИЕНТА
 
     public static String username = "hore4832@yopmail.com"; //Данные входа клеента (hore2966@yopmail.com был заполнен)
     public static String password = "LinkCare!!11";//Данные входа доктора
