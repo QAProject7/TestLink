@@ -59,7 +59,7 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
             //  createNewPatientPage.createPatientOneParent(personalId, email);
             //   loginPage.clickLogOut();
             loginPage.openLoginPage()
-                    .fillUsernameField("hore4162@yopmail.com")
+                    .fillUsernameField("more3809@yopmail.com")
                      .fillPasswordField(password)
                      .clickOnTermsCheckbox()
                      .clickOnLoginButton();

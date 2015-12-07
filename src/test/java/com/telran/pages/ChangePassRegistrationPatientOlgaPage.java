@@ -33,7 +33,7 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     WebElement changePasswordConfirmNewPassword;
     @FindBy(id = "MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangePasswordPushButton")
     WebElement changePasswordPushButton;
-    @FindBy(xpath = "//a[contains(text(),'המשך >')]")
+    @FindBy(xpath = "//a[contains(text(),'המשך')]")
     WebElement gotoFillProfile;
     @FindBy(id = "MainContent_firstNameTxt")
     WebElement firstNameTxt;
@@ -161,9 +161,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     //    Page Fill Profile User
     public ChangePassRegistrationPatientOlgaPage waitUntilFillProfilePageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(firstNameTxt);
-        } catch (IOException e) {
-            e.printStackTrace();
+            Thread.sleep(3000);
+            //waitUntilElementIsLoaded(firstNameTxt);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
