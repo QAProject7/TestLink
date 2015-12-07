@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
     @FindBy(xpath = ("//*[contains(text(), '"+PATIENT_TZ+"')]/..//*[@class='LinkBtnPatients GreenBtn']"))
     WebElement choosePatient;
 
-    @FindBy(xpath = "//*[contains(text(), 'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]")
+    @FindBy(xpath = "//*[contains(text(),'שאלון מחלות כרוניות, ניתוחים וסקירת מערכות')]/div/img")
     WebElement tableFrame;
 
 
@@ -35,7 +36,8 @@ public class DoctorQuestionnaireChronicDiseasesPetruninPage extends Page {
         return this;
     }
 
-    public boolean inTableFrame() {
+    public boolean inTableFrame() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(tableFrame);
         return exists(tableFrame);
     }
 
