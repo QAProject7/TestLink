@@ -47,7 +47,7 @@ public class RegistrationLeonidTest {
         loginPage
                 .openLoginPage(driver)
                 .waitUntilLoginPageIsLoaded()
-                .openForgotPassPage();
+                .openForgotPasswordPage();
         forgotPasswordPage
                 .waitUntilForgotPageIsLoaded()
                 .fillRestoreField("hore548@yopmail.com")
