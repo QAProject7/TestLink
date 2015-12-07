@@ -17,7 +17,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public abstract class Page {
   public String PAGE_URL;
   public String PAGE_TITLE;
-  protected WebDriver driver = TestNgTestBase.driver;
+  public WebDriver driver = TestNgTestBase.driver;
   protected String baseUrl = TestNgTestBase.baseUrl;
 
   /*
