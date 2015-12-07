@@ -49,6 +49,7 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
              loginPage.openLoginPage(driver)
                      .fillUsernameField(email)
                      .fillPasswordField(password)
+                     .clickOnTermsCheckbox()
                      .clickOnLoginButton();
 
         } catch (Exception e) {
