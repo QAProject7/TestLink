@@ -77,7 +77,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
     public void testLoginByRegisteredUser() {
         //setup();
         loginCreateTeachersPage.
-                openLoginPage(driver);
+                openLoginPage();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
