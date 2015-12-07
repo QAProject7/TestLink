@@ -3,7 +3,7 @@ package com.telran;
 
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
 import com.telran.pages.CreateNewPatientPage;
-import com.telran.pages.PageTraining.LoginVladimirPage;
+import com.telran.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -27,13 +27,13 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
 
     public CreateNewPatientPage createNewPatientPage;
     public ChangePassRegistrationPatientOlgaPage changePassPage;
-    private LoginVladimirPage loginPage;
+    private LoginPage loginPage;
     private String emailTeacher;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
 //        driver = new FirefoxDriver();
-        loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
         changePassPage = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
 
