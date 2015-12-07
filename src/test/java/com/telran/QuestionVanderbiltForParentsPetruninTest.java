@@ -11,7 +11,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
+/**
+ * Created by PetruninLeonid
+ */
 public class QuestionVanderbiltForParentsPetruninTest { //ТЕСТ ГОТОВ! Вписан клеент с незаполненой таблицей!
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String registered_username = "hore4832@yopmail.com"; //Данные входа клеента
