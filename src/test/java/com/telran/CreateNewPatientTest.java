@@ -2,7 +2,7 @@ package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
-import com.telran.pages.PageTraining.LoginVladimirPage;
+import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -22,7 +22,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
     public static String birthDate = "21/10/2013";
     public static String meetingDate;
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
-    public LoginVladimirPage loginPage;
+    public LoginPage loginPage;
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientpage;
     // private WebDriver driver;
@@ -33,14 +33,14 @@ public class CreateNewPatientTest extends TestNgTestBase {
 
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
-        loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
         createNewPatientpage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         zeut = createNewPatientpage.generateZeut();
         email = createNewPatientpage.generateParentEmail();
         emailTeacher = createNewPatientpage.generateTeacherEmail();
         meetingDate = createNewPatientpage.createMeetingDate();
-        loginPage.openLoginPage(driver);
+        loginPage.openLoginPage();
         loginPage.login(username, password);
 
         doctorsPage.waitUntilMainPageIsLoaded();
@@ -56,6 +56,36 @@ public class CreateNewPatientTest extends TestNgTestBase {
 
 
     public void createNewPatient() {
+        try {
+            Log.info("Create new patient started");
+            // createNewPatientpage.createPatientOneParent(zeut, email);
+            createNewPatientpage.waitUntilPageIsLoaded();
+            createNewPatientpage.fillFirstNameField("PatientChildFirst")
+                    .fillLastNamefield("PatientChildLast")
+                    .fillZeutfield(zeut)
+                    .fillWeightfield("2")
+                    .filltEmailField(email)
+                    .sendAdultEmail()
+                    .addTeacher()
+                    .filltEmailField(emailTeacher)
+                    .sendAdultEmail();
+            Thread.sleep(4000);
+            createNewPatientpage.fillMeetingDateAndTime(meetingDate)
+                    .fillBirthDayfield(birthDate)
+                    .clickSaveAccount();
+            Thread.sleep(4000);
+            // doctorsPage.waitUntilMainPageIsLoaded();
+            //  doctorsPage.isPatientExists(zeut);
+            Reporter.log("new Patient added");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(groups = {"positive", "smoke"})
+    public void createNewPatientTest() {
         try {
             Log.info("Create new patient started");
             // createNewPatientpage.createPatientOneParent(zeut, email);

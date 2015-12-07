@@ -8,10 +8,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.Random;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by Naryck, Maksim
@@ -50,7 +51,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         username = email;
 
         loginPage
-                .openLoginPage(driver)
+                .openLoginPage()
                 .fillUsernameField(docName)
                 .fillPasswordField(docPass)
                 .clickOnLoginButton();
@@ -92,7 +93,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         loginPage
-                .openLoginPage(driver)
+                .openLoginPage()
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(email)
                 .fillPasswordField(password)

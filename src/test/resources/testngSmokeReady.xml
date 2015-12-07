@@ -9,7 +9,7 @@
         </groups>
         <classes>
             <class name="com.telran.RestorePasswordLeonidTest"/>
-            <class name="com.telran.QuestionnaireChronicDiseasesPatientPetruninTest"/>
+            <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
         </classes>
 
 

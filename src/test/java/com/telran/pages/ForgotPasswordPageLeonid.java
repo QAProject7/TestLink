@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +13,12 @@ import java.io.IOException;
  * Created by Iakov Volf
  */
 public class ForgotPasswordPageLeonid extends Page {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
-   @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_SubmitButton")
+    @FindBy(id = "MainContent_LoginUser_LoginButton")
+    WebElement submitButton;
+
+    @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_SubmitButton")
     WebElement restoreButton;
 
     @FindBy(xpath = "//*[@id='MainContent_PasswordRecovery_UserNameContainerID_LinkButton1']")
@@ -37,11 +43,25 @@ public class ForgotPasswordPageLeonid extends Page {
 //Fill the fileds
 
     public ForgotPasswordPageLeonid fillRestoreField(String login) {
+        Log.info("fill restore field");
         setElementText(restoreField, login);
         return this;
     }
 
+    public ForgotPasswordPageLeonid waitUntilLoginPageIsLoaded() {
+        Log.info("waiting until login page is loaded");
+        try {
+            waitUntilElementIsLoaded(submitButton);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
     public ForgotPasswordPageLeonid waitUntilForgotPageIsLoaded() {
+        Log.info("waiting until forgot page is loaded");
         try {
             waitUntilElementIsLoaded(restoreButton);
         } catch (IOException e) {
@@ -53,6 +73,7 @@ public class ForgotPasswordPageLeonid extends Page {
     }
 
     public ForgotPasswordPageLeonid clickOnRestoreButton() {
+        Log.info("click on restore button");
         clickElement(restoreButton);
         return this;
     }

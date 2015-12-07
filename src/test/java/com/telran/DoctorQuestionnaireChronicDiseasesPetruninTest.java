@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
- * Created by leoni on 02.12.2015.
+ * Created by PetruninLeonid
  */
 public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBase {
     public static String username = "1003Doctor"; //Данные входа клеента
@@ -21,11 +21,11 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
     public LoginIrinaPage loginIrinaPage;
     public DoctorQuestionnaireChronicDiseasesPetruninPage doctorQuestionnaireChronicDiseasesPetruninPage;
     public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;
-    private WebDriver driver;
+    //private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver(); //Запускаем Firefox
+        //driver = new FirefoxDriver(); //Запускаем Firefox
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         doctorQuestionnaireChronicDiseasesPetruninPage=PageFactory.initElements(driver, DoctorQuestionnaireChronicDiseasesPetruninPage.class); //Последующие методы
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы

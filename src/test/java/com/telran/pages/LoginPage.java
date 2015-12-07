@@ -39,7 +39,7 @@ public class LoginPage extends Page {
     @FindBy(id = "MainContent_RptNotification_NowBtn1_2")
     WebElement nextButton;
 
-    @FindBy(id = "submit")
+    @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement submitButton;
 
     @FindBy(id = "Top1_HeadLoginStatus")
@@ -57,7 +57,15 @@ public class LoginPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']//li[contains(text(),'סיסמא חובה.')]")
     WebElement lastNameAlert;
 
-    //public ProfilePage profilePage;
+    @FindBy(xpath = "//span[@class='failureNotification']")
+    WebElement unregisteredUserAlert;
+
+    @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']//li[contains(text(), 'שם משתמש חובה')]")
+    WebElement wrongUserNameAlert;
+
+    @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']//li[contains(text(), 'סיסמא חובה.')]")
+    WebElement wrongPasswordAlert;
+
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -65,7 +73,7 @@ public class LoginPage extends Page {
         PageFactory.initElements(driver, this);
     }
 
-    public LoginPage openLoginPage(WebDriver driver) {
+    public LoginPage openLoginPage() {
         Log.info("Opening Login page");
         driver.get(PAGE_URL);
         return this;
@@ -89,6 +97,7 @@ public class LoginPage extends Page {
         clickElement(termsCheckBox);
         return this;
     }
+
 
     public LoginPage waitUntilRegPageIsLoaded() {
         try {
@@ -143,7 +152,7 @@ public class LoginPage extends Page {
     }
 
     public void login(String username, String password) {
-        waitUntilLoginPageIsLoaded();
+        //waitUntilLoginPageIsLoaded();
         fillUsernameField(username);
         fillPasswordField(password);
         clickOnTermsCheckbox();
@@ -152,13 +161,8 @@ public class LoginPage extends Page {
 
     //check alert presence
 
-    public boolean alertMessageNotValidUserName() {
-        return exists(nameAlert);
-    }
 
-    public boolean alertMessageNotValidPassword() {
-        return exists(lastNameAlert);
-    }
+
 
     public void clickOnNextButton() {
         clickElement(nextButton);
@@ -166,7 +170,7 @@ public class LoginPage extends Page {
 
     public LoginPage waitUntilLoginPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(submitButton);
+            waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -174,7 +178,21 @@ public class LoginPage extends Page {
         }
         return this;
     }
+    public boolean alertMessageUnregisteredUser() {
+        return exists(unregisteredUserAlert);
+    }
 
+    public boolean alertMessageNotValidUserName() {
+        return exists(wrongUserNameAlert);
+    }
+
+    public boolean alertMessageNotValidPassword() {
+        return exists(wrongPasswordAlert);
+    }
+
+    public boolean isPageOpened() {
+        return exists(loginButton);
+    }
     public void clickLogOut() {
         Log.info("Clicking on 'Log Out' button");
         logOutButton.click();

@@ -45,7 +45,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
         parentEmail = createPatientPage.generateParentEmail();
         zeut = createPatientPage.generateZeut();
         loginCreateTeachersPage.
-                openLoginPage(driver)
+                openLoginPage()
                 .fillUsernameField(username)
                 .fillPasswordField(password)
                 .clickOnTermsCheckbox()
