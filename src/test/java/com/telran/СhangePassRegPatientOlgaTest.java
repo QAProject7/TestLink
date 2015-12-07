@@ -51,7 +51,6 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
                      .fillPasswordField(password)
                      .clickOnTermsCheckbox()
                      .clickOnLoginButton();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
