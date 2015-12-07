@@ -29,7 +29,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
     @BeforeClass(alwaysRun = true)
     public void setup() {
         //driver = new FirefoxDriver(); //Запускаем Firefox
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); //Развертывание окна
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         doctorQuestionnaireChronicDiseasesPetruninPage=PageFactory.initElements(driver, DoctorQuestionnaireChronicDiseasesPetruninPage.class); //Последующие методы
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
