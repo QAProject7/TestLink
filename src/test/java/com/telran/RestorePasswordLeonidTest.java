@@ -46,7 +46,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     public void testMercuryRegister() throws Exception {
         loginPage.openLoginPage(driver)
                 .waitUntilLoginPageIsLoaded()
-                .openForgotPassPage();
+                .openForgotPasswordPage();
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("Doctor123")
                 .clickOnRestoreButton();
