@@ -39,7 +39,7 @@ public class LoginPage extends Page {
     @FindBy(id = "MainContent_RptNotification_NowBtn1_2")
     WebElement nextButton;
 
-    @FindBy(id = "submit")
+    @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement submitButton;
 
     @FindBy(id = "Top1_HeadLoginStatus")
@@ -57,7 +57,6 @@ public class LoginPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']//li[contains(text(),'סיסמא חובה.')]")
     WebElement lastNameAlert;
 
-    //public ProfilePage profilePage;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -89,6 +88,7 @@ public class LoginPage extends Page {
         clickElement(termsCheckBox);
         return this;
     }
+
 
     public LoginPage waitUntilRegPageIsLoaded() {
         try {
@@ -143,7 +143,7 @@ public class LoginPage extends Page {
     }
 
     public void login(String username, String password) {
-        waitUntilLoginPageIsLoaded();
+        //waitUntilLoginPageIsLoaded();
         fillUsernameField(username);
         fillPasswordField(password);
         clickOnTermsCheckbox();
@@ -166,7 +166,7 @@ public class LoginPage extends Page {
 
     public LoginPage waitUntilLoginPageIsLoaded() {
         try {
-            waitUntilElementIsLoaded(submitButton);
+            waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
