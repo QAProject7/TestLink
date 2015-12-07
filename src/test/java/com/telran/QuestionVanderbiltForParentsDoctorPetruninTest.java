@@ -3,7 +3,6 @@ package com.telran;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginPage;
-import com.telran.pages.PageTraining.LoginMaksimPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -37,7 +36,7 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginPage.openLoginPage(driver); //Логи к данному методу добавлены на странице Максима LoginPage
+        loginPage.openLoginPage(); //Логи к данному методу добавлены на странице Максима LoginPage
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)

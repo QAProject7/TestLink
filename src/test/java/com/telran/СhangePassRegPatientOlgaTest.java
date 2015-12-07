@@ -46,7 +46,7 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
             email = createNewPatientPage.generateParentEmail();
             emailTeacher = createNewPatientPage.generateTeacherEmail();
             createNewPatientPage.createPatientParentAndTeacher(personalId, email, emailTeacher);
-             loginPage.openLoginPage(driver)
+            loginPage.openLoginPage()
                      .fillUsernameField(email)
                      .fillPasswordField(password)
                      .clickOnLoginButton();

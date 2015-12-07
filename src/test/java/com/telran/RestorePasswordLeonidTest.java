@@ -43,7 +43,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest() throws Exception {
-        loginPage.openLoginPage(driver)
+        loginPage.openLoginPage()
                 .waitUntilLoginPageIsLoaded()
                 .openForgotPasswordPage();
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
