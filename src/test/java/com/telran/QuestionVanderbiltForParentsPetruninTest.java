@@ -14,18 +14,18 @@ import org.testng.annotations.Test;
 /**
  * Created by PetruninLeonid
  */
-public class QuestionVanderbiltForParentsPetruninTest { //ТЕСТ ГОТОВ! Вписан клеент с незаполненой таблицей!
+public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ТЕСТ ГОТОВ! Вписан клеент с незаполненой таблицей!
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String registered_username = "hore4832@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginMobilePage loginMobilePage;
-    private WebDriver driver;
+   // private WebDriver driver;
 
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver(); //Запускаем Firefox
+        //driver = new FirefoxDriver(); //Запускаем Firefox
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
 
@@ -33,7 +33,8 @@ public class QuestionVanderbiltForParentsPetruninTest { //ТЕСТ ГОТОВ! �
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
-        loginMobilePage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+        //loginMobilePage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
+        driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
         loginMobilePage.waitUntilLoginPageIsLoaded();
         loginMobilePage
                 .fillUsernameField(registered_username)

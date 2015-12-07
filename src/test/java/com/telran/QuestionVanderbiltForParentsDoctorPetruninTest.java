@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class QuestionVanderbiltForParentsDoctorPetruninTest {
+public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBase {
     public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "779294107";//Данные входа доктора
@@ -21,11 +21,11 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest {
     public LoginPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
     public DrugRecommendationPage drugRecommendationPage;
-    private WebDriver driver;
+  //  private WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver(); //Запускаем Firefox
+       //driver = new FirefoxDriver(); //Запускаем Firefox
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class); //Обращаемся к классу LoginMaksimPage и берем оттуда ссылку на страницу
