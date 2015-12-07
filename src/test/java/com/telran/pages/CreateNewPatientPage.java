@@ -313,10 +313,10 @@ public class CreateNewPatientPage extends Page {
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ConfirmNewPassword")).clear();
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ConfirmNewPassword")).sendKeys("LinkCare!!11");
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangePasswordPushButton")).click();
-        driver.findElement(By.name("fakeusernameremembered")).clear();
+        /*driver.findElement(By.name("fakeusernameremembered")).clear();
         driver.findElement(By.name("fakeusernameremembered")).sendKeys("3339Doctor");
         driver.findElement(By.name("fakepasswordremembered")).clear();
-        driver.findElement(By.name("fakepasswordremembered")).sendKeys("LinkCare!!11");
+        driver.findElement(By.name("fakepasswordremembered")).sendKeys("LinkCare!!11");*/
         driver.findElement(By.xpath("//form[@id='Form1']/div[2]/div[2]/div/div/a")).click();
         driver.findElement(By.id("MainContent_firstNameTxt")).clear();
         driver.findElement(By.id("MainContent_firstNameTxt")).sendKeys("Parent");

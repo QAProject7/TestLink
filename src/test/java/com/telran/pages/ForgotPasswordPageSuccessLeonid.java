@@ -10,7 +10,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Iakov Volf
+ * Created by Leonid Gengrinovich
  */
 public class ForgotPasswordPageSuccessLeonid extends Page {
 

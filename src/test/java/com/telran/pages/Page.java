@@ -10,7 +10,6 @@ import org.testng.Assert;
 
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
-
 /**
  * Abstract class representation of a Page in the UI. Page object pattern
  */

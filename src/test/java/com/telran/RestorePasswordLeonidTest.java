@@ -11,11 +11,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.thoughtworks.selenium.SeleneseTestBase.fail;
-
-public class RestorePasswordLeonidTest {
-    private WebDriver driver;
-    private String baseUrl;
+import static org.testng.Assert.fail;
+/**
+ * Created by Leonid Gengrinovich
+ */
+public class RestorePasswordLeonidTest  extends TestNgTestBase{
+    //private WebDriver driver;  we have driver from TestNgTestBase
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
@@ -41,22 +42,20 @@ public class RestorePasswordLeonidTest {
         }
     }
 
-    @Test
+    @Test(groups = {"positive", "smoke"})
     public void testMercuryRegister() throws Exception {
         loginPage.openLoginPage(driver)
                 .waitUntilLoginPageIsLoaded()
                 .openForgotPassPage();
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
-                .fillRestoreField("hore155@yopmail.com")
+                .fillRestoreField("Doctor123")
                 .clickOnRestoreButton();
         forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
                 .assertText();
-
     }
 
     @AfterTest
-    public void tearDown() throws Exception {
-        Thread.sleep(5000);
+    public void tearDown()  {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
