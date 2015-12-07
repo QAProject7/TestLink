@@ -3,15 +3,15 @@ package com.telran;
 import com.telran.pages.ForgotPasswordPageLeonid;
 import com.telran.pages.ForgotPasswordPageSuccessLeonid;
 import com.telran.pages.LoginPage;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.fail;
 /**
  * Created by Leonid Gengrinovich
  */
@@ -54,14 +54,14 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
                 .assertText();
     }
 
-    @AfterTest
+/*    @AfterTest
     public void tearDown()  {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
         }
-    }
+    }*/
 
     private boolean isElementPresent(By by) {
         try {

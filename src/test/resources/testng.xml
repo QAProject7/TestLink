@@ -3,8 +3,10 @@
 <suite name="Tests" verbose="5">
   <test name="Test1">
     <classes>
+      <class name="com.telran.RestorePasswordLeonidTest"/>
       <class name="com.telran.CreateNewPatientTest"/>
       <class name="com.telran.СhangePassRegPatientOlgaTest"/>
+
     </classes>
   </test>  
 </suite>
