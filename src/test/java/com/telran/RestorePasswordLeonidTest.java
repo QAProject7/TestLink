@@ -7,7 +7,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -26,7 +25,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        driver = new FirefoxDriver();
+        // driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
         forgotPasswordPageSuccess = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
