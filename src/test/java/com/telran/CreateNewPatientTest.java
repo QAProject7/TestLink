@@ -85,6 +85,36 @@ public class CreateNewPatientTest extends TestNgTestBase {
     }
 
     @Test(groups = {"positive", "smoke"})
+    public void createNewPatientTest() {
+        try {
+            Log.info("Create new patient started");
+            // createNewPatientpage.createPatientOneParent(zeut, email);
+            createNewPatientpage.waitUntilPageIsLoaded();
+            createNewPatientpage.fillFirstNameField("PatientChildFirst")
+                    .fillLastNamefield("PatientChildLast")
+                    .fillZeutfield(zeut)
+                    .fillWeightfield("2")
+                    .filltEmailField(email)
+                    .sendAdultEmail()
+                    .addTeacher()
+                    .filltEmailField(emailTeacher)
+                    .sendAdultEmail();
+            Thread.sleep(4000);
+            createNewPatientpage.fillMeetingDateAndTime(meetingDate)
+                    .fillBirthDayfield(birthDate)
+                    .clickSaveAccount();
+            Thread.sleep(4000);
+            // doctorsPage.waitUntilMainPageIsLoaded();
+            //  doctorsPage.isPatientExists(zeut);
+            Reporter.log("new Patient added");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(groups = {"positive", "smoke"})
     public void createNewPatientWithOneMethod() throws IOException, InterruptedException {
         Log.info("Creating of a new patient started");
         createNewPatientpage.createPatientOneParent(zeut, email);
