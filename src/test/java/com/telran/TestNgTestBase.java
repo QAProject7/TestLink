@@ -4,7 +4,7 @@ import com.telran.util.PropertyLoader;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import ru.stqa.selenium.factory.WebDriverFactory;
@@ -36,8 +36,10 @@ public class TestNgTestBase {
 
   }
 
-  @AfterSuite(alwaysRun = true)
+  @AfterClass(alwaysRun = true)
   public void tearDown() {
-    WebDriverFactory.dismissAll();
+    if (driver != null) {
+      driver.quit();
+    }
   }
 }
