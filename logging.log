@@ -1,3 +1,20 @@
+2015-12-03 12:52:58 INFO  LogLog4j:112 - Clicking on Login button
+2015-12-03 12:52:58 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-03 14:48:31 INFO  LogLog4j:147 - Zeut generated is <647202282>
+2015-12-03 14:48:31 INFO  LogLog4j:141 - TeacherEmail generated is <more514@yopmail.com>
+2015-12-03 14:48:31 INFO  LogLog4j:159 - MeetingDate generated is <18/1/2017 08:00>
+2015-12-03 14:48:31 INFO  LogLog4j:66 - Opening Login page
+2015-12-03 14:48:31 INFO  LogLog4j:73 - Filling username field
+2015-12-03 14:48:36 INFO  LogLog4j:79 - Filling password field
+2015-12-03 14:48:36 INFO  LogLog4j:112 - Clicking on Login button
+2015-12-03 14:48:36 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-03 14:48:51 INFO  LogLog4j:141 - TeacherEmail generated is <more729@yopmail.com>
+2015-12-03 14:48:51 INFO  LogLog4j:141 - TeacherEmail generated is <more682@yopmail.com>
+2015-12-03 14:48:51 INFO  LogLog4j:141 - TeacherEmail generated is <more428@yopmail.com>
+2015-12-03 14:48:52 INFO  LogLog4j:141 - TeacherEmail generated is <more967@yopmail.com>
+2015-12-03 14:48:52 INFO  LogLog4j:141 - TeacherEmail generated is <more416@yopmail.com>
+2015-12-03 14:48:52 INFO  LogLog4j:141 - TeacherEmail generated is <more803@yopmail.com>
+2015-12-03 14:48:52 INFO  LogLog4j:141 - TeacherEmail generated is <more183@yopmail.com>
 2015-11-26 13:02:05 INFO  LogLog4j:70 - Find all table elements
 2015-11-26 13:02:22 INFO  LogLog4j:57 - All input elements is clicked
 2015-11-26 13:04:19 INFO  LogLog4j:70 - Find all table elements
@@ -823,3 +840,14 @@
 2015-12-03 12:04:59 INFO  LogLog4j:64 - entering password from the list: LinkCare!!11 
 2015-12-03 12:04:59 INFO  LogLog4j:43 - Accept Field was added
 2015-12-03 12:05:13 INFO  LogLog4j:83 - Login button was pushed
+2015-12-07 09:52:28 INFO  LogLog4j:141 - TeacherEmail generated is <more534@yopmail.com>
+2015-12-07 09:52:44 INFO  LogLog4j:141 - TeacherEmail generated is <more240@yopmail.com>
+2015-12-07 09:52:59 INFO  LogLog4j:141 - TeacherEmail generated is <more791@yopmail.com>
+2015-12-07 09:53:14 INFO  LogLog4j:141 - TeacherEmail generated is <more259@yopmail.com>
+2015-12-07 09:53:29 INFO  LogLog4j:141 - TeacherEmail generated is <more194@yopmail.com>
+2015-12-07 09:53:44 INFO  LogLog4j:141 - TeacherEmail generated is <more863@yopmail.com>
+2015-12-07 09:54:00 INFO  LogLog4j:141 - TeacherEmail generated is <more423@yopmail.com>
+2015-12-07 09:54:15 INFO  LogLog4j:141 - TeacherEmail generated is <more44@yopmail.com>
+2015-12-07 09:54:31 INFO  LogLog4j:141 - TeacherEmail generated is <more974@yopmail.com>
+2015-12-07 09:54:46 INFO  LogLog4j:141 - TeacherEmail generated is <more853@yopmail.com>
+2015-12-07 09:55:02 INFO  LogLog4j:141 - TeacherEmail generated is <more716@yopmail.com>
