@@ -3,7 +3,7 @@ package com.telran;
 
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
 import com.telran.pages.CreateNewPatientPage;
-import com.telran.pages.LoginPage;
+import com.telran.pages.LoginVladimirPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -25,31 +25,32 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
 
 //    public WebDriver driver;
 
-    public CreateNewPatientPage patient;
-    public ChangePassRegistrationPatientOlgaPage loginPatient;
-    private LoginPage loginPage;
+    public CreateNewPatientPage createNewPatientPage;
+    public ChangePassRegistrationPatientOlgaPage changePassPage;
+    private LoginVladimirPage loginPage;
     private String emailTeacher;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
 //        driver = new FirefoxDriver();
-        loginPage = PageFactory.initElements(driver,LoginPage.class);
-        loginPatient = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
-        patient = PageFactory.initElements(driver, CreateNewPatientPage.class);
+        loginPage = PageFactory.initElements(driver, LoginVladimirPage.class);
+        changePassPage = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
+        createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
 
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-            personalId = patient.createId();
-            email = patient.generateParentEmail();
-            emailTeacher = patient.generateTeacherEmail();
-             patient.createPatientParentAndTeacher(personalId, email, emailTeacher);
+            personalId = createNewPatientPage.createId();
+            email = createNewPatientPage.generateParentEmail();
+            emailTeacher = createNewPatientPage.generateTeacherEmail();
+            createNewPatientPage.createPatientParentAndTeacher(personalId, email, emailTeacher);
              loginPage.openLoginPage(driver)
                      .fillUsernameField(email)
                      .fillPasswordField(password)
                      .clickOnLoginButton();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -58,15 +59,16 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"positive","smoke"})
     public void loginFirstPatient() {
         try {
-            loginPatient
+            changePassPage
+                    .waitUntilPassChangePageLoaded()
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .fillFirstNameTxt(firstName)
                     .fillLastNameTxt(lastName)
@@ -87,9 +89,9 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativeEmptyPass(){
         try {
-            loginPatient.clickOnChangePassButton();
+            changePassPage.clickOnChangePassButton();
 
-            Assert.assertTrue(loginPatient.isErrorEmptyPass(),"Not found alert: Empty Pass ");
+            Assert.assertTrue(changePassPage.isErrorEmptyPass(), "Not found alert: Empty Pass ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -97,8 +99,8 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyPassNew(){
         try {
-            loginPatient.clickOnChangePassButton();
-            Assert.assertTrue(loginPatient.isErrorEmptyPassNew(),"Not found alert: Empty Pass New");
+            changePassPage.clickOnChangePassButton();
+            Assert.assertTrue(changePassPage.isErrorEmptyPassNew(), "Not found alert: Empty Pass New");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -106,8 +108,8 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyPassRepeat(){
         try {
-            loginPatient.clickOnChangePassButton();
-            Assert.assertTrue(loginPatient.isErrorEmptyPassRepeat(),"Not found alert: Empty Pass Repeat  ");
+            changePassPage.clickOnChangePassButton();
+            Assert.assertTrue(changePassPage.isErrorEmptyPassRepeat(), "Not found alert: Empty Pass Repeat  ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -115,12 +117,12 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativePassNotSame(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword("QWEqwe123")
                     .fillConfirmNewPassword("qwe")
                     .clickOnChangePassButton();
-            Assert.assertTrue(loginPatient.isErrorPassNotSame(),"Not found alert: Pass Not Same  ");
+            Assert.assertTrue(changePassPage.isErrorPassNotSame(), "Not found alert: Pass Not Same  ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,13 +130,13 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativeNoIntermediatePage(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
 
-            Assert.assertTrue(loginPatient.isNoIntermediatePage(),"Not found alert: No Intermediate Page");
+            Assert.assertTrue(changePassPage.isNoIntermediatePage(), "Not found alert: No Intermediate Page");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -142,19 +144,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyFirstName(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyFirstName(),"Not found alert: Empty First Name");
+            Assert.assertTrue(changePassPage.isErEmptyFirstName(), "Not found alert: Empty First Name");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -162,19 +164,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyLastName(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyLastName(),"Not found alert: Empty Last Name");
+            Assert.assertTrue(changePassPage.isErEmptyLastName(), "Not found alert: Empty Last Name");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -182,19 +184,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativeEmptyEmail(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyEmail(),"Not found alert: Empty Last Email");
+            Assert.assertTrue(changePassPage.isErEmptyEmail(), "Not found alert: Empty Last Email");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -202,20 +204,20 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativeEmailInvalid(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .fillEmail("sdsdsdfsdf")
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErInvalidEmail(),"Not found alert: Empty Invalid Email");
+            Assert.assertTrue(changePassPage.isErInvalidEmail(), "Not found alert: Empty Invalid Email");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -223,19 +225,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test (groups = {"negative","smoke"})
     public void negativeEmptyTZ(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyTZ(),"Not found alert: Empty TZ");
+            Assert.assertTrue(changePassPage.isErEmptyTZ(), "Not found alert: Empty TZ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -243,20 +245,20 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeTZInvalid(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .fillEmail("sdsdsdfsdf")
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErTZInvalid(),"Not found alert: Empty TZ Invalid");
+            Assert.assertTrue(changePassPage.isErTZInvalid(), "Not found alert: Empty TZ Invalid");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -264,19 +266,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyTelephone(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyTelephone(),"Not found alert: Empty Telephone");
+            Assert.assertTrue(changePassPage.isErEmptyTelephone(), "Not found alert: Empty Telephone");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -284,19 +286,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyHomeNumber(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyHomeNumber(),"Not found alert: Empty Home Number");
+            Assert.assertTrue(changePassPage.isErEmptyHomeNumber(), "Not found alert: Empty Home Number");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -304,19 +306,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyHomeStreet(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyStreet(),"Not found alert: Empty Street");
+            Assert.assertTrue(changePassPage.isErEmptyStreet(), "Not found alert: Empty Street");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -324,19 +326,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @Test
     public void negativeEmptyTown(){
         try {
-            loginPatient
+            changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
                     .fillConfirmNewPassword(passwordResult)
                     .clickOnChangePassButton();
-            loginPatient
+            changePassPage
                     .waitUntilGoToNextPageLoaded()
                     .clickOnGotoFillProfile();
-            loginPatient
+            changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
 
-            Assert.assertTrue(loginPatient.isErEmptyTown(),"Not found alert: Empty Town");
+            Assert.assertTrue(changePassPage.isErEmptyTown(), "Not found alert: Empty Town");
         } catch (Exception e) {
             e.printStackTrace();
         }
