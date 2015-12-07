@@ -1,8 +1,8 @@
 package com.telran;
 
+import com.telran.Training.LoginIrinaPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecomendationPage;
-import com.telran.pages.LoginIrinaPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

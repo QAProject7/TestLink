@@ -2,7 +2,7 @@ package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
-import com.telran.pages.LoginVladimirPage;
+import com.telran.pages.PageTraining.LoginVladimirPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;

@@ -1,25 +1,26 @@
-package com.telran.pages;
+package com.telran.pages.PageTraining;
 
+import com.telran.pages.Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Created by Iakov Volf,Oleg
  */
-public class LoginPageArtem extends Page {
-
+public class LoginPageFainberg extends Page {
     //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(id = "MainContent_LoginUser_UserName")
-    WebElement usernameField;
+    WebElement userNameField;
+
 
     @FindBy(id = "MainContent_LoginUser_Password")
-    WebElement passwordField;
+    WebElement userPassword;
+
 
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
@@ -30,41 +31,43 @@ public class LoginPageArtem extends Page {
     @FindBy(xpath = "//a[@class='forgot']")
     WebElement forgotPassLink;
 
-    @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),('שם משתמש חובה'))]")
-    WebElement wrongUserNameAlert;
+	@FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'שם משתמש חובה')]")
+	private WebElement wrongUserNameAlert;
 
-    @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),('סיסמא חובה.'))]")
-    WebElement wrongPasswordAlert;
+    @FindBy(xpath = "//*[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
+    private WebElement wrongPasswordAlert;
+
 
     //public ProfilePage profilePage;
 
-    public LoginPageArtem(WebDriver driver) {
+    public LoginPageFainberg(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
 
-    public LoginPageArtem openRegistrationPage(WebDriver driver) {
+    public LoginPageFainberg openLoginPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
 
 //Fill the fileds
 
-    public LoginPageArtem fillUsernameField(String username) {
-        setElementText(usernameField, username);
+    public LoginPageFainberg fillUsernameField(String username) {
+        setElementText(userNameField, username);
+        return this;
+    }
+
+    public LoginPageFainberg fillUserPassword(String password) {
+    /*    int rand = ThreadLocalRandom.current().nextInt(0, 10000 + 1);
+        String email = "doctor" + rand + "yopmail.com";*/
+        setElementText(userPassword,password);
         return this;
     }
 
 
-    public LoginPageArtem fillPasswordField(String password) {
-        setElementText(passwordField, password);
-        // Log.info("entering password from the list: " + password + " ");
-        return this;
-    }
-
-    public LoginPageArtem waitUntilLoginPageIsLoaded() {
+    public LoginPageFainberg waitUntilRegPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
@@ -75,7 +78,7 @@ public class LoginPageArtem extends Page {
         return this;
     }
 
-    public void clickOnLoginButton() {
+    public void clickOnlineButton() {
         clickElement(loginButton);
 
     }
@@ -85,12 +88,9 @@ public class LoginPageArtem extends Page {
 
     }
 
-    public void openForgotPassPage() {
-        clickElement(forgotPassLink);
 
-    }
-
-    public boolean isOnRegistrationPage() {
+    public boolean isOnlineLogin()
+    {
         return exists(loginButton);
     }
 

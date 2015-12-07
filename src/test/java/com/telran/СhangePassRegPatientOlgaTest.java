@@ -3,7 +3,7 @@ package com.telran;
 
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
 import com.telran.pages.CreateNewPatientPage;
-import com.telran.pages.LoginVladimirPage;
+import com.telran.pages.PageTraining.LoginVladimirPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

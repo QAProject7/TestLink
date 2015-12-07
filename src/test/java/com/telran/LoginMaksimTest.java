@@ -1,6 +1,6 @@
 package com.telran;
 
-import com.telran.pages.LoginMaksimPage;
+import com.telran.pages.PageTraining.LoginMaksimPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

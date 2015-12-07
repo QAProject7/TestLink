@@ -2,7 +2,7 @@ package com.telran;
 
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
-import com.telran.pages.LoginMaksimPage;
+import com.telran.pages.PageTraining.LoginMaksimPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,10 +14,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class QuestionVanderbiltForParentsDoctorPetruninTest {
-    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public static String teudat = "779294107";//Данные входа доктора
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public LoginMaksimPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
     public DrugRecommendationPage drugRecommendationPage;

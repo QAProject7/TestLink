@@ -1,6 +1,7 @@
-package com.telran.pages;
+package com.telran.pages.PageTraining;
 
 import com.telran.LogLog4j;
+import com.telran.pages.Page;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,10 +1,11 @@
 package com.telran;
 
-import com.telran.pages.*;
-import junit.framework.Assert;
+import com.telran.pages.ChronicQuestionnaire1VladimirPage;
+import com.telran.pages.CreateNewPatientPage;
+import com.telran.pages.DoctorsPage;
+import com.telran.pages.PageTraining.LoginVladimirPage;
+import com.telran.pages.RegistrationPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -13,7 +14,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Random;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 /**
  * Created by Naryck, Maksim

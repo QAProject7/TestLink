@@ -2,7 +2,7 @@ package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
-import com.telran.pages.LoginMaksimPage;
+import com.telran.pages.PageTraining.LoginMaksimPage;
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

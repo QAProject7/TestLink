@@ -15,10 +15,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * Abstract class representation of a Page in the UI. Page object pattern
  */
 public abstract class Page {
+  public static String baseUrl = TestNgTestBase.baseUrl;
   public String PAGE_URL;
   public String PAGE_TITLE;
-  public WebDriver driver = TestNgTestBase.driver;
-  protected String baseUrl = TestNgTestBase.baseUrl;
+  public WebDriver driver;
 
   /*
    * Constructor injecting the WebDriver interface

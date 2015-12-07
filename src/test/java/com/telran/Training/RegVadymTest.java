@@ -1,6 +1,6 @@
 package com.telran.Training;
 
-import com.telran.pages.LoginVadymPage;
+import com.telran.pages.PageTraining.LoginVadymPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;

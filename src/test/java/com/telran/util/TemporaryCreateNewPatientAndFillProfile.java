@@ -1,31 +1,34 @@
 package com.telran.util;
 
+import com.telran.pages.PageTraining.LoginMaksimPage;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 import java.util.concurrent.TimeUnit;
 
-import com.telran.pages.LoginMaksimPage;
-import com.telran.pages.Page;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import static org.testng.Assert.fail;
 
 public class TemporaryCreateNewPatientAndFillProfile {
 
 
-
+    private static final String TZ1 = "208463992";
+    private static final String TZ2 = "385949870";
+    LoginMaksimPage loginPage;
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
-    LoginMaksimPage loginPage;
     //private String registered_doctor_name = "5998Doctor";
     private String registered_doctor_name = "493Doctor";
     private String registered_doctor_pass = "LinkCare!!11";
-
     private String email = "metupelet15@yopmail.com";
-    private static final String TZ1 = "208463992";
-    private static final String TZ2 = "385949870";
 
     @BeforeClass
     public void setUp() throws Exception {

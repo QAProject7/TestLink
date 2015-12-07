@@ -1,11 +1,7 @@
 package com.telran;
 
-import com.telran.MobileWebPages.LoginMobilePage;
-import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
-import com.telran.pages.LoginIrinaPage;
-import com.telran.pages.LoginVladimirPage;
+import com.telran.pages.PageTraining.LoginVladimirPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
-import org.apache.log4j.Priority;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
