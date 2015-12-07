@@ -1,17 +1,15 @@
 package com.telran;
 
 import com.telran.pages.*;
-import junit.framework.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.seleniumhq.jetty7.util.log.Log;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.util.Random;
+import java.io.*;
+import java.util.*;
 
 import static org.testng.Assert.*;
 
@@ -36,6 +34,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     public CreateNewPatientPage createNewPatientPage;
     public DoctorsPage doctorsPage;
     public RegistrationPage registrationPage;
+    public CreateNewPatientPage createNewPatientpage;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws InterruptedException, IOException {
@@ -59,11 +58,12 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         doctorsPage.waitUntilMainPageIsLoaded();
         doctorsPage.clickOnAddPatient();
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
-        createNewPatientPage.createPatientOneParent(zeut, email);
+        //createNewPatientPage.createPatientOneParent(zeut, email);
+        createNewPatient();
         questionnaireFirstPage.waitUntilElementIsDisappeared("popup");
 
         loginPage.clickLogOut();
-        createNewPatientPage.profileFilling(email, email);
+        createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
 
         /*loginPage
                 .openLoginPage(driver)
@@ -99,7 +99,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .clickOnLoginButton();
     }
 
-    @Test(groups = {"positive"})
+    @Test(groups = {"positive", "smoke"})
     public void FillElements() {
         assertTrue(questionnaireFirstPage.isChronicIllnessAvailable());
         questionnaireFirstPage.clickTestButton();
@@ -130,6 +130,33 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
             buf.append(chars.charAt(rnd.nextInt(chars.length())));
         }
         return buf.toString();
+    }
+    public void createNewPatient() {
+        try {
+            Log.info("Create new patient started");
+            // createNewPatientpage.createPatientOneParent(zeut, email);
+            createNewPatientPage.waitUntilPageIsLoaded();
+            createNewPatientPage.fillFirstNameField("PatientChildFirst")
+                    .fillLastNamefield("PatientChildLast")
+                    .fillZeutfield(zeut)
+                    .fillWeightfield("2")
+                    .filltEmailField(email)
+                    .sendAdultEmail();
+                    //.addTeacher()
+                    //.filltEmailField(createNewPatientPage.emailTeacher)
+                    //.sendAdultEmail();
+            Thread.sleep(4000);
+            createNewPatientPage.fillMeetingDateAndTime(createNewPatientPage.createMeetingDate())
+                    .fillBirthDayfield(createNewPatientPage.generateBirthDate())
+                    .clickSaveAccount();
+            Thread.sleep(4000);
+            // doctorsPage.waitUntilMainPageIsLoaded();
+            //  doctorsPage.isPatientExists(zeut);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

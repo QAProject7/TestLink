@@ -15,9 +15,9 @@ import java.io.IOException;
 public class ChangePassRegistrationPatientOlgaPage extends Page {
 
     public static Logger Log = Logger.getLogger(ChangePassRegistrationPatientOlgaPage.class.getName());
-    public static String firstName = "Moshe";
 
     //fields
+    public static String firstName = "Moshe";
     public static String lastName = "Levi";
     public static String password = "LinkCare!1";
     public static String passwordResult = "LinkCare!!11";
@@ -108,15 +108,10 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         setElementText(changePasswordCurrentPassword, pass);
         return this;
     }
-
-
-//    Page after Change password
-
     public ChangePassRegistrationPatientOlgaPage fillNewPassword(String pass) {
         setElementText(changePasswordNewPassword, pass);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillConfirmNewPassword(String pass) {
         setElementText(changePasswordConfirmNewPassword, pass);
         return this;
@@ -130,11 +125,9 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     public boolean isErrorEmptyPass() {
         return exists(errorEmptyPass);
     }
-
     public boolean isErrorEmptyPassNew() {
         return exists(errorEmptyPassNew);
     }
-
     public boolean isErrorEmptyPassRepeat() {
         return exists(errorEmptyPassRepeat);
     }
@@ -142,10 +135,12 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     public boolean isErrorPassNotSame() {
         return exists(errorPassNotSame);
     }
-
     public boolean isNoIntermediatePage() {
         return exists(gotoFillProfile);
     }
+
+
+//    Page after Change password
 
     public ChangePassRegistrationPatientOlgaPage waitUntilGoToNextPageLoaded() {
         try {
@@ -174,47 +169,38 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         }
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillFirstNameTxt(String firstName) {
         setElementText(firstNameTxt, firstName);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillLastNameTxt(String lastName) {
         setElementText(lastNameTxt, lastName);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillEmail(String email) {
         setElementText(emailTxt, email);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillDateBirthday(String date) {
         setElementText(dateBirthday, date);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillPersonalId(String personalId) {
         setElementText(personalIdTxt, personalId);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillcontactPhone(String personalId) {
         setElementText(contactPhoneTxt, personalId);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillAdress(String address) {
         setElementText(addressTxt, address);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillHouseNumber(String houseNumber) {
         setElementText(houseNumberTxt, houseNumber);
         return this;
     }
-
     public ChangePassRegistrationPatientOlgaPage fillCity(String city) {
         setElementText(cityTxt, city);
         return this;
