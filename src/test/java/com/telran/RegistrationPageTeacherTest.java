@@ -2,7 +2,7 @@ package com.telran;
 
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
-import com.telran.pages.PageTraining.LoginMaksimPage;
+import com.telran.pages.LoginPage;
 import com.telran.pages.TeacherTestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -23,7 +23,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
     public static String registered_password = "LinkCare!!11";
     public static String parentEmail = null;
     public static String zeut = null;
-    public LoginMaksimPage loginCreateTeachersPage;
+    public LoginPage loginCreateTeachersPage;
     public DoctorsPage doctorsPage;
     public TeacherTestPage loginPage;
     public CreateNewPatientPage createPatientPage;
@@ -36,7 +36,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, TeacherTestPage.class);
         createPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
-        loginCreateTeachersPage = PageFactory.initElements(driver, LoginMaksimPage.class);
+        loginCreateTeachersPage = PageFactory.initElements(driver, LoginPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
 
     }

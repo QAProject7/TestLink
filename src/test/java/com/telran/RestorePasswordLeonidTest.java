@@ -42,7 +42,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void testMercuryRegister() throws Exception {
+    public void restorePasswordTest() throws Exception {
         loginPage.openLoginPage(driver)
                 .waitUntilLoginPageIsLoaded()
                 .openForgotPasswordPage();
