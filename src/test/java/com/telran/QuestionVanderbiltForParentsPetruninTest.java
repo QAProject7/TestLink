@@ -11,10 +11,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-public class QuestionVanderbiltForParentsPetruninTest {
+/**
+ * Created by PetruninLeonid
+ */
+public class QuestionVanderbiltForParentsPetruninTest { //ТЕСТ ГОТОВ! Вписан клеент с незаполненой таблицей!
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
-    public static String registered_username = "hore2966@yopmail.com"; //Данные входа клеента
+    public static String registered_username = "hore4832@yopmail.com"; //Данные входа клеента
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
     public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginMobilePage loginMobilePage;
