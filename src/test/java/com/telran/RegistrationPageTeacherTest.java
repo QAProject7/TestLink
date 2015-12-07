@@ -76,9 +76,14 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() {
         //setup();
-        loginCreateTeachersPage
-                .openLoginPage()
-                .fillUsernameField(registered_username)
+        loginCreateTeachersPage.
+                openLoginPage(driver);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        loginCreateTeachersPage.fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
                 .clickOnTermsCheckbox()
                 .clickOnLoginButton();

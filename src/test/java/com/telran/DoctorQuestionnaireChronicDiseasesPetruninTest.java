@@ -3,19 +3,22 @@ package com.telran;
 import com.telran.Training.LoginIrinaPage;
 import com.telran.pages.DoctorQuestionnaireChronicDiseasesPetruninPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Created by PetruninLeonid
  */
-public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBase {
+public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBase { //ГОТОВЫЙ ТЕСТ
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String username = "1003Doctor"; //Данные входа клеента
     public static String password = "LinkCare!!11";//Данные входа доктора
     public LoginIrinaPage loginIrinaPage;
@@ -26,6 +29,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
     @BeforeClass(alwaysRun = true)
     public void setup() {
         //driver = new FirefoxDriver(); //Запускаем Firefox
+        driver.manage().window().maximize(); //Развертывание окна
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         doctorQuestionnaireChronicDiseasesPetruninPage=PageFactory.initElements(driver, DoctorQuestionnaireChronicDiseasesPetruninPage.class); //Последующие методы
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
@@ -45,14 +49,15 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void testOpenPatientPage() throws InterruptedException {
+    public void testOpenPatientPage() throws InterruptedException, IOException {
         Thread.sleep(5000);
         doctorQuestionnaireChronicDiseasesPetruninPage.clickChoosePatient();
-        Thread.sleep(10000);
-        //Assert.assertTrue(doctorQuestionnaireChronicDiseasesPetruninPage.inTableFrame(), "Table has not been completed");
+        Thread.sleep(15000);
+        driver.switchTo().frame("MainContent_iframe1");
+        Assert.assertTrue(doctorQuestionnaireChronicDiseasesPetruninPage.inTableFrame(), "Table has not been completed");
         doctorQuestionnaireChronicDiseasesPetruninPage.clickTableFrame();
         Thread.sleep(5000);
-
+        Log.info("Registration is validate!");
         Reporter.log("Registration is validate!");
 
     }

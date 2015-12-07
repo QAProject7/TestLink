@@ -3,6 +3,7 @@ package com.telran;
 
 import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
 import com.telran.pages.CreateNewPatientPage;
+import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -25,16 +26,21 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
 
 //    public WebDriver driver;
 
+    public CreateNewPatientTest createNewPatientPage1;
     public CreateNewPatientPage createNewPatientPage;
     public ChangePassRegistrationPatientOlgaPage changePassPage;
+
     private LoginPage loginPage;
     private String emailTeacher;
+    private DoctorsPage doctorsPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
 //        driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
+        doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         changePassPage = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
+        createNewPatientPage1 = PageFactory.initElements(driver, CreateNewPatientTest.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
 
     }
@@ -44,13 +50,19 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
         try {
             personalId = createNewPatientPage.createId();
             email = createNewPatientPage.generateParentEmail();
-            emailTeacher = createNewPatientPage.generateTeacherEmail();
-            createNewPatientPage.createPatientParentAndTeacher(personalId, email, emailTeacher);
+            // emailTeacher = createNewPatientPage.generateTeacherEmail();
+            //  loginPage.openLoginPage()
+            //         .login("1003Doctor","LinkCare!!11");
+            //   doctorsPage.waitUntilMainPageIsLoaded();
+            //   driver.manage().window().maximize();
+            //   doctorsPage.clickOnAddPatient();
+            //  createNewPatientPage.createPatientOneParent(personalId, email);
+            //   loginPage.clickLogOut();
             loginPage.openLoginPage()
-                     .fillUsernameField(email)
+                    .fillUsernameField("more3809@yopmail.com")
                      .fillPasswordField(password)
+                     .clickOnTermsCheckbox()
                      .clickOnLoginButton();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
