@@ -1,11 +1,13 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,7 +16,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class ForgotPasswordPageSuccessLeonid extends Page {
 
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(id = "MainContent_PasswordRecovery_SuccessContainerID_LinkButton1")
     WebElement backButton;
@@ -30,6 +32,7 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
 
 
     public ForgotPasswordPageSuccessLeonid openLoginPage(WebDriver driver) {
+        Log.info("Open login page");
         driver.get(PAGE_URL);
         return this;
     }
@@ -37,7 +40,7 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
 //Fill the fileds
 
     public ForgotPasswordPageSuccessLeonid assertText(){
-        System.out.println(textStatus.getText());
+        Log.info("assert text on forgotPassword page");
         assertEquals("הסיסמא שלך נשלחה אליך.\nחזור", textStatus.getText());
         return this;
     }
@@ -48,6 +51,7 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
     }
 
     public ForgotPasswordPageSuccessLeonid waitUntilForgotSuccessPageIsLoaded() {
+        Log.info("wait until forgot success page is loaded");
         try {
             waitUntilElementIsLoaded(backButton);
         } catch (IOException e) {
@@ -59,6 +63,7 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
     }
 
     public void clickOnBackButton() {
+        Log.info("clicking on \"back\" button");
         clickElement(backButton);
 
     }
