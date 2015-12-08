@@ -305,6 +305,7 @@ public class CreateNewPatientPage extends Page {
         driver.findElement(By.id("MainContent_LoginUser_UserName")).sendKeys(email);
         driver.findElement(By.id("MainContent_LoginUser_Password")).clear();
         driver.findElement(By.id("MainContent_LoginUser_Password")).sendKeys("LinkCare!1");
+        driver.findElement(By.id("MainContent_LoginUser_CBAgreeToTerms")).click();
         driver.findElement(By.id("MainContent_LoginUser_LoginButton")).click();
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_CurrentPassword")).clear();
         driver.findElement(By.id("MainContent_ChangeUserPassword_ChangePasswordContainerID_CurrentPassword")).sendKeys("LinkCare!1");

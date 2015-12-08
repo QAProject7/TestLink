@@ -54,6 +54,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .openLoginPage()
                 .fillUsernameField(docName)
                 .fillPasswordField(docPass)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
 
         doctorsPage.waitUntilMainPageIsLoaded();
@@ -64,6 +65,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         questionnaireFirstPage.waitUntilElementIsDisappeared("popup");
 
         loginPage.clickLogOut();
+
         createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
 
         /*loginPage
@@ -90,15 +92,16 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         loginPage.clickLogOut();*/
     }
 
-    @BeforeMethod(alwaysRun = true)
+    /*@BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         loginPage
                 .openLoginPage()
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(email)
                 .fillPasswordField(password)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
-    }
+    }*/
 
     @Test(groups = {"positive", "smoke"})
     public void FillElements() {
@@ -110,6 +113,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         loginPage.waitUntilRegPageIsLoaded()
                 .fillUsernameField(email)
                 .fillPasswordField(password)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         assertFalse(questionnaireFirstPage.isChronicIllnessAvailable());
 
@@ -117,6 +121,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
         loginPage.waitUntilRegPageIsLoaded()
                 .fillUsernameField(doctorEmail)
                 .fillPasswordField(doctorPassword)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         loginPage.clickElement(driver.findElement(By.xpath("//tr[contains(text(),'GridItem')]//*[contains(text(),'" + zeut + "')]/..//a[@class='LinkBtnPatients GreenBtn']")));
 
