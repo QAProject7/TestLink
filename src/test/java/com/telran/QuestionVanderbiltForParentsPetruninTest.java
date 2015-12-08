@@ -19,6 +19,9 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Random;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by PetruninLeonid
  */
@@ -66,11 +69,26 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         //createNewPatientPage.createPatientOneParent(zeut, email);
         createNewPatient();
-        Thread.sleep(6000);
         //questionnaireFirstPage.waitUntilElementIsDisappeared("popup");
         loginPage.clickLogOut();
-        //createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
+        createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
+      // assertTrue(questionnaireFirstPage.isChronicIllnessAvailable());
+        Log.info("Password was changed");
+        loginPage.clickLogOut();
+        Log.info("Exit from loginPage");
+       // questionnaireFirstPage.clickTestButton();
+        Log.info("TestButton was pushed");
+        /*questionnaireFirstPage.waitUntilTestPageIsLoaded();
+        questionnaireFirstPage.fillElements(zeut);
+*/
+       /* loginPage.waitUntilRegPageIsLoaded()
+                .fillUsernameField(email)
+                .fillPasswordField(password)
+                .clickOnTermsCheckbox()
+                .clickOnLoginButton();
+        assertFalse(questionnaireFirstPage.isChronicIllnessAvailable());
 
+        loginPage.clickLogOut();*/
 
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
@@ -82,8 +100,10 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() throws InterruptedException { //Входим на страницу и ждем пока она загрузится
         //loginMobilePage.openLoginPage(driver); //Логи к данному методу добавлены на странице LoginMobilePage
-       Thread.sleep(5000);
+       Thread.sleep(50000);
+        System.out.println("driver: " + driver);
         driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
+        Thread.sleep(50000);
         loginMobilePage.waitUntilLoginPageIsLoaded();
         loginMobilePage
                 .fillUsernameField(username)
