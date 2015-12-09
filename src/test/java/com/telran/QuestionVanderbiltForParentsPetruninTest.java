@@ -2,25 +2,17 @@ package com.telran;
 
 import com.telran.MobileWebPages.LoginMobilePage;
 import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
-import com.telran.pages.ChronicQuestionnaire1VladimirPage;
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.seleniumhq.jetty7.util.log.Log;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
-import java.util.Random;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
 /**
  * Created by PetruninLeonid
