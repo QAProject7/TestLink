@@ -58,7 +58,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         createNewPatient();
         loginPage.clickLogOut();
-
+        Log.info("Exit from web page");
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
@@ -79,8 +79,8 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
        Thread.sleep(5000);
         System.out.println("driver: " + driver);
         driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
-        Thread.sleep(5000);
-        loginMobilePage.waitUntilLoginPageIsLoaded();
+        Thread.sleep(10000);
+        //loginMobilePage.waitUntilLoginPageIsLoaded();
         loginMobilePage
                 .fillUsernameField(username)
                 .fillPasswordField(password)
