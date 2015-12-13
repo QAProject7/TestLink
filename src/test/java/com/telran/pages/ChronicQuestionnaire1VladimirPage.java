@@ -95,6 +95,8 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
                 }
             }
         }
+        fillTextAreas(loadSectionsTexts());
+
         try {
             oos.writeObject(buttons);
         } catch (IOException e) {
@@ -112,6 +114,23 @@ public class ChronicQuestionnaire1VladimirPage extends Page {
         clickElement(logOutButton);
     }
 
+    private Map<String, String> loadSectionsTexts() {
+        // TODO: add logic
+        return null;
+    }
+
+    private void fillTextAreas(Map<String, String> sectionsTexts) {
+        Set<String> sectionsNames = sectionsTexts.keySet();
+        for (String sectionName: sectionsNames) {
+            WebElement textArea = driver.findElement(
+                    By.xpath("//h2[text()='" + sectionName + 
+                            "']/following-sibling::table[2]//textarea"));
+            // TODO: in case textArea is not found add there logic to display it
+            textArea.clear();
+            textArea.sendKeys(sectionsTexts.get(sectionName));
+        }
+    }
+    
     public void checkAnswers() {
         // TODO: logic should be moved into proper place
         Log.info("Check Answers");
