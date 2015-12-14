@@ -104,7 +104,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     }*/
 
     @Test(groups = {"positive", "smoke"})
-    public void FillElements() {
+    public void FillElements() throws IOException, InterruptedException {
         assertTrue(questionnaireFirstPage.isChronicIllnessAvailable());
         questionnaireFirstPage.clickTestButton();
         questionnaireFirstPage.waitUntilTestPageIsLoaded();
