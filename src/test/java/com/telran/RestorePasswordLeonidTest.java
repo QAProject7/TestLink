@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.pages.ForgotPasswordPageLeonid;
 import com.telran.pages.ForgotPasswordPageSuccessLeonid;
 import com.telran.pages.LoginPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -15,7 +16,8 @@ import org.testng.annotations.Test;
  * Created by Leonid Gengrinovich
  */
 public class RestorePasswordLeonidTest  extends TestNgTestBase{
-    //private WebDriver driver;  we have driver from TestNgTestBase
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
@@ -26,14 +28,18 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     @BeforeClass(alwaysRun = true)
     public void setup() {
         // driver = new FirefoxDriver();
+        Log.info("initialize loginPage");
         loginPage = PageFactory.initElements(driver, LoginPage.class);
+        Log.info("initialize forgotPasswordPage");
         forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
+        Log.info("initialize forgotPasswordPageSuccess");
         forgotPasswordPageSuccess = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
+            Log.info("@BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage");
             loginPage.openLoginPage()
                     .waitUntilLoginPageIsLoaded()
                     .openForgotPasswordPage();
@@ -44,6 +50,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest1() throws Exception {
+        Log.info("test with 1 hebrew letter");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("ק")
                 .clickOnRestoreButton();
@@ -53,6 +60,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest2() throws Exception {
+        Log.info("test with 15 hebrew letters");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("קראטוןםפשדגכעיח")
                 .clickOnRestoreButton();
@@ -62,6 +70,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest3() throws Exception {
+        Log.info("test with 1 english letter");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("j")
                 .clickOnRestoreButton();
@@ -71,6 +80,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest4() throws Exception {
+        Log.info("test with 15 english letters");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("qwertyuiopasdfg")
                 .clickOnRestoreButton();
@@ -80,6 +90,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest5() throws Exception {
+        Log.info("test with 1 number");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("2")
                 .clickOnRestoreButton();
@@ -89,6 +100,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
 
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest6() throws Exception {
+        Log.info("test with 15 numbers");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField("555555555555555")
                 .clickOnRestoreButton();
