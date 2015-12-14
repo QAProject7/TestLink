@@ -18,5 +18,7 @@
 
 
     </test>
-
+    <listeners>
+        <listener class-name="com.telran.Listeners.TestListener"/>
+    </listeners>
 </suite>

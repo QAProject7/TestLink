@@ -8,4 +8,7 @@
             <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
         </classes>
     </test>
+    <listeners>
+        <listener class-name="com.telran.Listeners.TestListener"/>
+    </listeners>
 </suite>

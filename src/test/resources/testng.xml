@@ -9,5 +9,9 @@
       <class name="com.telran.QuestionVanderbiltForParentsDoctorPetruninTest"/>
 
     </classes>
-  </test>  
+
+  </test>
+  <listeners>
+    <listener class-name="com.telran.Listeners.TestListener"/>
+  </listeners>
 </suite>

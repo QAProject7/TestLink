@@ -28,11 +28,14 @@ public class TestNgTestBase {
     driver = new FirefoxDriver();
   }
 
+  public WebDriver getDriver() {
+    return driver;
+  }
 
   @AfterClass(alwaysRun = true)
   public void tearDown() {
-    if (driver != null) {
+    /*if (driver != null) {
       driver.quit();
-    }
+    }*/
   }
 }
