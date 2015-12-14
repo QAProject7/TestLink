@@ -1,12 +1,10 @@
 package com.telran;
 
 
-import com.telran.pages.ChangePassRegistrationPatientOlgaPage;
-import com.telran.pages.CreateNewPatientPage;
-import com.telran.pages.DoctorsPage;
-import com.telran.pages.LoginPage;
+import com.telran.pages.*;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -33,10 +31,12 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     private LoginPage loginPage;
     private String emailTeacher;
     private DoctorsPage doctorsPage;
+    private ChronicQuestionnaire3VladimirPage paitientPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
 //        driver = new FirefoxDriver();
+        paitientPage = PageFactory.initElements(driver, ChronicQuestionnaire3VladimirPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         changePassPage = PageFactory.initElements(driver, ChangePassRegistrationPatientOlgaPage.class);
@@ -92,7 +92,8 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
                     .fillHouseNumber(houseNumber)
                     .fillCity(city)
                     .clickOnSubmitButton();
-
+            Assert.assertTrue(paitientPage.isAvailable(),"Patients page isn't opening");
+            Reporter.log("Profile created successfully");
         } catch (Exception e) {
             e.printStackTrace();
         }
