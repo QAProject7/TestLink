@@ -5,10 +5,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import ru.stqa.selenium.factory.WebDriverFactory;
-import ru.stqa.selenium.factory.WebDriverFactoryMode;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.IOException;
 
@@ -22,19 +19,15 @@ public class TestNgTestBase {
   protected static Capabilities capabilities;
   public WebDriver driver;
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeSuite(alwaysRun = true)
   public void initTestSuite() throws IOException {
     baseUrl = PropertyLoader.loadProperty("site.url");//загружает capabilities
     capabilities = PropertyLoader.loadCapabilities();
-    WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
+    // WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
     //driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
     driver = new FirefoxDriver();
   }
 
-  @BeforeMethod(alwaysRun = true)
-  public void initWebDriver() {
-
-  }
 
   @AfterClass(alwaysRun = true)
   public void tearDown() {

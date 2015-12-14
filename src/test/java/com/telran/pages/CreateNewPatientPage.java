@@ -351,11 +351,11 @@ public class CreateNewPatientPage extends Page {
         fillWeightfield("5");
         filltEmailField(Email);
         sendAdultEmail();
-        fillBirthDayfield(generateBirthDate());
+        // clickElement(inputBirthDay);
+        //clickElement(inputMeetingDate);
+        addTeacher();
         fillMeetingDateAndTime(createMeetingDate());
-        clickElement(inputBirthDay);
-        clickElement(inputMeetingDate);
-        clickElement(addNewAdultButton);
+        fillBirthDayfield(generateBirthDate());
         Log.info("Clicking 'Save' button");
         clickSaveAccount();
     }

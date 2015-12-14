@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class CreateNewPatientTest extends TestNgTestBase {
-    public static String username = "1003Doctor";
+    public static String username = "2907Doctor";
     public static String password = "LinkCare!!11";
     public static String zeut;
     public static String email;
@@ -42,16 +42,17 @@ public class CreateNewPatientTest extends TestNgTestBase {
         meetingDate = createNewPatientpage.createMeetingDate();
 
 
-        doctorsPage.waitUntilMainPageIsLoaded();
-        driver.manage().window().maximize();
-        doctorsPage.clickOnAddPatient();
+
 
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() {
-        loginPage.openLoginPage();
+    public void beforeMethodSetUp() throws InterruptedException {
+        driver.get(baseUrl);
         loginPage.login(username, password);
+        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.clickOnAddPatient();
+        driver.manage().window().maximize();
     }
 
 
