@@ -1,5 +1,7 @@
 package com.telran.pages;
 
+import com.telran.LogLog4j;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,8 +14,8 @@ import java.util.concurrent.ThreadLocalRandom;
  * Created by Iakov Volf,Oleg
  */
 public class RegistrationPage extends Page {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
-    //private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //fields
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_UserName")
     WebElement usernameField;
@@ -80,7 +82,7 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage";
+        this.PAGE_URL = baseUrl + "/SitePages/createUser.aspx?ReturnUrl=HomePage";
         PageFactory.initElements(driver, this);
     }
 
@@ -90,83 +92,93 @@ public class RegistrationPage extends Page {
         return this;
     }
 
+
+    //generators
+    public String generateZeut() {
+        String number = createId();
+        Log.info("Doctor's Zeut generated is <" + number + ">");
+        return number;
+    }
+
+    public String generateDoctorUsername() {
+        int rand = ThreadLocalRandom.current().nextInt(100, 9999);
+        String username = "doctor" + rand;
+        Log.info("Doctor's Username generated is <" + username + ">");
+        return username;
+    }
+
+    public String generateDoctorEmail(String username) {
+        int rand = ThreadLocalRandom.current().nextInt(100, 9999);
+        String email = username + "@yopmail.com";
+        Log.info("Doctor's Email generated is <" + email + ">");
+        return email;
+    }
     //Fill the fileds
 
     public RegistrationPage fillUsernameField(String username) {
+        Log.info("Filling Doctor username field with <" + username + ">");
         setElementText(usernameField, username);
         return this;
     }
 
-    public RegistrationPage fillEmailField() {
-        int rand = ThreadLocalRandom.current().nextInt(1000, 9999);
-        String email = "doctor" + rand + "@yopmail.com";
-        setElementText(emailField, email);
-        return this;
-    }
 
     public RegistrationPage fillEmailField(String email) {
+        Log.info("Filling Doctor email field with <" + email + ">");
         setElementText(emailField, email);
         return this;
     }
 
     public RegistrationPage fillPasswordField(String password) {
+        Log.info("Filling Doctor password field with <" + password + ">");
         setElementText(passwordField, password);
-        // Log.info("entering password from the list: " + password + " ");
         return this;
     }
 
     public RegistrationPage fillConfPasswordField(String password) {
+        Log.info("Filling Doctor confirm password field with <" + password + ">");
         setElementText(confirmPassField, password);
-        // Log.info("entering password from the list: " + password + " ");
         return this;
     }
 
     public RegistrationPage fillFirstNameField(String firstName) {
+        Log.info("Filling Doctor firstName field with <" + firstName + ">");
         setElementText(firstNameField, firstName);
-        //  Log.info("entering first name from the list: " + firstName + " ");
         return this;
     }
 
     public RegistrationPage fillLastNameField(String lastName) {
+        Log.info("Filling Doctor lastName field with <" + lastName + ">");
         setElementText(lastNameField, lastName);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
     public RegistrationPage fillIdField(String id) {
+        Log.info("Filling Doctor id field with <" + id + ">");
         setElementText(teudatField, id);
-        //   Log.info("entering last name from the list: " + lastName + " ");
-        return this;
-    }
-
-    public RegistrationPage fillIdField() {
-        String id = createId();
-        setElementText(teudatField, id);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
     public RegistrationPage fillStreetField(String street) {
+        Log.info("Filling Doctor street field with <" + street + ">");
         setElementText(streetNameField, street);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
     public RegistrationPage fillMobile(String street) {
+        Log.info("Filling Doctor mobile field with <" + street + ">");
         setElementText(mobilePhoneField, street);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
     public RegistrationPage fillHouseField(String house) {
+        Log.info("Filling Doctor house number field with <" + house + ">");
         setElementText(houseNumberField, house);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
     public RegistrationPage fillCityField(String city) {
+        Log.info("Filling Doctor house number field with <" + city + ">");
         setElementText(cityField, city);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
@@ -177,8 +189,8 @@ public class RegistrationPage extends Page {
     }
 
     public RegistrationPage chooseClinic(String name) {
+        Log.info("Filling Doctor Clinic number field with <" + name + ">");
         selectValueInDropdownbyText(selectclinicType, name);
-        //   Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
@@ -203,6 +215,20 @@ public class RegistrationPage extends Page {
 
     }
 
+    public void registerDoctor(String username, String id) {
+        fillUsernameField(username);
+        fillPasswordField("LinkCare!!11");
+        fillConfPasswordField("LinkCare!!11");
+        fillEmailField(generateDoctorEmail(username));
+        fillCityField("Tel Aviv");
+        fillFirstNameField("userName" + username);
+        fillMobile("052-0001110");
+        fillLastNameField("lastName" + username);
+        fillHouseField("44");
+        fillStreetField("Shenkin");
+        fillIdField(id);
+        clickOnSubmitButton();
+    }
 
     public boolean isOnRegistrationPage() {
         return exists(submitButton);
@@ -219,3 +245,4 @@ public class RegistrationPage extends Page {
     }
 
 }
+

@@ -131,6 +131,7 @@ public class CreateNewPatientPage extends Page {
         Random rn = new Random();
         int num = rn.nextInt(1000) + 1;
         String ParentEmail = "hore" + num + "@yopmail.com";
+        Log.info("Parent email generated is <" + ParentEmail + ">");
         return ParentEmail;
     }
 

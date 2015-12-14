@@ -34,8 +34,8 @@ public class TestNgTestBase {
 
   @AfterClass(alwaysRun = true)
   public void tearDown() {
-    /*if (driver != null) {
+    if (driver != null) {
       driver.quit();
-    }*/
+    }
   }
 }
