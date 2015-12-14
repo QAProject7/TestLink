@@ -78,6 +78,24 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
                 .assertText();
     }
 
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest5() throws Exception {
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("2")
+                .clickOnRestoreButton();
+        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
+                .assertText();
+    }
+
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest6() throws Exception {
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("555555555555555")
+                .clickOnRestoreButton();
+        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
+                .assertText();
+    }
+
     private boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
