@@ -1,5 +1,6 @@
 package com.telran;
 
+import com.github.yev.FailTestScreenshotListener;
 import com.telran.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -9,8 +10,9 @@ import org.testng.annotations.Test;
 
 import java.util.Date;
 
+@org.testng.annotations.Listeners(FailTestScreenshotListener.class)
 public class LoginMaksimTest extends TestNgTestBase {
-    public static String registered_username = "loginName";
+    public static String registered_username = "loginame";
     public static String registered_password = "Passw0rd!";
     public LoginPage loginPage;
     //private WebDriver driver;
