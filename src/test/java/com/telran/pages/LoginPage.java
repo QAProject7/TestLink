@@ -193,7 +193,9 @@ public class LoginPage extends Page {
     public boolean isPageOpened() {
         return exists(loginButton);
     }
-    public void clickLogOut() {
+
+    public void clickLogOut() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(logOutButton);
         Log.info("Clicking on 'Log Out' button");
         logOutButton.click();
     }
