@@ -34,33 +34,49 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
         try {
-             //loginPage.openLoginPage(driver)
-             //         .waitUntilMenuPageIsLoaded();
+            loginPage.openLoginPage()
+                    .waitUntilLoginPageIsLoaded()
+                    .openForgotPasswordPage();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void restorePasswordTest() throws Exception {
-        loginPage.openLoginPage()
-                .waitUntilLoginPageIsLoaded()
-                .openForgotPasswordPage();
+    public void restorePasswordTest1() throws Exception {
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
-                .fillRestoreField("Doctor123")
+                .fillRestoreField("ק")
                 .clickOnRestoreButton();
         forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
                 .assertText();
     }
 
-/*    @AfterTest
-    public void tearDown()  {
-        driver.quit();
-        String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
-        }
-    }*/
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest2() throws Exception {
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("קראטוןםפשדגכעיח")
+                .clickOnRestoreButton();
+        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
+                .assertText();
+    }
+
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest3() throws Exception {
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("j")
+                .clickOnRestoreButton();
+        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
+                .assertText();
+    }
+
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest4() throws Exception {
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("qwertyuiopasdfg")
+                .clickOnRestoreButton();
+        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
+                .assertText();
+    }
 
     private boolean isElementPresent(By by) {
         try {
