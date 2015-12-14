@@ -50,16 +50,16 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
         try {
             personalId = createNewPatientPage.createId();
             email = createNewPatientPage.generateParentEmail();
-            // emailTeacher = createNewPatientPage.generateTeacherEmail();
-            //  loginPage.openLoginPage()
-            //         .login("1003Doctor","LinkCare!!11");
-            //   doctorsPage.waitUntilMainPageIsLoaded();
-            //   driver.manage().window().maximize();
-            //   doctorsPage.clickOnAddPatient();
-            //  createNewPatientPage.createPatientOneParent(personalId, email);
-            //   loginPage.clickLogOut();
+            emailTeacher = createNewPatientPage.generateTeacherEmail();
             loginPage.openLoginPage()
-                    .fillUsernameField("more3809@yopmail.com")
+                     .login("2907Doctor","LinkCare!!11");
+            doctorsPage.waitUntilMainPageIsLoaded();
+            driver.manage().window().maximize();
+            doctorsPage.clickOnAddPatient();
+            createNewPatientPage.createPatientOneParent(personalId, email);
+            loginPage.clickLogOut();
+            loginPage.openLoginPage()
+                    .fillUsernameField(email)
                      .fillPasswordField(password)
                      .clickOnTermsCheckbox()
                      .clickOnLoginButton();
