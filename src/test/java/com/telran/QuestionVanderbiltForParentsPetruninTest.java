@@ -67,7 +67,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() throws InterruptedException {
+    public void beforeMethodSetUp() throws InterruptedException, IOException {
         Thread.sleep(5000);
         createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
         Log.info("Password was changed");
