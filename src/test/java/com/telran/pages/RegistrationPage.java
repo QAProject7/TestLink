@@ -230,6 +230,21 @@ public class RegistrationPage extends Page {
         clickOnSubmitButton();
     }
 
+    public void registerDoctorAuto(String username) {
+        fillUsernameField(username);
+        fillPasswordField("LinkCare!!11");
+        fillConfPasswordField("LinkCare!!11");
+        fillEmailField(generateDoctorEmail(username));
+        fillCityField("Tel Aviv");
+        fillFirstNameField("userName" + username);
+        fillMobile("052-0001110");
+        fillLastNameField("lastName" + username);
+        fillHouseField("44");
+        fillStreetField("Shenkin");
+        fillIdField(generateZeut());
+        clickOnSubmitButton();
+    }
+
     public boolean isOnRegistrationPage() {
         return exists(submitButton);
     }
