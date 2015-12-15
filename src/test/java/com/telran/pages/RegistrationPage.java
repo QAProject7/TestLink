@@ -102,7 +102,7 @@ public class RegistrationPage extends Page {
 
     public String generateDoctorUsername() {
         int rand = ThreadLocalRandom.current().nextInt(100, 9999);
-        String username = "doctor" + rand;
+        String username = "doctor";
         Log.info("Doctor's Username generated is <" + username + ">");
         return username;
     }
