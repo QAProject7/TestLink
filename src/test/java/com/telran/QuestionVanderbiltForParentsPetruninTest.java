@@ -5,6 +5,7 @@ import com.telran.MobileWebPages.QuestionVanderbiltForParentsPetruninPage;
 import com.telran.pages.CreateNewPatientPage;
 import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
+import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -23,7 +24,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     public static String email;
     public static String zeut;
     public static String password = "LinkCare!!11";
-    public static String docName = "1003Doctor";
+    public static String docName;
     public static String docPass = "LinkCare!!11";
     public static String username;
 
@@ -33,6 +34,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     public LoginMobilePage loginMobilePage;
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientPage;
+    public RegistrationPage registrationPage;
 
 
 
@@ -42,9 +44,14 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
-        zeut = createNewPatientPage.generateZeut();
-        email = createNewPatientPage.generateParentEmail();
-        username = email;
+        registrationPage=PageFactory.initElements(driver, RegistrationPage.class);
+       // docName=registrationPage.generateDoctorUsername();
+       // zeut = createNewPatientPage.generateZeut();
+       // email = createNewPatientPage.generateParentEmail();
+      //  username = email;
+        registrationPage.openRegistrationPage(driver);
+        registrationPage.registerDoctor(registrationPage.generateDoctorUsername(), registrationPage.generateZeut());
+        Thread.sleep(10000);
 
         loginPage
                 .openLoginPage()
