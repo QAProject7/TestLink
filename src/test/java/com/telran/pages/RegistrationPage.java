@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import java.util.Random;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class RegistrationPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
+    private static Random rnd = new Random();
 
     //fields
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_UserName")
@@ -100,9 +101,18 @@ public class RegistrationPage extends Page {
         return number;
     }
 
+    private static String getRandomString(final int length) {
+        String chars = "abcdefghijklmnopqrstuvwxyz";
+        StringBuilder buf = new StringBuilder();
+        for (int i=0; i<length; i++) {
+            buf.append(chars.charAt(rnd.nextInt(chars.length())));
+        }
+        return buf.toString();
+    }
+
     public String generateDoctorUsername() {
-        int rand = ThreadLocalRandom.current().nextInt(100, 9999);
-        String username = "doctor";
+        String rand = getRandomString(3);
+        String username = "doctor"+rand;
         Log.info("Doctor's Username generated is <" + username + ">");
         return username;
     }
