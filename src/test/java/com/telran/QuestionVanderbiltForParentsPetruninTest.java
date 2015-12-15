@@ -8,6 +8,7 @@ import com.telran.pages.LoginPage;
 import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,7 +19,7 @@ import java.io.IOException;
 /**
  * Created by PetruninLeonid
  */
-public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ГОТОВ. ИСПРАВЕН
+public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ГОТОВ. ИСПРАВЕН (15.12.15)
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     public static String email;
@@ -27,7 +28,9 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     public static String docName;
     public static String docPass = "LinkCare!!11";
     public static String username;
-
+    public static String emailTeacher;
+    public static String meetingDate;
+    public static String birthDate = "21/10/2013";
 
     public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginPage loginPage;
@@ -35,7 +38,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
     public DoctorsPage doctorsPage;
     public CreateNewPatientPage createNewPatientPage;
     public RegistrationPage registrationPage;
-
+    public CreateNewPatientTest createNewPatientTest;
 
 
     @BeforeClass(alwaysRun = true)
@@ -45,38 +48,53 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
         registrationPage=PageFactory.initElements(driver, RegistrationPage.class);
-       // docName=registrationPage.generateDoctorUsername();
-       // zeut = createNewPatientPage.generateZeut();
-       // email = createNewPatientPage.generateParentEmail();
-      //  username = email;
-        registrationPage.openRegistrationPage(driver);
-        registrationPage.registerDoctor(registrationPage.generateDoctorUsername(), registrationPage.generateZeut());
-        Thread.sleep(10000);
-
-        loginPage
-                .openLoginPage()
-                .fillUsernameField(docName)
-                .fillPasswordField(docPass)
-                .clickOnTermsCheckbox()
-                .clickOnLoginButton();
-
-        doctorsPage.waitUntilMainPageIsLoaded();
-        doctorsPage.clickOnAddPatient();
-        System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
-        createNewPatient();
-        loginPage.clickLogOut();
-        Log.info("Exit from web page");
         loginMobilePage = PageFactory.initElements(driver, LoginMobilePage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
         questionVanderbiltForParentsPetrunin = PageFactory.initElements(driver, QuestionVanderbiltForParentsPetruninPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
+        createNewPatientTest = PageFactory.initElements(driver, CreateNewPatientTest.class);
+
+        zeut = createNewPatientPage.generateZeut();
+        email = createNewPatientPage.generateParentEmail();
+        username = email;
+        docName=registrationPage.generateDoctorUsername();
+        emailTeacher = createNewPatientPage.generateTeacherEmail();
+        meetingDate = createNewPatientPage.createMeetingDate();
 
 
+        registrationPage.openRegistrationPage(driver);
+        registrationPage.registerDoctor(docName, registrationPage.generateZeut());
+        Thread.sleep(3000);
+       // registrationPage.clickAddPatientButton();
+        doctorsPage.waitUntilMainPageIsLoaded();
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() throws InterruptedException, IOException {
+        doctorsPage.clickOnAddPatient();
+        System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         Thread.sleep(5000);
-        createNewPatientPage.profileFilling(email, createNewPatientPage.generateZeut());
+       // driver.switchTo().frame(1);
+        createNewPatientPage.fillFirstNameField("PatientChildFirst")
+                .fillLastNamefield("PatientChildLast")
+                .fillZeutfield(zeut)
+                .fillWeightfield("2")
+                .filltEmailField(email)
+                .sendAdultEmail()
+                .addTeacher()
+                .filltEmailField(emailTeacher)
+                .sendAdultEmail();
+        Thread.sleep(4000);
+        createNewPatientPage.fillMeetingDateAndTime(meetingDate)
+                .fillBirthDayfield(birthDate)
+                .clickSaveAccount();
+        Thread.sleep(4000);
+        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isPatientExists(zeut);
+        Reporter.log("new Patient added");
+        loginPage.clickLogOut();
+        Log.info("Exit from web page");
+        Thread.sleep(5000);
+        createNewPatientPage.profileFilling(email, zeut);
         Log.info("Password was changed");
         Thread.sleep(5000);
         loginPage.clickLogOut();
@@ -87,7 +105,6 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         System.out.println("driver: " + driver);
         driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
         Thread.sleep(10000);
-        //loginMobilePage.waitUntilLoginPageIsLoaded();
         loginMobilePage
                 .fillUsernameField(username)
                 .fillPasswordField(password)
@@ -114,10 +131,11 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         Log.info("Access buttom was pushed. Test is finished!");
     }
 
-    public void createNewPatient() {
+    public void createNewPatient() { //Not in work
         try {
             org.seleniumhq.jetty7.util.log.Log.info("Create new patient started");
-            createNewPatientPage.waitUntilPageIsLoaded();
+            Thread.sleep(5000);
+
             createNewPatientPage.fillFirstNameField("PatientChildFirst")
                     .fillLastNamefield("PatientChildLast")
                     .fillZeutfield(zeut)
@@ -138,7 +156,34 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         }
     }
 
-
+    public void createNewPatientTest() { //Not in work
+        try {
+            Log.info("Create new patient started");
+            // createNewPatientpage.createPatientOneParent(zeut, email);
+            createNewPatientPage.waitUntilPageIsLoaded();
+            createNewPatientPage.fillFirstNameField("PatientChildFirst")
+                    .fillLastNamefield("PatientChildLast")
+                    .fillZeutfield(zeut)
+                    .fillWeightfield("2")
+                    .filltEmailField(email)
+                    .sendAdultEmail()
+                    .addTeacher()
+                    .filltEmailField(emailTeacher)
+                    .sendAdultEmail();
+            Thread.sleep(4000);
+            createNewPatientPage.fillMeetingDateAndTime(meetingDate)
+                    .fillBirthDayfield(birthDate)
+                    .clickSaveAccount();
+            Thread.sleep(4000);
+            // doctorsPage.waitUntilMainPageIsLoaded();
+            //  doctorsPage.isPatientExists(zeut);
+            Reporter.log("new Patient added");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();

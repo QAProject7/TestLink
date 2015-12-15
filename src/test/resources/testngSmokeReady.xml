@@ -11,7 +11,7 @@
             <class name="com.telran.RestorePasswordLeonidTest"/>
             <class name="com.telran.CreateNewPatientTest"/>
             <class name="com.telran.LoginMaksimTest"/>
-            <class name="com.telran.DoctorQuestionnaireChronicDiseasesPetruninTest"/>
+            <class name="com.telran.QuestionVanderbiltForParentsPetruninTest"/>
         </classes>
 
 
