@@ -43,7 +43,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws InterruptedException, IOException {
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
@@ -93,7 +93,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
        // Reporter.log("new Patient added");
         loginPage.clickLogOut();
         Log.info("Exit from web page");
-        Thread.sleep(7000);
+        Thread.sleep(8000);
         createNewPatientPage.profileFilling(email, zeut);
         Log.info("Password was changed");
         Thread.sleep(5000);
@@ -184,10 +184,10 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
             e.printStackTrace();
         }
     }
-    @AfterClass(alwaysRun = true)
+  /*  @AfterClass(alwaysRun = true)
     public void tearDown() {
         this.driver.quit();
-    }
+    }*/
 }
 
 
