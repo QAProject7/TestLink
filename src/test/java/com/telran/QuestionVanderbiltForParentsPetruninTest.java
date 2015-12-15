@@ -90,10 +90,10 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         Thread.sleep(4000);
         doctorsPage.waitUntilMainPageIsLoaded();
         doctorsPage.isPatientExists(zeut);
-        Reporter.log("new Patient added");
+       // Reporter.log("new Patient added");
         loginPage.clickLogOut();
         Log.info("Exit from web page");
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         createNewPatientPage.profileFilling(email, zeut);
         Log.info("Password was changed");
         Thread.sleep(5000);

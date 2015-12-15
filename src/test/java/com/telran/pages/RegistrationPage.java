@@ -73,6 +73,9 @@ public class RegistrationPage extends Page {
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_FirsNameRequired")
     private WebElement firstNameAlert;
 
+    @FindBy(id="MainContent_ItemLinkButton3")
+    WebElement addNewPatientButton;
+
 
     //checkboxs
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_IsClinicAdmin")
@@ -254,7 +257,10 @@ public class RegistrationPage extends Page {
         fillIdField(generateZeut());
         clickOnSubmitButton();
     }
-
+    public RegistrationPage clickAddPatientButton() {
+        clickElement(addNewPatientButton);
+        return this;
+    }
     public boolean isOnRegistrationPage() {
         return exists(submitButton);
     }
