@@ -109,7 +109,7 @@ public class RegistrationPage extends Page {
 
     public String generateDoctorEmail(String username) {
         int rand = ThreadLocalRandom.current().nextInt(100, 9999);
-        String email = username + "@yopmail.com";
+        String email = username+ rand + "@yopmail.com";
         Log.info("Doctor's Email generated is <" + email + ">");
         return email;
     }
