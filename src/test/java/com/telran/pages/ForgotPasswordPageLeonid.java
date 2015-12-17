@@ -63,8 +63,9 @@ public class ForgotPasswordPageLeonid extends Page {
     public ForgotPasswordPageLeonid waitUntilForgotPageIsLoaded() {
         Log.info("waiting until forgot page is loaded");
         try {
-            waitUntilIsLoadedCustomTime(restoreButton, 120);
             waitUntilElementIsLoaded(restoreButton);
+            waitUntilIsLoadedCustomTime(restoreButton, 120);
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

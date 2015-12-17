@@ -8,6 +8,7 @@
             </run>
         </groups>
         <classes>
+
             <class name="com.telran.RestorePasswordLeonidTest"/>
             <class name="com.telran.CreateNewPatientTest"/>
             <class name="com.telran.LoginMaksimTest"/>

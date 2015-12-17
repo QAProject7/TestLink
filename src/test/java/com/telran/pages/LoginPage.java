@@ -170,6 +170,7 @@ public class LoginPage extends Page {
 
     public LoginPage waitUntilLoginPageIsLoaded() {
         try {
+            Thread.sleep(2000);
             waitUntilElementIsLoaded(loginButton);
         } catch (IOException e) {
             e.printStackTrace();
