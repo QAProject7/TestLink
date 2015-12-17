@@ -87,7 +87,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         createNewPatientPage.fillMeetingDateAndTime(meetingDate)
                 .fillBirthDayfield(birthDate)
                 .clickSaveAccount();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         doctorsPage.waitUntilMainPageIsLoaded();
         doctorsPage.isPatientExists(zeut);
        // Reporter.log("new Patient added");
@@ -101,7 +101,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         Log.info("Exit from loginPage");
         Log.info("TestButton was pushed");
 
-       Thread.sleep(5000);
+       //Thread.sleep(5000);
         System.out.println("driver: " + driver);
         driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
         Thread.sleep(10000);
