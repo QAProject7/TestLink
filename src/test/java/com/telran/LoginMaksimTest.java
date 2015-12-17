@@ -1,6 +1,7 @@
 package com.telran;
 
 import com.github.yev.FailTestScreenshotListener;
+import com.telran.pages.DataProviders;
 import com.telran.pages.LoginPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -30,7 +31,14 @@ public class LoginMaksimTest extends TestNgTestBase {
         loginPage.openLoginPage();
     }
 
-
+    @Test(groups = {"smoke", "negative"}, dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
+    public void testLoginWithExtData(String login, String pass) {
+        loginPage
+                .fillUsernameField(login)
+                .fillPasswordField(pass)
+                .clickOnLoginButton();
+        Assert.assertTrue(loginPage.alertMessageNotValidUserName() && loginPage.alertMessageNotValidPassword());
+    }
     @Test(groups = {"negative"})
     public void testLoginWithoutNameAndPassword() {
         loginPage

@@ -465,131 +465,428 @@
 2015-12-07 12:15:39 INFO  LogLog4j:188 - Wait until drug page is loaded
 2015-12-07 12:15:49 INFO  LogLog4j:249 - Click time line element
 2015-12-07 12:15:54 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 13:01:55 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:02:14 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:02:14 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:02:15 INFO  LogLog4j:43 - Accept Field was added
-2015-12-07 13:02:15 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:04:30 INFO  LogLog4j:78 - LoginPage was Loaded
-2015-12-07 13:04:30 INFO  LogLog4j:59 - UserName was incerted
-2015-12-07 13:04:30 INFO  LogLog4j:65 - entering password from the list: LinkCare!!11 
-2015-12-07 13:04:31 INFO  LogLog4j:43 - Accept Field was added
-2015-12-07 13:04:35 INFO  LogLog4j:84 - Login button was pushed
-2015-12-07 13:04:40 INFO  LogLog4j:34 - The patient was choosed
-2015-12-07 13:06:34 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:06:36 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 13:06:36 INFO  LogLog4j:46 - fill restore field
-2015-12-07 13:06:37 INFO  LogLog4j:76 - click on restore button
-2015-12-07 13:07:07 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:07:08 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:07:09 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:07:10 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:07:12 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 13:07:12 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 13:07:12 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 13:07:12 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 13:07:23 INFO  LogLog4j:249 - Click time line element
-2015-12-07 13:07:27 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 13:07:36 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:07:37 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:07:38 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:07:38 INFO  LogLog4j:43 - Accept Field was added
-2015-12-07 13:07:38 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:24:53 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:24:55 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 13:24:55 INFO  LogLog4j:46 - fill restore field
-2015-12-07 13:24:55 INFO  LogLog4j:76 - click on restore button
-2015-12-07 13:25:24 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:25:25 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:25:27 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:25:27 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:25:29 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 13:25:29 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 13:25:29 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 13:25:29 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 13:25:39 INFO  LogLog4j:249 - Click time line element
-2015-12-07 13:25:44 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 13:25:52 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:25:54 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:25:55 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:25:55 INFO  LogLog4j:43 - Accept Field was added
-2015-12-07 13:25:55 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:32:08 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:32:10 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 13:32:10 INFO  LogLog4j:46 - fill restore field
-2015-12-07 13:32:11 INFO  LogLog4j:76 - click on restore button
-2015-12-07 13:32:23 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:32:23 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:32:25 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:32:25 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:32:27 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 13:32:27 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 13:32:28 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 13:32:28 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 13:32:38 INFO  LogLog4j:249 - Click time line element
-2015-12-07 13:32:43 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 13:32:52 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:32:55 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:32:55 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:32:56 INFO  LogLog4j:43 - Accept Field was added
-2015-12-07 13:32:56 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:53:24 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:53:26 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 13:53:26 INFO  LogLog4j:46 - fill restore field
-2015-12-07 13:53:26 INFO  LogLog4j:76 - click on restore button
-2015-12-07 13:53:38 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 13:53:38 INFO  LogLog4j:84 - Filling username field
-2015-12-07 13:53:40 INFO  LogLog4j:90 - Filling password field
-2015-12-07 13:53:41 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 13:53:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 13:53:43 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 13:53:43 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 13:53:43 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 13:53:53 INFO  LogLog4j:249 - Click time line element
-2015-12-07 13:53:58 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 14:01:02 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:01:04 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 14:01:04 INFO  LogLog4j:46 - fill restore field
-2015-12-07 14:01:04 INFO  LogLog4j:76 - click on restore button
-2015-12-07 14:01:15 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:01:15 INFO  LogLog4j:84 - Filling username field
-2015-12-07 14:01:18 INFO  LogLog4j:90 - Filling password field
-2015-12-07 14:01:18 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 14:01:20 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 14:01:20 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 14:01:20 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 14:01:20 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 14:01:30 INFO  LogLog4j:249 - Click time line element
-2015-12-07 14:01:35 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 14:01:43 INFO  LogLog4j:141 - TeacherEmail generated is <more608@yopmail.com>
-2015-12-07 14:02:14 INFO  LogLog4j:141 - TeacherEmail generated is <more955@yopmail.com>
-2015-12-07 14:02:30 INFO  LogLog4j:141 - TeacherEmail generated is <more687@yopmail.com>
-2015-12-07 14:02:45 INFO  LogLog4j:141 - TeacherEmail generated is <more903@yopmail.com>
-2015-12-07 14:03:54 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:03:56 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 14:03:56 INFO  LogLog4j:46 - fill restore field
-2015-12-07 14:03:57 INFO  LogLog4j:76 - click on restore button
-2015-12-07 14:04:09 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:04:09 INFO  LogLog4j:84 - Filling username field
-2015-12-07 14:04:10 INFO  LogLog4j:90 - Filling password field
-2015-12-07 14:04:11 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 14:04:13 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 14:04:13 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 14:04:13 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 14:04:13 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 14:04:23 INFO  LogLog4j:249 - Click time line element
-2015-12-07 14:04:28 INFO  LogLog4j:64 - We are on frame page
-2015-12-07 14:06:08 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:06:09 INFO  LogLog4j:64 - waiting until forgot page is loaded
-2015-12-07 14:06:10 INFO  LogLog4j:46 - fill restore field
-2015-12-07 14:06:10 INFO  LogLog4j:76 - click on restore button
-2015-12-07 14:06:22 INFO  LogLog4j:77 - Opening Login page
-2015-12-07 14:06:22 INFO  LogLog4j:84 - Filling username field
-2015-12-07 14:06:23 INFO  LogLog4j:90 - Filling password field
-2015-12-07 14:06:24 INFO  LogLog4j:130 - Clicking on Login button
-2015-12-07 14:06:26 INFO  LogLog4j:66 - Waiting for Main page is loaded
-2015-12-07 14:06:26 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
-2015-12-07 14:06:26 INFO  LogLog4j:60 - Clicking 'Green' button
-2015-12-07 14:06:26 INFO  LogLog4j:188 - Wait until drug page is loaded
-2015-12-07 14:06:36 INFO  LogLog4j:249 - Click time line element
-2015-12-07 14:06:41 INFO  LogLog4j:64 - We are on frame page
+2015-12-07 12:55:40 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 12:55:42 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-07 12:55:42 INFO  LogLog4j:46 - fill restore field
+2015-12-07 12:55:43 INFO  LogLog4j:76 - click on restore button
+2015-12-07 12:56:10 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 12:56:10 INFO  LogLog4j:84 - Filling username field
+2015-12-07 12:56:12 INFO  LogLog4j:90 - Filling password field
+2015-12-07 12:56:12 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 12:56:14 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 12:56:14 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2015-12-07 12:56:14 INFO  LogLog4j:60 - Clicking 'Green' button
+2015-12-07 12:56:15 INFO  LogLog4j:188 - Wait until drug page is loaded
+2015-12-07 12:56:25 INFO  LogLog4j:249 - Click time line element
+2015-12-07 12:56:30 INFO  LogLog4j:64 - We are on frame page
+2015-12-07 12:56:37 INFO  LogLog4j:147 - Zeut generated is <847514205>
+2015-12-07 12:56:37 INFO  LogLog4j:141 - TeacherEmail generated is <more419@yopmail.com>
+2015-12-07 12:56:37 INFO  LogLog4j:159 - MeetingDate generated is <20/8/2017 08:00>
+2015-12-07 12:56:37 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 12:56:37 INFO  LogLog4j:84 - Filling username field
+2015-12-07 12:56:39 INFO  LogLog4j:90 - Filling password field
+2015-12-07 12:56:40 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 12:56:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 12:56:43 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-07 12:56:43 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-07 12:56:48 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-07 12:56:48 INFO  LogLog4j:90 - Create new patient started
+2015-12-07 12:56:48 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-07 12:56:48 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-07 12:56:49 INFO  LogLog4j:193 - Filling Teudat zeut <847514205>
+2015-12-07 12:56:49 INFO  LogLog4j:208 - Filling weight <2>
+2015-12-07 12:56:49 INFO  LogLog4j:214 - Filling Email <hore778@yopmail.com>
+2015-12-07 12:56:50 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-07 12:56:50 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (097dcd9b-d2b8-43ce-8c33-d05dbdec652e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-07 12:56:50 INFO  LogLog4j:252 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@53f6fd09>
+2015-12-07 12:56:55 INFO  LogLog4j:254 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (097dcd9b-d2b8-43ce-8c33-d05dbdec652e)] -> id: btnAddLink]>
+2015-12-07 12:56:56 INFO  LogLog4j:214 - Filling Email <more419@yopmail.com>
+2015-12-07 12:56:56 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-07 12:56:56 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (097dcd9b-d2b8-43ce-8c33-d05dbdec652e)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-07 12:57:01 INFO  LogLog4j:261 - Filling meeting date with <20/8/2017 08:00>
+2015-12-07 12:57:02 INFO  LogLog4j:201 - Filling BirthDate <21/10/2013>
+2015-12-07 12:57:02 INFO  LogLog4j:290 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (097dcd9b-d2b8-43ce-8c33-d05dbdec652e)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-12-07 12:57:07 INFO  LogLog4j:119 - Creating of a new patient started
+2015-12-07 12:57:33 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 12:57:37 INFO  LogLog4j:84 - Filling username field
+2015-12-07 12:57:37 INFO  LogLog4j:90 - Filling password field
+2015-12-07 12:57:38 INFO  LogLog4j:43 - Accept Field was added
+2015-12-07 12:57:38 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 12:57:46 INFO  LogLog4j:49 - TableButtom was pushed
+2015-12-07 12:57:51 INFO  LogLog4j:63 - Find all table elements 47
+2015-12-07 12:57:57 INFO  LogLog4j:81 - Text was write into the last TextField
+2015-12-07 12:58:01 INFO  LogLog4j:92 - SubmitButtom was pushed
+2015-12-07 15:03:01 INFO  LogLog4j:141 - TeacherEmail generated is <more366@yopmail.com>
+2015-12-07 15:07:04 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:07:04 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:07:06 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:07:06 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:10:41 INFO  LogLog4j:141 - TeacherEmail generated is <more242@yopmail.com>
+2015-12-07 15:11:43 INFO  LogLog4j:141 - TeacherEmail generated is <more256@yopmail.com>
+2015-12-07 15:14:48 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:14:48 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:14:50 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:14:50 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:14:51 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:14:51 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:14:52 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:14:52 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:14:52 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:14:53 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:14:53 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:14:54 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:14:54 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:14:55 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:14:55 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:14:55 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:14:56 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:14:56 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:14:57 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:14:57 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:14:57 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:02 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:02 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:17:06 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:17:06 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:17:07 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:07 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:17:08 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:17:08 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:17:09 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:09 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:17:10 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:17:10 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:17:10 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:11 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:17:11 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:17:12 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:17:12 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:17:13 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:17:13 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:17:13 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:17:14 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:21:45 INFO  LogLog4j:147 - Zeut generated is <901612358>
+2015-12-07 15:21:45 INFO  LogLog4j:141 - TeacherEmail generated is <more658@yopmail.com>
+2015-12-07 15:21:45 INFO  LogLog4j:159 - MeetingDate generated is <22/6/2016 08:00>
+2015-12-07 15:21:45 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 15:22:00 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:22:01 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:22:02 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:22:03 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:22:40 INFO  LogLog4j:147 - Zeut generated is <443705884>
+2015-12-07 15:22:40 INFO  LogLog4j:141 - TeacherEmail generated is <more526@yopmail.com>
+2015-12-07 15:22:40 INFO  LogLog4j:159 - MeetingDate generated is <16/4/2017 08:00>
+2015-12-07 15:22:40 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 15:22:55 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:22:56 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:22:57 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:22:57 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:24:01 INFO  LogLog4j:147 - Zeut generated is <324327550>
+2015-12-07 15:24:01 INFO  LogLog4j:141 - TeacherEmail generated is <more163@yopmail.com>
+2015-12-07 15:24:01 INFO  LogLog4j:159 - MeetingDate generated is <9/4/2016 08:00>
+2015-12-07 15:24:01 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 15:24:17 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:24:18 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:24:19 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:24:19 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:33:38 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:33:38 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:33:40 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:33:40 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 15:33:43 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 15:33:43 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-07 15:33:43 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-07 15:33:48 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-07 15:33:48 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-07 15:33:48 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-07 15:33:49 INFO  LogLog4j:193 - Filling Teudat zeut <308666338>
+2015-12-07 15:33:49 INFO  LogLog4j:208 - Filling weight <5>
+2015-12-07 15:33:49 INFO  LogLog4j:214 - Filling Email <hore569@yopmail.com>
+2015-12-07 15:33:50 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-07 15:33:50 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (cd27a430-0bf2-44d7-bd77-4724842dd45f)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-07 15:33:50 INFO  LogLog4j:201 - Filling BirthDate <10/10/2012>
+2015-12-07 15:33:54 INFO  LogLog4j:159 - MeetingDate generated is <8/7/2018 08:00>
+2015-12-07 15:33:54 INFO  LogLog4j:261 - Filling meeting date with <8/7/2018 08:00>
+2015-12-07 15:33:55 INFO  LogLog4j:358 - Clicking 'Save' button
+2015-12-07 15:33:55 INFO  LogLog4j:290 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (cd27a430-0bf2-44d7-bd77-4724842dd45f)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-12-07 15:33:56 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:33:57 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:38:06 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 15:38:06 INFO  LogLog4j:84 - Filling username field
+2015-12-07 15:38:08 INFO  LogLog4j:90 - Filling password field
+2015-12-07 15:38:08 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 16:07:16 INFO  LogLog4j:147 - Zeut generated is <490033479>
+2015-12-07 16:07:16 INFO  LogLog4j:141 - TeacherEmail generated is <more615@yopmail.com>
+2015-12-07 16:07:16 INFO  LogLog4j:159 - MeetingDate generated is <9/4/2017 08:00>
+2015-12-07 16:07:16 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:07:34 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:08:43 INFO  LogLog4j:147 - Zeut generated is <021660204>
+2015-12-07 16:08:43 INFO  LogLog4j:141 - TeacherEmail generated is <more690@yopmail.com>
+2015-12-07 16:08:43 INFO  LogLog4j:159 - MeetingDate generated is <4/6/2018 08:00>
+2015-12-07 16:08:43 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:09:10 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:10:14 INFO  LogLog4j:147 - Zeut generated is <373626662>
+2015-12-07 16:10:14 INFO  LogLog4j:141 - TeacherEmail generated is <more340@yopmail.com>
+2015-12-07 16:10:14 INFO  LogLog4j:159 - MeetingDate generated is <24/1/2017 08:00>
+2015-12-07 16:10:14 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:10:36 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:10:37 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:10:38 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:11:26 INFO  LogLog4j:147 - Zeut generated is <440445427>
+2015-12-07 16:11:26 INFO  LogLog4j:141 - TeacherEmail generated is <more367@yopmail.com>
+2015-12-07 16:11:26 INFO  LogLog4j:159 - MeetingDate generated is <2/10/2017 08:00>
+2015-12-07 16:11:26 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:11:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:12:44 INFO  LogLog4j:147 - Zeut generated is <828525717>
+2015-12-07 16:12:44 INFO  LogLog4j:141 - TeacherEmail generated is <more494@yopmail.com>
+2015-12-07 16:12:44 INFO  LogLog4j:159 - MeetingDate generated is <20/8/2017 08:00>
+2015-12-07 16:12:44 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:13:15 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:13:17 INFO  LogLog4j:84 - Filling username field
+2015-12-07 16:13:19 INFO  LogLog4j:90 - Filling password field
+2015-12-07 16:13:21 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 16:16:53 INFO  LogLog4j:147 - Zeut generated is <051575314>
+2015-12-07 16:16:53 INFO  LogLog4j:141 - TeacherEmail generated is <more643@yopmail.com>
+2015-12-07 16:16:53 INFO  LogLog4j:159 - MeetingDate generated is <18/3/2016 08:00>
+2015-12-07 16:16:53 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:16:53 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:18:49 INFO  LogLog4j:147 - Zeut generated is <976395129>
+2015-12-07 16:18:49 INFO  LogLog4j:141 - TeacherEmail generated is <more510@yopmail.com>
+2015-12-07 16:18:49 INFO  LogLog4j:159 - MeetingDate generated is <12/2/2016 08:00>
+2015-12-07 16:18:49 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:18:49 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:19:55 INFO  LogLog4j:147 - Zeut generated is <881970917>
+2015-12-07 16:19:55 INFO  LogLog4j:141 - TeacherEmail generated is <more857@yopmail.com>
+2015-12-07 16:19:55 INFO  LogLog4j:159 - MeetingDate generated is <23/9/2016 08:00>
+2015-12-07 16:19:55 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:20:10 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:20:12 INFO  LogLog4j:84 - Filling username field
+2015-12-07 16:20:12 INFO  LogLog4j:90 - Filling password field
+2015-12-07 16:20:13 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-07 16:23:34 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:23:36 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-07 16:23:36 INFO  LogLog4j:46 - fill restore field
+2015-12-07 16:23:37 INFO  LogLog4j:76 - click on restore button
+2015-12-07 16:23:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:23:41 INFO  LogLog4j:147 - Zeut generated is <737746982>
+2015-12-07 16:23:41 INFO  LogLog4j:141 - TeacherEmail generated is <more433@yopmail.com>
+2015-12-07 16:23:41 INFO  LogLog4j:159 - MeetingDate generated is <1/2/2017 08:00>
+2015-12-07 16:23:41 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:23:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:23:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:23:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:23:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:27:25 INFO  LogLog4j:147 - Zeut generated is <213681208>
+2015-12-07 16:27:25 INFO  LogLog4j:141 - TeacherEmail generated is <more235@yopmail.com>
+2015-12-07 16:27:25 INFO  LogLog4j:159 - MeetingDate generated is <13/11/2016 08:00>
+2015-12-07 16:27:25 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-07 16:27:41 INFO  LogLog4j:77 - Opening Login page
+2015-12-07 16:27:46 INFO  LogLog4j:84 - Filling username field
+2015-12-07 16:27:46 INFO  LogLog4j:90 - Filling password field
+2015-12-07 16:27:47 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 10:05:37 INFO  LogLog4j:147 - Zeut generated is <944782960>
+2015-12-14 10:05:37 INFO  LogLog4j:141 - TeacherEmail generated is <more121@yopmail.com>
+2015-12-14 10:05:37 INFO  LogLog4j:159 - MeetingDate generated is <20/8/2018 08:00>
+2015-12-14 10:05:37 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 10:05:53 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 10:05:54 INFO  LogLog4j:84 - Filling username field
+2015-12-14 10:05:54 INFO  LogLog4j:90 - Filling password field
+2015-12-14 10:05:55 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 10:54:10 INFO  LogLog4j:147 - Zeut generated is <984449470>
+2015-12-14 10:54:10 INFO  LogLog4j:141 - TeacherEmail generated is <more472@yopmail.com>
+2015-12-14 10:54:10 INFO  LogLog4j:159 - MeetingDate generated is <26/1/2017 08:00>
+2015-12-14 10:54:10 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 10:54:26 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 10:54:27 INFO  LogLog4j:84 - Filling username field
+2015-12-14 10:54:27 INFO  LogLog4j:90 - Filling password field
+2015-12-14 10:54:28 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 10:56:16 INFO  LogLog4j:147 - Zeut generated is <247451339>
+2015-12-14 10:56:16 INFO  LogLog4j:141 - TeacherEmail generated is <more762@yopmail.com>
+2015-12-14 10:56:16 INFO  LogLog4j:159 - MeetingDate generated is <15/8/2016 08:00>
+2015-12-14 10:56:23 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 10:56:23 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 10:56:25 INFO  LogLog4j:84 - Filling username field
+2015-12-14 10:56:25 INFO  LogLog4j:90 - Filling password field
+2015-12-14 10:56:26 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 10:58:57 INFO  LogLog4j:147 - Zeut generated is <125172197>
+2015-12-14 10:58:57 INFO  LogLog4j:141 - TeacherEmail generated is <more145@yopmail.com>
+2015-12-14 10:58:57 INFO  LogLog4j:159 - MeetingDate generated is <20/2/2018 08:00>
+2015-12-14 10:59:03 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 10:59:03 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 10:59:04 INFO  LogLog4j:84 - Filling username field
+2015-12-14 10:59:05 INFO  LogLog4j:90 - Filling password field
+2015-12-14 10:59:05 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:00:08 INFO  LogLog4j:147 - Zeut generated is <671155133>
+2015-12-14 11:00:08 INFO  LogLog4j:141 - TeacherEmail generated is <more845@yopmail.com>
+2015-12-14 11:00:08 INFO  LogLog4j:159 - MeetingDate generated is <15/1/2016 08:00>
+2015-12-14 11:00:12 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:00:13 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 11:00:14 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:00:15 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:00:15 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:07:05 INFO  LogLog4j:147 - Zeut generated is <957791247>
+2015-12-14 11:07:05 INFO  LogLog4j:141 - TeacherEmail generated is <more24@yopmail.com>
+2015-12-14 11:07:05 INFO  LogLog4j:159 - MeetingDate generated is <26/2/2018 08:00>
+2015-12-14 11:07:05 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:07:07 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:07:08 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:07:11 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:07:11 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:07:11 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-14 11:07:16 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-14 11:07:16 INFO  LogLog4j:91 - Create new patient started
+2015-12-14 11:07:16 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-14 11:07:16 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-14 11:07:17 INFO  LogLog4j:193 - Filling Teudat zeut <957791247>
+2015-12-14 11:07:17 INFO  LogLog4j:208 - Filling weight <2>
+2015-12-14 11:07:17 INFO  LogLog4j:214 - Filling Email <hore437@yopmail.com>
+2015-12-14 11:07:17 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:07:17 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (b187b477-92cd-4afb-9188-e755f76feb9b)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:07:18 INFO  LogLog4j:252 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@74f6c5d8>
+2015-12-14 11:07:22 INFO  LogLog4j:254 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (b187b477-92cd-4afb-9188-e755f76feb9b)] -> id: btnAddLink]>
+2015-12-14 11:07:22 INFO  LogLog4j:214 - Filling Email <more24@yopmail.com>
+2015-12-14 11:07:23 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:07:23 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (b187b477-92cd-4afb-9188-e755f76feb9b)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:07:27 INFO  LogLog4j:261 - Filling meeting date with <26/2/2018 08:00>
+2015-12-14 11:07:28 INFO  LogLog4j:201 - Filling BirthDate <21/10/2013>
+2015-12-14 11:07:29 INFO  LogLog4j:290 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (b187b477-92cd-4afb-9188-e755f76feb9b)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-12-14 11:08:03 INFO  LogLog4j:147 - Zeut generated is <690132048>
+2015-12-14 11:08:03 INFO  LogLog4j:141 - TeacherEmail generated is <more2@yopmail.com>
+2015-12-14 11:08:03 INFO  LogLog4j:159 - MeetingDate generated is <14/10/2017 08:00>
+2015-12-14 11:08:03 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:08:05 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:08:05 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:08:08 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:08:08 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:08:08 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-14 11:08:13 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-14 11:08:13 INFO  LogLog4j:120 - Creating of a new patient started
+2015-12-14 11:08:13 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-14 11:08:13 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-14 11:08:14 INFO  LogLog4j:193 - Filling Teudat zeut <690132048>
+2015-12-14 11:08:14 INFO  LogLog4j:208 - Filling weight <5>
+2015-12-14 11:08:14 INFO  LogLog4j:214 - Filling Email <hore809@yopmail.com>
+2015-12-14 11:08:14 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:08:15 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (1e2d83f6-b725-43ba-a404-8981e50e2f05)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:08:15 INFO  LogLog4j:159 - MeetingDate generated is <16/3/2016 08:00>
+2015-12-14 11:08:15 INFO  LogLog4j:261 - Filling meeting date with <16/3/2016 08:00>
+2015-12-14 11:08:15 INFO  LogLog4j:201 - Filling BirthDate <9/6/2012>
+2015-12-14 11:08:21 INFO  LogLog4j:359 - Clicking 'Save' button
+2015-12-14 11:08:21 INFO  LogLog4j:290 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (1e2d83f6-b725-43ba-a404-8981e50e2f05)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-12-14 11:08:25 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:11:24 INFO  LogLog4j:147 - Zeut generated is <251191409>
+2015-12-14 11:11:24 INFO  LogLog4j:141 - TeacherEmail generated is <more287@yopmail.com>
+2015-12-14 11:11:24 INFO  LogLog4j:159 - MeetingDate generated is <20/5/2016 08:00>
+2015-12-14 11:11:24 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:11:26 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:11:27 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:11:29 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:11:30 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:11:30 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-14 11:11:35 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-14 11:11:35 INFO  LogLog4j:120 - Creating of a new patient started
+2015-12-14 11:11:35 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-14 11:11:35 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-14 11:11:36 INFO  LogLog4j:193 - Filling Teudat zeut <251191409>
+2015-12-14 11:11:36 INFO  LogLog4j:208 - Filling weight <5>
+2015-12-14 11:11:36 INFO  LogLog4j:214 - Filling Email <hore806@yopmail.com>
+2015-12-14 11:11:37 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:11:37 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (e3c98ef8-7479-461f-bd7a-ae75610e8dad)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:12:09 INFO  LogLog4j:147 - Zeut generated is <913381430>
+2015-12-14 11:12:09 INFO  LogLog4j:141 - TeacherEmail generated is <more890@yopmail.com>
+2015-12-14 11:12:09 INFO  LogLog4j:159 - MeetingDate generated is <6/4/2017 08:00>
+2015-12-14 11:12:10 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:12:12 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:12:13 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:12:17 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:12:17 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:12:17 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-14 11:12:22 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-14 11:12:22 INFO  LogLog4j:120 - Creating of a new patient started
+2015-12-14 11:12:22 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-14 11:12:22 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-14 11:12:23 INFO  LogLog4j:193 - Filling Teudat zeut <913381430>
+2015-12-14 11:12:23 INFO  LogLog4j:208 - Filling weight <5>
+2015-12-14 11:12:23 INFO  LogLog4j:214 - Filling Email <hore68@yopmail.com>
+2015-12-14 11:12:24 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:12:24 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (28a6cef5-8735-4d09-a857-4c98b2d946f4)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:17:26 INFO  LogLog4j:147 - Zeut generated is <424297240>
+2015-12-14 11:17:26 INFO  LogLog4j:141 - TeacherEmail generated is <more483@yopmail.com>
+2015-12-14 11:17:26 INFO  LogLog4j:159 - MeetingDate generated is <4/11/2018 08:00>
+2015-12-14 11:17:27 INFO  LogLog4j:84 - Filling username field
+2015-12-14 11:17:40 INFO  LogLog4j:90 - Filling password field
+2015-12-14 11:17:40 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 11:17:51 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:17:51 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2015-12-14 11:17:51 INFO  LogLog4j:95 - Trying thread sleep 5000
+2015-12-14 11:17:56 INFO  LogLog4j:97 - Trying to switch to frame 0
+2015-12-14 11:17:58 INFO  LogLog4j:120 - Creating of a new patient started
+2015-12-14 11:17:59 INFO  LogLog4j:173 - Filling First Name <PatientChildFirst>
+2015-12-14 11:17:59 INFO  LogLog4j:180 - Filling Last Name <PatientChildLast>
+2015-12-14 11:17:59 INFO  LogLog4j:193 - Filling Teudat zeut <424297240>
+2015-12-14 11:18:00 INFO  LogLog4j:208 - Filling weight <5>
+2015-12-14 11:18:00 INFO  LogLog4j:214 - Filling Email <hore880@yopmail.com>
+2015-12-14 11:18:00 INFO  LogLog4j:232 - Waiting for button Send Email
+2015-12-14 11:18:00 INFO  LogLog4j:234 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (fa4095b4-41a6-49ff-b805-e043e4d5b701)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2015-12-14 11:18:01 INFO  LogLog4j:252 - Waiting for <Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@102cec62>
+2015-12-14 11:18:06 INFO  LogLog4j:254 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (fa4095b4-41a6-49ff-b805-e043e4d5b701)] -> id: btnAddLink]>
+2015-12-14 11:18:06 INFO  LogLog4j:159 - MeetingDate generated is <13/7/2016 08:00>
+2015-12-14 11:18:06 INFO  LogLog4j:261 - Filling meeting date with <13/7/2016 08:00>
+2015-12-14 11:18:07 INFO  LogLog4j:201 - Filling BirthDate <26/4/2011>
+2015-12-14 11:18:08 INFO  LogLog4j:359 - Clicking 'Save' button
+2015-12-14 11:18:08 INFO  LogLog4j:290 - Clicking on Save button <[[FirefoxDriver: firefox on WINDOWS (fa4095b4-41a6-49ff-b805-e043e4d5b701)] -> id: MainContent_AddEditAccount1_SaveAccount]>
+2015-12-14 11:18:12 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2015-12-14 11:18:15 INFO  LogLog4j:108 - Checking if patient with ID 424297240 exists
+2015-12-14 15:39:06 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:39:07 INFO  LogLog4j:84 - Filling username field
+2015-12-14 15:39:09 INFO  LogLog4j:90 - Filling password field
+2015-12-14 15:39:09 INFO  LogLog4j:130 - Clicking on Login button
+2015-12-14 15:41:18 INFO  LogLog4j:31 - initialize loginPage
+2015-12-14 15:41:19 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2015-12-14 15:41:19 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2015-12-14 15:41:19 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:19 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:22 INFO  LogLog4j:53 - test with 1 hebrew letter
+2015-12-14 15:41:22 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:22 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:23 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:26 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:26 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:27 INFO  LogLog4j:63 - test with 15 hebrew letters
+2015-12-14 15:41:27 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:27 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:27 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:29 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:29 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:30 INFO  LogLog4j:73 - test with 1 english letter
+2015-12-14 15:41:30 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:30 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:30 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:32 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:32 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:34 INFO  LogLog4j:83 - test with 15 english letters
+2015-12-14 15:41:34 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:34 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:34 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:36 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:36 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:37 INFO  LogLog4j:93 - test with 1 number
+2015-12-14 15:41:37 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:37 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:38 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:40 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2015-12-14 15:41:40 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:41 INFO  LogLog4j:103 - test with 15 numbers
+2015-12-14 15:41:41 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2015-12-14 15:41:41 INFO  LogLog4j:46 - fill restore field
+2015-12-14 15:41:41 INFO  LogLog4j:77 - click on restore button
+2015-12-14 15:41:44 INFO  LogLog4j:77 - Opening Login page
+2015-12-14 15:41:44 INFO  LogLog4j:148 - Zeut generated is <071498497>
+2015-12-14 15:41:44 INFO  LogLog4j:134 - Parent email generated is <hore223@yopmail.com>
+2015-12-14 15:41:44 INFO  LogLog4j:142 - TeacherEmail generated is <more379@yopmail.com>
+2015-12-14 15:41:44 INFO  LogLog4j:160 - MeetingDate generated is <19/4/2016 08:00>
+2015-12-14 15:41:44 INFO  LogLog4j:77 - Opening Login page
+2015-12-17 14:41:06 INFO  LogLog4j:77 - Opening Login page
+2015-12-17 14:41:06 INFO  LogLog4j:77 - Opening Login page
+2015-12-17 14:41:06 INFO  LogLog4j:77 - Opening Login page
+2015-12-17 14:41:06 INFO  LogLog4j:77 - Opening Login page
