@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.Date;
 
 @org.testng.annotations.Listeners(FailTestScreenshotListener.class)
@@ -33,8 +34,9 @@ public class LoginMaksimTest extends TestNgTestBase {
         loginPage
                 .fillUsernameField(login)
                 .fillPasswordField(pass)
+                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
-        Assert.assertTrue(loginPage.alertMessageNotValidUserName() || loginPage.alertMessageNotValidPassword());
+        Assert.assertTrue(loginPage.isLoginUnsuccessfulAlertMessageDisplayed());
     }
 
     @Test(groups = {"negative"})
@@ -75,13 +77,15 @@ public class LoginMaksimTest extends TestNgTestBase {
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void testLoginByRegisteredUser() {
+    public void testLoginByRegisteredUser() throws IOException, InterruptedException {
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
                 .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         Assert.assertFalse(loginPage.isPageOpened());
+        loginPage.clickLogOut();
+        loginPage.waitUntilLoginPageIsLoaded();
     }
 
     @Test(groups = {"positive"})

@@ -66,6 +66,8 @@ public class LoginPage extends Page {
     @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']//li[contains(text(), 'סיסמא חובה.')]")
     WebElement wrongPasswordAlert;
 
+    @FindBy(xpath = "//*[contains(text(), 'ניסיון ההתחברות שלך לא הצליח. אנא נסה שוב')]")
+    WebElement loginUnsuccessfulAlert;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -185,6 +187,10 @@ public class LoginPage extends Page {
 
     public boolean alertMessageNotValidUserName() {
         return exists(wrongUserNameAlert);
+    }
+
+    public boolean isLoginUnsuccessfulAlertMessageDisplayed() {
+        return exists(loginUnsuccessfulAlert);
     }
 
     public boolean alertMessageNotValidPassword() {
