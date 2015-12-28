@@ -7,6 +7,7 @@ import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
 import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -97,7 +98,8 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         Thread.sleep(8000);
         createNewPatientPage.profileFilling(email, zeut);
         Log.info("Password was changed");
-        Thread.sleep(5000);
+        loginPage.waitUntinLogOutButtomIsLoaded();
+       // Thread.sleep(5000);
         loginPage.clickLogOut();
         Log.info("Exit from loginPage");
         Log.info("TestButton was pushed");
@@ -105,6 +107,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
        //Thread.sleep(5000);
         System.out.println("driver: " + driver);
         driver.get("http://dhclinicamobileppstg.item-soft.co.il/index.htm");
+        loginMobilePage.waitUntilLoginPageIsLoaded();
         Thread.sleep(10000);
         loginMobilePage
                 .fillUsernameField(username)

@@ -124,6 +124,17 @@ public class LoginPage extends Page {
         return this;
     }
 
+    public LoginPage waitUntinLogOutButtomIsLoaded() {
+        try {
+            waitUntilElementIsLoaded(logOutButton);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
     public void clickOnForgotPassLink() {
         clickElement(forgotPassLink);
     }
