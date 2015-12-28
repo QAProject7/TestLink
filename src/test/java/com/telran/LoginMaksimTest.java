@@ -3,6 +3,7 @@ package com.telran;
 import com.github.yev.FailTestScreenshotListener;
 import com.telran.pages.DataProviders;
 import com.telran.pages.LoginPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -15,6 +16,7 @@ import java.util.Date;
 
 @org.testng.annotations.Listeners(FailTestScreenshotListener.class)
 public class LoginMaksimTest extends TestNgTestBase {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String registered_username = "3339Doctor";
     public static String registered_password = "LinkCare!!11";
     public LoginPage loginPage;
@@ -31,12 +33,14 @@ public class LoginMaksimTest extends TestNgTestBase {
 
     @Test(groups = {"smoke", "negative"}, dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
     public void testLoginWithExtData(String login, String pass) {
+        Log.info("TestLoginWithExtData was started....");
         loginPage
                 .fillUsernameField(login)
                 .fillPasswordField(pass)
                 .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         Assert.assertTrue(loginPage.isLoginUnsuccessfulAlertMessageDisplayed());
+        Log.info("TestLoginWithExtData stoped....");
     }
 
     @Test(groups = {"negative"})
@@ -78,6 +82,7 @@ public class LoginMaksimTest extends TestNgTestBase {
 
     @Test(groups = {"positive", "smoke"})
     public void testLoginByRegisteredUser() throws IOException, InterruptedException {
+        Log.info("TestLoginByRegisteredUser was started....");
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
@@ -90,14 +95,15 @@ public class LoginMaksimTest extends TestNgTestBase {
 
     @Test(groups = {"positive"})
     public void testOpenForgotPasswordPage() {
+     Log.info("TestOpenForgotPasswordPage was started....");
         loginPage.openForgotPasswordPage();
         Assert.assertFalse(loginPage.isPageOpened());
     }
 
     // test of clicking on Registration link are written in another class
 
-    @AfterClass(alwaysRun = true)
+   /* @AfterClass(alwaysRun = true)
       public void tearDown() {
           this.driver.quit();
-     }
+     }*/
 }

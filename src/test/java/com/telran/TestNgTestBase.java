@@ -17,7 +17,7 @@ public class TestNgTestBase {
   public static String baseUrl;
   protected static String gridHubUrl;
   protected static Capabilities capabilities;
-  public WebDriver driver;
+  public static WebDriver driver;
 
   @BeforeSuite(alwaysRun = true)
   public void initTestSuite() throws IOException {
@@ -28,14 +28,15 @@ public class TestNgTestBase {
     driver = new FirefoxDriver();
   }
 
-  public WebDriver getDriver() {
+  public static WebDriver getDriver() {
     return driver;
   }
 
-  @AfterClass(alwaysRun = true)
+ /*@AfterClass(alwaysRun = true)
   public void tearDown() {
+    System.out.println("We are in TestNgTestBase tearDown AfterClass");
     if (driver != null) {
       driver.quit();
     }
-  }
+  }*/
 }

@@ -53,6 +53,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         createNewPatientTest = PageFactory.initElements(driver, CreateNewPatientTest.class);
 
+        Log.info("QuestionVanderbiltForParentsPetruninTest started.....");
         zeut = createNewPatientPage.generateZeut();
         email = createNewPatientPage.generateParentEmail();
         username = email;

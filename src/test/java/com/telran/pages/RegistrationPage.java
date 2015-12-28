@@ -92,6 +92,7 @@ public class RegistrationPage extends Page {
 
 
     public RegistrationPage openRegistrationPage(WebDriver driver) {
+        Log.info("Open registration page");
         driver.get(PAGE_URL);
         return this;
     }
