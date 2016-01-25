@@ -9,7 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
+
 
 /**
  * Created by Leonid Gengrinovich
