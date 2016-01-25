@@ -92,15 +92,16 @@
             <properties>
                 <capabilities>/firefox.capabilities</capabilities>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
         </profile>
         <profile>
             <id>chrome</id>
             <properties>
                 <capabilities>/chrome.capabilities</capabilities>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
         <profile>
             <id>ie</id>
