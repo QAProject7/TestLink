@@ -2802,3 +2802,243 @@
 2015-12-28 14:07:05 INFO  LogLog4j:70 - Find all table elements
 2015-12-28 14:07:15 INFO  LogLog4j:132 - All input elements is clicked
 2015-12-28 14:07:18 INFO  LogLog4j:135 - Access buttom was pushed. Test is finished!
+2016-01-25 17:48:00 INFO  LogLog4j:148 - Zeut generated is <254540859>
+2016-01-25 17:48:00 INFO  LogLog4j:134 - Parent email generated is <hore652@yopmail.com>
+2016-01-25 17:48:00 INFO  LogLog4j:142 - TeacherEmail generated is <more734@yopmail.com>
+2016-01-25 17:48:00 INFO  LogLog4j:160 - MeetingDate generated is <8/4/2016 08:00>
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:23 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 17:59:23 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 17:59:23 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 17:59:23 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 17:59:23 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:26 INFO  LogLog4j:53 - test with 1 hebrew letter
+2016-01-25 17:59:26 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 17:59:26 INFO  LogLog4j:46 - fill restore field
+2016-01-25 17:59:27 INFO  LogLog4j:78 - click on restore button
+2016-01-25 17:59:52 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 17:59:52 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:55 INFO  LogLog4j:63 - test with 15 hebrew letters
+2016-01-25 17:59:55 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 17:59:55 INFO  LogLog4j:46 - fill restore field
+2016-01-25 17:59:55 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:00:20 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:00:20 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:00:23 INFO  LogLog4j:73 - test with 1 english letter
+2016-01-25 18:00:23 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:00:23 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:00:23 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:00:48 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:00:48 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:00:51 INFO  LogLog4j:83 - test with 15 english letters
+2016-01-25 18:00:51 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:00:51 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:00:51 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:01:17 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:01:17 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:01:17 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:01:17 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:01:42 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:01:42 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:01:42 INFO  LogLog4j:103 - test with 15 numbers
+2016-01-25 18:01:42 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:08:12 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 18:08:12 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 18:08:12 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 18:08:12 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:08:12 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:08:16 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:08:16 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:08:16 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:08:16 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:08:41 INFO  LogLog4j:142 - TeacherEmail generated is <more925@yopmail.com>
+2016-01-25 18:08:41 INFO  LogLog4j:134 - Parent email generated is <hore28@yopmail.com>
+2016-01-25 18:08:41 INFO  LogLog4j:148 - Zeut generated is <761593045>
+2016-01-25 18:08:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:08:41 INFO  LogLog4j:86 - Filling username field
+2016-01-25 18:08:42 INFO  LogLog4j:92 - Filling password field
+2016-01-25 18:08:42 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 18:08:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 18:08:59 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 18:08:59 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 18:08:59 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 18:08:59 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:08:59 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:02 INFO  LogLog4j:53 - test with 1 hebrew letter
+2016-01-25 18:09:02 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:02 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:02 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:04 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:04 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:06 INFO  LogLog4j:63 - test with 15 hebrew letters
+2016-01-25 18:09:06 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:06 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:06 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:08 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:08 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:10 INFO  LogLog4j:73 - test with 1 english letter
+2016-01-25 18:09:10 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:10 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:10 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:12 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:12 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:14 INFO  LogLog4j:83 - test with 15 english letters
+2016-01-25 18:09:14 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:14 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:14 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:16 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:16 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:18 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:09:18 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:18 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:18 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:20 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:20 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:22 INFO  LogLog4j:103 - test with 15 numbers
+2016-01-25 18:09:22 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:22 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:22 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:27:13 INFO  LogLog4j:33 - initialize loginPage
+2016-01-25 18:27:13 INFO  LogLog4j:35 - initialize forgotPasswordPage
+2016-01-25 18:27:13 INFO  LogLog4j:37 - initialize forgotPasswordPageSuccess
+2016-01-25 18:28:25 INFO  LogLog4j:33 - initialize loginPage
+2016-01-25 18:28:25 INFO  LogLog4j:35 - initialize forgotPasswordPage
+2016-01-25 18:28:25 INFO  LogLog4j:37 - initialize forgotPasswordPageSuccess
+2016-01-25 18:40:36 INFO  LogLog4j:57 - initialize loginPage
+2016-01-25 18:40:36 INFO  LogLog4j:59 - initialize forgotPasswordPage
+2016-01-25 18:40:36 INFO  LogLog4j:61 - initialize forgotPasswordPageSuccess
+2016-01-25 18:42:49 INFO  LogLog4j:57 - initialize loginPage
+2016-01-25 18:42:49 INFO  LogLog4j:59 - initialize forgotPasswordPage
+2016-01-25 18:42:49 INFO  LogLog4j:61 - initialize forgotPasswordPageSuccess
+2016-01-25 18:45:42 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:45:42 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:45:42 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:47:09 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:47:09 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:47:09 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:48:19 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:48:19 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:48:19 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:49:39 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:49:39 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:49:39 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:49:39 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:49:39 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:49:43 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:49:43 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:49:43 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:49:43 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:37 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:51:37 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:51:37 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:51:37 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:37 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:40 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:40 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:41 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:41 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:43 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:43 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:46 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:46 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:46 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:46 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:47 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:47 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:50 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:50 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:50 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:50 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:52 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:52 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:54 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:54 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:54 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:54 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:43 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:52:43 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:52:43 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:52:43 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:43 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:47 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:47 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:47 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:47 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:49 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:49 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:51 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:51 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:51 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:51 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:53 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:53 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:55 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:55 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:55 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:55 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:57 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:57 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:59 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:59 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:59 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:00 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:53:01 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:53:01 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:53:03 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:53:03 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:53:03 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:04 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:53:05 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:53:05 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:53:07 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:53:07 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:53:07 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:08 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:11 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:56:11 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:56:11 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:56:11 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:11 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:14 INFO  LogLog4j:58 - test with "1 eng letter"
+2016-01-25 18:56:14 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:14 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:15 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:16 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:16 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:19 INFO  LogLog4j:58 - test with "15 eng letter"
+2016-01-25 18:56:19 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:19 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:19 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:21 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:21 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:23 INFO  LogLog4j:58 - test with "1 number"
+2016-01-25 18:56:23 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:23 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:23 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:25 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:25 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:27 INFO  LogLog4j:58 - test with "15 numbers"
+2016-01-25 18:56:27 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:27 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:27 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:29 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:29 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:31 INFO  LogLog4j:58 - test with "1 hebrew letter"
+2016-01-25 18:56:31 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:31 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:31 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:33 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:33 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:35 INFO  LogLog4j:58 - test with "15 hebrew letter"
+2016-01-25 18:56:35 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:35 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:35 INFO  LogLog4j:78 - click on restore button
