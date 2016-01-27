@@ -9,7 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
+
 
 /**
  * Created by Leonid Gengrinovich
@@ -37,16 +38,9 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
         return this;
     }
 
-//Fill the fileds
-
     public ForgotPasswordPageSuccessLeonid assertText(){
         Log.info("assert text on forgotPassword page");
         assertEquals("הסיסמא שלך נשלחה אליך.\nחזור", textStatus.getText());
-        return this;
-    }
-
-    public ForgotPasswordPageSuccessLeonid fillRestoreField(String login) {
-        setElementText(backButton, login);
         return this;
     }
 
@@ -67,10 +61,5 @@ public class ForgotPasswordPageSuccessLeonid extends Page {
         clickElement(backButton);
 
     }
-
-    public boolean isOnForgotPage() {
-        return exists(backButton);
-    }
-
 
 }

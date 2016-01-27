@@ -168,7 +168,7 @@ public class LoginPage extends Page {
         //waitUntilLoginPageIsLoaded();
         fillUsernameField(username);
         fillPasswordField(password);
-        clickOnTermsCheckbox();
+        //clickOnTermsCheckbox();
         clickOnLoginButton();
     }
 

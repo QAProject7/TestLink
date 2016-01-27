@@ -2802,3 +2802,569 @@
 2015-12-28 14:07:05 INFO  LogLog4j:70 - Find all table elements
 2015-12-28 14:07:15 INFO  LogLog4j:132 - All input elements is clicked
 2015-12-28 14:07:18 INFO  LogLog4j:135 - Access buttom was pushed. Test is finished!
+2016-01-25 17:48:00 INFO  LogLog4j:148 - Zeut generated is <254540859>
+2016-01-25 17:48:00 INFO  LogLog4j:134 - Parent email generated is <hore652@yopmail.com>
+2016-01-25 17:48:00 INFO  LogLog4j:142 - TeacherEmail generated is <more734@yopmail.com>
+2016-01-25 17:48:00 INFO  LogLog4j:160 - MeetingDate generated is <8/4/2016 08:00>
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:49:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:23 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 17:59:23 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 17:59:23 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 17:59:23 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 17:59:23 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:26 INFO  LogLog4j:53 - test with 1 hebrew letter
+2016-01-25 17:59:26 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 17:59:26 INFO  LogLog4j:46 - fill restore field
+2016-01-25 17:59:27 INFO  LogLog4j:78 - click on restore button
+2016-01-25 17:59:52 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 17:59:52 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 17:59:55 INFO  LogLog4j:63 - test with 15 hebrew letters
+2016-01-25 17:59:55 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 17:59:55 INFO  LogLog4j:46 - fill restore field
+2016-01-25 17:59:55 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:00:20 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:00:20 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:00:23 INFO  LogLog4j:73 - test with 1 english letter
+2016-01-25 18:00:23 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:00:23 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:00:23 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:00:48 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:00:48 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:00:51 INFO  LogLog4j:83 - test with 15 english letters
+2016-01-25 18:00:51 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:00:51 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:00:51 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:01:17 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:01:17 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:01:17 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:01:17 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:01:42 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:01:42 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:01:42 INFO  LogLog4j:103 - test with 15 numbers
+2016-01-25 18:01:42 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:08:12 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 18:08:12 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 18:08:12 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 18:08:12 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:08:12 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:08:16 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:08:16 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:08:16 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:08:16 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:08:41 INFO  LogLog4j:142 - TeacherEmail generated is <more925@yopmail.com>
+2016-01-25 18:08:41 INFO  LogLog4j:134 - Parent email generated is <hore28@yopmail.com>
+2016-01-25 18:08:41 INFO  LogLog4j:148 - Zeut generated is <761593045>
+2016-01-25 18:08:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:08:41 INFO  LogLog4j:86 - Filling username field
+2016-01-25 18:08:42 INFO  LogLog4j:92 - Filling password field
+2016-01-25 18:08:42 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 18:08:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 18:08:59 INFO  LogLog4j:31 - initialize loginPage
+2016-01-25 18:08:59 INFO  LogLog4j:33 - initialize forgotPasswordPage
+2016-01-25 18:08:59 INFO  LogLog4j:35 - initialize forgotPasswordPageSuccess
+2016-01-25 18:08:59 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:08:59 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:02 INFO  LogLog4j:53 - test with 1 hebrew letter
+2016-01-25 18:09:02 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:02 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:02 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:04 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:04 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:06 INFO  LogLog4j:63 - test with 15 hebrew letters
+2016-01-25 18:09:06 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:06 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:06 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:08 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:08 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:10 INFO  LogLog4j:73 - test with 1 english letter
+2016-01-25 18:09:10 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:10 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:10 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:12 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:12 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:14 INFO  LogLog4j:83 - test with 15 english letters
+2016-01-25 18:09:14 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:14 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:14 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:16 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:16 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:18 INFO  LogLog4j:93 - test with 1 number
+2016-01-25 18:09:18 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:18 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:18 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:09:20 INFO  LogLog4j:42 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:09:20 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:09:22 INFO  LogLog4j:103 - test with 15 numbers
+2016-01-25 18:09:22 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:09:22 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:09:22 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:27:13 INFO  LogLog4j:33 - initialize loginPage
+2016-01-25 18:27:13 INFO  LogLog4j:35 - initialize forgotPasswordPage
+2016-01-25 18:27:13 INFO  LogLog4j:37 - initialize forgotPasswordPageSuccess
+2016-01-25 18:28:25 INFO  LogLog4j:33 - initialize loginPage
+2016-01-25 18:28:25 INFO  LogLog4j:35 - initialize forgotPasswordPage
+2016-01-25 18:28:25 INFO  LogLog4j:37 - initialize forgotPasswordPageSuccess
+2016-01-25 18:40:36 INFO  LogLog4j:57 - initialize loginPage
+2016-01-25 18:40:36 INFO  LogLog4j:59 - initialize forgotPasswordPage
+2016-01-25 18:40:36 INFO  LogLog4j:61 - initialize forgotPasswordPageSuccess
+2016-01-25 18:42:49 INFO  LogLog4j:57 - initialize loginPage
+2016-01-25 18:42:49 INFO  LogLog4j:59 - initialize forgotPasswordPage
+2016-01-25 18:42:49 INFO  LogLog4j:61 - initialize forgotPasswordPageSuccess
+2016-01-25 18:45:42 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:45:42 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:45:42 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:47:09 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:47:09 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:47:09 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:48:19 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:48:19 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:48:19 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:49:39 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:49:39 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:49:39 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:49:39 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:49:39 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:49:43 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:49:43 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:49:43 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:49:43 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:37 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:51:37 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:51:37 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:51:37 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:37 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:40 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:40 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:41 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:41 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:43 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:43 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:46 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:46 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:46 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:46 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:47 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:47 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:50 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:50 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:50 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:50 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:51:52 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:51:52 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:51:54 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:51:54 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:51:54 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:51:54 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:43 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:52:43 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:52:43 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:52:43 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:43 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:47 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:47 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:47 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:47 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:49 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:49 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:51 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:51 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:51 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:51 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:53 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:53 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:55 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:55 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:55 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:52:55 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:52:57 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:52:57 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:52:59 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:52:59 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:52:59 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:00 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:53:01 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:53:01 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:53:03 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:53:03 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:53:03 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:04 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:53:05 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:53:05 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:53:07 INFO  LogLog4j:58 - test with 1 hebrew letter
+2016-01-25 18:53:07 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:53:07 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:53:08 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:11 INFO  LogLog4j:36 - initialize loginPage
+2016-01-25 18:56:11 INFO  LogLog4j:38 - initialize forgotPasswordPage
+2016-01-25 18:56:11 INFO  LogLog4j:40 - initialize forgotPasswordPageSuccess
+2016-01-25 18:56:11 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:11 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:14 INFO  LogLog4j:58 - test with "1 eng letter"
+2016-01-25 18:56:14 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:14 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:15 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:16 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:16 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:19 INFO  LogLog4j:58 - test with "15 eng letter"
+2016-01-25 18:56:19 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:19 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:19 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:21 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:21 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:23 INFO  LogLog4j:58 - test with "1 number"
+2016-01-25 18:56:23 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:23 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:23 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:25 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:25 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:27 INFO  LogLog4j:58 - test with "15 numbers"
+2016-01-25 18:56:27 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:27 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:27 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:29 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:29 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:31 INFO  LogLog4j:58 - test with "1 hebrew letter"
+2016-01-25 18:56:31 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:31 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:31 INFO  LogLog4j:78 - click on restore button
+2016-01-25 18:56:33 INFO  LogLog4j:47 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 18:56:33 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 18:56:35 INFO  LogLog4j:58 - test with "15 hebrew letter"
+2016-01-25 18:56:35 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 18:56:35 INFO  LogLog4j:46 - fill restore field
+2016-01-25 18:56:35 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:00 INFO  LogLog4j:29 - initialize loginPage
+2016-01-25 21:44:00 INFO  LogLog4j:31 - initialize forgotPasswordPage
+2016-01-25 21:44:00 INFO  LogLog4j:33 - initialize forgotPasswordPageSuccess
+2016-01-25 21:44:00 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:00 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:04 INFO  LogLog4j:51 - test with "1 eng letter"
+2016-01-25 21:44:04 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:05 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:05 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:08 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:08 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:11 INFO  LogLog4j:51 - test with "15 eng letter"
+2016-01-25 21:44:11 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:11 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:11 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:13 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:13 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:16 INFO  LogLog4j:51 - test with "1 number"
+2016-01-25 21:44:16 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:16 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:17 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:19 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:19 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:22 INFO  LogLog4j:51 - test with "15 numbers"
+2016-01-25 21:44:22 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:22 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:22 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:25 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:25 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:27 INFO  LogLog4j:51 - test with "1 hebrew letter"
+2016-01-25 21:44:27 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:27 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:28 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:44:54 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 21:44:54 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:44:57 INFO  LogLog4j:51 - test with "15 hebrew letter"
+2016-01-25 21:44:57 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 21:44:57 INFO  LogLog4j:46 - fill restore field
+2016-01-25 21:44:57 INFO  LogLog4j:78 - click on restore button
+2016-01-25 21:45:23 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:45:23 INFO  LogLog4j:85 - TestLoginByRegisteredUser was started....
+2016-01-25 21:45:23 INFO  LogLog4j:86 - Filling username field
+2016-01-25 21:45:24 INFO  LogLog4j:92 - Filling password field
+2016-01-25 21:45:24 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 21:45:25 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:45:25 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 21:45:25 INFO  LogLog4j:86 - Filling username field
+2016-01-25 21:45:26 INFO  LogLog4j:92 - Filling password field
+2016-01-25 21:45:26 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 21:45:27 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:45:27 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 21:45:27 INFO  LogLog4j:86 - Filling username field
+2016-01-25 21:45:27 INFO  LogLog4j:92 - Filling password field
+2016-01-25 21:45:28 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 21:45:29 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:45:29 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 21:45:29 INFO  LogLog4j:86 - Filling username field
+2016-01-25 21:45:29 INFO  LogLog4j:92 - Filling password field
+2016-01-25 21:45:30 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 21:45:31 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 21:45:31 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 21:45:31 INFO  LogLog4j:86 - Filling username field
+2016-01-25 21:45:31 INFO  LogLog4j:92 - Filling password field
+2016-01-25 21:45:32 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 21:45:32 INFO  LogLog4j:57 - QuestionVanderbiltForParentsPetruninTest started.....
+2016-01-25 21:45:32 INFO  LogLog4j:148 - Zeut generated is <275654267>
+2016-01-25 21:45:32 INFO  LogLog4j:134 - Parent email generated is <hore968@yopmail.com>
+2016-01-25 21:45:32 INFO  LogLog4j:120 - Doctor's Username generated is <doctorxqi>
+2016-01-25 21:45:32 INFO  LogLog4j:142 - TeacherEmail generated is <more925@yopmail.com>
+2016-01-25 21:45:32 INFO  LogLog4j:160 - MeetingDate generated is <14/8/2018 08:00>
+2016-01-25 21:45:32 INFO  LogLog4j:95 - Open registration page
+2016-01-25 21:45:33 INFO  LogLog4j:104 - Doctor's Zeut generated is <668954290>
+2016-01-25 21:45:33 INFO  LogLog4j:133 - Filling Doctor username field with <doctorxqi>
+2016-01-25 21:45:34 INFO  LogLog4j:146 - Filling Doctor password field with <LinkCare!!11>
+2016-01-25 21:45:34 INFO  LogLog4j:152 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-01-25 21:45:34 INFO  LogLog4j:127 - Doctor's Email generated is <doctorxqi2336@yopmail.com>
+2016-01-25 21:45:34 INFO  LogLog4j:140 - Filling Doctor email field with <doctorxqi2336@yopmail.com>
+2016-01-25 21:45:35 INFO  LogLog4j:194 - Filling Doctor house number field with <Tel Aviv>
+2016-01-25 21:45:35 INFO  LogLog4j:158 - Filling Doctor firstName field with <userNamedoctorxqi>
+2016-01-25 21:45:36 INFO  LogLog4j:182 - Filling Doctor mobile field with <052-0001110>
+2016-01-25 21:45:36 INFO  LogLog4j:164 - Filling Doctor lastName field with <lastNamedoctorxqi>
+2016-01-25 21:45:37 INFO  LogLog4j:188 - Filling Doctor house number field with <44>
+2016-01-25 21:45:37 INFO  LogLog4j:176 - Filling Doctor street field with <Shenkin>
+2016-01-25 21:45:37 INFO  LogLog4j:170 - Filling Doctor id field with <668954290>
+2016-01-25 21:45:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 21:45:42 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-01-25 21:45:42 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-01-25 21:45:47 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-01-25 21:45:52 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-01-25 21:45:53 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-01-25 21:45:53 INFO  LogLog4j:194 - Filling Teudat zeut <275654267>
+2016-01-25 21:45:53 INFO  LogLog4j:209 - Filling weight <2>
+2016-01-25 21:45:54 INFO  LogLog4j:215 - Filling Email <hore968@yopmail.com>
+2016-01-25 21:45:54 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-01-25 21:45:54 INFO  LogLog4j:235 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (58a25799-1b69-4376-94e6-bc489e3d5d03)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2016-01-25 21:45:54 INFO  LogLog4j:253 - Waiting for <[[FirefoxDriver: firefox on WINDOWS (58a25799-1b69-4376-94e6-bc489e3d5d03)] -> id: btnAddLink]>
+2016-01-25 21:45:55 INFO  LogLog4j:255 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (58a25799-1b69-4376-94e6-bc489e3d5d03)] -> id: btnAddLink]>
+2016-01-25 21:45:55 INFO  LogLog4j:215 - Filling Email <more925@yopmail.com>
+2016-01-25 22:16:35 INFO  LogLog4j:29 - initialize loginPage
+2016-01-25 22:16:35 INFO  LogLog4j:31 - initialize forgotPasswordPage
+2016-01-25 22:16:35 INFO  LogLog4j:33 - initialize forgotPasswordPageSuccess
+2016-01-25 22:16:35 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:16:35 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:16:38 INFO  LogLog4j:51 - test with "1 eng letter"
+2016-01-25 22:16:38 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:16:38 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:16:39 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:16:41 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:16:41 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:16:44 INFO  LogLog4j:51 - test with "15 eng letter"
+2016-01-25 22:16:44 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:16:44 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:16:44 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:16:47 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:16:47 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:16:50 INFO  LogLog4j:51 - test with "1 number"
+2016-01-25 22:16:50 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:16:50 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:16:50 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:16:53 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:16:53 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:16:56 INFO  LogLog4j:51 - test with "15 numbers"
+2016-01-25 22:16:56 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:16:56 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:16:56 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:16:58 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:16:58 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:17:01 INFO  LogLog4j:51 - test with "1 hebrew letter"
+2016-01-25 22:17:01 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:17:01 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:17:02 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:17:27 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:17:27 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:17:30 INFO  LogLog4j:51 - test with "15 hebrew letter"
+2016-01-25 22:17:30 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:17:31 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:17:32 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:17:57 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:17:58 INFO  LogLog4j:85 - TestLoginByRegisteredUser was started....
+2016-01-25 22:17:58 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:17:58 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:17:59 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:17:59 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:18:00 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:18:00 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:18:00 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:18:01 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:18:01 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:18:02 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:18:02 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:18:02 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:18:03 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:18:04 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:18:04 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:18:04 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:18:05 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:18:05 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:18:06 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:18:06 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:18:06 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:18:07 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:18:07 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:18:08 INFO  LogLog4j:57 - QuestionVanderbiltForParentsPetruninTest started.....
+2016-01-25 22:18:08 INFO  LogLog4j:148 - Zeut generated is <774538961>
+2016-01-25 22:18:08 INFO  LogLog4j:134 - Parent email generated is <hore590@yopmail.com>
+2016-01-25 22:18:08 INFO  LogLog4j:120 - Doctor's Username generated is <doctorawh>
+2016-01-25 22:18:08 INFO  LogLog4j:142 - TeacherEmail generated is <more344@yopmail.com>
+2016-01-25 22:18:08 INFO  LogLog4j:160 - MeetingDate generated is <14/1/2016 08:00>
+2016-01-25 22:18:08 INFO  LogLog4j:95 - Open registration page
+2016-01-25 22:18:09 INFO  LogLog4j:104 - Doctor's Zeut generated is <499676336>
+2016-01-25 22:18:09 INFO  LogLog4j:133 - Filling Doctor username field with <doctorawh>
+2016-01-25 22:18:10 INFO  LogLog4j:146 - Filling Doctor password field with <LinkCare!!11>
+2016-01-25 22:18:10 INFO  LogLog4j:152 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-01-25 22:18:11 INFO  LogLog4j:127 - Doctor's Email generated is <doctorawh300@yopmail.com>
+2016-01-25 22:18:11 INFO  LogLog4j:140 - Filling Doctor email field with <doctorawh300@yopmail.com>
+2016-01-25 22:18:11 INFO  LogLog4j:194 - Filling Doctor house number field with <Tel Aviv>
+2016-01-25 22:18:11 INFO  LogLog4j:158 - Filling Doctor firstName field with <userNamedoctorawh>
+2016-01-25 22:18:12 INFO  LogLog4j:182 - Filling Doctor mobile field with <052-0001110>
+2016-01-25 22:18:12 INFO  LogLog4j:164 - Filling Doctor lastName field with <lastNamedoctorawh>
+2016-01-25 22:18:13 INFO  LogLog4j:188 - Filling Doctor house number field with <44>
+2016-01-25 22:18:13 INFO  LogLog4j:176 - Filling Doctor street field with <Shenkin>
+2016-01-25 22:18:13 INFO  LogLog4j:170 - Filling Doctor id field with <499676336>
+2016-01-25 22:18:19 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 22:18:19 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-01-25 22:18:19 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-01-25 22:18:24 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-01-25 22:18:29 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-01-25 22:18:30 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-01-25 22:18:30 INFO  LogLog4j:194 - Filling Teudat zeut <774538961>
+2016-01-25 22:18:30 INFO  LogLog4j:209 - Filling weight <2>
+2016-01-25 22:18:31 INFO  LogLog4j:215 - Filling Email <hore590@yopmail.com>
+2016-01-25 22:18:31 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-01-25 22:18:31 INFO  LogLog4j:235 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (c54a984e-d6ab-449d-bd57-5a79cc0d87ae)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2016-01-25 22:18:32 INFO  LogLog4j:253 - Waiting for <[[FirefoxDriver: firefox on WINDOWS (c54a984e-d6ab-449d-bd57-5a79cc0d87ae)] -> id: btnAddLink]>
+2016-01-25 22:18:32 INFO  LogLog4j:255 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (c54a984e-d6ab-449d-bd57-5a79cc0d87ae)] -> id: btnAddLink]>
+2016-01-25 22:18:32 INFO  LogLog4j:215 - Filling Email <more344@yopmail.com>
+2016-01-25 22:24:46 INFO  LogLog4j:29 - initialize loginPage
+2016-01-25 22:24:47 INFO  LogLog4j:31 - initialize forgotPasswordPage
+2016-01-25 22:24:47 INFO  LogLog4j:33 - initialize forgotPasswordPageSuccess
+2016-01-25 22:24:47 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:24:47 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:24:49 INFO  LogLog4j:51 - test with "1 eng letter"
+2016-01-25 22:24:49 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:24:50 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:24:50 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:24:53 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:24:53 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:24:56 INFO  LogLog4j:51 - test with "15 eng letter"
+2016-01-25 22:24:56 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:24:56 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:24:56 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:24:59 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:24:59 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:25:02 INFO  LogLog4j:51 - test with "1 number"
+2016-01-25 22:25:02 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:25:02 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:25:03 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:25:05 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:25:05 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:25:08 INFO  LogLog4j:51 - test with "15 numbers"
+2016-01-25 22:25:08 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:25:08 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:25:09 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:25:11 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:25:11 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:25:14 INFO  LogLog4j:51 - test with "1 hebrew letter"
+2016-01-25 22:25:14 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:25:14 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:25:14 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:25:40 INFO  LogLog4j:40 - @BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage
+2016-01-25 22:25:40 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:25:43 INFO  LogLog4j:51 - test with "15 hebrew letter"
+2016-01-25 22:25:43 INFO  LogLog4j:64 - waiting until forgot page is loaded
+2016-01-25 22:25:43 INFO  LogLog4j:46 - fill restore field
+2016-01-25 22:25:43 INFO  LogLog4j:78 - click on restore button
+2016-01-25 22:26:10 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:26:10 INFO  LogLog4j:85 - TestLoginByRegisteredUser was started....
+2016-01-25 22:26:10 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:26:11 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:26:12 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:26:13 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:26:13 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:26:13 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:26:14 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:26:14 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:26:15 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:26:15 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:26:15 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:26:16 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:26:16 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:26:17 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:26:17 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:26:17 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:26:18 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:26:19 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:26:19 INFO  LogLog4j:79 - Opening Login page
+2016-01-25 22:26:20 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-01-25 22:26:20 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:26:20 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:26:21 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:26:21 INFO  LogLog4j:57 - QuestionVanderbiltForParentsPetruninTest started.....
+2016-01-25 22:26:22 INFO  LogLog4j:148 - Zeut generated is <593702913>
+2016-01-25 22:26:22 INFO  LogLog4j:134 - Parent email generated is <hore945@yopmail.com>
+2016-01-25 22:26:22 INFO  LogLog4j:120 - Doctor's Username generated is <doctoruty>
+2016-01-25 22:26:22 INFO  LogLog4j:142 - TeacherEmail generated is <more331@yopmail.com>
+2016-01-25 22:26:22 INFO  LogLog4j:160 - MeetingDate generated is <7/6/2016 08:00>
+2016-01-25 22:26:22 INFO  LogLog4j:95 - Open registration page
+2016-01-25 22:26:23 INFO  LogLog4j:104 - Doctor's Zeut generated is <293486270>
+2016-01-25 22:26:23 INFO  LogLog4j:133 - Filling Doctor username field with <doctoruty>
+2016-01-25 22:26:23 INFO  LogLog4j:146 - Filling Doctor password field with <LinkCare!!11>
+2016-01-25 22:26:23 INFO  LogLog4j:152 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-01-25 22:26:24 INFO  LogLog4j:127 - Doctor's Email generated is <doctoruty5679@yopmail.com>
+2016-01-25 22:26:24 INFO  LogLog4j:140 - Filling Doctor email field with <doctoruty5679@yopmail.com>
+2016-01-25 22:26:24 INFO  LogLog4j:194 - Filling Doctor house number field with <Tel Aviv>
+2016-01-25 22:26:25 INFO  LogLog4j:158 - Filling Doctor firstName field with <userNamedoctoruty>
+2016-01-25 22:26:25 INFO  LogLog4j:182 - Filling Doctor mobile field with <052-0001110>
+2016-01-25 22:26:26 INFO  LogLog4j:164 - Filling Doctor lastName field with <lastNamedoctoruty>
+2016-01-25 22:26:26 INFO  LogLog4j:188 - Filling Doctor house number field with <44>
+2016-01-25 22:26:27 INFO  LogLog4j:176 - Filling Doctor street field with <Shenkin>
+2016-01-25 22:26:27 INFO  LogLog4j:170 - Filling Doctor id field with <293486270>
+2016-01-25 22:26:32 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 22:26:32 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-01-25 22:26:33 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-01-25 22:26:38 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-01-25 22:26:43 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-01-25 22:26:43 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-01-25 22:26:43 INFO  LogLog4j:194 - Filling Teudat zeut <593702913>
+2016-01-25 22:26:44 INFO  LogLog4j:209 - Filling weight <2>
+2016-01-25 22:26:44 INFO  LogLog4j:215 - Filling Email <hore945@yopmail.com>
+2016-01-25 22:26:45 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-01-25 22:26:45 INFO  LogLog4j:235 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (5dc5180c-87ae-4d10-a249-0952e9be4136)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2016-01-25 22:26:45 INFO  LogLog4j:253 - Waiting for <[[FirefoxDriver: firefox on WINDOWS (5dc5180c-87ae-4d10-a249-0952e9be4136)] -> id: btnAddLink]>
+2016-01-25 22:26:45 INFO  LogLog4j:255 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (5dc5180c-87ae-4d10-a249-0952e9be4136)] -> id: btnAddLink]>
+2016-01-25 22:26:46 INFO  LogLog4j:215 - Filling Email <more331@yopmail.com>
+2016-01-25 22:33:39 INFO  LogLog4j:148 - Zeut generated is <762686392>
+2016-01-25 22:33:39 INFO  LogLog4j:134 - Parent email generated is <hore902@yopmail.com>
+2016-01-25 22:33:39 INFO  LogLog4j:142 - TeacherEmail generated is <more699@yopmail.com>
+2016-01-25 22:33:39 INFO  LogLog4j:160 - MeetingDate generated is <8/4/2016 08:00>
+2016-01-25 22:33:39 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:33:41 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:33:42 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:33:42 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 22:34:39 INFO  LogLog4j:148 - Zeut generated is <911496370>
+2016-01-25 22:34:39 INFO  LogLog4j:134 - Parent email generated is <hore542@yopmail.com>
+2016-01-25 22:34:39 INFO  LogLog4j:142 - TeacherEmail generated is <more288@yopmail.com>
+2016-01-25 22:34:39 INFO  LogLog4j:160 - MeetingDate generated is <24/6/2018 08:00>
+2016-01-25 22:34:41 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:34:43 INFO  LogLog4j:92 - Filling password field
+2016-01-25 22:34:43 INFO  LogLog4j:143 - Clicking on Login button
+2016-01-25 22:34:46 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-01-25 22:34:46 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-01-25 22:34:46 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-01-25 22:34:51 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-01-25 22:34:51 INFO  LogLog4j:91 - Create new patient started
+2016-01-25 22:34:51 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-01-25 22:34:52 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-01-25 22:34:52 INFO  LogLog4j:194 - Filling Teudat zeut <911496370>
+2016-01-25 22:34:52 INFO  LogLog4j:209 - Filling weight <2>
+2016-01-25 22:34:53 INFO  LogLog4j:215 - Filling Email <hore542@yopmail.com>
+2016-01-25 22:34:53 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-01-25 22:34:53 INFO  LogLog4j:235 - Clicking button Send Email <[[FirefoxDriver: firefox on WINDOWS (b7f0838f-1649-4755-aed7-31331222a587)] -> id: ctl00_MainContent_AddEditAccount1_BtnSearch_input]>
+2016-01-25 22:34:54 INFO  LogLog4j:253 - Waiting for <[[FirefoxDriver: firefox on WINDOWS (b7f0838f-1649-4755-aed7-31331222a587)] -> id: btnAddLink]>
+2016-01-25 22:34:54 INFO  LogLog4j:255 - Clicking on <[[FirefoxDriver: firefox on WINDOWS (b7f0838f-1649-4755-aed7-31331222a587)] -> id: btnAddLink]>
+2016-01-25 22:34:54 INFO  LogLog4j:215 - Filling Email <more288@yopmail.com>
+2016-01-25 22:34:56 INFO  LogLog4j:86 - Filling username field
+2016-01-25 22:34:58 INFO  LogLog4j:86 - Filling username field

@@ -10,7 +10,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.9.9</version>
+            <version>6.9.10</version>
         </dependency>
         <dependency>
             <groupId>com.github.yev</groupId>
@@ -92,15 +92,16 @@
             <properties>
                 <capabilities>/firefox.capabilities</capabilities>
             </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
         </profile>
         <profile>
             <id>chrome</id>
             <properties>
                 <capabilities>/chrome.capabilities</capabilities>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
         <profile>
             <id>ie</id>
