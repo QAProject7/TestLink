@@ -57,7 +57,6 @@ public class doctorRegistrationTest {
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).clear();
         driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email"))
                 .sendKeys(DocLogin + "@mail.com");
-        //String mailVar = loginName + millis + "@mail.com";
         System.out.println("mail is: " + DocLogin + "@mail.com");
         try {
             assertEquals(DocLogin + "@mail.com", driver
