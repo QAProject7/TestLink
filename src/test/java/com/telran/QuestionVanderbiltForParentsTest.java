@@ -20,7 +20,7 @@ import java.io.IOException;
 /**
  * Created by PetruninLeonid
  */
-public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //ГОТОВ. ИСПРАВЕН (15.12.15)
+public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТОВ. ИСПРАВЕН (15.12.15)
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     public static String email;
@@ -54,7 +54,7 @@ public class QuestionVanderbiltForParentsPetruninTest extends TestNgTestBase{ //
         createNewPatientPage = PageFactory.initElements(driver, CreateNewPatientPage.class);
         createNewPatientTest = PageFactory.initElements(driver, CreateNewPatientTest.class);
 
-        Log.info("QuestionVanderbiltForParentsPetruninTest started.....");
+        Log.info("QuestionVanderbiltForParentsTest started.....");
         zeut = createNewPatientPage.generateZeut();
         email = createNewPatientPage.generateParentEmail();
         username = email;

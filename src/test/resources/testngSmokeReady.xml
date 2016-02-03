@@ -10,8 +10,8 @@
         <classes>
             <!-- <class name="com.telran.RestorePasswordLeonidTest"/>
              <class name="com.telran.LoginTests"/>
-             <class name="com.telran.QuestionVanderbiltForParentsPetruninTest"/>
-            <class name="com.telran.CreateNewPatientTest"/>-->
+             <class name="com.telran.QuestionVanderbiltForParentsTest"/>
+             <class name="com.telran.CreateNewPatientTest"/>-->
 
           </classes>
 
