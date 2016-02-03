@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.Date;
 
 @org.testng.annotations.Listeners(FailTestScreenshotListener.class)
-public class LoginMaksimTest extends TestNgTestBase {
+public class LoginTests extends TestNgTestBase {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String registered_username = "3339Doctor";
     public static String registered_password = "LinkCare!!11";
@@ -37,7 +37,7 @@ public class LoginMaksimTest extends TestNgTestBase {
         loginPage
                 .fillUsernameField(login)
                 .fillPasswordField(pass)
-                .clickOnTermsCheckbox()
+               // .clickOnTermsCheckbox()
                 .clickOnLoginButton();
         Assert.assertTrue(loginPage.isLoginUnsuccessfulAlertMessageDisplayed());
         Log.info("TestLoginWithExtData stoped....");
@@ -86,7 +86,7 @@ public class LoginMaksimTest extends TestNgTestBase {
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
-                .clickOnTermsCheckbox()
+                //.clickOnTermsCheckbox()
                 .clickOnLoginButton();
         Assert.assertFalse(loginPage.isPageOpened());
         loginPage.clickLogOut();

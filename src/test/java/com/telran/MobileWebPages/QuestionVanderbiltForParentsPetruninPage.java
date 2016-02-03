@@ -13,7 +13,7 @@ import java.util.List;
 import static org.testng.Assert.assertTrue;
 
 /**
- * Created by Iakov Volf
+ * Created by PetruninLeonid
  */
 public class QuestionVanderbiltForParentsPetruninPage extends Page {
 
