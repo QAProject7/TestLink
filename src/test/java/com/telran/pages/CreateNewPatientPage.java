@@ -74,9 +74,6 @@ public class CreateNewPatientPage extends Page {
     WebElement questMenu;
 
 
-//*[@id='popup']/div[6]/iframe
-
-
     @FindBy(id = "ctl00_MainContent_AddEditAccount1_RDDL_Therapists")
     WebElement buttonChooseTherapist;
 
@@ -86,7 +83,7 @@ public class CreateNewPatientPage extends Page {
     @FindBy(id = "MainContent_AddEditAccount1_TBMeetingMinutes")
     WebElement inputMeetingTime;
 
-    @FindBy(id = "MainContent_AddEditAccount1_SaveAccount")
+    @FindBy(xpath = "//*[@id='MainContent_AddEditAccount1_SaveAccount']")
     WebElement buttonSaveAccount;
 
     @FindBy(id = "MainContent_AddEditAccount1_Label1")
@@ -231,6 +228,7 @@ public class CreateNewPatientPage extends Page {
 
     public CreateNewPatientPage sendAdultEmail() throws IOException, InterruptedException {
         Log.info("Waiting for button Send Email");
+        Thread.sleep(3000);
         waitUntilElementIsLoaded(sendFirstEmailButton);
         Log.info("Clicking button Send Email <" + sendFirstEmailButton + ">");
         clickElement(sendFirstEmailButton);
@@ -251,6 +249,7 @@ public class CreateNewPatientPage extends Page {
 
     public CreateNewPatientPage addTeacher() throws IOException, InterruptedException {
         Log.info("Waiting for <" + addNewAdultButton + ">");
+        Thread.sleep(3000);
         waitUntilElementIsLoaded(addNewAdultButton);
         Log.info("Clicking on <" + addNewAdultButton + ">");
         clickElement(addNewAdultButton);

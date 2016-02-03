@@ -70,11 +70,12 @@ public class CreateNewPatientTest extends TestNgTestBase {
                     .addTeacher()
                     .filltEmailField(emailTeacher)
                     .sendAdultEmail();
-            Thread.sleep(4000);
+          //  Thread.sleep(7000);
+            Log.info("PAUSE 2......................");
             createNewPatientpage.fillMeetingDateAndTime(meetingDate)
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
-            Thread.sleep(4000);
+           // Thread.sleep(15000);
             // doctorsPage.waitUntilMainPageIsLoaded();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
