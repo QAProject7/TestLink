@@ -137,7 +137,7 @@ public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТО
 
     public void createNewPatient() { //Not in work
         try {
-            org.seleniumhq.jetty7.util.log.Log.info("Create new patient started");
+            Log.info("Create new patient started");
             Thread.sleep(5000);
 
             createNewPatientPage.fillFirstNameField("PatientChildFirst")

@@ -1,9 +1,9 @@
 package com.telran;
 
 import com.telran.pages.*;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
-import org.seleniumhq.jetty7.util.log.Log;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,6 +18,7 @@ import static org.testng.Assert.assertTrue;
  * Created by Naryck, Maksim
  */
 public class QuestionnaireVladimirTest extends TestNgTestBase {
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String email;// = "metupelet06@yopmail.com";
     public static String zeut;
     public static String password = "LinkCare!!11";

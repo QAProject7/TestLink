@@ -7,6 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import ru.stqa.selenium.factory.WebDriverFactory;
+import ru.stqa.selenium.factory.WebDriverFactoryMode;
 
 import java.io.IOException;
 
