@@ -3368,3 +3368,29 @@
 2016-01-25 22:34:54 INFO  LogLog4j:215 - Filling Email <more288@yopmail.com>
 2016-01-25 22:34:56 INFO  LogLog4j:86 - Filling username field
 2016-01-25 22:34:58 INFO  LogLog4j:86 - Filling username field
+2016-05-30 23:05:48 INFO  LogLog4j:145 - Zeut generated is <415630607>
+2016-05-30 23:05:48 INFO  LogLog4j:131 - Parent email generated is <hore322@yopmail.com>
+2016-05-30 23:05:48 INFO  LogLog4j:139 - TeacherEmail generated is <more211@yopmail.com>
+2016-05-30 23:05:48 INFO  LogLog4j:157 - MeetingDate generated is <10/2/2016 08:00>
+2016-05-30 23:08:06 INFO  LogLog4j:145 - Zeut generated is <196449821>
+2016-05-30 23:08:06 INFO  LogLog4j:131 - Parent email generated is <hore80@yopmail.com>
+2016-05-30 23:08:06 INFO  LogLog4j:139 - TeacherEmail generated is <more432@yopmail.com>
+2016-05-30 23:08:06 INFO  LogLog4j:157 - MeetingDate generated is <26/9/2017 08:00>
+2016-05-30 23:09:14 INFO  LogLog4j:145 - Zeut generated is <358110823>
+2016-05-30 23:09:14 INFO  LogLog4j:131 - Parent email generated is <hore275@yopmail.com>
+2016-05-30 23:09:14 INFO  LogLog4j:139 - TeacherEmail generated is <more416@yopmail.com>
+2016-05-30 23:09:14 INFO  LogLog4j:157 - MeetingDate generated is <3/7/2016 08:00>
+2016-05-30 23:09:15 INFO  LogLog4j:86 - Filling username field
+2016-05-30 23:09:16 INFO  LogLog4j:92 - Filling password field
+2016-05-30 23:09:16 INFO  LogLog4j:143 - Clicking on Login button
+2016-05-30 23:09:26 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-05-30 23:09:26 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-05-30 23:09:26 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-05-30 23:09:31 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-05-30 23:09:31 INFO  LogLog4j:92 - Create new patient started
+2016-05-30 23:09:32 INFO  LogLog4j:171 - Filling First Name <PatientChildFirst>
+2016-05-30 23:09:32 INFO  LogLog4j:178 - Filling Last Name <PatientChildLast>
+2016-05-30 23:09:32 INFO  LogLog4j:191 - Filling Teudat zeut <358110823>
+2016-05-30 23:09:33 INFO  LogLog4j:206 - Filling weight <2>
+2016-05-30 23:09:33 INFO  LogLog4j:212 - Filling Email <hore275@yopmail.com>
+2016-05-30 23:09:33 INFO  LogLog4j:230 - Waiting for button Send Email
