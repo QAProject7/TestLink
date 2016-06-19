@@ -73,6 +73,9 @@ public class CreateNewPatientPage extends Page {
     @FindBy(xpath = "//*[@id='ctl00_DisplayImportantLinks1_myMenu']/ul/li[1]/a")
     WebElement questMenu;
 
+    @FindBy(id ="ctl00_MainContent_AddEditAccount1_TxtSearchCellPhone")
+    WebElement telefonFields;
+
 
     @FindBy(id = "ctl00_MainContent_AddEditAccount1_RDDL_Therapists")
     WebElement buttonChooseTherapist;

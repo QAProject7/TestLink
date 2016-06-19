@@ -3394,3 +3394,66 @@
 2016-05-30 23:09:33 INFO  LogLog4j:206 - Filling weight <2>
 2016-05-30 23:09:33 INFO  LogLog4j:212 - Filling Email <hore275@yopmail.com>
 2016-05-30 23:09:33 INFO  LogLog4j:230 - Waiting for button Send Email
+2016-06-07 15:43:49 INFO  LogLog4j:145 - Zeut generated is <405116104>
+2016-06-07 15:43:49 INFO  LogLog4j:131 - Parent email generated is <hore632@yopmail.com>
+2016-06-07 15:43:49 INFO  LogLog4j:139 - TeacherEmail generated is <more684@yopmail.com>
+2016-06-07 15:43:49 INFO  LogLog4j:157 - MeetingDate generated is <26/3/2017 08:00>
+2016-06-07 15:43:49 INFO  LogLog4j:86 - Filling username field
+2016-06-07 15:43:55 INFO  LogLog4j:92 - Filling password field
+2016-06-07 15:43:56 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-07 15:44:09 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-07 15:44:09 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-06-07 15:44:10 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-06-07 15:44:15 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-06-07 15:44:17 INFO  LogLog4j:92 - Create new patient started
+2016-06-07 15:44:17 INFO  LogLog4j:171 - Filling First Name <PatientChildFirst>
+2016-06-07 15:44:18 INFO  LogLog4j:178 - Filling Last Name <PatientChildLast>
+2016-06-07 15:44:19 INFO  LogLog4j:191 - Filling Teudat zeut <405116104>
+2016-06-07 15:44:19 INFO  LogLog4j:206 - Filling weight <2>
+2016-06-07 15:44:20 INFO  LogLog4j:212 - Filling Email <hore632@yopmail.com>
+2016-06-07 15:44:21 INFO  LogLog4j:230 - Waiting for button Send Email
+2016-06-07 15:44:58 INFO  LogLog4j:86 - Filling username field
+2016-06-07 15:45:01 INFO  LogLog4j:86 - Filling username field
+2016-06-15 12:55:36 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 12:57:39 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:03:20 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:04:19 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:06:00 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:07:07 INFO  LogLog4j:148 - Zeut generated is <231871740>
+2016-06-15 13:07:07 INFO  LogLog4j:134 - Parent email generated is <hore29@yopmail.com>
+2016-06-15 13:07:07 INFO  LogLog4j:142 - TeacherEmail generated is <more656@yopmail.com>
+2016-06-15 13:07:07 INFO  LogLog4j:160 - MeetingDate generated is <8/7/2017 08:00>
+2016-06-15 13:49:46 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:53:16 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 13:58:31 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 14:58:00 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 15:10:26 INFO  LogLog4j:79 - Opening Login page
+2016-06-15 15:10:32 INFO  LogLog4j:86 - Filling username field
+2016-06-15 15:10:32 INFO  LogLog4j:92 - Filling password field
+2016-06-15 15:10:33 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-15 15:10:33 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-16 14:25:39 INFO  LogLog4j:79 - Opening Login page
+2016-06-16 14:25:45 INFO  LogLog4j:86 - Filling username field
+2016-06-16 14:25:46 INFO  LogLog4j:92 - Filling password field
+2016-06-16 14:25:47 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-16 14:25:47 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-16 15:32:26 INFO  LogLog4j:79 - Opening Login page
+2016-06-16 15:32:30 INFO  LogLog4j:86 - Filling username field
+2016-06-16 15:32:31 INFO  LogLog4j:92 - Filling password field
+2016-06-16 15:32:32 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-16 15:32:32 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-16 15:57:28 INFO  LogLog4j:79 - Opening Login page
+2016-06-16 15:57:31 INFO  LogLog4j:86 - Filling username field
+2016-06-16 15:57:32 INFO  LogLog4j:92 - Filling password field
+2016-06-16 15:57:33 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-16 15:57:33 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-16 16:08:12 INFO  LogLog4j:79 - Opening Login page
+2016-06-16 16:08:16 INFO  LogLog4j:86 - Filling username field
+2016-06-16 16:08:16 INFO  LogLog4j:92 - Filling password field
+2016-06-16 16:08:17 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-16 16:08:17 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 12:41:34 INFO  LogLog4j:79 - Opening Login page
+2016-06-19 12:41:37 INFO  LogLog4j:86 - Filling username field
+2016-06-19 12:41:37 INFO  LogLog4j:92 - Filling password field
+2016-06-19 12:41:37 INFO  LogLog4j:143 - Clicking on Login button
+2016-06-19 12:41:38 INFO  LogLog4j:66 - Waiting for Main page is loaded

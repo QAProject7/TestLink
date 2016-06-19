@@ -96,6 +96,7 @@ public class LoginPage extends Page {
     }
 
     public LoginPage clickOnTermsCheckbox() {
+        Log.info("Clicking on terms ofCheckBox");
         clickElement(termsCheckBox);
         return this;
     }
@@ -165,10 +166,10 @@ public class LoginPage extends Page {
     }
 
     public void login(String username, String password) {
-        //waitUntilLoginPageIsLoaded();
+        waitUntilLoginPageIsLoaded();
         fillUsernameField(username);
         fillPasswordField(password);
-        //clickOnTermsCheckbox();
+        clickOnTermsCheckbox();
         clickOnLoginButton();
     }
 

@@ -3,6 +3,7 @@ package com.telran;
 import com.telran.util.PropertyLoader;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -28,7 +29,7 @@ public class TestNgTestBase {
     capabilities = PropertyLoader.loadCapabilities();
     // WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
     //driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
-    driver = new FirefoxDriver();
+    driver = new ChromeDriver();
   }
 
   public static WebDriver getDriver() {
