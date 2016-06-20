@@ -3457,3 +3457,49 @@
 2016-06-19 12:41:37 INFO  LogLog4j:92 - Filling password field
 2016-06-19 12:41:37 INFO  LogLog4j:143 - Clicking on Login button
 2016-06-19 12:41:38 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 13:53:36 INFO  LogLog4j:79 - Opening Login page
+2016-06-19 13:53:38 INFO  LogLog4j:86 - Filling username field
+2016-06-19 13:53:39 INFO  LogLog4j:92 - Filling password field
+2016-06-19 13:53:39 INFO  LogLog4j:99 - Clicking on terms ofCheckBox
+2016-06-19 13:53:39 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-19 13:53:39 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 13:54:50 INFO  LogLog4j:79 - Opening Login page
+2016-06-19 13:54:53 INFO  LogLog4j:86 - Filling username field
+2016-06-19 13:54:53 INFO  LogLog4j:92 - Filling password field
+2016-06-19 13:54:53 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-19 13:54:56 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 13:54:56 INFO  LogLog4j:57 - Open patient page by teudat <779294107>
+2016-06-19 14:00:43 INFO  LogLog4j:79 - Opening Login page
+2016-06-19 14:00:45 INFO  LogLog4j:86 - Filling username field
+2016-06-19 14:00:46 INFO  LogLog4j:92 - Filling password field
+2016-06-19 14:00:46 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-19 14:00:49 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 14:00:49 INFO  LogLog4j:57 - Open patient page by teudat <081690273>
+2016-06-19 14:00:49 INFO  LogLog4j:60 - Clicking 'Green' button
+2016-06-19 14:01:14 INFO  LogLog4j:188 - Wait until drug page is loaded
+2016-06-19 14:30:20 INFO  LogLog4j:79 - Opening Login page
+2016-06-19 14:30:23 INFO  LogLog4j:86 - Filling username field
+2016-06-19 14:30:23 INFO  LogLog4j:92 - Filling password field
+2016-06-19 14:30:24 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-19 14:30:28 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-19 14:30:28 INFO  LogLog4j:57 - Open patient page by teudat <081690273>
+2016-06-19 14:30:29 INFO  LogLog4j:60 - Clicking 'Green' button
+2016-06-19 14:31:24 INFO  LogLog4j:188 - Wait until drug page is loaded
+2016-06-20 14:07:33 INFO  LogLog4j:79 - Opening Login page
+2016-06-20 14:07:38 INFO  LogLog4j:86 - Filling username field
+2016-06-20 14:07:39 INFO  LogLog4j:92 - Filling password field
+2016-06-20 14:07:40 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-20 14:07:51 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-20 14:07:51 INFO  LogLog4j:57 - Open patient page by teudat <081690273>
+2016-06-20 14:07:51 INFO  LogLog4j:60 - Clicking 'Green' button
+2016-06-20 14:08:14 INFO  LogLog4j:188 - Wait until drug page is loaded
+2016-06-20 15:23:35 INFO  LogLog4j:79 - Opening Login page
+2016-06-20 15:23:38 INFO  LogLog4j:86 - Filling username field
+2016-06-20 15:23:38 INFO  LogLog4j:92 - Filling password field
+2016-06-20 15:23:38 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-20 15:23:41 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-20 15:23:42 INFO  LogLog4j:57 - Open patient page by teudat <081690273>
+2016-06-20 15:23:42 INFO  LogLog4j:60 - Clicking 'Green' button
+2016-06-20 15:23:50 INFO  LogLog4j:188 - Wait until drug page is loaded
+2016-06-20 15:24:01 INFO  LogLog4j:249 - Click time line element
+2016-06-20 15:24:05 INFO  LogLog4j:63 - We are on frame page

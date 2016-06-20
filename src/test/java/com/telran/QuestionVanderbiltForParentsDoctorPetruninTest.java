@@ -20,7 +20,7 @@ import org.testng.annotations.Test;
 public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBase {  //ТЕСТ ГОТОВ!
     public static String registered_username = "1003Doctor"; //Данные входа доктора
     public static String registered_password = "LinkCare!!11";//Данные входа доктора
-    public static String teudat = "779294107";//Данные входа доктора
+    public static String teudat = "081690273";//Данные входа доктора
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public LoginPage loginPage; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public DoctorsPage doctorsPage;
@@ -44,7 +44,6 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
         loginPage
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
-                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
        doctorsPage.waitUntilMainPageIsLoaded();
     }

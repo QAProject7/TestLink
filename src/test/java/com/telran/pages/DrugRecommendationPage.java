@@ -154,9 +154,9 @@ public class DrugRecommendationPage extends Page {
     private WebElement group7_linkAdd;
     @FindBy(id = "ctl00_MainContent_ctl10_RadTreeList1_ctl03_ExpandCollapseButton")
     private WebElement expandCollapseButton;
-    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/showIcon1.png\"]")
+    @FindBy(xpath = "//*[@id='MainContent_ctl05_chartDiv']//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src=\"../images/copyReport.png\"]")
     private WebElement timeLineQst;
-    @FindBy(xpath = "//*[contains(text(),'שאלון וונדרבילט להורה')]//img[@src='../images/showIcon1.png']/../..[contains(text(), 'שאלון וונדרבילט להורה')]")
+    @FindBy(xpath = "//*[contains(text(),'שאלון וונדרבילט להורה - טרם התקבלו')]//img[@src='../images/copyReport.png']")
     private WebElement tebleSelect;
 
    /* @FindBy(xpath = "/*//*[@id='form1']/*//*[@type='button'][@value='export pdf']")
