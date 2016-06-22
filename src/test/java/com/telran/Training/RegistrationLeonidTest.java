@@ -1,7 +1,7 @@
 package com.telran.Training;
 
 import com.telran.pages.ForgotPasswordPageLeonid;
-import com.telran.pages.ForgotPasswordPageSuccessLeonid;
+import com.telran.pages.ForgotPasswordSuccessLeonidPage;
 import com.telran.pages.LoginPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,14 +21,14 @@ public class RegistrationLeonidTest {
 
     private LoginPage loginPage;
     private ForgotPasswordPageLeonid forgotPasswordPage;
-    private ForgotPasswordPageSuccessLeonid forgotPasswordSuccessPage;
+    private ForgotPasswordSuccessLeonidPage forgotPasswordSuccessPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
         driver = new FirefoxDriver();
         loginPage = PageFactory.initElements(driver,LoginPage.class);
         forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
-        forgotPasswordSuccessPage = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
+        forgotPasswordSuccessPage = PageFactory.initElements(driver, ForgotPasswordSuccessLeonidPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)

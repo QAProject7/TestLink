@@ -2,15 +2,18 @@ package com.telran;
 
 
 import com.telran.pages.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
+public class СhangePassRegPatientOlgaTest {
     public static String firstName = "Moshe";
     public static String lastName = "Levi";
     public static String email = "";
@@ -21,21 +24,25 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     public static String city = "Ashdod";
     public static String houseNumber = "33";
     public static String date = "1990-11-05";
+    private String emailTeacher;
 
-//    public WebDriver driver;
+    public WebDriver driver;
+    private String driverPath = "C:\\Telran\\browserDriver\\";
 
     public CreateNewPatientTest createNewPatientPage1;
     public CreateNewPatientPage createNewPatientPage;
     public ChangePassRegistrationPatientOlgaPage changePassPage;
 
     private LoginPage loginPage;
-    private String emailTeacher;
     private DoctorsPage doctorsPage;
     private ChronicQuestionnaire3VladimirPage paitientPage;
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
 //        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
+        driver = new ChromeDriver();
+
         paitientPage = PageFactory.initElements(driver, ChronicQuestionnaire3VladimirPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         doctorsPage = PageFactory.initElements(driver, DoctorsPage.class);
@@ -356,7 +363,10 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
             e.printStackTrace();
         }
     }
-
+    @AfterClass(alwaysRun = true)
+    public void tearDown(){
+        this.driver.quit();
+    }
 
 
 }

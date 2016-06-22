@@ -71,7 +71,7 @@ public class LoginPage extends Page {
 
     public LoginPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = baseUrl;
+        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
@@ -162,6 +162,7 @@ public class LoginPage extends Page {
     }
 
     public void openForgotPasswordPage() {
+        Log.info("Clicking on forgotPassLink");
         clickElement(forgotPassLink);
     }
 

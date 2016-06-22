@@ -25,7 +25,7 @@ public class ForgotPasswordPageLeonid extends Page {
     WebElement backButton;
 
     @FindBy(id = "MainContent_PasswordRecovery_UserNameContainerID_UserName")
-    WebElement restoreField;
+    WebElement restoreUserNameField;
 
 
     public ForgotPasswordPageLeonid(WebDriver driver) {
@@ -44,7 +44,7 @@ public class ForgotPasswordPageLeonid extends Page {
 
     public ForgotPasswordPageLeonid fillRestoreField(String login) {
         Log.info("fill restore field");
-        setElementText(restoreField, login);
+        setElementText(restoreUserNameField, login);
         return this;
     }
 
