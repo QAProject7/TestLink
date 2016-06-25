@@ -17,7 +17,7 @@ public class LoginIrinaPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
-    @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
+    @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")  //zor meshtamesh
     WebElement goToRegLink;
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;

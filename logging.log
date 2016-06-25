@@ -3503,3 +3503,222 @@
 2016-06-20 15:23:50 INFO  LogLog4j:188 - Wait until drug page is loaded
 2016-06-20 15:24:01 INFO  LogLog4j:249 - Click time line element
 2016-06-20 15:24:05 INFO  LogLog4j:63 - We are on frame page
+2016-06-24 11:32:29 INFO  LogLog4j:148 - Zeut generated is <639788264>
+2016-06-24 11:32:29 INFO  LogLog4j:134 - Parent email generated is <hore308@yopmail.com>
+2016-06-24 11:32:29 INFO  LogLog4j:142 - TeacherEmail generated is <more80@yopmail.com>
+2016-06-24 11:32:29 INFO  LogLog4j:160 - MeetingDate generated is <22/4/2018 08:00>
+2016-06-24 11:32:33 INFO  LogLog4j:86 - Filling username field
+2016-06-24 11:32:33 INFO  LogLog4j:92 - Filling password field
+2016-06-24 11:32:34 INFO  LogLog4j:99 - Clicking on terms ofCheckBox
+2016-06-24 11:32:34 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 11:32:34 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-24 11:33:01 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-06-24 11:33:01 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-06-24 11:33:06 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-06-24 11:33:06 INFO  LogLog4j:92 - Create new patient started
+2016-06-24 11:33:06 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-06-24 11:33:06 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-06-24 11:33:06 INFO  LogLog4j:194 - Filling Teudat zeut <639788264>
+2016-06-24 11:33:06 INFO  LogLog4j:209 - Filling weight <2>
+2016-06-24 11:33:07 INFO  LogLog4j:215 - Filling Email <hore308@yopmail.com>
+2016-06-24 11:33:07 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-06-24 12:16:06 INFO  LogLog4j:148 - Zeut generated is <320020050>
+2016-06-24 12:16:06 INFO  LogLog4j:134 - Parent email generated is <hore501@yopmail.com>
+2016-06-24 12:16:06 INFO  LogLog4j:142 - TeacherEmail generated is <more646@yopmail.com>
+2016-06-24 12:16:06 INFO  LogLog4j:160 - MeetingDate generated is <5/7/2016 08:00>
+2016-06-24 12:16:11 INFO  LogLog4j:86 - Filling username field
+2016-06-24 12:16:11 INFO  LogLog4j:92 - Filling password field
+2016-06-24 12:16:11 INFO  LogLog4j:99 - Clicking on terms ofCheckBox
+2016-06-24 12:16:11 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 12:16:11 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-24 12:16:29 INFO  LogLog4j:93 - Clicking 'Add patient' button
+2016-06-24 12:16:29 INFO  LogLog4j:95 - Trying thread sleep 5000
+2016-06-24 12:16:34 INFO  LogLog4j:97 - Trying to switch to frame 0
+2016-06-24 12:16:34 INFO  LogLog4j:92 - Create new patient started
+2016-06-24 12:16:34 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-06-24 12:16:34 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-06-24 12:16:34 INFO  LogLog4j:194 - Filling Teudat zeut <320020050>
+2016-06-24 12:16:35 INFO  LogLog4j:209 - Filling weight <2>
+2016-06-24 12:16:35 INFO  LogLog4j:215 - Filling Email <hore501@yopmail.com>
+2016-06-24 12:16:35 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-06-24 21:30:39 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 21:30:42 INFO  LogLog4j:86 - Filling username field
+2016-06-24 21:30:42 INFO  LogLog4j:92 - Filling password field
+2016-06-24 21:30:42 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 21:30:53 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-24 21:30:54 INFO  LogLog4j:57 - Open patient page by teudat <081690273>
+2016-06-24 21:30:54 INFO  LogLog4j:60 - Clicking 'Green' button
+2016-06-24 21:30:55 INFO  LogLog4j:188 - Wait until drug page is loaded
+2016-06-24 21:59:36 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 21:59:38 INFO  LogLog4j:85 - TestLoginByRegisteredUser was started....
+2016-06-24 21:59:38 INFO  LogLog4j:86 - Filling username field
+2016-06-24 21:59:38 INFO  LogLog4j:92 - Filling password field
+2016-06-24 21:59:38 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:00:09 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:00:11 INFO  LogLog4j:98 - TestOpenForgotPasswordPage was started....
+2016-06-24 22:00:35 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:00:37 INFO  LogLog4j:85 - TestLoginByRegisteredUser was started....
+2016-06-24 22:00:37 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:00:37 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:00:37 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:01:14 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:01:17 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:01:17 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:01:17 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:01:26 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:01:28 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:01:28 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:01:28 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:01:53 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:01:55 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:01:55 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:01:55 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:02:06 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:02:09 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-06-24 22:02:09 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:02:09 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:02:09 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:02:10 INFO  LogLog4j:43 - TestLoginWithExtData stoped....
+2016-06-24 22:02:10 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:02:10 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-06-24 22:02:10 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:02:10 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:02:10 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:02:10 INFO  LogLog4j:43 - TestLoginWithExtData stoped....
+2016-06-24 22:02:10 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:02:10 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-06-24 22:02:10 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:02:11 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:02:11 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:02:11 INFO  LogLog4j:43 - TestLoginWithExtData stoped....
+2016-06-24 22:02:11 INFO  LogLog4j:79 - Opening Login page
+2016-06-24 22:02:11 INFO  LogLog4j:36 - TestLoginWithExtData was started....
+2016-06-24 22:02:11 INFO  LogLog4j:86 - Filling username field
+2016-06-24 22:02:11 INFO  LogLog4j:92 - Filling password field
+2016-06-24 22:02:12 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-24 22:02:12 INFO  LogLog4j:43 - TestLoginWithExtData stoped....
+2016-06-24 23:06:19 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:22:10 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:33:07 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:49:48 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:50:43 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:52:32 INFO  LogLog4j:106 - Open registration page
+2016-06-24 23:59:33 INFO  LogLog4j:106 - Open registration page
+2016-06-25 12:00:32 INFO  LogLog4j:134 - Parent email generated is <hore36@yopmail.com>
+2016-06-25 12:00:32 INFO  LogLog4j:142 - TeacherEmail generated is <more395@yopmail.com>
+2016-06-25 12:00:32 INFO  LogLog4j:79 - Opening Login page
+2016-06-25 12:00:39 INFO  LogLog4j:86 - Filling username field
+2016-06-25 12:00:39 INFO  LogLog4j:92 - Filling password field
+2016-06-25 12:00:39 INFO  LogLog4j:99 - Clicking on terms ofCheckBox
+2016-06-25 12:00:39 INFO  LogLog4j:144 - Clicking on Login button
+2016-06-25 12:00:40 INFO  LogLog4j:66 - Waiting for Main page is loaded
+2016-06-25 12:19:54 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 12:20:08 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 12:20:08 INFO  LogLog4j:144 - Filling Doctor username field with <username>
+2016-06-25 12:20:08 INFO  LogLog4j:169 - Filling Doctor firstName field with <firstname>
+2016-06-25 12:20:08 INFO  LogLog4j:175 - Filling Doctor lastName field with <lastname>
+2016-06-25 12:20:08 INFO  LogLog4j:157 - Filling Doctor password field with <password>
+2016-06-25 12:20:08 INFO  LogLog4j:163 - Filling Doctor confirm password field with <confpassword>
+2016-06-25 12:20:09 INFO  LogLog4j:151 - Filling Doctor email field with <sasdfg@yopmail.com>
+2016-06-25 12:20:09 INFO  LogLog4j:181 - Filling Doctor id field with <949703086>
+2016-06-25 12:20:09 INFO  LogLog4j:199 - Filling Doctor house number field with <14>
+2016-06-25 12:20:09 INFO  LogLog4j:205 - Filling Doctor house number field with <haifa>
+2016-06-25 12:20:09 INFO  LogLog4j:193 - Filling Doctor mobile field with <0503214654>
+2016-06-25 12:41:03 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 12:41:04 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 13:51:46 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 13:52:01 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 13:52:01 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 13:52:01 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 13:52:01 INFO  LogLog4j:171 - Filling Doctor firstName field with <firstname>
+2016-06-25 13:52:01 INFO  LogLog4j:177 - Filling Doctor lastName field with <lastname>
+2016-06-25 13:52:01 INFO  LogLog4j:159 - Filling Doctor password field with <password>
+2016-06-25 13:52:02 INFO  LogLog4j:165 - Filling Doctor confirm password field with <password>
+2016-06-25 13:52:02 INFO  LogLog4j:153 - Filling Doctor email field with <sasdfg1@yopmail.com>
+2016-06-25 13:52:02 INFO  LogLog4j:183 - Filling Doctor id field with <238403877>
+2016-06-25 13:52:02 INFO  LogLog4j:201 - Filling Doctor house number field with <14>
+2016-06-25 13:52:02 INFO  LogLog4j:207 - Filling Doctor house number field with <haifa>
+2016-06-25 13:52:02 INFO  LogLog4j:195 - Filling Doctor mobile field with <0503214654>
+2016-06-25 13:52:03 INFO  LogLog4j:219 - Filling Doctor Clinic number field with <טסט מינדי>
+2016-06-25 13:52:03 INFO  LogLog4j:103 - write capcha mannualy
+2016-06-25 13:52:13 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:03:16 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:03:18 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:03:18 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:03:18 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:03:18 INFO  LogLog4j:171 - Filling Doctor firstName field with <firstname>
+2016-06-25 14:03:18 INFO  LogLog4j:177 - Filling Doctor lastName field with <lastname>
+2016-06-25 14:03:18 INFO  LogLog4j:159 - Filling Doctor password field with <password>
+2016-06-25 14:03:18 INFO  LogLog4j:165 - Filling Doctor confirm password field with <password>
+2016-06-25 14:03:18 INFO  LogLog4j:153 - Filling Doctor email field with <sasdfg1@yopmail.com>
+2016-06-25 14:03:19 INFO  LogLog4j:183 - Filling Doctor id field with <238403877>
+2016-06-25 14:03:19 INFO  LogLog4j:201 - Filling Doctor house number field with <14>
+2016-06-25 14:03:19 INFO  LogLog4j:207 - Filling Doctor house number field with <haifa>
+2016-06-25 14:03:19 INFO  LogLog4j:195 - Filling Doctor mobile field with <0503214654>
+2016-06-25 14:03:19 INFO  LogLog4j:219 - Filling Doctor Clinic number field with <טסט מינדי>
+2016-06-25 14:03:19 INFO  LogLog4j:103 - write capcha mannualy
+2016-06-25 14:03:29 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:04:38 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:04:38 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:06:25 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:06:25 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:06:56 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:06:56 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:06:56 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:12:12 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:12:13 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:12:43 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:12:43 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:12:43 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:16:56 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:16:58 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:17:43 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:17:43 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:18:42 INFO  LogLog4j:171 - Filling Doctor firstName field with <firstname>
+2016-06-25 14:19:01 INFO  LogLog4j:177 - Filling Doctor lastName field with <lastname>
+2016-06-25 14:19:20 INFO  LogLog4j:159 - Filling Doctor password field with <password>
+2016-06-25 14:19:35 INFO  LogLog4j:165 - Filling Doctor confirm password field with <password>
+2016-06-25 14:19:47 INFO  LogLog4j:153 - Filling Doctor email field with <sasdfg1111@yopmail.com>
+2016-06-25 14:19:50 INFO  LogLog4j:183 - Filling Doctor id field with <083493015>
+2016-06-25 14:20:03 INFO  LogLog4j:201 - Filling Doctor house number field with <14>
+2016-06-25 14:20:05 INFO  LogLog4j:207 - Filling Doctor house number field with <haifa>
+2016-06-25 14:20:07 INFO  LogLog4j:195 - Filling Doctor mobile field with <975176421>
+2016-06-25 14:21:27 INFO  LogLog4j:219 - Filling Doctor Clinic number field with <טסט מינדי>
+2016-06-25 14:22:56 INFO  LogLog4j:103 - write capcha mannualy
+2016-06-25 14:23:40 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:27:31 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:27:32 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:27:32 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:27:32 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:27:32 INFO  LogLog4j:171 - Filling Doctor firstName field with <firstname>
+2016-06-25 14:27:33 INFO  LogLog4j:177 - Filling Doctor lastName field with <lastname>
+2016-06-25 14:27:33 INFO  LogLog4j:159 - Filling Doctor password field with <password>
+2016-06-25 14:27:33 INFO  LogLog4j:165 - Filling Doctor confirm password field with <password>
+2016-06-25 14:27:33 INFO  LogLog4j:153 - Filling Doctor email field with <sasdfg1111@yopmail.com>
+2016-06-25 14:27:33 INFO  LogLog4j:183 - Filling Doctor id field with <083493015>
+2016-06-25 14:27:33 INFO  LogLog4j:201 - Filling Doctor house number field with <14>
+2016-06-25 14:27:33 INFO  LogLog4j:207 - Filling Doctor house number field with <haifa>
+2016-06-25 14:27:34 INFO  LogLog4j:195 - Filling Doctor mobile field with <975176421>
+2016-06-25 14:27:34 INFO  LogLog4j:219 - Filling Doctor Clinic number field with <טסט מינדי>
+2016-06-25 14:27:34 INFO  LogLog4j:103 - write capcha mannualy
+2016-06-25 14:27:54 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:31:12 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:31:12 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:31:12 INFO  LogLog4j:84 - Registration of a new doctor
+2016-06-25 14:31:13 INFO  LogLog4j:146 - Filling Doctor username field with <username>
+2016-06-25 14:31:13 INFO  LogLog4j:171 - Filling Doctor firstName field with <firstname>
+2016-06-25 14:31:13 INFO  LogLog4j:177 - Filling Doctor lastName field with <lastname>
+2016-06-25 14:31:13 INFO  LogLog4j:159 - Filling Doctor password field with <password>
+2016-06-25 14:31:13 INFO  LogLog4j:165 - Filling Doctor confirm password field with <password>
+2016-06-25 14:31:13 INFO  LogLog4j:153 - Filling Doctor email field with <sasdfg1111@yopmail.com>
+2016-06-25 14:31:13 INFO  LogLog4j:183 - Filling Doctor id field with <083493015>
+2016-06-25 14:31:13 INFO  LogLog4j:201 - Filling Doctor house number field with <14>
+2016-06-25 14:31:14 INFO  LogLog4j:207 - Filling Doctor house number field with <haifa>
+2016-06-25 14:31:14 INFO  LogLog4j:195 - Filling Doctor mobile field with <975176421>
+2016-06-25 14:31:14 INFO  LogLog4j:219 - Filling Doctor Clinic number field with <טסט מינדי>
+2016-06-25 14:31:14 INFO  LogLog4j:103 - write capcha mannualy
+2016-06-25 14:31:34 INFO  LogLog4j:114 - Creating new doctor by  saving the data in database
+2016-06-25 14:39:16 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:39:17 INFO  LogLog4j:89 - RegistrationPage was opened
+2016-06-25 14:46:15 INFO  LogLog4j:78 - LoginPage was Loaded
+2016-06-25 14:46:16 INFO  LogLog4j:89 - RegistrationPage was opened

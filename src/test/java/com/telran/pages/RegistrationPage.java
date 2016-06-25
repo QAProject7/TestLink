@@ -6,8 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import java.util.Random;
+
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -21,20 +22,21 @@ public class RegistrationPage extends Page {
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_UserName")
     WebElement usernameField;
 
+    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_firstNameTxt")
+    WebElement firstNameField;
+
+    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_lastNameTxt")
+    WebElement lastNameField;
+
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_Email")
     WebElement emailField;
 
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_Password")
     WebElement passwordField;
+
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")
     WebElement confirmPassField;
-
-    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_firstNameTxt")
-    WebElement firstNameField;
-
-    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_lastNameTxt")
-    WebElement lastNameField;
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")
     WebElement teudatField;
@@ -45,6 +47,9 @@ public class RegistrationPage extends Page {
 
     @FindBy(id = "ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactCellTxt")
     WebElement mobilePhoneField;
+
+    @FindBy(id="ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactPhoneTxt")
+    WebElement housePhoneField;
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_AddressTxt")
     WebElement streetNameField;
@@ -57,14 +62,21 @@ public class RegistrationPage extends Page {
 
     //Select
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_rolesDDl")
-    WebElement selectMedProvider;
+    WebElement selectMedProvider;  //combo tafkid
+
+    @FindBy (id="MainContent_RegisterUser_CreateUserStepContainer_clinicNameTxt")
+    WebElement clinicName;
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_OrganizationDDL")
-    WebElement selectclinicType;
+    WebElement selectclinicType; //combo name of clinic organization
 
     //Alerts
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_UserNameRequired")
-    WebElement usernameAlert;
+    WebElement usernameAlert;  //  shem meshtamesh hova
+
+    @FindBy( id="MainContent_RegisterUser_CreateUserStepContainer_RegularExpressionValidator2")
+    WebElement otiiotIMisparimBilvadAlert;
+
     //buttons
     @FindBy(id = "MainContent_LinkButton1")
     WebElement cancelButton;
@@ -127,6 +139,7 @@ public class RegistrationPage extends Page {
         Log.info("Doctor's Email generated is <" + email + ">");
         return email;
     }
+
     //Fill the fileds
 
     public RegistrationPage fillUsernameField(String username) {
@@ -198,7 +211,7 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage choosePrivateDoctor() {
         selectValueInDropdown(selectclinicType, "2");
-        //   Log.info("entering last name from the list: " + lastName + " ");
+        //  Log.info("entering last name from the list: " + lastName + " ");
         return this;
     }
 
