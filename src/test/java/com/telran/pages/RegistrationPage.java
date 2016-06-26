@@ -380,7 +380,7 @@ public class RegistrationPage extends Page {
         return text_elemen;
     }
 
-
+/*
     public String gettext() {return getTextElement(ErrorCaptcha); }
     public String gettext() {return getTextElement(ErrorCaptcha); }
     public String gettext() {return getTextElement(ErrorCaptcha); }
@@ -390,7 +390,7 @@ public class RegistrationPage extends Page {
     public String gettext() {return getTextElement(ErrorCaptcha); }
     public String gettext() {return getTextElement(ErrorCaptcha); }
     public String gettext() {return getTextElement(ErrorCaptcha); }
-
+*/
     public void waitForCaptcha() {
         Log.info("Waiting of Captcha mesaage");
         waitUntilIsLoaded(ErrorCaptcha);
