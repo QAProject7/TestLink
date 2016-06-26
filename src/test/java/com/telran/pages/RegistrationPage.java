@@ -211,7 +211,7 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage choosePrivateDoctor() {
         selectValueInDropdown(selectclinicType, "2");
-        //  Log.info("entering last name from the list: " + lastName + " ");
+          Log.info("entering last name from the list: " + "lastName" + " "); //lastName
         return this;
     }
 

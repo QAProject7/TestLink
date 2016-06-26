@@ -53,7 +53,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
     }
 
 
@@ -102,7 +102,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
 
             Log.info("write capcha mannualy");
-            Thread.sleep(7000);
+            Thread.sleep(10000);
 
             registrationPage
                  .clickOnSubmitButton();
@@ -117,9 +117,19 @@ public class doctorRegistrationTest extends TestNgTestBase {
        // Assert.assertFalse(registrationPage.isOnRegistrationPage(),"You are still on Registration Page now!!!");
 
     }
+    @Test(groups= {"smock","positive"})
+    public void doctorPositiveAutoRegTest() throws Exception {
+        Log.info("Registration of a new doctor");
+        try {
 
-
-
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .registerDoctorAuto("doctr16");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
+    }
   /*  @Test
     public void doctorRegTest1() throws Exception {
         driver.findElement(By.id("MainContent_LoginUser_RegisterHyperLink")).click();
