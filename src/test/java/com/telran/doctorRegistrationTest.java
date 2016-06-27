@@ -14,6 +14,7 @@ import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
+import static java.awt.SystemColor.text;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
@@ -45,60 +46,38 @@ public class doctorRegistrationTest extends TestNgTestBase {
         try {
             loginIrinaPage
                     .openLoginPage(driver)
-                    .waitUntilLoginPageIsLoaded()
+                  //  .waitUntilLoginPageIsLoaded()
                     .openRegistrationPage();
-            registrationPage
-                    .waitUntilRegPageIsLoaded();
+         //   registrationPage
+                   // .waitUntilRegPageIsLoaded();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-       // driver.manage().window().maximize();
     }
 
 
 
-  /* @Test(groups = {"smoke", "negative"}, dataProviderClass = DataProviders.class, dataProvider = "loadInvalidLoginFromFile")
-    public void testLoginWithExtData(String login, String pass) {
-        Log.info("TestLoginWithExtData was started....");
-        loginIrinaPage
-                .fillUsernameField(login)
-                .fillPasswordField(pass)
-                // .clickOnTermsCheckbox()
-                .clickOnLoginButton();
-        Assert.assertTrue(loginIrinaPageisLoginUnsuccessfulAlertMessageDisplayed());
-        Log.info("TestLoginWithExtData stoped....");
-    }*/
-
-    @Test(groups = {"negative"})
-      public void testLoginWithoutNameAndPassword() {
-          loginIrinaPage
-                  .fillUsernameField("")
-                  .fillPasswordField("")
-                  .clickOnLoginButton();
-          Assert.assertTrue(loginIrinaPage.alertMessageNotValidUsername(),"Not found alert: Empty First Name");// && loginIrinaPage.alertMessageNotValidPassword());
-
-      }
-
-    @Test(groups= {"smock","positive"})
-    public void doctorPositiveRegTest() throws Exception {
-        Log.info("Registration of a new doctor");
+    @Test(groups={"smock","positive"},dataProviderClass = DataProviders.class, dataProvider = "positiveDoctorsReg")
+    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String confirmPassword,String email,String id,String house,String city,String phoneNumber)
+            {
+        Log.info("Test Registration of a new doctor was started...");
         try {
-
-        registrationPage
+            loginIrinaPage.isOnLoginPage();
+            registrationPage
                 .waitUntilRegPageIsLoaded()
-                .fillUsernameField("username")
-                .fillFirstNameField("firstname")
-                .fillLastNameField("lastname")
-                .fillPasswordField("password")
-                .fillConfPasswordField("password")
-                .fillEmailField("sasdfg1111@yopmail.com")
-                .fillIdField("083493015")
-                .fillHouseField("14")
-                .fillCityField("haifa")
-                .fillMobile("975176421")
-                .choosePrivateDoctor()
-                .chooseClinic("טסט מינדי");
+                .fillUsernameField(username)
+                .fillFirstNameField(firstname)
+                .fillLastNameField(lastname)
+                .fillPasswordField(password)
+                .fillConfPasswordField(confirmPassword)
+                .fillEmailField(email)
+                .fillIdField(id)
+                .fillHouseField(house)
+                .fillCityField(city)
+                .fillMobile(phoneNumber);
+              //  .choosePrivateDoctor()
+              //  .chooseClinic("טסט מינדי");
 
 
             Log.info("write capcha mannualy");
@@ -117,6 +96,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
        // Assert.assertFalse(registrationPage.isOnRegistrationPage(),"You are still on Registration Page now!!!");
 
     }
+
     @Test(groups= {"smock","positive"})
     public void doctorPositiveAutoRegTest() throws Exception {
         Log.info("Registration of a new doctor");
@@ -124,12 +104,13 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
             registrationPage
                     .waitUntilRegPageIsLoaded()
-                    .registerDoctorAuto("doctr16");
+                    .registerDoctorAuto("doctrr");
         } catch (Exception e) {
             e.printStackTrace();
         }
         Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
     }
+
   /*  @Test
     public void doctorRegTest1() throws Exception {
         driver.findElement(By.id("MainContent_LoginUser_RegisterHyperLink")).click();

@@ -3854,3 +3854,64 @@
 2016-06-27 09:53:02 INFO  LogLog4j:268 - Filling Doctor street field with <Shenkin>
 2016-06-27 09:53:02 INFO  LogLog4j:195 - Doctor's Zeut generated is <555349851>
 2016-06-27 09:53:02 INFO  LogLog4j:262 - Filling Doctor id field with <555349851>
+2016-06-27 16:57:27 INFO  LogLog4j:81 - LoginPage was Loaded
+2016-06-27 16:57:37 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 17:05:14 INFO  LogLog4j:81 - LoginPage was Loaded
+2016-06-27 17:05:15 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 17:05:24 INFO  LogLog4j:81 - LoginPage was Loaded
+2016-06-27 17:05:24 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 17:09:20 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 17:49:16 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 17:49:16 INFO  LogLog4j:113 - Registration of a new doctor
+2016-06-27 17:49:16 INFO  LogLog4j:225 - Filling Doctor username field with <doctr5>
+2016-06-27 17:49:16 INFO  LogLog4j:238 - Filling Doctor password field with <LinkCare!!11>
+2016-06-27 17:49:16 INFO  LogLog4j:244 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-06-27 17:49:16 INFO  LogLog4j:218 - Doctor's Email generated is <doctr55969@yopmail.com>
+2016-06-27 17:49:16 INFO  LogLog4j:232 - Filling Doctor email field with <doctr55969@yopmail.com>
+2016-06-27 17:49:16 INFO  LogLog4j:286 - Filling Doctor house number field with <Tel Aviv>
+2016-06-27 17:49:16 INFO  LogLog4j:250 - Filling Doctor firstName field with <userNamedoctr5>
+2016-06-27 17:49:16 INFO  LogLog4j:274 - Filling Doctor mobile field with <052-0001110>
+2016-06-27 17:49:17 INFO  LogLog4j:256 - Filling Doctor lastName field with <lastNamedoctr5>
+2016-06-27 17:49:17 INFO  LogLog4j:280 - Filling Doctor house number field with <44>
+2016-06-27 17:49:17 INFO  LogLog4j:268 - Filling Doctor street field with <Shenkin>
+2016-06-27 17:49:17 INFO  LogLog4j:195 - Doctor's Zeut generated is <278576830>
+2016-06-27 17:49:17 INFO  LogLog4j:262 - Filling Doctor id field with <278576830>
+2016-06-27 17:59:51 INFO  LogLog4j:113 - Registration of a new doctor
+2016-06-27 18:00:53 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 18:00:53 INFO  LogLog4j:113 - Registration of a new doctor
+2016-06-27 18:00:53 INFO  LogLog4j:225 - Filling Doctor username field with <doctrr>
+2016-06-27 18:00:53 INFO  LogLog4j:238 - Filling Doctor password field with <LinkCare!!11>
+2016-06-27 18:00:53 INFO  LogLog4j:244 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-06-27 18:00:53 INFO  LogLog4j:218 - Doctor's Email generated is <doctrr8212@yopmail.com>
+2016-06-27 18:00:53 INFO  LogLog4j:232 - Filling Doctor email field with <doctrr8212@yopmail.com>
+2016-06-27 18:00:54 INFO  LogLog4j:287 - Filling Doctor house number field with <Tel Aviv>
+2016-06-27 18:00:54 INFO  LogLog4j:250 - Filling Doctor firstName field with <userNamedoctrr>
+2016-06-27 18:00:54 INFO  LogLog4j:275 - Filling Doctor mobile field with <052-0001110>
+2016-06-27 18:00:54 INFO  LogLog4j:257 - Filling Doctor lastName field with <lastNamedoctrr>
+2016-06-27 18:00:54 INFO  LogLog4j:281 - Filling Doctor house number field with <44>
+2016-06-27 18:00:54 INFO  LogLog4j:269 - Filling Doctor street field with <Shenkin>
+2016-06-27 18:00:55 INFO  LogLog4j:195 - Doctor's Zeut generated is <900990003>
+2016-06-27 18:00:55 INFO  LogLog4j:263 - Filling Doctor id field with <900990003>
+2016-06-27 18:08:03 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 18:08:03 INFO  LogLog4j:113 - Registration of a new doctor
+2016-06-27 18:08:03 INFO  LogLog4j:225 - Filling Doctor username field with <doctrr>
+2016-06-27 18:08:03 INFO  LogLog4j:238 - Filling Doctor password field with <LinkCare!!11>
+2016-06-27 18:08:04 INFO  LogLog4j:244 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-06-27 18:08:04 INFO  LogLog4j:218 - Doctor's Email generated is <doctrr5690@yopmail.com>
+2016-06-27 18:08:04 INFO  LogLog4j:232 - Filling Doctor email field with <doctrr5690@yopmail.com>
+2016-06-27 18:08:04 INFO  LogLog4j:287 - Filling Doctor house number field with <Tel Aviv>
+2016-06-27 18:30:31 INFO  LogLog4j:92 - RegistrationPage was opened
+2016-06-27 18:30:31 INFO  LogLog4j:103 - Registration of a new doctor
+2016-06-27 18:30:31 INFO  LogLog4j:225 - Filling Doctor username field with <doctrr>
+2016-06-27 18:30:32 INFO  LogLog4j:238 - Filling Doctor password field with <LinkCare!!11>
+2016-06-27 18:30:32 INFO  LogLog4j:244 - Filling Doctor confirm password field with <LinkCare!!11>
+2016-06-27 18:30:32 INFO  LogLog4j:218 - Doctor's Email generated is <doctrr3499@yopmail.com>
+2016-06-27 18:30:32 INFO  LogLog4j:232 - Filling Doctor email field with <doctrr3499@yopmail.com>
+2016-06-27 18:30:32 INFO  LogLog4j:287 - Filling Doctor house number field with <Tel Aviv>
+2016-06-27 18:30:32 INFO  LogLog4j:250 - Filling Doctor firstName field with <userNamedoctrr>
+2016-06-27 18:30:32 INFO  LogLog4j:275 - Filling Doctor mobile field with <052-0001110>
+2016-06-27 18:30:32 INFO  LogLog4j:257 - Filling Doctor lastName field with <lastNamedoctrr>
+2016-06-27 18:30:33 INFO  LogLog4j:281 - Filling Doctor house number field with <44>
+2016-06-27 18:30:33 INFO  LogLog4j:269 - Filling Doctor street field with <Shenkin>
+2016-06-27 18:30:33 INFO  LogLog4j:195 - Doctor's Zeut generated is <363140617>
+2016-06-27 18:30:33 INFO  LogLog4j:263 - Filling Doctor id field with <363140617>

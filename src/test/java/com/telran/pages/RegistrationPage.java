@@ -248,6 +248,7 @@ public class RegistrationPage extends Page {
 
     public RegistrationPage fillFirstNameField(String firstName) {
         Log.info("Filling Doctor firstName field with <" + firstName + ">");
+
         setElementText(firstNameField, firstName);
         return this;
     }
