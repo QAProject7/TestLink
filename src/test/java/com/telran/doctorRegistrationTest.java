@@ -105,10 +105,20 @@ public class doctorRegistrationTest extends TestNgTestBase {
             registrationPage
                     .waitUntilRegPageIsLoaded()
                     .registerDoctorAuto("doctrr");
+            Log.info("write capcha mannualy");
+            Thread.sleep(8000);
+
+            registrationPage
+                    .clickOnSubmitButton();
+            Thread.sleep(3000);
         } catch (Exception e) {
             e.printStackTrace();
         }
         Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
+        Assert.assertTrue((registrationPage.isOnRegistrationPage()), "You are not on Registration Page now!!!");
+        Assert.assertTrue((registrationPage.alertMessageNotValidFirstName()),"First name is not valid");
+        Assert.assertTrue((registrationPage.alertMessageNotValidLastName()),"Last name is not valid");
+        Assert.assertTrue((registrationPage.alertMessageNotValidUserName()),"User name s not valid");
     }
 
   /*  @Test
@@ -195,7 +205,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-    }*/
+    }
 
 
     private boolean isElementPresent(By by) {
@@ -205,5 +215,5 @@ public class doctorRegistrationTest extends TestNgTestBase {
         } catch (NoSuchElementException e) {
             return false;
         }
-    }
+    }*/
 }
