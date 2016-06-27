@@ -36,7 +36,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
         // driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
         registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class);
-        //   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+           driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 
@@ -215,15 +215,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
             verificationErrors.append(e.toString());
         }
     }*/
-/*
-    @AfterTest
-    public void tearDown() throws Exception {
-        driver.quit();
-        String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
-        }
-    }*/
+
 
     private boolean isElementPresent(By by) {
         try {

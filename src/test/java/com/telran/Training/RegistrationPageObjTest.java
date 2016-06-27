@@ -97,7 +97,7 @@ public class RegistrationPageObjTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(registrationPage.isOnRegistrationPage(), "The Main Page is opened");
-            Assert.assertTrue(registrationPage.alertMessageNotValidFirsrName(), "Alert message 'שם פרטי חובה' is not presented");
+            Assert.assertTrue(registrationPage.alertMessageNotValidFirstName(), "Alert message 'שם פרטי חובה' is not presented");
 
         } catch (Exception e) {
             e.printStackTrace();
