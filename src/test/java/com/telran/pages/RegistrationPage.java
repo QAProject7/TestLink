@@ -349,7 +349,7 @@ public class RegistrationPage extends Page {
         fillHouseField("44");
         fillStreetField("Shenkin");
         fillIdField(generateZeut());
-        clickOnSubmitButton();
+       // clickOnSubmitButton();
     }
     public RegistrationPage clickAddPatientButton() {
         clickElement(addNewPatientButton);
