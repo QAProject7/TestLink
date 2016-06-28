@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import static java.awt.SystemColor.text;
@@ -58,12 +59,11 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
 
 
-    @Test(groups={"smock","positive"},dataProviderClass = DataProviders.class, dataProvider = "positiveDoctorsReg")
-    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String confirmPassword,String email,String id,String house,String city,String phoneNumber)
+    @Test(groups={"smock","positive"},dataProviderClass = DataProviders.class, dataProvider = "loadPositiveRegDoctor")
+    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String confirmPassword,String email,String id,String house,String mobile,String city,String phoneNumber)throws IOException, InterruptedException
             {
         Log.info("Test Registration of a new doctor was started...");
         try {
-            loginIrinaPage.isOnLoginPage();
             registrationPage
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(username)
@@ -74,12 +74,13 @@ public class doctorRegistrationTest extends TestNgTestBase {
                 .fillEmailField(email)
                 .fillIdField(id)
                 .fillHouseField(house)
+                .fillMobile(mobile)
                 .fillCityField(city)
-                .fillMobile(phoneNumber);
+                .fillHouseField(phoneNumber);
+
+
               //  .choosePrivateDoctor()
               //  .chooseClinic("טסט מינדי");
-
-
             Log.info("write capcha mannualy");
             Thread.sleep(10000);
 
