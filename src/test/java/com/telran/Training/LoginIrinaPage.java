@@ -17,7 +17,7 @@ public class LoginIrinaPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
-    @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
+    @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")  //zor meshtamesh
     WebElement goToRegLink;
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;
@@ -26,12 +26,15 @@ public class LoginIrinaPage extends Page {
     //buttons
     @FindBy(xpath = "//a[@class='forgot']")
     private WebElement forgotPassLink;
-    //alerts
-    @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'שם משתמש חובה')]")
+    //alerts    //System messages
+
+    @FindBy (xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'שם משתמש חובה')]")
     private WebElement wrongUsernameAlert;
 
     @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
     private WebElement wrongPasswordAlert;
+
+
 
     public LoginIrinaPage(WebDriver driver) {
         super(driver);

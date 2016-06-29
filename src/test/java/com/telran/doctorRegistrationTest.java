@@ -1,17 +1,26 @@
 package com.telran;
-
+/*
+// Modified by Tatiana Pereminski
+*/
+import com.telran.Training.LoginIrinaPage;
+import com.telran.pages.DataProviders;
+import com.telran.pages.RegistrationPage;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.*;
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import static java.awt.SystemColor.text;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
-public class doctorRegistrationTest {
-    private WebDriver driver;
+public class doctorRegistrationTest extends TestNgTestBase {
+
     private StringBuffer verificationErrors = new StringBuffer();
     private String lFamily = "testfam";
     private String lName = "testname";
@@ -19,15 +28,102 @@ public class doctorRegistrationTest {
     long millis = System.currentTimeMillis();
     private String DocLogin = loginName + millis;
 
-    @BeforeTest
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
+    public RegistrationPage registrationPage;
+    public LoginIrinaPage loginIrinaPage;
+
+
+    @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
-        driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        // driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
+        registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
+        loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class);
+           driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
 
-    @Test
-    public void doctorRegTest() throws Exception {
+    @BeforeMethod(alwaysRun = true)
+    public void beforeMethodSetUp() {
+        try {
+            loginIrinaPage
+                    .openLoginPage(driver)
+                  //  .waitUntilLoginPageIsLoaded()
+                    .openRegistrationPage();
+         //   registrationPage
+                   // .waitUntilRegPageIsLoaded();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    @Test(groups={"smock","positive"},dataProviderClass = DataProviders.class, dataProvider = "loadPositiveRegDoctor")
+    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String confirmPassword,String email,String id,String house,String mobile,String city,String phoneNumber)throws IOException, InterruptedException
+            {
+        Log.info("Test Registration of a new doctor was started...");
+        try {
+            registrationPage
+                .waitUntilRegPageIsLoaded()
+                .fillUsernameField(username)
+                .fillFirstNameField(firstname)
+                .fillLastNameField(lastname)
+                .fillPasswordField(password)
+                .fillConfPasswordField(confirmPassword)
+                .fillEmailField(email)
+                .fillIdField(id)
+                .fillHouseField(house)
+                .fillMobile(mobile)
+                .fillCityField(city)
+                .fillHouseField(phoneNumber);
+
+
+              //  .choosePrivateDoctor()
+              //  .chooseClinic("טסט מינדי");
+            Log.info("write capcha mannualy");
+            Thread.sleep(10000);
+
+            registrationPage
+                 .clickOnSubmitButton();
+            Thread.sleep(5000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Log.info("Creating new doctor by  saving the data in database");
+        Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
+       // Assert.assertFalse(registrationPage.isOnRegistrationPage(),"You are still on Registration Page now!!!");
+
+    }
+
+    @Test(groups= {"smock","positive"})
+    public void doctorPositiveAutoRegTest() throws Exception {
+        Log.info("Registration of a new doctor");
+        try {
+
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .registerDoctorAuto("doctrr");
+            Log.info("write capcha mannualy");
+            Thread.sleep(8000);
+
+            registrationPage
+                    .clickOnSubmitButton();
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
+        Assert.assertTrue((registrationPage.isOnRegistrationPage()), "You are not on Registration Page now!!!");
+        Assert.assertTrue((registrationPage.alertMessageNotValidFirstName()),"First name is not valid");
+        Assert.assertTrue((registrationPage.alertMessageNotValidLastName()),"Last name is not valid");
+        Assert.assertTrue((registrationPage.alertMessageNotValidUserName()),"User name s not valid");
+    }
+
+  /*  @Test
+    public void doctorRegTest1() throws Exception {
         driver.findElement(By.id("MainContent_LoginUser_RegisterHyperLink")).click();
         for (int second = 0; ; second++) {
             if (second >= 60) fail("timeout");
@@ -112,14 +208,6 @@ public class doctorRegistrationTest {
         }
     }
 
-    @AfterTest
-    public void tearDown() throws Exception {
-        driver.quit();
-        String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
-        }
-    }
 
     private boolean isElementPresent(By by) {
         try {
@@ -128,5 +216,5 @@ public class doctorRegistrationTest {
         } catch (NoSuchElementException e) {
             return false;
         }
-    }
+    }*/
 }
