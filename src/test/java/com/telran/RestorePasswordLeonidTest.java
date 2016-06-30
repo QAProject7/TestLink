@@ -54,6 +54,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
         Thread.sleep(5000);
         forgotPasswordSuccessPage.isRestoreLoginMessageExists();
     }
+
     @Test(groups = {"negative", "smoke"})
     public void restorePasswordNotValidLoginTest() throws IOException, InterruptedException {
         Log.info("restore Password");
@@ -63,6 +64,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
         Thread.sleep(5000);
         forgotPasswordSuccessPage.isRestoreNotValidLoginMessageExists();
     }
+
     @Test(groups = {"negative", "smoke"})
     public void restorePasswordEmptyLoginTest() throws IOException, InterruptedException {
         Log.info("restore Password");
