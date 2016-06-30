@@ -44,7 +44,6 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
                 .isOnLoginPage();
         loginPage.openForgotPasswordPage();
     }
-
     @Test(groups = {"positive", "smoke"})
     public void restorePasswordTest() throws IOException, InterruptedException {
         Log.info("restore Password");
