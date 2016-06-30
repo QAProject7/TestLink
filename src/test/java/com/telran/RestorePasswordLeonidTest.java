@@ -4,10 +4,7 @@ import com.telran.pages.ForgotPasswordLeonidPage;
 import com.telran.pages.ForgotPasswordSuccessLeonidPage;
 import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -55,15 +52,25 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
                 .fillRestoreField(login)
                 .clickOnRestoreButton();
         Thread.sleep(5000);
-        forgotPasswordSuccessPage.isRestoreMessageExists();
+        forgotPasswordSuccessPage.isRestoreLoginMessageExists();
     }
     @Test(groups = {"negative", "smoke"})
-    public void restorePasswordTestnegative() throws IOException, InterruptedException {
+    public void restorePasswordNotValidLoginTest() throws IOException, InterruptedException {
         Log.info("restore Password");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
                 .fillRestoreField(loginNotValid)
                 .clickOnRestoreButton();
-        forgotPasswordSuccessPage.isRestoreMessageNotValidExists();
+        Thread.sleep(5000);
+        forgotPasswordSuccessPage.isRestoreNotValidLoginMessageExists();
+    }
+    @Test(groups = {"negative", "smoke"})
+    public void restorePasswordEmptyLoginTest() throws IOException, InterruptedException {
+        Log.info("restore Password");
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField("")
+                .clickOnRestoreButton();
+        Thread.sleep(5000);
+        forgotPasswordSuccessPage.isRestoreEmptyLoginMessageExists();
     }
 //    @AfterClass(alwaysRun = true)
 //    public void tearDown(){

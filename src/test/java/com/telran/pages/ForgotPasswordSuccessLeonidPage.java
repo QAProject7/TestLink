@@ -29,7 +29,10 @@ public class ForgotPasswordSuccessLeonidPage extends Page {
     WebElement messageStatus;
 
     @FindBy(xpath = "//*[contains (text(), 'לא הצלחנו לגשת למידע שלך. אנא נסה שוב')]")
-    WebElement messageStatusNotValid;
+    WebElement notValidMessageStatus;
+
+    @FindBy(xpath = "//*[@id='MainContent_PasswordRecovery_UserNameContainerID_UserNameRequired']")
+    WebElement emptyMessageStatus;
 
      public ForgotPasswordSuccessLeonidPage(WebDriver driver) {
         super(driver);
@@ -59,12 +62,16 @@ public class ForgotPasswordSuccessLeonidPage extends Page {
         Log.info("clicking on \"back\" button");
         clickElement(backButton);
     }
-    public void isRestoreMessageExists() {
-        Log.info("Wait for Restore message");
+    public void isRestoreLoginMessageExists() {
+        Log.info("Wait for Restore login message ");
         exists(messageStatus);
     }
-    public void isRestoreMessageNotValidExists() {
-        Log.info("Wait for Restore message not valid");
-        exists(messageStatusNotValid);
+    public void isRestoreNotValidLoginMessageExists() {
+        Log.info("Wait for Restore not valid login message");
+        exists(notValidMessageStatus);
+    }
+    public void isRestoreEmptyLoginMessageExists() {
+        Log.info("Wait for Restore empty login message");
+        exists(emptyMessageStatus);
     }
 }
