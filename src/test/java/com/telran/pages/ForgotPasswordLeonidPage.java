@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by Iakov Volf
  */
-public class ForgotPasswordPageLeonid extends Page {
+public class ForgotPasswordLeonidPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
 
     @FindBy(id = "MainContent_LoginUser_LoginButton")
@@ -28,53 +28,40 @@ public class ForgotPasswordPageLeonid extends Page {
     WebElement restoreField;
 
 
-    public ForgotPasswordPageLeonid(WebDriver driver) {
+    public ForgotPasswordLeonidPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = baseUrl + "/Login.aspx";
         PageFactory.initElements(driver, this);
     }
 
 
-    public ForgotPasswordPageLeonid openLoginPage(WebDriver driver) {
+    public ForgotPasswordLeonidPage openLoginPage(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
 
 //Fill the fileds
 
-    public ForgotPasswordPageLeonid fillRestoreField(String login) {
+    public ForgotPasswordLeonidPage fillRestoreField(String login) {
         Log.info("fill restore field");
         setElementText(restoreField, login);
         return this;
     }
 
-    public ForgotPasswordPageLeonid waitUntilLoginPageIsLoaded() {
+    public ForgotPasswordLeonidPage waitUntilLoginPageIsLoaded() throws IOException, InterruptedException {
         Log.info("waiting until login page is loaded");
-        try {
             waitUntilElementIsLoaded(submitButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
-    public ForgotPasswordPageLeonid waitUntilForgotPageIsLoaded() {
+    public ForgotPasswordLeonidPage waitUntilForgotPageIsLoaded() throws IOException, InterruptedException {
         Log.info("waiting until forgot page is loaded");
-        try {
             waitUntilElementIsLoaded(restoreButton);
             waitUntilIsLoadedCustomTime(restoreButton, 120);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
-    public ForgotPasswordPageLeonid clickOnRestoreButton() {
+    public ForgotPasswordLeonidPage clickOnRestoreButton() {
         Log.info("click on restore button");
         clickElement(restoreButton);
         return this;

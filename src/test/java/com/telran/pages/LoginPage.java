@@ -102,37 +102,19 @@ public class LoginPage extends Page {
     }
 
 
-    public LoginPage waitUntilRegPageIsLoaded() {
-        try {
+    public LoginPage waitUntilRegPageIsLoaded() throws IOException, InterruptedException {
             Log.info("Waiting for the Reg page is loaded");
             waitUntilElementIsLoaded(loginButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
-    public LoginPage waitUntilNextPageIsLoaded() {
-        try {
+    public LoginPage waitUntilNextPageIsLoaded() throws IOException, InterruptedException {
             waitUntilElementIsLoaded(nextButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
-    public LoginPage waitUntinLogOutButtomIsLoaded() {
-        try {
+    public LoginPage waitUntinLogOutButtomIsLoaded() throws IOException, InterruptedException {
             waitUntilElementIsLoaded(logOutButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
@@ -150,7 +132,7 @@ public class LoginPage extends Page {
         clickElement(cancelChangePasswordButton);
     }
 
-    public void openRegistrationPage() {
+    public void openRegistrationPage() throws IOException, InterruptedException {
         waitUntilLoginPageIsLoaded();
         Log.info("CLicking the 'Register' button");
         clickElement(goToRegLink);
@@ -165,11 +147,10 @@ public class LoginPage extends Page {
         clickElement(forgotPassLink);
     }
 
-    public void login(String username, String password) {
+    public void login(String username, String password) throws IOException, InterruptedException {
         waitUntilLoginPageIsLoaded();
         fillUsernameField(username);
         fillPasswordField(password);
-        clickOnTermsCheckbox();
         clickOnLoginButton();
     }
 
@@ -182,15 +163,9 @@ public class LoginPage extends Page {
         clickElement(nextButton);
     }
 
-    public LoginPage waitUntilLoginPageIsLoaded() {
-        try {
+    public LoginPage waitUntilLoginPageIsLoaded() throws IOException, InterruptedException {
             Thread.sleep(2000);
             waitUntilElementIsLoaded(loginButton);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
     public boolean alertMessageUnregisteredUser() {

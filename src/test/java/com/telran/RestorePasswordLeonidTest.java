@@ -1,14 +1,18 @@
 package com.telran;
 
-import com.telran.pages.DataProviders;
-import com.telran.pages.ForgotPasswordPageLeonid;
-import com.telran.pages.ForgotPasswordPageSuccessLeonid;
+import com.telran.pages.ForgotPasswordLeonidPage;
+import com.telran.pages.ForgotPasswordSuccessLeonidPage;
 import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 /**
  * Created by Leonid Gengrinovich
@@ -20,40 +24,49 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
     private LoginPage loginPage;
-    private ForgotPasswordPageLeonid forgotPasswordPage;
-    private ForgotPasswordPageSuccessLeonid forgotPasswordPageSuccess;
+    private ForgotPasswordLeonidPage forgotPasswordPage;
+    private ForgotPasswordSuccessLeonidPage forgotPasswordSuccessPage;
+    private static String login = "7070Doctor";
+    private static String loginNotValid = "Doctor";
 
     @BeforeClass(alwaysRun = true)
     public void setup() {
-        // driver = new FirefoxDriver();
+
         Log.info("initialize loginPage");
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         Log.info("initialize forgotPasswordPage");
-        forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
-        Log.info("initialize forgotPasswordPageSuccess");
-        forgotPasswordPageSuccess = PageFactory.initElements(driver, ForgotPasswordPageSuccessLeonid.class);
+        forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordLeonidPage.class);
+        Log.info("initialize forgotPasswordSuccessPage");
+        forgotPasswordSuccessPage = PageFactory.initElements(driver, ForgotPasswordSuccessLeonidPage.class);
     }
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        try {
-            Log.info("@BeforeMethod: open login page, waitUntilPageIsLoaded and openForgotPasswordPage");
-            loginPage.openLoginPage()
-                    .waitUntilLoginPageIsLoaded()
-                    .openForgotPasswordPage();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Log.info("@BeforeMethod: open login page and openForgotPasswordPage");
+        loginPage.openLoginPage()
+                .isOnLoginPage();
+        loginPage.openForgotPasswordPage();
     }
 
-    @Test(groups = {"positive", "smoke"},dataProviderClass = DataProviders.class, dataProvider = "loadLogins")
-    public void restorePasswordTest1(String login, String comment) throws Exception {
-        Log.info("test with " + comment);
+    @Test(groups = {"positive", "smoke"})
+    public void restorePasswordTest() throws IOException, InterruptedException {
+        Log.info("restore Password");
         forgotPasswordPage.waitUntilForgotPageIsLoaded()
-                        .fillRestoreField(login)
-                        .clickOnRestoreButton();
-        forgotPasswordPageSuccess.waitUntilForgotSuccessPageIsLoaded()
-                                .assertText();
+                .fillRestoreField(login)
+                .clickOnRestoreButton();
+        Thread.sleep(5000);
+        forgotPasswordSuccessPage.isRestoreMessageExists();
     }
-
+    @Test(groups = {"negative", "smoke"})
+    public void restorePasswordTestnegative() throws IOException, InterruptedException {
+        Log.info("restore Password");
+        forgotPasswordPage.waitUntilForgotPageIsLoaded()
+                .fillRestoreField(loginNotValid)
+                .clickOnRestoreButton();
+        forgotPasswordSuccessPage.isRestoreMessageNotValidExists();
+    }
+//    @AfterClass(alwaysRun = true)
+//    public void tearDown(){
+//        this.driver.quit();
+//    }
 }

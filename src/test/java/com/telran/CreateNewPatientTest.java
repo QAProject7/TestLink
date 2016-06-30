@@ -30,7 +30,6 @@ public class CreateNewPatientTest extends TestNgTestBase {
     @BeforeClass(alwaysRun = true)
     public void setup() throws InterruptedException {
         //driver = new FirefoxDriver();
-
         //registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         //  mainPage = PageFactory.initElements(driver, DoctorMainPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -40,14 +39,10 @@ public class CreateNewPatientTest extends TestNgTestBase {
         email = createNewPatientpage.generateParentEmail();
         emailTeacher = createNewPatientpage.generateTeacherEmail();
         meetingDate = createNewPatientpage.createMeetingDate();
-
-
-
-
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() throws InterruptedException {
+    public void beforeMethodSetUp() throws InterruptedException, IOException {
         driver.get(baseUrl);
         loginPage.login(username, password);
         doctorsPage.waitUntilMainPageIsLoaded();
@@ -55,9 +50,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
         driver.manage().window().maximize();
     }
 
-
-    public void createNewPatient() {
-        try {
+    public void createNewPatient() throws IOException, InterruptedException {
             Log.info("Create new patient started");
             // createNewPatientpage.createPatientOneParent(zeut, email);
             createNewPatientpage.waitUntilPageIsLoaded();
@@ -79,16 +72,10 @@ public class CreateNewPatientTest extends TestNgTestBase {
             // doctorsPage.waitUntilMainPageIsLoaded();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test(groups = {"positive", "smoke"})
-    public void createNewPatientTest() {
-        try {
+    public void createNewPatientTest() throws IOException, InterruptedException {
             Log.info("Create new patient started");
             // createNewPatientpage.createPatientOneParent(zeut, email);
             createNewPatientpage.waitUntilPageIsLoaded();
@@ -109,11 +96,6 @@ public class CreateNewPatientTest extends TestNgTestBase {
             // doctorsPage.waitUntilMainPageIsLoaded();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test(groups = {"positive", "smoke"})

@@ -40,7 +40,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() throws InterruptedException {
+    public void beforeMethodSetUp() throws InterruptedException, IOException {
         registered_username = createPatientPage.generateTeacherEmail();
         parentEmail = createPatientPage.generateParentEmail();
         zeut = createPatientPage.generateZeut();
