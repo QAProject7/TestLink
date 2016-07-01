@@ -95,7 +95,6 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
     @Test (groups = {"negative","smoke"})
     public void negativeEmptyPass(){
