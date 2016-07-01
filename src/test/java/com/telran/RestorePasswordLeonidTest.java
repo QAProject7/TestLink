@@ -23,7 +23,7 @@ public class RestorePasswordLeonidTest  extends TestNgTestBase{
     private LoginPage loginPage;
     private ForgotPasswordLeonidPage forgotPasswordPage;
     private ForgotPasswordSuccessLeonidPage forgotPasswordSuccessPage;
-    private static String login = "7070Doctor";
+    private static String login = "2907Doctor";
     private static String loginNotValid = "Doctor";
 
     @BeforeClass(alwaysRun = true)

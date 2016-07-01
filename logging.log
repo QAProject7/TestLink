@@ -4446,3 +4446,22 @@
 2016-06-30 16:36:36 INFO  LogLog4j:58 - waiting until forgot page is loaded
 2016-06-30 16:36:36 INFO  LogLog4j:46 - fill restore field
 2016-06-30 16:36:36 INFO  LogLog4j:65 - click on restore button
+2016-06-30 16:47:54 INFO  LogLog4j:134 - Parent email generated is <hore930@yopmail.com>
+2016-06-30 16:47:54 INFO  LogLog4j:142 - TeacherEmail generated is <more256@yopmail.com>
+2016-06-30 16:47:54 INFO  LogLog4j:79 - Opening Login page
+2016-06-30 16:47:59 INFO  LogLog4j:86 - Filling username field
+2016-06-30 16:47:59 INFO  LogLog4j:92 - Filling password field
+2016-06-30 16:48:00 INFO  LogLog4j:126 - Clicking on Login button
+2016-06-30 16:48:10 INFO  LogLog4j:65 - Waiting for Main page is loaded
+2016-06-30 16:48:10 INFO  LogLog4j:87 - Clicking 'Add patient' button
+2016-06-30 16:48:10 INFO  LogLog4j:89 - Trying thread sleep 5000
+2016-06-30 16:48:15 INFO  LogLog4j:91 - Trying to switch to frame 0
+2016-06-30 16:48:15 INFO  LogLog4j:174 - Filling First Name <PatientChildFirst>
+2016-06-30 16:48:16 INFO  LogLog4j:181 - Filling Last Name <PatientChildLast>
+2016-06-30 16:48:16 INFO  LogLog4j:194 - Filling Teudat zeut <101230761>
+2016-06-30 16:48:16 INFO  LogLog4j:209 - Filling weight <5>
+2016-06-30 16:48:16 INFO  LogLog4j:215 - Filling Email <hore930@yopmail.com>
+2016-06-30 16:48:17 INFO  LogLog4j:233 - Waiting for button Send Email
+2016-06-30 16:48:50 INFO  LogLog4j:134 - Parent email generated is <hore124@yopmail.com>
+2016-06-30 16:48:50 INFO  LogLog4j:142 - TeacherEmail generated is <more444@yopmail.com>
+2016-06-30 16:48:50 INFO  LogLog4j:79 - Opening Login page

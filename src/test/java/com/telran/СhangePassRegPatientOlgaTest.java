@@ -50,9 +50,9 @@ public class СhangePassRegPatientOlgaTest extends TestNgTestBase{
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() throws IOException, InterruptedException {
 
-        personalId = createNewPatientPage.createId();
-        email = createNewPatientPage.generateParentEmail();
-        emailTeacher = createNewPatientPage.generateTeacherEmail();
+//        personalId = createNewPatientPage.createId();
+//        email = createNewPatientPage.generateParentEmail();
+//        emailTeacher = createNewPatientPage.generateTeacherEmail();
         loginPage.openLoginPage()
                 .login("2907Doctor", "LinkCare!!11");
         doctorsPage.waitUntilMainPageIsLoaded();
