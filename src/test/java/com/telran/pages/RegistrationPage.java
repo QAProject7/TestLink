@@ -1,6 +1,7 @@
 package com.telran.pages;
 
 import com.telran.LogLog4j;
+import jsr166e.ThreadLocalRandom;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
+
+
 
 /**
  * Created by Iakov Volf,Oleg
@@ -49,13 +51,13 @@ public class RegistrationPage extends Page {
     @FindBy(id = "ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactCellTxt")
     WebElement mobilePhoneField;
 
-    @FindBy(id="ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactPhoneTxt")
+    @FindBy(id="ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactPhoneTxt")//number of home telephone
     WebElement housePhoneField;
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_AddressTxt")
     WebElement streetNameField;
 
-    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_HouseNumberTxt")
+    @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_HouseNumberTxt") //number of building
     WebElement houseNumberField;
 
     @FindBy(id = "MainContent_RegisterUser_CreateUserStepContainer_CityTxt")
@@ -283,11 +285,17 @@ public class RegistrationPage extends Page {
         return this;
     }
 
+    public RegistrationPage fillHousePhoneField(String housePhoneNumber){
+        Log.info("Filling Doctor house phone number <" + housePhoneNumber + ">");
+        setElementText(housePhoneField,housePhoneNumber);
+        return this;
+    }
     public RegistrationPage fillCityField(String city) {
         Log.info("Filling Doctor house number field with <" + city + ">");
         setElementText(cityField, city);
         return this;
     }
+
 
     public RegistrationPage choosePrivateDoctor() {
         selectValueInDropdown(selectclinicType, "2");
