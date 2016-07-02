@@ -108,7 +108,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
             registrationPage
                     .clickOnSubmitButton();
-                     Thread.sleep(10000);
+                     Thread.sleep(1000);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -128,7 +128,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
             registrationPage
                     .clickOnSubmitButton();
-            Thread.sleep(10000);
+            Thread.sleep(1000);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -147,7 +147,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
             registrationPage
                     .clickOnSubmitButton();
-            Thread.sleep(10000);
+            Thread.sleep(1000);
 
         } catch (Exception e) {
             e.printStackTrace();
