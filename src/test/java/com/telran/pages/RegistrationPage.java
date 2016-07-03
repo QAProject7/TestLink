@@ -155,17 +155,17 @@ public class RegistrationPage extends Page {
     @FindBy(xpath = "//span[@id='MainContent_RegisterUser_CreateUserStepContainer_RequiredFieldValidator3']") //rehov hova
     WebElement wrongValidatorStreetAlert;
 
-    @FindBy(id="MainContent_RegisterUser_CreateUserStepContainer_RegularExpressionValidator4")  //lo iaxol leahil tavim miuhadim
-    WebElement streetWrong;
+    @FindBy(id="MainContent_RegisterUser_CreateUserStepContainer_RegularExpressionValidator4")  //city hova
+    WebElement wrongCityRequired;
 
     @FindBy(xpath = "//span[@id='MainContent_RegisterUser_CreateUserStepContainer_RequiredFieldValidator4']")
-    WebElement wrongValidatorBaitAlert;
+    WebElement wrongValidatorCityAlert;
 
     @FindBy(id="MainContent_RegisterUser_CreateUserStepContainer_RegularExpressionValidator5")//lo iaxol leahil tavim miuhadim
     WebElement wrongBait;
 
-    @FindBy(xpath = "//span[@id='MainContent_RegisterUser_CreateUserStepContainer_RequiredFieldValidator5']")//ir hova
-    WebElement wrongValidatorHouseAlert;
+    @FindBy(xpath = "//span[@id='MainContent_RegisterUser_CreateUserStepContainer_RequiredFieldValidator5']")//bait hova
+    WebElement wrongValidatorBaitAlert;
 
     @FindBy(id="MainContent_RegisterUser_CreateUserStepContainer_RegularExpressionValidator7") //lo iaxol leahil tavim miuhadim
             WebElement wrongValidatorCountryAlert;
@@ -308,7 +308,11 @@ public class RegistrationPage extends Page {
         selectValueInDropdownbyText(selectclinicType, name);
         return this;
     }
-
+    public RegistrationPage fillClinicName(String clinicName1) {
+        Log.info("Filling clinicName <" + clinicName1 + ">");
+        setElementText(clinicName, clinicName1);
+        return this;
+    }
     public RegistrationPage waitUntilRegPageIsLoaded() {
         try {
             waitUntilElementIsLoaded(submitButton);
@@ -380,8 +384,20 @@ public class RegistrationPage extends Page {
     public boolean alertMessageNotValidLastName() {
         return exists(wrongLastNameAlert);
     }
+    public boolean alertMessageRequiredEmail()  {return exists(wrongEmailAlert);}
+    public boolean alertMessageNotValiddEmail()  {return exists(formatMailWrong);}
+    public boolean alertMessageNotValidPassword()  {return exists(passwordWrong);}
+    public boolean alertMessageRequiredPassword()  {return exists(wrongPasswordAlert);}
+    public boolean alertMessageRequiredConfirmPassword() {return exists(wrongConfirmPasswordAlert);}
+    public boolean alertMessageNotValidConfirmPassword() {return exists(wrongConfirmPassword);}
+    public boolean alertMessageNotValidZeut(){return  exists (wrongValidatorID);}
+    public boolean alertMessageRequiredZeut(){return  exists (wrongValidatorIDAlert);}
+    public boolean alertMessageRequiredHouse(){return  exists (wrongValidatorBaitAlert);}
+    public boolean alertMessageNotReqMobile(){return  exists (wrongValidatorMobileAlert);}
+    public boolean alertMessageNotValidStreet(){return  exists (wrongValidatorStreetAlert);}
+    public boolean alertMessageNotValidCity(){return  exists (wrongValidatorCityAlert);}
 
-    public String getTextElement(WebElement element) {
+    public String getTextElement(WebElement element){
 
         String text_elemen;
         text_elemen = element.getText();
@@ -406,7 +422,7 @@ public class RegistrationPage extends Page {
     }
 
 
-    public boolean checkFirstNameEmptyFieldMessage() {
+  /*  public boolean checkFirstNameEmptyFieldMessage() {
         return verifyTextBoolean(wrongUsernameAlert, "The first name field is required.");
     }
 
@@ -419,6 +435,6 @@ public class RegistrationPage extends Page {
     }
     public boolean checkEmailInvalidFieldMessage() {
         return verifyTextBoolean(wrongEmailAlert, "The email format is invalid.");
-    }
+    }*/
 }
 
