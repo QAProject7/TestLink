@@ -76,9 +76,6 @@ public class doctorRegistrationTest extends TestNgTestBase {
                 .fillClinicName("Asuta");
                 String name = "טסט מינדי";
            registrationPage.chooseClinic(name);
-                //    .choosePrivateDoctor();
-          //  page
-           //         .selectValueInDropdownbyText(selectclinicType,"hhh");
             Log.info("write capcha mannualy");
             Thread.sleep(20000);
 
