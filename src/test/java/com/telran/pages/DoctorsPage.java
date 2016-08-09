@@ -61,15 +61,9 @@ public class DoctorsPage extends Page {
         greenButton.click();
     }
 
-    public DoctorsPage waitUntilMainPageIsLoaded() {
-        try {
+    public DoctorsPage waitUntilMainPageIsLoaded() throws IOException, InterruptedException {
             Log.info("Waiting for Main page is loaded");
             waitUntilElementIsLoaded(namesField);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 

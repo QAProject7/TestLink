@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 
 public class СhangePassRegPatientOlgaTest {
     public static String firstName = "Moshe";
@@ -53,28 +55,24 @@ public class СhangePassRegPatientOlgaTest {
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() {
-        try {
-            personalId = createNewPatientPage.createId();
-            email = createNewPatientPage.generateParentEmail();
-            emailTeacher = createNewPatientPage.generateTeacherEmail();
-            loginPage.openLoginPage()
-                     .login("2907Doctor","LinkCare!!11");
-            doctorsPage.waitUntilMainPageIsLoaded();
-            driver.manage().window().maximize();
-            doctorsPage.clickOnAddPatient();
-            createNewPatientPage.createPatientOneParent(personalId, email);
-            loginPage.clickLogOut();
-            loginPage.openLoginPage()
-                    .fillUsernameField(email)
-                     .fillPasswordField(password)
-                     .clickOnTermsCheckbox()
-                     .clickOnLoginButton();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    public void beforeMethodSetUp() throws IOException, InterruptedException {
 
+//        personalId = createNewPatientPage.createId();
+//        email = createNewPatientPage.generateParentEmail();
+//        emailTeacher = createNewPatientPage.generateTeacherEmail();
+        loginPage.openLoginPage()
+                .login("2907Doctor", "LinkCare!!11");
+        doctorsPage.waitUntilMainPageIsLoaded();
+        driver.manage().window().maximize();
+        doctorsPage.clickOnAddPatient();
+        createNewPatientPage.createPatientOneParent(personalId, email);
+        loginPage.clickLogOut();
+        loginPage.openLoginPage()
+                .fillUsernameField(email)
+                .fillPasswordField(password)
+                .clickOnTermsCheckbox()
+                .clickOnLoginButton();
+    }
     @Test (groups = {"positive","smoke"})
     public void loginFirstPatient() {
         try {
@@ -104,7 +102,6 @@ public class СhangePassRegPatientOlgaTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
     @Test (groups = {"negative","smoke"})
     public void negativeEmptyPass(){

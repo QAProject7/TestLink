@@ -1,23 +1,19 @@
 package com.telran;
 /*
-// Modified by Tatiana Pereminski
+// Created by Tatiana Pereminski
 */
 import com.telran.Training.LoginIrinaPage;
 import com.telran.pages.DataProviders;
+import com.telran.pages.Page;
 import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import static java.awt.SystemColor.text;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.fail;
 
 public class doctorRegistrationTest extends TestNgTestBase {
 
@@ -31,6 +27,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public RegistrationPage registrationPage;
     public LoginIrinaPage loginIrinaPage;
+    public Page page;
 
 
     @BeforeClass(alwaysRun = true)
@@ -38,7 +35,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
         // driver.get("http://dhclinicappv2stg.item-soft.co.il/Login.aspx");
         registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class);
-           driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 
@@ -47,11 +44,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
         try {
             loginIrinaPage
                     .openLoginPage(driver)
-                  //  .waitUntilLoginPageIsLoaded()
                     .openRegistrationPage();
-         //   registrationPage
-                   // .waitUntilRegPageIsLoaded();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,7 +53,7 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
 
     @Test(groups={"smock","positive"},dataProviderClass = DataProviders.class, dataProvider = "loadPositiveRegDoctor")
-    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String confirmPassword,String email,String id,String house,String mobile,String city,String phoneNumber)throws IOException, InterruptedException
+    public void doctorPositiveRegTest(String username,String firstname,String lastname,String password,String house,String mobile,String street,String city,String phoneNumber)throws IOException, InterruptedException
             {
         Log.info("Test Registration of a new doctor was started...");
         try {
@@ -68,25 +61,27 @@ public class doctorRegistrationTest extends TestNgTestBase {
                 .waitUntilRegPageIsLoaded()
                 .fillUsernameField(username)
                 .fillFirstNameField(firstname)
-                .fillLastNameField(lastname)
+                .fillLastNameField(lastname);
+            String email = registrationPage.generateDoctorEmail(username);
+            registrationPage.fillEmailField(email)
                 .fillPasswordField(password)
-                .fillConfPasswordField(confirmPassword)
-                .fillEmailField(email)
-                .fillIdField(id)
+                .fillConfPasswordField(password);
+            String number = registrationPage.generateZeut();
+            registrationPage.fillIdField(number)
+                 .fillHousePhoneField(phoneNumber)
+                 .fillMobile(mobile)
+                 .fillStreetField(street)
                 .fillHouseField(house)
-                .fillMobile(mobile)
                 .fillCityField(city)
-                .fillHouseField(phoneNumber);
-
-
-              //  .choosePrivateDoctor()
-              //  .chooseClinic("טסט מינדי");
+                .fillClinicName("Asuta");
+                String name = "טסט מינדי";
+           registrationPage.chooseClinic(name);
             Log.info("write capcha mannualy");
-            Thread.sleep(10000);
+            Thread.sleep(20000);
 
             registrationPage
                  .clickOnSubmitButton();
-            Thread.sleep(5000);
+            Thread.sleep(10000);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,127 +89,346 @@ public class doctorRegistrationTest extends TestNgTestBase {
 
         Log.info("Creating new doctor by  saving the data in database");
         Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
-       // Assert.assertFalse(registrationPage.isOnRegistrationPage(),"You are still on Registration Page now!!!");
+        Assert.assertFalse(registrationPage.isOnRegistrationPage(),"You are still on Registration Page now!!!");
 
     }
 
-    @Test(groups= {"smock","positive"})
-    public void doctorPositiveAutoRegTest() throws Exception {
-        Log.info("Registration of a new doctor");
+    @Test(groups={"negative"})
+    public void negativeEmptyUserName(){
         try {
-
             registrationPage
                     .waitUntilRegPageIsLoaded()
-                    .registerDoctorAuto("doctrr");
-            Log.info("write capcha mannualy");
-            Thread.sleep(8000);
+                    .fillUsernameField("")
+                    .fillFirstNameField("firstname")
+                    .fillLastNameField("lastname");
 
             registrationPage
                     .clickOnSubmitButton();
-            Thread.sleep(3000);
+                     Thread.sleep(1000);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
-        Assert.assertTrue((registrationPage.isOnRegistrationPage()), "You are not on Registration Page now!!!");
-        Assert.assertTrue((registrationPage.alertMessageNotValidFirstName()),"First name is not valid");
-        Assert.assertTrue((registrationPage.alertMessageNotValidLastName()),"Last name is not valid");
-        Assert.assertTrue((registrationPage.alertMessageNotValidUserName()),"User name s not valid");
+        Assert.assertTrue(registrationPage.alertMessageNotValidUserName(), "Not found alert: Empty User Name");
     }
 
-  /*  @Test
-    public void doctorRegTest1() throws Exception {
-        driver.findElement(By.id("MainContent_LoginUser_RegisterHyperLink")).click();
-        for (int second = 0; ; second++) {
-            if (second >= 60) fail("timeout");
-            try {
-                if (isElementPresent(By.xpath
-                        ("//input[@id='MainContent_RegisterUser_CreateUserStepContainer_UserName']")))
-                    break;
-            } catch (Exception e) {
-            }
+
+    @Test(groups={"negative"})
+    public void negativeEmptyFirstName(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc233")
+                    .fillFirstNameField("")
+                    .fillLastNameField("lastname");
+
+            registrationPage
+                    .clickOnSubmitButton();
             Thread.sleep(1000);
-        }
 
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_UserName")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_UserName"))
-                .sendKeys(DocLogin);
-        try {
-            assertEquals(DocLogin, driver
-                    .findElement(By.xpath("//input[@id='MainContent_RegisterUser_CreateUserStepContainer_UserName']"))
-                    .getAttribute("value"));
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_firstNameTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_firstNameTxt")).sendKeys(lName);
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_lastNameTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_lastNameTxt")).sendKeys(lFamily);
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Email"))
-                .sendKeys(DocLogin + "@mail.com");
-        System.out.println("mail is: " + DocLogin + "@mail.com");
+        Assert.assertTrue(registrationPage.alertMessageNotValidFirstName(), "Not found alert: Empty First Name");
+    }
+
+    @Test(groups={"negative"})
+    public void negativeEmptyLastName(){
         try {
-            assertEquals(DocLogin + "@mail.com", driver
-                    .findElement(By.xpath("//*[@id='MainContent_RegisterUser_CreateUserStepContainer_Email']"))
-                    .getAttribute("value"));
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc234")
+                    .fillFirstNameField("Anatolii")
+                    .fillLastNameField("");
+
+            registrationPage
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_Password")).sendKeys("Qazxsw2!");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ConfirmPassword"))
-                .sendKeys("Qazxsw2!");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_PersonalIdTxt"))
-                .sendKeys("70357264");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_clinicNameTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_clinicNameTxt")).sendKeys("Clinic");
-        new Select(driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_OrganizationDDL")))
-                .selectByVisibleText("רופאים פרטיים");
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_birthdayTxt_dateInput"))
-                .click();
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_birthdayTxt_dateInput"))
-                .clear();
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_birthdayTxt_dateInput"))
-                .sendKeys("07/11/1981");
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactCellTxt")).clear();
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactCellTxt"))
-                .sendKeys("053-1234567");
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactPhoneTxt")).clear();
-        driver.findElement(By.id("ctl00_MainContent_RegisterUser_CreateUserStepContainer_ContactPhoneTxt"))
-                .sendKeys("(053)-1234568");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_AddressTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_AddressTxt")).sendKeys("Ye'elim");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_HouseNumberTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_HouseNumberTxt")).sendKeys("3");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_CityTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_CityTxt")).sendKeys("Jerusalem");
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ZipCodeTxt")).clear();
-        driver.findElement(By.id("MainContent_RegisterUser_CreateUserStepContainer_ZipCodeTxt")).sendKeys("1234567");
-        driver.findElement(By.id("MainContent_AddNewUser")).click();
+        Assert.assertTrue(registrationPage.alertMessageNotValidLastName(), "Not found alert: Empty Last Name");
+    }
+
+    @Test(groups={"negative"})
+    public void negativeEmail(){
         try {
-            assertEquals("http://dhclinicappv2stg.item-soft.co.il/SecurityInfrastructure/Accounts.aspx"
-                    , driver.getCurrentUrl());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Anton")
+                    .fillLastNameField("Pol")
+                    .fillEmailField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        Assert.assertTrue(registrationPage.alertMessageRequiredEmail(), "Not found alert: Empty Email");
+    }
+    @Test(groups={"negative"})
+    public void negativeNotValidEmail(){
         try {
-            assertEquals(lName + " " + lFamily, driver
-                    .findElement(By.xpath("//*[@id='Top1_HeadLoginView_DisplayName']")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hjhj")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        Assert.assertTrue(registrationPage.alertMessageNotValiddEmail(), "Not found alert: Not valid Email");
+    }
+    @Test(groups={"negative"})
+    public void negativeNotValidPassword(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("vb123")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotValidPassword(), "Not found alert: Not valid Password");
+    }
+    @Test(groups={"negative"})
+    public void negativeRequiredPassword(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageRequiredPassword(), "Not found alert: Required Password");
+    }
+    @Test(groups={"negative"})
+    public void negativeRequiredConfirmPassword(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageRequiredConfirmPassword(), "Not found alert: Required Confirm Password");
+    }
+    @Test(groups={"negative"})
+    public void negativeNotValidConfirmPassword(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!11")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotValidConfirmPassword(), "Not found alert:  Not Valid Confirm Password");
+    }
+
+    @Test(groups={"negative"})
+    public void negativeNotValidZeut(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11")
+                    .fillIdField("123ghj")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotValidZeut(), "Not found alert:  Not Valid Zeut");
+
+    }
+    @Test(groups={"negative"})
+    public void negativeRequiredZeut(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11")
+           // String number = registrationPage.generateZeut();
+         //   registrationPage.fillIdField(number)
+                    .fillIdField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageRequiredZeut(), "Not found alert:  Required Zeut");
+
+    }
+    @Test(groups={"negative"})
+    public void negativeRequiredHouse(){
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11");
+                     String number = registrationPage.generateZeut();
+                     registrationPage.fillIdField(number)
+                     .fillMobile("0509454665")
+                    .fillHouseField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageRequiredHouse(), "Not found alert:  Required number of  House");
+
+    }
+    @Test(groups={"negative"})
+    public void negativeRequiredMobile() {
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11");
+            String number = registrationPage.generateZeut();
+            registrationPage.fillIdField(number)
+                    .fillHouseField("11")
+                    .fillMobile("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotReqMobile(), "Not found alert:  Not required mobile ");
+
+    }
+    @Test(groups={"negative"})
+    public void negativeNotValidStreet() {
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11");
+            String number = registrationPage.generateZeut();
+            registrationPage.fillIdField(number)
+                    .fillHouseField("11")
+                    .fillMobile("0506506506")
+                    .fillStreetField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotValidStreet(), "Not found alert:  Not valid street ");
+
+    }
+    @Test(groups={"negative"})
+    public void negativeNotValidCity() {
+        try {
+            registrationPage
+                    .waitUntilRegPageIsLoaded()
+                    .fillUsernameField("Doc235")
+                    .fillFirstNameField("Dan")
+                    .fillLastNameField("Markov")
+                    .fillEmailField("asdssa@hj.com")
+                    .fillPasswordField("LinkCare!!11")
+                    .fillConfPasswordField("LinkCare!!11");
+            String number = registrationPage.generateZeut();
+            registrationPage.fillIdField(number)
+                    .fillHouseField("11")
+                    .fillMobile("0506506506")
+                    .fillStreetField("Histadrut")
+                    .fillCityField("")
+                    .clickOnSubmitButton();
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(registrationPage.alertMessageNotValidCity(), "Not found alert:  Not valid city ");
+
     }
 
 
-    private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }*/
-}
+
+       /* @Test(groups = {"smock", "positive"})
+        public void doctorPositiveAutoRegTest ()throws Exception {
+            Log.info("Registration of a new doctor");
+            try {
+
+                registrationPage
+                        .waitUntilRegPageIsLoaded()
+                        .registerDoctorAuto("doctrr");
+                Log.info("write capcha mannualy");
+                Thread.sleep(8000);
+
+                registrationPage
+                        .clickOnSubmitButton();
+                Thread.sleep(3000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Assert.assertTrue((loginIrinaPage.isOnLoginPage()), "You are not on Login Page now!!!");
+            Assert.assertTrue((registrationPage.isOnRegistrationPage()), "You are not on Registration Page now!!!");
+            Assert.assertTrue((registrationPage.alertMessageNotValidFirstName()), "First name is not valid");
+            Assert.assertTrue((registrationPage.alertMessageNotValidLastName()), "Last name is not valid");
+            Assert.assertTrue((registrationPage.alertMessageNotValidUserName()), "User name s not valid");
+        }*/
+
+    }
+

@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 /**
  * Created by PetruninLeonid
  */
@@ -39,7 +41,7 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void beforeMethodSetUp() { //Входим на страницу и ждем пока она загрузится
+    public void beforeMethodSetUp() throws IOException, InterruptedException { //Входим на страницу и ждем пока она загрузится
         loginPage.openLoginPage(); //Логи к данному методу добавлены на странице Максима LoginPage
         loginPage
                 .fillUsernameField(registered_username)

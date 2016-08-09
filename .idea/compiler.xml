@@ -25,7 +25,7 @@
         <module name="rere" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.9">
+    <bytecodeTargetLevel target="1.8">
       <module name="rere" target="1.6" />
     </bytecodeTargetLevel>
   </component>
