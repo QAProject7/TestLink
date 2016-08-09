@@ -50,12 +50,12 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
                 .fillPasswordField(password)
                 .clickOnTermsCheckbox()
                 .clickOnLoginButton();
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
         driver.manage().window().maximize();
         doctorsPage.clickOnAddPatient();
         try {
             createPatientPage.createPatientParentAndTeacher(zeut, parentEmail, registered_username );
-          // doctorsPage.waitUntilMainPageIsLoaded();
+            // doctorsPage.isOnMainPage();
            // doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();
@@ -153,7 +153,7 @@ public class RegistrationPageTeacherTest extends TestNgTestBase {
                     .fillCityField(city)
                     .clickOnSubmitButton();
 
-            //    mainPage.waitUntilMainPageIsLoaded();
+            //    mainPage.isOnMainPage();
             //    Assert.assertTrue(mainPage.isOnMainPage(), "The Main Page doesn't open");
 
         } catch (Exception e) {

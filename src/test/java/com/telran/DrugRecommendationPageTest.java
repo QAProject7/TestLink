@@ -44,10 +44,8 @@ public class DrugRecommendationPageTest {
                     .fillUsernameField(username)
                     .fillPasswordField(password)
                     .clickOnLoginButton();
-
-            mainPage.waitUntilMainPageIsLoaded()
-                    .clickOnGoToPatientButton();
-
+            mainPage.isOnMainPage();
+            mainPage.clickOnGoToPatientButton();
             drugPage.waitUntilDrugPageIsLoaded();
 
 

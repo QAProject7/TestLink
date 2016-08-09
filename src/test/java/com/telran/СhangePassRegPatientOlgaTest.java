@@ -26,15 +26,12 @@ public class СhangePassRegPatientOlgaTest {
     public static String city = "Ashdod";
     public static String houseNumber = "33";
     public static String date = "1990-11-05";
-    private String emailTeacher;
-
     public WebDriver driver;
-    private String driverPath = "C:\\Telran\\browserDriver\\";
-
     public CreateNewPatientTest createNewPatientPage1;
     public CreateNewPatientPage createNewPatientPage;
     public ChangePassRegistrationPatientOlgaPage changePassPage;
-
+    private String emailTeacher;
+    private String driverPath = "C:\\Telran\\browserDriver\\";
     private LoginPage loginPage;
     private DoctorsPage doctorsPage;
     private ChronicQuestionnaire3VladimirPage paitientPage;
@@ -56,26 +53,24 @@ public class СhangePassRegPatientOlgaTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() throws IOException, InterruptedException {
-
-//        personalId = createNewPatientPage.createId();
-//        email = createNewPatientPage.generateParentEmail();
-//        emailTeacher = createNewPatientPage.generateTeacherEmail();
+//            personalId = createNewPatientPage.createId();
+//            email = createNewPatientPage.generateParentEmail();
+//            emailTeacher = createNewPatientPage.generateTeacherEmail();
         loginPage.openLoginPage()
-                .login("2907Doctor", "LinkCare!!11");
-        doctorsPage.waitUntilMainPageIsLoaded();
-        driver.manage().window().maximize();
+                .login("7070Doctor", "LinkCare!!11");
+        doctorsPage.isOnMainPage();
+//            driver.manage().window().maximize();
         doctorsPage.clickOnAddPatient();
         createNewPatientPage.createPatientOneParent(personalId, email);
         loginPage.clickLogOut();
         loginPage.openLoginPage()
                 .fillUsernameField(email)
                 .fillPasswordField(password)
-                .clickOnTermsCheckbox()
                 .clickOnLoginButton();
     }
+
     @Test (groups = {"positive","smoke"})
-    public void loginFirstPatient() {
-        try {
+    public void loginFirstPatient() throws IOException, InterruptedException {
             changePassPage
                     .waitUntilPassChangePageLoaded()
                     .fillCurrentPassword(password)
@@ -97,41 +92,29 @@ public class СhangePassRegPatientOlgaTest {
                     .fillHouseNumber(houseNumber)
                     .fillCity(city)
                     .clickOnSubmitButton();
-            Assert.assertTrue(paitientPage.isAvailable(),"Patients page isn't opening");
+        Assert.assertTrue(paitientPage.isAvailable(), "Patients page isn't opening");
             Reporter.log("Profile created successfully");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test (groups = {"negative","smoke"})
-    public void negativeEmptyPass(){
-        try {
-            changePassPage.clickOnChangePassButton();
 
+    //    @Test (groups = {"negative","smoke"})
+    public void negativeEmptyPass(){
+            changePassPage.clickOnChangePassButton();
             Assert.assertTrue(changePassPage.isErrorEmptyPass(), "Not found alert: Empty Pass ");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
+
+    //    @Test
     public void negativeEmptyPassNew(){
-        try {
             changePassPage.clickOnChangePassButton();
             Assert.assertTrue(changePassPage.isErrorEmptyPassNew(), "Not found alert: Empty Pass New");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
+
+    //    @Test
     public void negativeEmptyPassRepeat(){
-        try {
             changePassPage.clickOnChangePassButton();
             Assert.assertTrue(changePassPage.isErrorEmptyPassRepeat(), "Not found alert: Empty Pass Repeat  ");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test (groups = {"negative","smoke"})
+
+    //    @Test (groups = {"negative","smoke"})
     public void negativePassNotSame(){
         try {
             changePassPage
@@ -144,9 +127,9 @@ public class СhangePassRegPatientOlgaTest {
             e.printStackTrace();
         }
     }
-    @Test (groups = {"negative","smoke"})
+
+    //    @Test (groups = {"negative","smoke"})
     public void negativeNoIntermediatePage(){
-        try {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -154,13 +137,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnChangePassButton();
 
             Assert.assertTrue(changePassPage.isNoIntermediatePage(), "Not found alert: No Intermediate Page");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyFirstName(){
-        try {
+
+    //    @Test
+    public void negativeEmptyFirstName() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -174,13 +154,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErEmptyFirstName(), "Not found alert: Empty First Name");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyLastName(){
-        try {
+
+    //    @Test
+    public void negativeEmptyLastName() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -192,15 +169,11 @@ public class СhangePassRegPatientOlgaTest {
             changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
-
             Assert.assertTrue(changePassPage.isErEmptyLastName(), "Not found alert: Empty Last Name");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test (groups = {"negative","smoke"})
-    public void negativeEmptyEmail(){
-        try {
+
+    //    @Test (groups = {"negative","smoke"})
+    public void negativeEmptyEmail() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -214,13 +187,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErEmptyEmail(), "Not found alert: Empty Last Email");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test (groups = {"negative","smoke"})
-    public void negativeEmailInvalid(){
-        try {
+
+    //    @Test (groups = {"negative","smoke"})
+    public void negativeEmailInvalid() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -235,13 +205,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErInvalidEmail(), "Not found alert: Empty Invalid Email");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test (groups = {"negative","smoke"})
-    public void negativeEmptyTZ(){
-        try {
+
+    //    @Test (groups = {"negative","smoke"})
+    public void negativeEmptyTZ() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -255,13 +222,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErEmptyTZ(), "Not found alert: Empty TZ");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeTZInvalid(){
-        try {
+
+    //    @Test
+    public void negativeTZInvalid() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -276,13 +240,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErTZInvalid(), "Not found alert: Empty TZ Invalid");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyTelephone(){
-        try {
+
+    //    @Test
+    public void negativeEmptyTelephone() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -296,13 +257,10 @@ public class СhangePassRegPatientOlgaTest {
                     .clickOnSubmitButton();
 
             Assert.assertTrue(changePassPage.isErEmptyTelephone(), "Not found alert: Empty Telephone");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyHomeNumber(){
-        try {
+
+    //    @Test
+    public void negativeEmptyHomeNumber() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -314,15 +272,11 @@ public class СhangePassRegPatientOlgaTest {
             changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
-
             Assert.assertTrue(changePassPage.isErEmptyHomeNumber(), "Not found alert: Empty Home Number");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyHomeStreet(){
-        try {
+
+    //    @Test
+    public void negativeEmptyHomeStreet() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -334,15 +288,11 @@ public class СhangePassRegPatientOlgaTest {
             changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
-
             Assert.assertTrue(changePassPage.isErEmptyStreet(), "Not found alert: Empty Street");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-    @Test
-    public void negativeEmptyTown(){
-        try {
+
+    //    @Test
+    public void negativeEmptyTown() throws IOException, InterruptedException {
             changePassPage
                     .fillCurrentPassword(password)
                     .fillNewPassword(passwordResult)
@@ -354,16 +304,11 @@ public class СhangePassRegPatientOlgaTest {
             changePassPage
                     .waitUntilFillProfilePageIsLoaded()
                     .clickOnSubmitButton();
-
             Assert.assertTrue(changePassPage.isErEmptyTown(), "Not found alert: Empty Town");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
+
     @AfterClass(alwaysRun = true)
     public void tearDown(){
         this.driver.quit();
     }
-
-
 }

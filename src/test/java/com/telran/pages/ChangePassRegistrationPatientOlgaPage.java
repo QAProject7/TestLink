@@ -92,14 +92,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
 
     //Fill the fileds MainContent_ChangeUserPassword_ChangePasswordContainerID_ChangeUserPasswordValidationSummary
 //wait until page is loaded
-    public ChangePassRegistrationPatientOlgaPage waitUntilPassChangePageLoaded() {
-        try {
+    public ChangePassRegistrationPatientOlgaPage waitUntilPassChangePageLoaded() throws IOException, InterruptedException {
             waitUntilElementIsLoaded(changePasswordCurrentPassword);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-    }
         return this;
     }
 
@@ -142,14 +136,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
 
 //    Page after Change password
 
-    public ChangePassRegistrationPatientOlgaPage waitUntilGoToNextPageLoaded() {
-        try {
+    public ChangePassRegistrationPatientOlgaPage waitUntilGoToNextPageLoaded() throws IOException, InterruptedException {
             waitUntilElementIsLoaded(gotoFillProfile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return this;
     }
 
@@ -159,13 +147,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
     }
 
     //    Page Fill Profile User
-    public ChangePassRegistrationPatientOlgaPage waitUntilFillProfilePageIsLoaded() {
-        try {
-            Thread.sleep(3000);
-            //waitUntilElementIsLoaded(firstNameTxt);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public ChangePassRegistrationPatientOlgaPage waitUntilFillProfilePageIsLoaded() throws IOException, InterruptedException {
+        waitUntilElementIsLoaded(firstNameTxt);
         return this;
     }
     public ChangePassRegistrationPatientOlgaPage fillFirstNameTxt(String firstName) {
@@ -254,7 +237,7 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         return exists(requiredTown);
     }
 
-    public void fillAllChangePassAndProfile(String tz, String email){
+    public void fillAllChangePassAndProfile(String tz, String email) throws IOException, InterruptedException {
         fillCurrentPassword(password);
         fillNewPassword(passwordResult);
         fillConfirmNewPassword(passwordResult);
@@ -273,7 +256,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         fillCity(city);
         clickOnSubmitButton();
     }
-    public void fillOnlyProfile(String tz, String email){
+
+    public void fillOnlyProfile(String tz, String email) throws IOException, InterruptedException {
         waitUntilFillProfilePageIsLoaded();
         fillFirstNameTxt(firstName);
         fillLastNameTxt(lastName);
@@ -286,7 +270,8 @@ public class ChangePassRegistrationPatientOlgaPage extends Page {
         fillCity(city);
         clickOnSubmitButton();
     }
-    public void fillChangePass(){
+
+    public void fillChangePass() throws IOException, InterruptedException {
         fillCurrentPassword(password);
         fillNewPassword(passwordResult);
         fillConfirmNewPassword(passwordResult);

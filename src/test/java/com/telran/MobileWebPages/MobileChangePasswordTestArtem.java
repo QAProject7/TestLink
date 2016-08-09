@@ -62,7 +62,7 @@ public class MobileChangePasswordTestArtem {
                     .fillNewPasswordField(newPass)
                     .fillConfirmNewPasswordField(newPass)
                     .clickOnOkChangePasswordButton();
-            //    mainPage.waitUntilMainPageIsLoaded();
+            //    mainPage.isOnMainPage();
             //    Assert.assertTrue(mainPage.isOnMainPage(), "The Main Page doesn't open");
 
         } catch (Exception e) {

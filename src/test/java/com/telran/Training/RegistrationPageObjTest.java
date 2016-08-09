@@ -71,7 +71,7 @@ public class RegistrationPageObjTest {
                     .fillCityField(city)
                     .clickOnSubmitButton();
 
-            //    mainPage.waitUntilMainPageIsLoaded();
+            //    mainPage.isOnMainPage();
             //    Assert.assertTrue(mainPage.isOnMainPage(), "The Main Page doesn't open");
 
         } catch (Exception e) {

@@ -38,25 +38,16 @@ public class DrugRecommendationPageTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        try {
             loginPage.openLoginPage(driver)
                     .waitUntilLoginPageIsLoaded()
                     .fillUsernameField(username)
                     .fillPasswordField(password)
                     .clickOnLoginButton();
 
-            mainPage.waitUntilMainPageIsLoaded()
-                    .clickOnGoToPatientButton();
+        mainPage.isOnMainPage();
+        mainPage.clickOnGoToPatientButton();
 
             drugPage.waitUntilDrugPageIsLoaded();
-
-
-            //            .clickOnRegLink();
-//            registrationPage.openRegistrationPage(driver)
-            //loginPage.waitUntilLoginPageIsLoaded();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Test(groups = {"smoke", "positive"})
@@ -67,7 +58,7 @@ public class DrugRecommendationPageTest {
                     /*.inputDrugToAdd()
                     .clickOnAddButton()
                     .waitUntilValueButtonIsLoaded();*/
-            //mainPage.waitUntilMainPageIsLoaded();
+            //mainPage.isOnMainPage();
             Assert.assertTrue(drugPage.isOnDrugPage(), "The drug Page is opened");
 
         } catch (Exception e) {

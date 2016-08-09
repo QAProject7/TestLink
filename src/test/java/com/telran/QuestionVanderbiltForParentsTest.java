@@ -7,13 +7,12 @@ import com.telran.pages.DoctorsPage;
 import com.telran.pages.LoginPage;
 import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 
 
@@ -21,8 +20,6 @@ import java.io.IOException;
  * Created by PetruninLeonid
  */
 public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТОВ. ИСПРАВЕН (15.12.15)
-    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
-
     public static String email;
     public static String zeut;
     public static String password = "LinkCare!!11";
@@ -32,7 +29,7 @@ public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТО
     public static String emailTeacher;
     public static String meetingDate;
     public static String birthDate = "21/10/2013";
-
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public QuestionVanderbiltForParentsPetruninPage questionVanderbiltForParentsPetrunin; //Ссылка на вход на страницу (берет из класса LoginMaksimPage)
     public LoginPage loginPage;
     public LoginMobilePage loginMobilePage;
@@ -67,7 +64,7 @@ public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТО
         registrationPage.registerDoctor(docName, registrationPage.generateZeut());
         Thread.sleep(3000);
        // registrationPage.clickAddPatientButton();
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -90,7 +87,7 @@ public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТО
                 .fillBirthDayfield(birthDate)
                 .clickSaveAccount();
         Thread.sleep(5000);
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
         doctorsPage.isPatientExists(zeut);
        // Reporter.log("new Patient added");
         loginPage.clickLogOut();
@@ -179,7 +176,7 @@ public class QuestionVanderbiltForParentsTest extends TestNgTestBase{ //ГОТО
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
             Thread.sleep(4000);
-            // doctorsPage.waitUntilMainPageIsLoaded();
+            // doctorsPage.isOnMainPage();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
         } catch (IOException e) {

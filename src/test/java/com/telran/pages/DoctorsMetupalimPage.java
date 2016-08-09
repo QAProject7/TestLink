@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * 
  */
-public class DoctorsMetupalim extends Page {
+public class DoctorsMetupalimPage extends Page {
 
     @FindBy(id = "Div1")
     WebElement goNext;
@@ -48,13 +48,13 @@ public class DoctorsMetupalim extends Page {
 
     //public ProfilePage profilePage;
 
-    public DoctorsMetupalim(WebDriver driver) {
+    public DoctorsMetupalimPage(WebDriver driver) {
         super(driver);
         this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/SitePages/createUser.aspx?ReturnUrl=HomePage";
         PageFactory.initElements(driver, this);
     }
 
-    public DoctorsMetupalim addingPatient(WebDriver driver) {
+    public DoctorsMetupalimPage addingPatient(WebDriver driver) {
         driver.get(PAGE_URL);
         return this;
     }
@@ -85,22 +85,22 @@ public class DoctorsMetupalim extends Page {
         clickElement(addPatientBottom);
     }
 
-    public DoctorsMetupalim inputDate(String date) {
+    public DoctorsMetupalimPage inputDate(String date) {
         setElementText(inputDate, date);
         return this;
     }
 
-    public DoctorsMetupalim inputTeudat(String teudat) {
+    public DoctorsMetupalimPage inputTeudat(String teudat) {
         setElementText(teudatInput, teudat);
         return this;
     }
 
-    public DoctorsMetupalim inputName(String name) {
+    public DoctorsMetupalimPage inputName(String name) {
         setElementText(nameInput, name);
         return this;
     }
 
-    public DoctorsMetupalim inputLastName(String lastName) {
+    public DoctorsMetupalimPage inputLastName(String lastName) {
         setElementText(lastNameInput, lastName);
         return this;
     }

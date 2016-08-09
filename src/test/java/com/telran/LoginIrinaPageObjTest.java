@@ -55,7 +55,7 @@ public class LoginIrinaPageObjTest {
                     .fillPasswordField(password)
                     .clickOnLoginButton();
 
-            //mainPage.waitUntilMainPageIsLoaded();
+            //mainPage.isOnMainPage();
             Assert.assertTrue(mainPage.isOnMainPage(), "The Main Page is opened");
 
         } catch (Exception e) {

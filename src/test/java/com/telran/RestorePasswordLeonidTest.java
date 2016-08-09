@@ -1,6 +1,6 @@
 package com.telran;
 
-import com.telran.pages.ForgotPasswordPageLeonid;
+import com.telran.pages.ForgotPasswordPage;
 import com.telran.pages.ForgotPasswordSuccessLeonidPage;
 import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
@@ -18,14 +18,12 @@ import org.testng.annotations.Test;
  */
 public class RestorePasswordLeonidTest  {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
-
+    private static String login = "3339Doctor";
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
     private LoginPage loginPage;
-    private ForgotPasswordPageLeonid forgotPasswordPage;
+    private ForgotPasswordPage forgotPasswordPage;
     private ForgotPasswordSuccessLeonidPage forgotPasswordPageSuccess;
-    private static String login = "3339Doctor";
-
     private WebDriver driver;
     private String driverPath = "C:\\Telran\\browserDriver\\";
 
@@ -37,7 +35,7 @@ public class RestorePasswordLeonidTest  {
         Log.info("initialize loginPage");
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         Log.info("initialize forgotPasswordPage");
-        forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPageLeonid.class);
+        forgotPasswordPage = PageFactory.initElements(driver, ForgotPasswordPage.class);
         Log.info("initialize forgotPasswordPageSuccess");
         forgotPasswordPageSuccess = PageFactory.initElements(driver, ForgotPasswordSuccessLeonidPage.class);
     }

@@ -8,21 +8,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
-
 /**
  * Created by Iakov Volf,Oleg
  */
 public class DoctorsPage extends Page {
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
+
     @FindBy(id = "MainContent_LoginUser_Password")
     WebElement passwordField;
     @FindBy(id = "MainContent_LoginUser_RegisterHyperLink")
     WebElement goToRegLink;
     @FindBy(id = "MainContent_LoginUser_LoginButton")
     WebElement loginButton;
-    @FindBy(xpath = "//span[@id='Top1_HeadLoginView_DisplayName']")
-    private WebElement namesField;
+    @FindBy(xpath = "//*[@id='Top1_HeadLoginStatus']")
+    private WebElement exitField;
+
     //buttons
     @FindBy(xpath = "//a[@class='forgot']")
     private WebElement forgotPassLink;
@@ -33,13 +33,11 @@ public class DoctorsPage extends Page {
     @FindBy(xpath = "//div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[contains(text(),'סיסמא חובה.')]")
     private WebElement wrongPasswordAlert;
 
-
     @FindBy(xpath = "//a[@class='LinkBtnPatients GreenBtn']")
     private WebElement goToPatientButton;
 
     @FindBy(id = "MainContent_ItemLinkButton3")
     private WebElement addPatientButton;
-    //*[@id='MainContent_ItemLinkButton3']
 
     public DoctorsPage(WebDriver driver) {
         super(driver);
@@ -61,10 +59,9 @@ public class DoctorsPage extends Page {
         greenButton.click();
     }
 
-    public DoctorsPage waitUntilMainPageIsLoaded() throws IOException, InterruptedException {
-            Log.info("Waiting for Main page is loaded");
-            waitUntilElementIsLoaded(namesField);
-        return this;
+    public boolean isOnMainPage() {
+        Log.info("Checking if we are on the Main page");
+        return exists(exitField);
     }
 
     public void clickOnGoToPatientButton() {
@@ -75,27 +72,19 @@ public class DoctorsPage extends Page {
     public void openRegistrationPage() {
         Log.info("Opening Registration page");
         clickElement(goToRegLink);
-
     }
 
     public void openForgotPassPage() {
         clickElement(forgotPassLink);
-
     }
 
     public DoctorsPage clickOnAddPatient() throws InterruptedException {
         Log.info("Clicking 'Add patient' button");
         clickElement(addPatientButton);
-        Log.info("Trying thread sleep 5000");
+//        Log.info("Trying to switch to frame 0");
+//        driver.switchTo().frame(0);
         Thread.sleep(5000);
-        Log.info("Trying to switch to frame 0");
-        driver.switchTo().frame(0);
         return this;
-    }
-
-    public boolean isOnMainPage() {
-        Log.info("Checking if we are on the Main page");
-        return exists(namesField);
     }
 
     public boolean isPatientExists(String tz) {
@@ -106,10 +95,8 @@ public class DoctorsPage extends Page {
     //check alert presence
 
     public boolean alertMessageNotValidUsername() {
-
         return exists(wrongUsernameAlert);
     }
-    //div[@id='MainContent_LoginUser_LoginUserValidationSummary']/ul/li[1]
 
     public boolean alertMessageNotValidPassword() {
         return exists(wrongPasswordAlert);

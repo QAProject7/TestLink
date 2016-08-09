@@ -4,8 +4,6 @@ import com.telran.pages.DoctorsPage;
 import com.telran.pages.DrugRecommendationPage;
 import com.telran.pages.LoginPage;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -47,7 +45,7 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
                 .fillUsernameField(registered_username)
                 .fillPasswordField(registered_password)
                 .clickOnLoginButton();
-       doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
     }
 
 
@@ -70,6 +68,6 @@ public class QuestionVanderbiltForParentsDoctorPetruninTest extends TestNgTestBa
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        this.driver.quit();
+        driver.quit();
     }
 }

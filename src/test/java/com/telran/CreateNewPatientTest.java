@@ -45,7 +45,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
     public void beforeMethodSetUp() throws InterruptedException, IOException {
         driver.get(baseUrl);
         loginPage.login(username, password);
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
         doctorsPage.clickOnAddPatient();
         driver.manage().window().maximize();
     }
@@ -69,7 +69,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
            // Thread.sleep(15000);
-            // doctorsPage.waitUntilMainPageIsLoaded();
+        // doctorsPage.isOnMainPage();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
     }
@@ -93,7 +93,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
                     .fillBirthDayfield(birthDate)
                     .clickSaveAccount();
             Thread.sleep(4000);
-            // doctorsPage.waitUntilMainPageIsLoaded();
+        // doctorsPage.isOnMainPage();
             //  doctorsPage.isPatientExists(zeut);
             Reporter.log("new Patient added");
     }
@@ -104,7 +104,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
         createNewPatientpage.createPatientOneParent(zeut, email);
         Reporter.log("new Patient added");
         Thread.sleep(4000);
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
         doctorsPage.isPatientExists(zeut);
         Reporter.log("new Patient added");
         // createNewPatientpage.profileFilling(email, zeut);
@@ -117,7 +117,7 @@ public class CreateNewPatientTest extends TestNgTestBase {
     public void createNewPatientWithParentAndTeacher() {
         try {
             createNewPatientpage.createPatientParentAndTeacher(zeut, email, emailTeacher);
-            doctorsPage.waitUntilMainPageIsLoaded();
+            doctorsPage.isOnMainPage();
             doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();

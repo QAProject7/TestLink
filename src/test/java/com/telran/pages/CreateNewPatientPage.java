@@ -22,8 +22,8 @@ public class CreateNewPatientPage extends Page {
     @FindBy(xpath = "//*[@id='MainContent_AddEditAccount1_ctl07'][contains(text(), 'נא להזין פרטים חסרים')]")
     WebElement fillingAlert;
 
-    @FindBy(id = "MainContent_AddEditAccount1_firstNameTxt")
-    WebElement inputName;
+    @FindBy(xpath = "//*[@id='MainContent_AddEditAccount1_firstNameTxt']")
+    WebElement inputNameField;
 
     @FindBy(id = "MainContent_AddEditAccount1_lastNameTxt")
     WebElement inputLastName;
@@ -172,7 +172,7 @@ public class CreateNewPatientPage extends Page {
     //methods that fill test data
     public CreateNewPatientPage fillFirstNameField(String name) {
         Log.info("Filling First Name <" + name + ">");
-        setElementText(inputName, name);
+        setElementText(inputNameField, name);
         return this;
     }
 
@@ -397,7 +397,7 @@ public class CreateNewPatientPage extends Page {
 
 
     public CreateNewPatientPage WaitUntilPatientPageIsLoaded() {
-        waitUntilIsLoaded(questMenu);
+        waitUntilIsLoaded(inputNameField);
         return this;
     }
 

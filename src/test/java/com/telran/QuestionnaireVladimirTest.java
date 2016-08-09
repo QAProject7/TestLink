@@ -5,7 +5,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -18,7 +17,6 @@ import static org.testng.Assert.assertTrue;
  * Created by Naryck, Maksim
  */
 public class QuestionnaireVladimirTest extends TestNgTestBase {
-    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String email;// = "metupelet06@yopmail.com";
     public static String zeut;
     public static String password = "LinkCare!!11";
@@ -29,8 +27,8 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
     public static String docPass = "LinkCare!!11";
     public static String username;
     static Random rnd = new Random();
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     //public WebDriver driver;
-
     public ChronicQuestionnaire1VladimirPage questionnaireFirstPage;
     public LoginPage loginPage;
     public CreateNewPatientPage createNewPatientPage;
@@ -58,7 +56,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                 .clickOnTermsCheckbox()
                 .clickOnLoginButton();
 
-        doctorsPage.waitUntilMainPageIsLoaded();
+        doctorsPage.isOnMainPage();
         doctorsPage.clickOnAddPatient();
         System.out.println("zeut: " + zeut + ", mail: " + email + " and the doctor is: " + docName);
         //createNewPatientPage.createPatientOneParent(zeut, email);
@@ -157,7 +155,7 @@ public class QuestionnaireVladimirTest extends TestNgTestBase {
                     .fillBirthDayfield(createNewPatientPage.generateBirthDate())
                     .clickSaveAccount();
             Thread.sleep(4000);
-            // doctorsPage.waitUntilMainPageIsLoaded();
+            // doctorsPage.isOnMainPage();
             //  doctorsPage.isPatientExists(zeut);
         } catch (IOException e) {
             e.printStackTrace();

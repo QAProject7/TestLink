@@ -39,23 +39,15 @@ public class DrugRecommendationFainbergObjTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethodSetUp() {
-        try {
             loginPage
                     .openLoginPage(driver)
                     .waitUntilLoginPageIsLoaded()
                     .fillUsernameField(username)
                     .fillPasswordField(password)
                     .clickOnLoginButton();
-            mainPage.waitUntilMainPageIsLoaded()
-                    .clickOnGoToPatientButton();
-
+        mainPage.isOnMainPage();
+        mainPage.clickOnGoToPatientButton();
             patientPage.waitUntilTestPageIsLoaded();
-
-
-            //loginPage.waitUntilTestPageIsLoaded();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         driver.manage().window().maximize();
     }
 
