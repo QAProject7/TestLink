@@ -41,4 +41,15 @@ public class AnatolyLoginPage extends Page {
     public void LoginRun(){
         clickElement(loginButton);
     }
+
+    public void WaitLoginPageIsLoaded() {
+        waitUntilIsLoadedCustomTime(loginButton, 10);
+    }
+
+    public void Login() {
+        WaitLoginPageIsLoaded();
+        FillPassword();
+        FillUserName();
+        LoginRun();
+    }
 }
