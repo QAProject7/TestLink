@@ -55,8 +55,6 @@ public class VinokurRegisteredDoctor2211 extends Page {
         setElementText (lastNameTxt, "Doctor1Family");}
     public void emailinput (){
         setElementText (email, "Doctor1@mail.ru");}
-    public void lastNameTxtinput (){
-        setElementText (userName, "Doctor1");}
     public void passwordinput (){
         setElementText (password, "Linkcare!!11");}
     public void confirmPasswordinput (){
@@ -66,7 +64,7 @@ public class VinokurRegisteredDoctor2211 extends Page {
     public void clinicNameTxtinput (){
         setElementText (clinicNameTxt, "Marshak");}
     public void birthdayTxtinput (){
-        setDate  (birthdayTxt, "2001-11-11");
+   //!!!!     setDate  (birthdayTxt, "2001-11-11");
     }
     public void contactCellTxtinput (){
         setElementText (contactCellTxt, "0587909999");}
