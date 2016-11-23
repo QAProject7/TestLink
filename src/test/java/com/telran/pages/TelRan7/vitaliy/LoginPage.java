@@ -25,17 +25,17 @@ public class LoginPage extends Page {
     WebElement LoginButton;
 
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
-        PageFactory.initElements(driver, this);
-    }
+
 
 
     //check alert presence
 
     //methods
-
+    public LoginPage(WebDriver driver) {
+        super(driver);
+        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
+        PageFactory.initElements(driver, this);
+    }
     public void FillUserName() {
         setElementText(usernameField, "Login");
     }
