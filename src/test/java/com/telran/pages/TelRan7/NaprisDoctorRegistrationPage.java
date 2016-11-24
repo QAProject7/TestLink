@@ -154,6 +154,4 @@ public class NaprisDoctorRegistrationPage extends Page {
         fillCity();
         clickOnAddNewDoctor();
     }
-
-
 }

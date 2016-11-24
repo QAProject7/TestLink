@@ -51,5 +51,4 @@ public class NaprisLoginPage extends Page {
         fillPassword();
         clickOnLogin();
     }
-
 }
