@@ -79,79 +79,82 @@ public class NaprisDoctorRegistrationPage extends Page {
         waitUntilIsLoadedCustomTime(addNewUserButton, 10);
     }
 
-    public void fillUserName() {
-        setElementText(userNameField, "userName");
+    public void fillUserName(String userName) {
+        setElementText(userNameField, userName);
     }
 
-    public void fillFirstName() {
-        setElementText(firstNameField, "firstName");
+    public void fillFirstName(String firstName) {
+        setElementText(firstNameField, firstName);
     }
 
-    public void fillLastName() {
-        setElementText(lastNameField, "lastName");
+    public void fillLastName(String lastName) {
+        setElementText(lastNameField, lastName);
     }
 
-    public void fillEmail() {
-        setElementText(emailField, "email");
+    public void fillEmail(String email) {
+        setElementText(emailField, email);
     }
 
-    public void fillPassword() {
-        setElementText(passwordField, "password");
+    public void fillPassword(String password) {
+        setElementText(passwordField, password);
     }
 
-    public void fillConfirmPassword() {
-        setElementText(confirmPasswordField, "confirmPassword");
+    public void fillConfirmPassword(String confirmPassword) {
+        setElementText(confirmPasswordField, confirmPassword);
     }
 
-    public void fillPersonalId() {
-        setElementText(personalIdField, "personalId");
+    public void fillPersonalId(String personalId) {
+        setElementText(personalIdField, personalId);
     }
 
-    public void fillClinicName() {
-        setElementText(clinicNameField, "clinicName");
+    public void fillClinicName(String clinicName) {
+        setElementText(clinicNameField, clinicName);
     }
 
-    public void fillBirthday() {
-        setElementText(birthdayField, "birthday");
+    public void fillBirthday(String birthday) {
+        setElementText(birthdayField, birthday);
     }
 
-    public void fillContactCell() {
-        setElementText(contactCellField, "contactCell");
+    public void fillContactCell(String contactCell) {
+        setElementText(contactCellField, contactCell);
     }
 
-    public void fillStreet() {
-        setElementText(streetField, "street");
+    public void fillStreet(String street) {
+        setElementText(streetField, street);
     }
 
-    public void fillHouseNumber() {
-        setElementText(houseNumberField, "houseNumber");
+    public void fillHouseNumber(String houseNumber) {
+        setElementText(houseNumberField, houseNumber);
     }
 
-    public void fillCity() {
-        setElementText(cityField, "city");
+    public void fillCity(String city) {
+        setElementText(cityField, city);
     }
 
     public void clickOnAddNewDoctor() {
         clickElement(addNewUserButton);
     }
 
-    public void doctorRegistration() {
+    public void doctorRegistration(String userName, String firstName, String lastName,
+                                   String email, String password, String confirmPassword,
+                                   String personalId, String clinicName, String birthday,
+                                   String contactCell, String street, String houseNumber, String city) {
         waitUntilLoginPageIsLoaded();
         clickOnDoctorRegistrationLink();
         waitUntilDoctorRegistrationPageIsLoaded();
-        fillUserName();
-        fillFirstName();
-        fillLastName();
-        fillEmail();
-        fillPassword();
-        fillConfirmPassword();
-        fillPersonalId();
-        fillClinicName();
-        fillBirthday();
-        fillContactCell();
-        fillStreet();
-        fillHouseNumber();
-        fillCity();
+        fillUserName(userName);
+        fillFirstName(firstName);
+        fillLastName(lastName);
+        fillEmail(email);
+        fillPassword(password);
+        fillConfirmPassword(confirmPassword);
+        fillPersonalId(personalId);
+        fillClinicName(clinicName);
+        fillBirthday(birthday);
+        fillContactCell(contactCell);
+        fillStreet(street);
+        fillHouseNumber(houseNumber);
+        fillCity(city);
         clickOnAddNewDoctor();
     }
 }

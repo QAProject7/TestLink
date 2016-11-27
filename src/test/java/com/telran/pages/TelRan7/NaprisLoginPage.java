@@ -29,12 +29,12 @@ public class NaprisLoginPage extends Page {
     }
 
     //methods
-    public void fillUserName() {
-        setElementText(usernameField, "Login");
+    public void fillUserName(String username) {
+        setElementText(usernameField, username);
     }
 
-    public void fillPassword() {
-        setElementText(passwordField, "Password");
+    public void fillPassword(String password) {
+        setElementText(passwordField, password);
     }
 
     public void clickOnLogin() {
@@ -45,10 +45,10 @@ public class NaprisLoginPage extends Page {
         waitUntilIsLoadedCustomTime(loginButton, 10);
     }
 
-    public void login() {
+    public void login(String username, String password) {
         waitUntilLoginPageIsLoaded();
-        fillUserName();
-        fillPassword();
+        fillUserName(username);
+        fillPassword(password);
         clickOnLogin();
     }
 }
