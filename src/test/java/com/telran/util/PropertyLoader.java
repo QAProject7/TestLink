@@ -1,18 +1,11 @@
 package com.telran.util;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Properties;
-
 /**
  * Class that extracts properties from the prop file.
  */
 public class PropertyLoader {
 
-  private static final String DEBUG_PROPERTIES = "/debug.properties";
+ /* private static final String DEBUG_PROPERTIES = "/debug.properties";
 
   public static Capabilities loadCapabilities() throws IOException {
     return loadCapabilities(System.getProperty("application.properties", DEBUG_PROPERTIES));
@@ -50,6 +43,6 @@ public class PropertyLoader {
     props.load(PropertyLoader.class.getResourceAsStream(fromResource));
 
     return props.getProperty(name);
-  }
+  }*/
 
 }

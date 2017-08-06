@@ -20,18 +20,18 @@
         <dependency>
             <groupId>ru.stqa.selenium</groupId>
             <artifactId>webdriver-factory</artifactId>
-            <version>3.0</version>
+            <version>4.1</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
-            <version>2.53.1</version>
+            <version>3.4.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
-            <version>3.0.1</version>
+            <version>3.4.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -42,13 +42,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-firefox-driver</artifactId>
-            <version>3.0.1</version>
+            <version>3.4.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.0.1</version>
+            <version>3.4.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -162,7 +162,7 @@
         <profile>
             <id>stage</id>
             <properties>
-                <site.url>http://dhclinicappv2stg.item-soft.co.il/</site.url>
+                <site.url>http://dhclinicappv2stgclalitinternal.item-soft.co.il/</site.url>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>

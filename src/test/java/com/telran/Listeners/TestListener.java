@@ -3,21 +3,7 @@ package com.telran.Listeners;
 /**
  * Created by Maksim on 14.12.2015.
  */
-import com.telran.TestNgTestBase;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
-
-import java.io.File;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
+/*
 public class TestListener implements ITestListener {
     WebDriver driver=null;
     String filePath = "target/surefire-reports/";
@@ -54,3 +40,4 @@ public class TestListener implements ITestListener {
 
     public void onStart(ITestContext context) {   }
 }
+*/
