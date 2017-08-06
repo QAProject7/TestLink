@@ -35,10 +35,10 @@ public class LoginIrinaPage extends Page {
     private WebElement wrongPasswordAlert;
 
 
-
+    //todo use URL from propretyloader instead of hardcpded address
     public LoginIrinaPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
+        this.PAGE_URL = "http://dhclinicappv2stgclalitinternal.item-soft.co.il/";
         PageFactory.initElements(driver, this);
     }
 
