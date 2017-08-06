@@ -1,6 +1,6 @@
 package com.telran.pages;
 
-import com.telran.TestNgTestBase;
+import com.telran.SuiteConfiguration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,10 +14,11 @@ import java.util.concurrent.ThreadLocalRandom;
  * Abstract class representation of a Page in the UI. Page object pattern
  */
 public abstract class Page {
-  public static String baseUrl = TestNgTestBase.baseUrl;
+  public static String baseUrl;
   public String PAGE_URL;
   public String PAGE_TITLE;
   public WebDriver driver;
+  SuiteConfiguration config;
 
   /*
    * Constructor injecting the WebDriver interface
@@ -26,6 +27,12 @@ public abstract class Page {
    */
   public Page(WebDriver driver) {
     this.driver = driver;
+    try {
+      config = new SuiteConfiguration();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    baseUrl = config.getProperty("site.url");
   }
 
 

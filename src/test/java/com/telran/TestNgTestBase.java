@@ -2,40 +2,42 @@ package com.telran;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import ru.stqa.selenium.factory.WebDriverPool;
 
 import java.io.IOException;
+import java.net.URL;
 
 /**
  * Base class for TestNG-based test classes
  */
 public class TestNgTestBase {
 
-  public static String baseUrl;
-  public static WebDriver driver;
-  protected static String gridHubUrl;
+  protected static URL gridHubUrl = null;
+  protected static String baseUrl;
   protected static Capabilities capabilities;
 
-  public static WebDriver getDriver() {
-    return driver;
-  }
+  protected WebDriver driver;
 
-  @BeforeSuite(alwaysRun = true)
+  @BeforeSuite
   public void initTestSuite() throws IOException {
-    // baseUrl = PropertyLoader.loadProperty("site.url");//загружает capabilities
-    // capabilities = PropertyLoader.loadCapabilities();
-    // WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
-    //driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
-    driver = new FirefoxDriver();
+    SuiteConfiguration config = new SuiteConfiguration();
+    baseUrl = config.getProperty("site.url");
+    if (config.hasProperty("grid.url") && !"".equals(config.getProperty("grid.url"))) {
+      gridHubUrl = new URL(config.getProperty("grid.url"));
+    }
+    capabilities = config.getCapabilities();
   }
 
- @AfterSuite(alwaysRun = true)
+  @BeforeMethod
+  public void initWebDriver() {
+    driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities);
+  }
+
+  @AfterSuite(alwaysRun = true)
   public void tearDown() {
-    System.out.println("We are in TestNgTestBase tearDown AfterClass");
-    if (driver != null) {
-      driver.quit();
-    }
+    WebDriverPool.DEFAULT.dismissAll();
   }
 }
