@@ -38,7 +38,7 @@ public class LoginIrinaPage extends Page {
     //todo use URL from propretyloader instead of hardcpded address
     public LoginIrinaPage(WebDriver driver) {
         super(driver);
-        this.PAGE_URL = "http://dhclinicappv2stgclalitinternal.item-soft.co.il/";
+        //  this.PAGE_URL = "http://dhclinicappv2stgclalitinternal.item-soft.co.il/";
         PageFactory.initElements(driver, this);
     }
 

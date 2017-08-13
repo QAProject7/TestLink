@@ -2,14 +2,16 @@ package com.telran;
 /*
 // Created by Tatiana Pereminski
 */
+
 import com.telran.Training.LoginIrinaPage;
-import com.telran.pages.DataProviders;
 import com.telran.pages.Page;
 import com.telran.pages.RegistrationPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -17,18 +19,16 @@ import java.util.concurrent.TimeUnit;
 
 public class doctorRegistrationTest extends TestNgTestBase {
 
-    private StringBuffer verificationErrors = new StringBuffer();
-    private String lFamily = "testfam";
-    private String lName = "testname";
-    private String loginName = "d";
-    long millis = System.currentTimeMillis();
-    private String DocLogin = loginName + millis;
-
     private static Logger Log = Logger.getLogger(LogLog4j.class.getName()); //Необходимо для написания логов
     public RegistrationPage registrationPage;
     public LoginIrinaPage loginIrinaPage;
     public Page page;
-
+    long millis = System.currentTimeMillis();
+    private StringBuffer verificationErrors = new StringBuffer();
+    private String lFamily = "testfam";
+    private String lName = "testname";
+    private String loginName = "d";
+    private String DocLogin = loginName + millis;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {

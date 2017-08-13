@@ -1,7 +1,7 @@
 package com.telran;
 
 import com.telran.Training.LoginIrinaPage;
-import com.telran.pages.DoctorQuestionnaireChronicDiseasesPetruninPage;
+import com.telran.pages.DoctorQuestionnaireChronicDiseasesPage;
 import com.telran.pages.QuestionnaireChronicDiseasesPatientPetruninPage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -18,11 +18,11 @@ import java.io.IOException;
  * Created by PetruninLeonid
  */
 public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBase { //ГОТОВЫЙ ТЕСТ
-    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public static String username = "1003Doctor"; //Данные входа клеента
     public static String password = "LinkCare!!11";//Данные входа доктора
+    private static Logger Log = Logger.getLogger(LogLog4j.class.getName());
     public LoginIrinaPage loginIrinaPage;
-    public DoctorQuestionnaireChronicDiseasesPetruninPage doctorQuestionnaireChronicDiseasesPetruninPage;
+    public DoctorQuestionnaireChronicDiseasesPage doctorQuestionnaireChronicDiseasesPage;
     public QuestionnaireChronicDiseasesPatientPetruninPage questionnaireChronicDiseasesPatientPetruninPage;
     //private WebDriver driver;
 
@@ -31,7 +31,7 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
         //driver = new FirefoxDriver(); //Запускаем Firefox
         driver.manage().window().maximize(); //Развертывание окна
         loginIrinaPage = PageFactory.initElements(driver, LoginIrinaPage.class); //Обращаемся к классу LoginMobilePage и берем оттуда ссылку на страницу
-        doctorQuestionnaireChronicDiseasesPetruninPage=PageFactory.initElements(driver, DoctorQuestionnaireChronicDiseasesPetruninPage.class); //Последующие методы
+        doctorQuestionnaireChronicDiseasesPage = PageFactory.initElements(driver, DoctorQuestionnaireChronicDiseasesPage.class); //Последующие методы
         questionnaireChronicDiseasesPatientPetruninPage=PageFactory.initElements(driver, QuestionnaireChronicDiseasesPatientPetruninPage.class); //Последующие методы
 
     }
@@ -51,11 +51,11 @@ public class DoctorQuestionnaireChronicDiseasesPetruninTest extends TestNgTestBa
     @Test(groups = {"positive", "smoke"})
     public void testOpenPatientPage() throws InterruptedException, IOException {
         Thread.sleep(5000);
-        doctorQuestionnaireChronicDiseasesPetruninPage.clickChoosePatient();
+        doctorQuestionnaireChronicDiseasesPage.clickChoosePatient();
         Thread.sleep(15000);
         driver.switchTo().frame("MainContent_iframe1");
-        Assert.assertTrue(doctorQuestionnaireChronicDiseasesPetruninPage.inTableFrame(), "Table has not been completed");
-        doctorQuestionnaireChronicDiseasesPetruninPage.clickTableFrame();
+        Assert.assertTrue(doctorQuestionnaireChronicDiseasesPage.inTableFrame(), "Table has not been completed");
+        doctorQuestionnaireChronicDiseasesPage.clickTableFrame();
         Thread.sleep(5000);
         Log.info("Registration is validate!");
         Reporter.log("Registration is validate!");

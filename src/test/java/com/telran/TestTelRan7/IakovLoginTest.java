@@ -2,7 +2,6 @@ package com.telran.TestTelRan7;
 
 import com.telran.TestNgTestBase;
 import com.telran.pages.TelRan7.IakovLoginPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -14,7 +13,7 @@ import org.testng.annotations.Test;
  * Created by Iakov on 11/24/2016.
  */
 public class IakovLoginTest extends TestNgTestBase {
-    public WebDriver driver;
+    // public WebDriver driver;
     public IakovLoginPage iakovLoginPage;
 
     @BeforeClass

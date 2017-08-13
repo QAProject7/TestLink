@@ -1,4 +1,4 @@
-package com.telran.pages;
+package com.telran;
 
 import org.testng.annotations.DataProvider;
 
